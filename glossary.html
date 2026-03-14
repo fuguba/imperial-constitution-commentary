@@ -138,7 +138,7 @@ html, body { height: 100%; font-family: "UD デジタル 教科書体 NK-R", "UD
     border-left: 2px solid #b0a060;
 }
 .toc-tree ul ul > li:last-child::before {
-    bottom: auto; height: calc(0.85em + 4px);
+    bottom: auto; height: calc(0.85em + 2px);
 }
 .toc-tree ul ul > li::after {
     content: ""; position: absolute;
@@ -151,6 +151,7 @@ html, body { height: 100%; font-family: "UD デジタル 教科書体 NK-R", "UD
 .toc-tree .toc-lv2 { font-size: 19px; }
 .toc-tree .toc-lv3 { font-size: 18px; }
 .toc-tree .toc-sub-item { font-size: 17px; color: #6a5a3a; }
+.toc-tree .toc-sub-item::before, .toc-tree .toc-sub-item::after { display: none; }
 .toc-tree .sep { color: #c0b898; }
 .toc-tree .toc-charts {
     margin-top: 16px; padding-top: 8px;
