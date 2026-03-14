@@ -116,16 +116,20 @@ html, body { height: 100%; font-family: "UD デジタル 教科書体 NK-R", "UD
     padding: 12px 18px; margin: 14px 0; font-style: italic;
     font-size: 17px;
 }
-.content-pane .toc-section { margin: 16px 0; }
+.content-pane .toc-wrapper {
+    background: #f8f4e8; padding: 20px 28px; margin: 20px 0;
+    border: 1px solid #d0c8a0; border-radius: 4px;
+}
+.content-pane .toc-section { margin: 12px 0; }
 .content-pane .toc-section a { color: #0645ad; text-decoration: none; }
 .content-pane .toc-section a:hover { text-decoration: underline; }
 .content-pane .toc-section a:visited { color: #7b2d8b; }
-.toc-section .toc-lv0 { font-size: 22px; font-weight: bold; margin: 10px 0 2px; }
-.toc-section .toc-lv1 { font-size: 20px; margin: 2px 0; }
-.toc-section .toc-lv2 { font-size: 19px; margin: 2px 0; }
-.toc-section .toc-lv3 { font-size: 18px; margin: 2px 0; }
-.toc-section .toc-lv4 { font-size: 18px; margin: 2px 0; }
-.toc-section .toc-sub { font-size: 17px; margin: 1px 0; color: #6a5a3a; }
+.toc-section .toc-lv0 { font-size: 22px; font-weight: bold; margin: 10px 0 2px; padding-left: 0; }
+.toc-section .toc-lv1 { font-size: 20px; margin: 2px 0; padding-left: 1.6em; text-indent: -1.2em; }
+.toc-section .toc-lv2 { font-size: 19px; margin: 2px 0; padding-left: 3.2em; text-indent: -1.2em; }
+.toc-section .toc-lv3 { font-size: 18px; margin: 2px 0; padding-left: 4.8em; text-indent: -1.2em; }
+.toc-section .toc-lv4 { font-size: 18px; margin: 2px 0; padding-left: 3.2em; text-indent: -1.2em; }
+.toc-section .toc-sub { font-size: 17px; margin: 1px 0; padding-left: 6.0em; text-indent: 0; color: #6a5a3a; }
 .toc-section .sep { color: #c0b898; }
 .content-pane .subtitle {
     font-size: 15px; color: #6a5a3a; margin: 4px 0 10px;
