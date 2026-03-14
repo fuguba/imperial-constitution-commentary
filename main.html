@@ -116,21 +116,46 @@ html, body { height: 100%; font-family: "UD デジタル 教科書体 NK-R", "UD
     padding: 12px 18px; margin: 14px 0; font-style: italic;
     font-size: 17px;
 }
-.content-pane .toc-wrapper {
-    background: #f8f4e8; padding: 20px 28px; margin: 20px 0;
+.toc-tree {
+    background: #f8f4e8; padding: 20px 28px 20px 18px; margin: 20px 0;
     border: 1px solid #d0c8a0; border-radius: 4px;
 }
-.content-pane .toc-section { margin: 12px 0; }
-.content-pane .toc-section a { color: #0645ad; text-decoration: none; }
-.content-pane .toc-section a:hover { text-decoration: underline; }
-.content-pane .toc-section a:visited { color: #7b2d8b; }
-.toc-section .toc-lv0 { font-size: 22px; font-weight: bold; margin: 10px 0 2px; padding-left: 0; }
-.toc-section .toc-lv1 { font-size: 20px; margin: 2px 0; padding-left: 1.6em; text-indent: -1.2em; }
-.toc-section .toc-lv2 { font-size: 19px; margin: 2px 0; padding-left: 3.2em; text-indent: -1.2em; }
-.toc-section .toc-lv3 { font-size: 18px; margin: 2px 0; padding-left: 4.8em; text-indent: -1.2em; }
-.toc-section .toc-lv4 { font-size: 18px; margin: 2px 0; padding-left: 3.2em; text-indent: -1.2em; }
-.toc-section .toc-sub { font-size: 17px; margin: 1px 0; padding-left: 6.0em; text-indent: 0; color: #6a5a3a; }
-.toc-section .sep { color: #c0b898; }
+.toc-tree a { color: #0645ad; text-decoration: none; }
+.toc-tree a:hover { text-decoration: underline; }
+.toc-tree a:visited { color: #7b2d8b; }
+.toc-tree ul {
+    list-style: none; margin: 0; padding: 0 0 0 24px;
+}
+.toc-tree > ul { padding-left: 0; }
+.toc-tree li {
+    position: relative; padding: 3px 0 3px 20px; line-height: 1.7;
+}
+.toc-tree > ul > li { padding-left: 0; }
+.toc-tree ul ul { margin-left: 4px; }
+.toc-tree ul ul > li::before {
+    content: ""; position: absolute;
+    left: -16px; top: 0; bottom: 0;
+    border-left: 2px solid #b0a060;
+}
+.toc-tree ul ul > li:last-child::before {
+    bottom: auto; height: calc(0.85em + 4px);
+}
+.toc-tree ul ul > li::after {
+    content: ""; position: absolute;
+    left: -16px; top: 0.85em;
+    width: 14px; height: 0;
+    border-top: 2px solid #b0a060;
+}
+.toc-tree .toc-lv0 { font-size: 22px; font-weight: bold; }
+.toc-tree .toc-lv1 { font-size: 20px; }
+.toc-tree .toc-lv2 { font-size: 19px; }
+.toc-tree .toc-lv3 { font-size: 18px; }
+.toc-tree .toc-sub-item { font-size: 17px; color: #6a5a3a; }
+.toc-tree .sep { color: #c0b898; }
+.toc-tree .toc-charts {
+    margin-top: 16px; padding-top: 8px;
+    border-top: 1px dashed #b0a080; font-size: 18px;
+}
 .content-pane .subtitle {
     font-size: 15px; color: #6a5a3a; margin: 4px 0 10px;
     padding: 4px 0 4px 12px;
@@ -397,200 +422,497 @@ a.ext-link:visited { color: #7b2d8b; }
 
 <div id="toc">
 <h2>目次</h2>
-<div class="toc-wrapper">
-<div class="toc-section">
-<p class="no-indent toc-lv0"><a href="#1">第1編　緒論</a></p>
-<p class="no-indent toc-lv1"><a href="#1-1">第1章　国家</a></p>
-<p class="no-indent toc-lv2"><a href="#1-1-1">第1節　国家の観念</a></p>
-<p class="no-indent toc-lv3"><a href="#1-1-1-1">第1款　国家の社会的観念</a></p>
-<p class="no-indent toc-sub"><a href="#1-1-1-1">国家の構成三要素</a><span class="sep"> / </span><a href="#1-1-1-1">人民・領域・統治権</a><span class="sep"> / </span><a href="#1-1-1-1_m4">統治権の強制性</a><span class="sep"> / </span><a href="#1-1-1-1_m5">統治権支配の範囲</a><span class="sep"> / </span><a href="#1-1-1-1_m6">統治権の不可分性</a><span class="sep"> / </span><a href="#1-1-1-1_m7">統治権の固有性</a><span class="sep"> / </span><a href="#1-1-1-1_m8">統治権と主権との関係</a></p>
-<p class="no-indent toc-lv3"><a href="#1-1-1-2">第2款　国家の法理的観念</a></p>
-<p class="no-indent toc-sub"><a href="#1-1-1-2_m1">国家は統治権の主体である</a><span class="sep"> / </span><a href="#1-1-1-2_m2">国家は公法人である</a></p>
-<p class="no-indent toc-lv2"><a href="#1-1-2">第2節　国家存在の意義</a></p>
-<p class="no-indent toc-sub"><a href="#1-1-2_m1">国家の目的</a><span class="sep"> / </span><a href="#1-1-2_m2">国家の活動</a><span class="sep"> / </span><a href="#1-1-2_m3">国家生存の意義</a></p>
-<p class="no-indent toc-lv2"><a href="#1-1-3">第3節　国体と政体</a></p>
-<p class="no-indent toc-sub"><a href="#1-1-3_m1">発生した理由が異なる</a><span class="sep"> / </span><a href="#1-1-3_m2">結果が異なる</a></p>
-<p class="no-indent toc-lv3"><a href="#1-1-3-1">第1款　国体</a></p>
-<p class="no-indent toc-sub"><a href="#1-1-3-1_m1">共和国体</a><span class="sep"> / </span><a href="#1-1-3-1_m2">貴族国体</a><span class="sep"> / </span><a href="#1-1-3-1_m3">普通君主国体</a><span class="sep"> / </span><a href="#1-1-3-1_m4">真正君主国体</a></p>
-<p class="no-indent toc-lv3"><a href="#1-1-3-2">第2款　政体</a></p>
-<p class="no-indent toc-sub"><a href="#1-1-3-2_m1">専制政体</a><span class="sep"> / </span><a href="#1-1-3-2_m2">立憲政体</a><span class="sep"> / </span><a href="#1-1-3-2_m3">三権分立</a><span class="sep"> / </span><a href="#1-1-3-2_m4">民選議会</a></p>
-<p class="no-indent toc-lv1"><a href="#1-2">第2章　憲法</a></p>
-<p class="no-indent toc-lv2"><a href="#1-2-1">第1節　法の観念</a></p>
-<p class="no-indent toc-sub"><a href="#1-2-1_m1">法は規則</a><span class="sep"> / </span><a href="#1-2-1_m2">法は共同生活の規則</a><span class="sep"> / </span><a href="#1-2-1_m3">法は統治権者の命令</a></p>
-<p class="no-indent toc-lv2"><a href="#1-2-2">第2節　憲法の意義および性質</a></p>
-<p class="no-indent toc-sub"><a href="#1-2-2_m1">憲法は統治権の所在を宣明する</a><span class="sep"> / </span><a href="#1-2-2_m2">憲法は統治権行使の形式を規定する</a><span class="sep"> / </span><a href="#1-2-2_m3">憲法は国家の構成要素について規定する</a></p>
-<p class="no-indent toc-lv2"><a href="#1-2-3">第3節　憲法の効力</a></p>
-<p class="no-indent toc-sub"><a href="#1-2-3_m1">憲法の他の法令に対する効力</a><span class="sep"> / </span><a href="#1-2-3">憲法と皇室典範</a><span class="sep"> / </span><a href="#1-2-3_m2">憲法の時に関する効力</a><span class="sep"> / </span><a href="#1-2-3_m3">憲法の人に対する効力</a></p>
-<p class="no-indent toc-sub"><a href="#1-2-3_m4">憲法の場所に関する効力</a><span class="sep"> / </span><a href="#1-2-3">新領土に関する憲法の効力</a></p>
-<p class="no-indent toc-lv2"><a href="#1-2-4">第4節　憲法の解釈</a></p>
-<p class="no-indent toc-sub"><a href="#1-2-4">憲法の解釈は天皇の大権に属する</a></p>
-<p class="no-indent toc-lv2"><a href="#1-2-6">第6節　帝国憲法の特色</a></p>
-<p class="no-indent toc-sub"><a href="#1-2-6_m1">解釈権者の特有性</a><span class="sep"> / </span><a href="#1-2-6_m2">憲法改正の発案権者の特有性</a><span class="sep"> / </span><a href="#1-2-6_m3">憲法の規定外の統治作用の総攬者の特有性</a></p>
-<p class="no-indent toc-lv0"><a href="#2">第2編　本論</a></p>
-<p class="no-indent toc-lv1"><a href="#2-1">第1章　天皇</a></p>
-<p class="no-indent toc-lv4"><a href="#2-1-1">第1条</a></p>
-<p class="no-indent toc-sub"><a href="#2-1-1">我が国の国体</a><span class="sep"> / </span><a href="#2-1-1">国体と憲法との関係</a><span class="sep"> / </span><a href="#2-1-1">万世一系の法理的観念</a><span class="sep"> / </span><a href="#2-1-1">統治権効果の帰属</a><span class="sep"> / </span><a href="#2-1-1">天皇は統治機関ではない</a></p>
-<p class="no-indent toc-lv4"><a href="#2-1-2">第2条</a></p>
-<p class="no-indent toc-sub"><a href="#2-1-2_m9">皇位継承の性質</a><span class="sep"> / </span><a href="#2-1-2_m10">皇位継承の原因</a><span class="sep"> / </span><a href="#2-1-2_m11">皇位継承の資格</a><span class="sep"> / </span><a href="#2-1-2_m3">皇位継承の順序</a><span class="sep"> / </span><a href="#2-1-2">皇太子・皇太孫</a><span class="sep"> / </span><a href="#2-1-2">胎中皇子</a><span class="sep"> / </span><a href="#2-1-2"><span class="fn" id="fn-ref-32-1" data-fn="32" onclick="openYakuchu(32)">践祚<sup class="fn-mark">*32</sup></span></a><span class="sep"> / </span><a href="#2-1-2">元号</a><span class="sep"> / </span><a href="#2-1-2">即位の大礼</a></p>
-<p class="no-indent toc-lv4"><a href="#2-1-3">第3条</a></p>
-<p class="no-indent toc-sub"><a href="#2-1-3">自然人としての天皇の特権</a><span class="sep"> / </span><a href="#2-1-3">不可侵権</a><span class="sep"> / </span><a href="#2-1-3_m1">栄誉権</a><span class="sep"> / </span><a href="#2-1-3_m7">財産上の特権</a><span class="sep"> / </span><a href="#2-1-3_m10">皇室首長権</a><span class="sep"> / </span><a href="#2-1-3">天皇一身上の特権と天皇の憲法上の大権</a></p>
-<p class="no-indent toc-lv4"><a href="#2-1-4">第4条</a></p>
-<p class="no-indent toc-sub"><a href="#2-1-4">元首および総攬の意義</a><span class="sep"> / </span><a href="#2-1-4">我が国の政体</a><span class="sep"> / </span><a href="#2-1-4">立憲政体と専制政体との利害</a></p>
-<p class="no-indent toc-lv4"><a href="#2-1-5">第5条</a></p>
-<p class="no-indent toc-sub"><a href="#2-1-5">天皇の立法権</a><span class="sep"> / </span><a href="#2-1-5">本条立法の意義</a><span class="sep"> / </span><a href="#2-1-5">協賛の意義</a></p>
-<p class="no-indent toc-lv4"><a href="#2-1-6">第6条</a></p>
-<p class="no-indent toc-sub"><a href="#2-1-6">我が国統治作用の形式</a><span class="sep"> / </span><a href="#2-1-6">大権作用</a><span class="sep"> / </span><a href="#2-1-6">憲法上の大権作用は機関に委任することができるのか</a><span class="sep"> / </span><a href="#2-1-6_m1">法律の裁可</a><span class="sep"> / </span><a href="#2-1-6">法律の公布</a><span class="sep"> / </span><a href="#2-1-6">法律施行時期</a></p>
-<p class="no-indent toc-lv4"><a href="#2-1-7">第7条</a></p>
-<p class="no-indent toc-sub"><a href="#2-1-7">帝国議会の召集・開会・閉会・停会および衆議院の解散権</a></p>
-<p class="no-indent toc-lv4"><a href="#2-1-8">第8条</a></p>
-<p class="no-indent toc-sub"><a href="#2-1-8_m5">緊急勅令</a><span class="sep"> / </span><a href="#2-1-8_m6">緊急勅令の要件</a><span class="sep"> / </span><a href="#2-1-8_m1">公共の安全を保持しまたはその災厄を避けるため必要なことを要する</a><span class="sep"> / </span><a href="#2-1-8_m2">帝国議会閉会中であることを要する</a><span class="sep"> / </span><a href="#2-1-8_m3">緊急の必要あることを要する</a><span class="sep"> / </span><a href="#2-1-8_m7">緊急勅令の承諾</a><span class="sep"> / </span><a href="#2-1-8_m8">緊急勅令に関する疑義</a><span class="sep"> / </span><a href="#2-1-8_m4">議会の不承諾とは不承諾の議決があるときに限るの意味であるか、承諾の議決のない場合をも含むの意味か</a><span class="sep"> / </span><a href="#2-1-8">緊急勅令は次の会期の議会開会前に廃止できるのか</a><span class="sep"> / </span><a href="#2-1-8">緊急勅令は次の会期の議会の開会中に廃止できるのか</a><span class="sep"> / </span><a href="#2-1-8">緊急勅令を以って既成の法律を改廃した場合、その勅令が議会の不承諾により失効したときには、当然に原規定に復するのか</a><span class="sep"> / </span><a href="#2-1-8">緊急勅令の他の法律に対する効力はどうか</a></p>
-<p class="no-indent toc-lv4"><a href="#2-1-9">第9条</a></p>
-<p class="no-indent toc-sub"><a href="#2-1-9">命令大権</a><span class="sep"> / </span><a href="#2-1-9_m1">執行命令</a><span class="sep"> / </span><a href="#2-1-9_m2">独立命令</a><span class="sep"> / </span><a href="#2-1-9_m3">委任命令</a><span class="sep"> / </span><a href="#2-1-9">複委任の制限</a></p>
-<p class="no-indent toc-lv4"><a href="#2-1-10">第10条</a></p>
-<p class="no-indent toc-sub"><a href="#2-1-10">官制</a><span class="sep"> / </span><a href="#2-1-10">官吏の任免および俸給</a><span class="sep"> / </span><a href="#2-1-10">官吏任命の性質</a><span class="sep"> / </span><a href="#2-1-10">官吏任命権</a><span class="sep"> / </span><a href="#2-1-10">俸給</a></p>
-<p class="no-indent toc-lv4"><a href="#2-1-11">第11条</a></p>
-<p class="no-indent toc-sub"><a href="#2-1-11">陸海軍の統帥</a></p>
-<p class="no-indent toc-lv4"><a href="#2-1-12">第12条</a></p>
-<p class="no-indent toc-sub"><a href="#2-1-12">陸海軍の編成および常備兵額の確定</a></p>
-<p class="no-indent toc-lv4"><a href="#2-1-13">第13条</a></p>
-<p class="no-indent toc-sub"><a href="#2-1-13">宣戦講和</a><span class="sep"> / </span><a href="#2-1-13">条約・条約締結の手続き</a><span class="sep"> / </span><a href="#2-1-13">条約の効力</a><span class="sep"> / </span><a href="#2-1-13">秘密条約</a></p>
-<p class="no-indent toc-lv4"><a href="#2-1-14">第14条</a></p>
-<p class="no-indent toc-sub"><a href="#2-1-14">戒厳宣告</a><span class="sep"> / </span><a href="#2-1-14">非常大権</a><span class="sep"> / </span><a href="#2-1-14">戒厳の要件</a><span class="sep"> / </span><a href="#2-1-14">戒厳の効力</a><span class="sep"> / </span><a href="#2-1-14">戒厳宣告の委任</a></p>
-<p class="no-indent toc-lv4"><a href="#2-1-15">第15条</a></p>
-<p class="no-indent toc-sub"><a href="#2-1-15">栄典授与</a><span class="sep"> / </span><a href="#2-1-15">王族および公族</a><span class="sep"> / </span><a href="#2-1-15">華族</a><span class="sep"> / </span><a href="#2-1-15">朝鮮貴族</a><span class="sep"> / </span><a href="#2-1-15">位階</a><span class="sep"> / </span><a href="#2-1-15">勲章</a><span class="sep"> / </span><a href="#2-1-15">褒章および褒状</a><span class="sep"> / </span><a href="#2-1-15">記章</a><span class="sep"> / </span><a href="#2-1-15">元帥</a><span class="sep"> / </span><a href="#2-1-15">金銀木杯および金円</a><span class="sep"> / </span><a href="#2-1-15">学位</a><span class="sep"> / </span><a href="#2-1-15">神社社格の昇進・贈位および贈官</a><span class="sep"> / </span><a href="#2-1-15">栄典授与の性質</a></p>
-<p class="no-indent toc-lv4"><a href="#2-1-16">第16条</a></p>
-<p class="no-indent toc-sub"><a href="#2-1-16">恩赦</a><span class="sep"> / </span><a href="#2-1-16">大赦</a><span class="sep"> / </span><a href="#2-1-16">特赦</a><span class="sep"> / </span><a href="#2-1-16">減刑</a><span class="sep"> / </span><a href="#2-1-16">復権</a></p>
-<p class="no-indent toc-lv4"><a href="#2-1-17">第17条</a></p>
-<p class="no-indent toc-sub"><a href="#2-1-17">摂政</a><span class="sep"> / </span><a href="#2-1-17">摂政の地位</a><span class="sep"> / </span><a href="#2-1-17">摂政の設置</a><span class="sep"> / </span><a href="#2-1-17">天皇がまだ成年に達していないとき</a><span class="sep"> / </span><a href="#2-1-17">天皇の長期間の故障により大政を親しくすることができないとき</a><span class="sep"> / </span><a href="#2-1-17">摂政の資格</a><span class="sep"> / </span><a href="#2-1-17">皇族であること</a><span class="sep"> / </span><a href="#2-1-17">成年に達していること</a><span class="sep"> / </span><a href="#2-1-17">皇后以外の女子で摂政に任じられるのは配偶者のない者に限る</a><span class="sep"> / </span><a href="#2-1-17">精神上もしくは身体上の重大な欠点のないこと</a><span class="sep"> / </span><a href="#2-1-17">摂政の順序</a><span class="sep"> / </span><a href="#2-1-17">摂政の就任</a><span class="sep"> / </span><a href="#2-1-17">摂政の更迭</a><span class="sep"> / </span><a href="#2-1-17">摂政の終了</a><span class="sep"> / </span><a href="#2-1-17">摂政の責任</a><span class="sep"> / </span><a href="#2-1-17">刑事上の責任</a><span class="sep"> / </span><a href="#2-1-17">民事上の責任</a><span class="sep"> / </span><a href="#2-1-17">監国</a></p>
-<p class="no-indent toc-lv1"><a href="#2-2">第2章　臣民権利義務</a></p>
-<p class="no-indent toc-lv4"><a href="#2-2-18">第18条</a></p>
-<p class="no-indent toc-sub"><a href="#2-2-18">臣民の性質</a><span class="sep"> / </span><a href="#2-2-18">臣民の権利の性質</a><span class="sep"> / </span><a href="#2-2-18">公権と私権</a><span class="sep"> / </span><a href="#2-2-18">臣民の意義</a><span class="sep"> / </span><a href="#2-2-18">皇族</a><span class="sep"> / </span><a href="#2-2-18">華族</a><span class="sep"> / </span><a href="#2-2-18">憲法第二章の表示</a><span class="sep"> / </span><a href="#2-2-18">国籍</a><span class="sep"> / </span><a href="#2-2-18">国籍取得</a><span class="sep"> / </span><a href="#2-2-18">国籍喪失</a><span class="sep"> / </span><a href="#2-2-18">国籍抵触</a></p>
-<p class="no-indent toc-lv4"><a href="#2-2-19">第19条</a></p>
-<p class="no-indent toc-sub"><a href="#2-2-19">ひとしく公務に就く権利</a><span class="sep"> / </span><a href="#2-2-19">帰化人</a><span class="sep"> / </span><a href="#2-2-19">公侯爵</a><span class="sep"> / </span><a href="#2-2-19">外国人</a></p>
-<p class="no-indent toc-lv4"><a href="#2-2-20">第20条</a></p>
-<p class="no-indent toc-sub"><a href="#2-2-20">服従の義務</a><span class="sep"> / </span><a href="#2-2-20">忠実の義務</a><span class="sep"> / </span><a href="#2-2-20">兵役の義務</a></p>
-<p class="no-indent toc-lv4"><a href="#2-2-21">第21条</a></p>
-<p class="no-indent toc-sub"><a href="#2-2-21">納税の義務</a></p>
-<p class="no-indent toc-lv4"><a href="#2-2-22">第22条</a></p>
-<p class="no-indent toc-sub"><a href="#2-2-22">居住および移転の自由権</a><span class="sep"> / </span><a href="#2-2-22">営業の自由</a></p>
-<p class="no-indent toc-lv4"><a href="#2-2-23">第23条</a></p>
-<p class="no-indent toc-sub"><a href="#2-2-23">身体の自由権</a><span class="sep"> / </span><a href="#2-2-23">処罰</a><span class="sep"> / </span><a href="#2-2-23">逮捕・監禁および審問</a></p>
-<p class="no-indent toc-lv4"><a href="#2-2-24">第24条</a></p>
-<p class="no-indent toc-sub"><a href="#2-2-24">法定裁判官の裁判を受ける権利</a><span class="sep"> / </span><a href="#2-2-24">領事裁判</a><span class="sep"> / </span><a href="#2-2-24"><span class="fn" id="fn-ref-45-1" data-fn="45" onclick="openYakuchu(45)">違警罪<sup class="fn-mark">*45</sup></span>即決処分</a><span class="sep"> / </span><a href="#2-2-24">間接国税反則者処分</a><span class="sep"> / </span><a href="#2-2-24">陪審制度</a><span class="sep"> / </span><a href="#2-2-24">軍法会議</a></p>
-<p class="no-indent toc-lv4"><a href="#2-2-25">第25条</a></p>
-<p class="no-indent toc-sub"><a href="#2-2-25">住所の安全権</a></p>
-<p class="no-indent toc-lv4"><a href="#2-2-26">第26条</a></p>
-<p class="no-indent toc-sub"><a href="#2-2-26">信書の秘密を保つ権</a></p>
-<p class="no-indent toc-lv4"><a href="#2-2-27">第27条</a></p>
-<p class="no-indent toc-sub"><a href="#2-2-27">所有権不可侵権</a><span class="sep"> / </span><a href="#2-2-27_m1">本条第2項の処分とは所有権収用のみを指すものであるか</a><span class="sep"> / </span><a href="#2-2-27_m2">命令を以って所有権を制限することは本条に抵触しないか</a><span class="sep"> / </span><a href="#2-2-27">警察処分を以って所有権を制限することはできるか</a><span class="sep"> / </span><a href="#2-2-27_m4">公益の為必要な処分の範囲</a><span class="sep"> / </span><a href="#2-2-27_m5">所有権を侵す場合は補償を与えることを要するか</a><span class="sep"> / </span><a href="#2-2-27_m6">所有権の意義とは</a><span class="sep"> / </span><a href="#2-2-27_m7">公用徴収</a><span class="sep"> / </span><a href="#2-2-27">行政執行</a><span class="sep"> / </span><a href="#2-2-27_m9">徴発</a></p>
-<p class="no-indent toc-lv4"><a href="#2-2-28">第28条</a></p>
-<p class="no-indent toc-sub"><a href="#2-2-28">信教の自由</a></p>
-<p class="no-indent toc-lv4"><a href="#2-2-29">第29条</a></p>
-<p class="no-indent toc-sub"><a href="#2-2-29">意思発表の自由権</a></p>
-<p class="no-indent toc-lv4"><a href="#2-2-30">第30条</a></p>
-<p class="no-indent toc-sub"><a href="#2-2-30">請願権</a><span class="sep"> / </span><a href="#2-2-30">請願令</a><span class="sep"> / </span><a href="#2-2-30">請願と<span class="fn" id="fn-ref-46-1" data-fn="46" onclick="openYakuchu(46)">訴願<sup class="fn-mark">*46</sup></span></a><span class="sep"> / </span><a href="#2-2-30">請願と上奏</a><span class="sep"> / </span><a href="#2-2-30">請願と建議</a></p>
-<p class="no-indent toc-lv4"><a href="#2-2-31">第31条</a></p>
-<p class="no-indent toc-sub"><a href="#2-2-31">非常大権に依拠する臣民の権利の制限</a><span class="sep"> / </span><a href="#2-2-31">非常大権と戒厳</a></p>
-<p class="no-indent toc-lv4"><a href="#2-2-32">第32条</a></p>
-<p class="no-indent toc-sub"><a href="#2-2-32">軍人に対する特別制限</a></p>
-<p class="no-indent toc-lv1"><a href="#2-3">第3章　帝国議会</a></p>
-<p class="no-indent toc-lv4"><a href="#2-3-33">第33条</a></p>
-<p class="no-indent toc-sub"><a href="#2-3-33">帝国議会の性質</a><span class="sep"> / </span><a href="#2-3-33">議会の地位</a><span class="sep"> / </span><a href="#2-3-33">統治権主体説</a><span class="sep"> / </span><a href="#2-3-33">立法権主体説</a><span class="sep"> / </span><a href="#2-3-33">国民代表機関説</a><span class="sep"> / </span><a href="#2-3-33">二院制採用の理由</a></p>
-<p class="no-indent toc-lv4"><a href="#2-3-34">第34条</a></p>
-<p class="no-indent toc-sub"><a href="#2-3-34">貴族院の組織</a><span class="sep"> / </span><a href="#2-3-34">貴族院令</a><span class="sep"> / </span><a href="#2-3-34">貴族院に専属する権限</a></p>
-<p class="no-indent toc-lv4"><a href="#2-3-35">第35条</a></p>
-<p class="no-indent toc-sub"><a href="#2-3-35">貴族院の組織</a><span class="sep"> / </span><a href="#2-3-35">衆議院議院選挙法</a><span class="sep"> / </span><a href="#2-3-35_m1">選挙区</a><span class="sep"> / </span><a href="#2-3-35_m2">選挙権および被選挙権</a><span class="sep"> / </span><a href="#2-3-35_m3">選挙人名簿</a><span class="sep"> / </span><a href="#2-3-35_m4">投票</a><span class="sep"> / </span><a href="#2-3-35_m5">当選</a><span class="sep"> / </span><a href="#2-3-35">議院の任期および再選挙と補欠選挙</a><span class="sep"> / </span><a href="#2-3-35_m7">選挙に関する訴訟</a><span class="sep"> / </span><a href="#2-3-35_m8">選挙運動</a><span class="sep"> / </span><a href="#2-3-35_m9">選挙罰則</a><span class="sep"> / </span><a href="#2-3-35">婦人参政</a><span class="sep"> / </span><a href="#2-3-35">比例選挙</a><span class="sep"> / </span><a href="#2-3-35">議院法</a></p>
-<p class="no-indent toc-lv4"><a href="#2-3-36">第36条</a></p>
-<p class="no-indent toc-sub"><a href="#2-3-36">両議院兼務の制限</a></p>
-<p class="no-indent toc-lv4"><a href="#2-3-37">第37条</a></p>
-<p class="no-indent toc-sub"><a href="#2-3-37">議会の権限</a><span class="sep"> / </span><a href="#2-3-37">法律案の協賛</a><span class="sep"> / </span><a href="#2-3-37">国民一般投票制を採用しない理由</a><span class="sep"> / </span><a href="#2-3-37">協賛と承諾</a><span class="sep"> / </span><a href="#2-3-37">貴族院令の改正増補</a><span class="sep"> / </span><a href="#2-3-37">憲法改正案の議決の性質</a></p>
-<p class="no-indent toc-lv4"><a href="#2-3-38">第38条</a></p>
-<p class="no-indent toc-sub"><a href="#2-3-38">両議院の議決権</a><span class="sep"> / </span><a href="#2-3-38">法律案提出権</a></p>
-<p class="no-indent toc-lv4"><a href="#2-3-39">第39条</a></p>
-<p class="no-indent toc-sub"><a href="#2-3-39">一事不再理</a></p>
-<p class="no-indent toc-lv4"><a href="#2-3-40">第40条</a></p>
-<p class="no-indent toc-sub"><a href="#2-3-40">両議院の建議権</a><span class="sep"> / </span><a href="#2-3-40_m1">法律についての建議</a><span class="sep"> / </span><a href="#2-3-40_m2">法律以外の事項に関する建議</a><span class="sep"> / </span><a href="#2-3-40">政府に対する議院の監視</a><span class="sep"> / </span><a href="#2-3-40_m3">決議</a><span class="sep"> / </span><a href="#2-3-40_m4">質問</a></p>
-<p class="no-indent toc-lv4"><a href="#2-3-41">第41条</a></p>
-<p class="no-indent toc-sub"><a href="#2-3-41">議会の召集</a></p>
-<p class="no-indent toc-lv4"><a href="#2-3-42">第42条</a></p>
-<p class="no-indent toc-sub"><a href="#2-3-42">通常会の会期</a><span class="sep"> / </span><a href="#2-3-42">会期の延長</a></p>
-<p class="no-indent toc-lv4"><a href="#2-3-43">第43条</a></p>
-<p class="no-indent toc-sub"><a href="#2-3-43">臨時会</a></p>
-<p class="no-indent toc-lv4"><a href="#2-3-44">第44条</a></p>
-<p class="no-indent toc-sub"><a href="#2-3-44">両院同時行動の原則</a></p>
-<p class="no-indent toc-lv4"><a href="#2-3-45">第45条</a></p>
-<p class="no-indent toc-sub"><a href="#2-3-45">衆議院の解散</a><span class="sep"> / </span><a href="#2-3-45">解散の効果</a><span class="sep"> / </span><a href="#2-3-45">解散後の議会の性質</a></p>
-<p class="no-indent toc-lv4"><a href="#2-3-46">第46条</a></p>
-<p class="no-indent toc-sub"><a href="#2-3-46">議事定足数</a><span class="sep"> / </span><a href="#2-3-46">議事日程</a></p>
-<p class="no-indent toc-lv4"><a href="#2-3-47">第47条</a></p>
-<p class="no-indent toc-sub"><a href="#2-3-47">表決数</a><span class="sep"> / </span><a href="#2-3-47">議会</a><span class="sep"> / </span><a href="#2-3-47">議案</a><span class="sep"> / </span><a href="#2-3-47">議案の発案</a><span class="sep"> / </span><a href="#2-3-47">議案の撤回および修正</a><span class="sep"> / </span><a href="#2-3-47_m1">委員会</a><span class="sep"> / </span><a href="#2-3-47_m2">委員会の種類</a><span class="sep"> / </span><a href="#2-3-47_m3">委員長</a><span class="sep"> / </span><a href="#2-3-47">委員会審査手続き</a><span class="sep"> / </span><a href="#2-3-47">委員会の継続</a><span class="sep"> / </span><a href="#2-3-47">再議</a></p>
-<p class="no-indent toc-lv4"><a href="#2-3-48">第48条</a></p>
-<p class="no-indent toc-sub"><a href="#2-3-48">会議の公開</a><span class="sep"> / </span><a href="#2-3-48">両院協議会</a></p>
-<p class="no-indent toc-lv4"><a href="#2-3-49">第49条</a></p>
-<p class="no-indent toc-sub"><a href="#2-3-49">両議院の上奏権</a><span class="sep"> / </span><a href="#2-3-49">上奏と奏上</a></p>
-<p class="no-indent toc-lv4"><a href="#2-3-50">第50条</a></p>
-<p class="no-indent toc-sub"><a href="#2-3-50">両議院の請願受理権</a></p>
-<p class="no-indent toc-lv4"><a href="#2-3-51">第51条</a></p>
-<p class="no-indent toc-sub"><a href="#2-3-51">両議院の規則制定権</a><span class="sep"> / </span><a href="#2-3-51">議院の資格審査</a></p>
-<p class="no-indent toc-lv4"><a href="#2-3-52">第52条</a></p>
-<p class="no-indent toc-sub"><a href="#2-3-52">議院の発言表決の自由権</a><span class="sep"> / </span><a href="#2-3-52">政党党議の拘束</a></p>
-<p class="no-indent toc-lv4"><a href="#2-3-53">第53条</a></p>
-<p class="no-indent toc-sub"><a href="#2-3-53">議院の刑法上の特権</a><span class="sep"> / </span><a href="#2-3-53">議院の財産上の特権</a><span class="sep"> / </span><a href="#2-3-53">議院の義務</a><span class="sep"> / </span><a href="#2-3-53_m1">召集に応ずる義務</a><span class="sep"> / </span><a href="#2-3-53_m2">本会議および委員会に出席する義務</a><span class="sep"> / </span><a href="#2-3-53_m3">自己の良心に従い発言表決を為す義務</a><span class="sep"> / </span><a href="#2-3-53_m4">院内整理の権に服従する義務</a><span class="sep"> / </span><a href="#2-3-53">議院の資格消滅</a><span class="sep"> / </span><a href="#2-3-53_m5">死亡</a><span class="sep"> / </span><a href="#2-3-53_m6">任期終了</a><span class="sep"> / </span><a href="#2-3-53_m7">衆議院の解散</a><span class="sep"> / </span><a href="#2-3-53_m8">辞職</a><span class="sep"> / </span><a href="#2-3-53_m9">除名</a><span class="sep"> / </span><a href="#2-3-53_m10">退職</a></p>
-<p class="no-indent toc-lv4"><a href="#2-3-54">第54条</a></p>
-<p class="no-indent toc-sub"><a href="#2-3-54">国務大臣と議会との関係</a></p>
-<p class="no-indent toc-lv1"><a href="#2-4">第4章　国務大臣および枢密顧問</a></p>
-<p class="no-indent toc-lv4"><a href="#2-4-55">第55条</a></p>
-<p class="no-indent toc-sub"><a href="#2-4-55_m1">国務大臣の地位</a><span class="sep"> / </span><a href="#2-4-55_m2"><span class="fn" id="fn-ref-38-1" data-fn="38" onclick="openYakuchu(38)">輔弼<sup class="fn-mark">*38</sup></span>の範囲</a><span class="sep"> / </span><a href="#2-4-55_m3">副署</a><span class="sep"> / </span><a href="#2-4-55_m4">大臣責任</a><span class="sep"> / </span><a href="#2-4-55_m5">大臣責任の根拠</a><span class="sep"> / </span><a href="#2-4-55_m6">大臣責任の性質</a><span class="sep"> / </span><a href="#2-4-55_m7">大臣は何人に対して責任を負うか</a><span class="sep"> / </span><a href="#2-4-55_m8">大臣責任のあり方</a><span class="sep"> / </span><a href="#2-4-55_m9">憲法が特に大臣責任のみについて規定している理由</a><span class="sep"> / </span><a href="#2-4-55_m10">大臣の任免登用</a><span class="sep"> / </span><a href="#2-4-55_m11">政府の意義</a></p>
-<p class="no-indent toc-lv4"><a href="#2-4-56">第56条</a></p>
-<p class="no-indent toc-sub"><a href="#2-4-56">枢密顧問の地位</a><span class="sep"> / </span><a href="#2-4-56">枢密院の組織権限</a><span class="sep"> / </span><a href="#2-4-56">諮詢事項</a><span class="sep"> / </span><a href="#2-4-56_m1">枢密院官制に規定のあるもの</a><span class="sep"> / </span><a href="#2-4-56_m2">皇室典範に規定のあるもの</a><span class="sep"> / </span><a href="#2-4-56_m3">登極令</a><span class="sep"> / </span><a href="#2-4-56">皇族身位令</a><span class="sep"> / </span><a href="#2-4-56">皇室財産令に規定のあるもの</a><span class="sep"> / </span><a href="#2-4-56">国務大臣と枢密顧問との関係</a></p>
-<p class="no-indent toc-lv1"><a href="#2-5">第5章　司法</a></p>
-<p class="no-indent toc-lv4"><a href="#2-5-57">第57条</a></p>
-<p class="no-indent toc-sub"><a href="#2-5-57">司法の観念</a><span class="sep"> / </span><a href="#2-5-57_m1">司法権は裁判所がこれを行う</a><span class="sep"> / </span><a href="#2-5-57_m2">裁判所は天皇の御名において司法権を行う</a><span class="sep"> / </span><a href="#2-5-57_m3">裁判所は法律に依り司法権を行う</a><span class="sep"> / </span><a href="#2-5-57">裁判所の法令審査権</a><span class="sep"> / </span><a href="#2-5-57">裁判所構成法</a><span class="sep"> / </span><a href="#2-5-57">陪審制度</a></p>
-<p class="no-indent toc-lv4"><a href="#2-5-58">第58条</a></p>
-<p class="no-indent toc-sub"><a href="#2-5-58">裁判官の資格および地位</a><span class="sep"> / </span><a href="#2-5-58">司法官定年制</a></p>
-<p class="no-indent toc-lv4"><a href="#2-5-59">第59条</a></p>
-<p class="no-indent toc-sub"><a href="#2-5-59">裁判の公開</a><span class="sep"> / </span><a href="#2-5-59">公開の例外</a></p>
-<p class="no-indent toc-lv4"><a href="#2-5-60">第60条</a></p>
-<p class="no-indent toc-sub"><a href="#2-5-60">特別裁判所</a></p>
-<p class="no-indent toc-lv4"><a href="#2-5-61">第61条</a></p>
-<p class="no-indent toc-sub"><a href="#2-5-61">行政裁判所</a><span class="sep"> / </span><a href="#2-5-61">行政裁判所の組織</a><span class="sep"> / </span><a href="#2-5-61">行政裁判所の権限</a><span class="sep"> / </span><a href="#2-5-61_m1">行政訴訟は行政上の処分に対すること</a><span class="sep"> / </span><a href="#2-5-61_m2">違法の行政処分に対すること</a><span class="sep"> / </span><a href="#2-5-61_m3">権利を傷害した行政処分に対すること</a><span class="sep"> / </span><a href="#2-5-61_m4">行政訴訟事項</a><span class="sep"> / </span><a href="#2-5-61">行政訴訟と訴願</a><span class="sep"> / </span><a href="#2-5-61">権限争議</a></p>
-<p class="no-indent toc-lv1"><a href="#2-6">第6章　会計</a></p>
-<p class="no-indent toc-lv4"><a href="#2-6-62">第62条</a></p>
-<p class="no-indent toc-sub"><a href="#2-6-62">租税</a><span class="sep"> / </span><a href="#2-6-62">課税および税率の変更</a><span class="sep"> / </span><a href="#2-6-62">手数料</a><span class="sep"> / </span><a href="#2-6-62">租債</a><span class="sep"> / </span><a href="#2-6-62">予算外国庫負担の契約</a></p>
-<p class="no-indent toc-lv4"><a href="#2-6-63">第63条</a></p>
-<p class="no-indent toc-sub"><a href="#2-6-63">憲法施行当時の租税の存置</a></p>
-<p class="no-indent toc-lv4"><a href="#2-6-64">第64条</a></p>
-<p class="no-indent toc-sub"><a href="#2-6-64">予算の意義</a><span class="sep"> / </span><a href="#2-6-64">予算の国法上の性質</a><span class="sep"> / </span><a href="#2-6-64">予算は法律であるという説</a><span class="sep"> / </span><a href="#2-6-64">予算は財政事務処理の委任状であるという説</a><span class="sep"> / </span><a href="#2-6-64">予算は議会に対する政府の責任を予め解除するものであるという説</a><span class="sep"> / </span><a href="#2-6-64">予算の効力</a><span class="sep"> / </span><a href="#2-6-64">予算不分割の原則</a><span class="sep"> / </span><a href="#2-6-64">予算の協賛および裁可・公布</a><span class="sep"> / </span><a href="#2-6-64">予算超過または予算外の支出に対する議会の事後承認</a><span class="sep"> / </span><a href="#2-6-64">議会の承諾の性質</a></p>
-<p class="no-indent toc-lv4"><a href="#2-6-65">第65条</a></p>
-<p class="no-indent toc-sub"><a href="#2-6-65">衆議院の予算先議権</a><span class="sep"> / </span><a href="#2-6-65">貴族院の予算修正権</a><span class="sep"> / </span><a href="#2-6-65">予算発案権</a></p>
-<p class="no-indent toc-lv4"><a href="#2-6-66">第66条</a></p>
-<p class="no-indent toc-sub"><a href="#2-6-66">皇室経費</a></p>
-<p class="no-indent toc-lv4"><a href="#2-6-67">第67条</a></p>
-<p class="no-indent toc-sub"><a href="#2-6-67">予算審議権の制限</a><span class="sep"> / </span><a href="#2-6-67">憲法上の大権に基づく既定の歳出</a><span class="sep"> / </span><a href="#2-6-67">法律上の結果による歳出</a><span class="sep"> / </span><a href="#2-6-67">法律上政府の義務に属する歳出</a></p>
-<p class="no-indent toc-lv4"><a href="#2-6-68">第68条</a></p>
-<p class="no-indent toc-sub"><a href="#2-6-68">継続費</a></p>
-<p class="no-indent toc-lv4"><a href="#2-6-69">第69条</a></p>
-<p class="no-indent toc-sub"><a href="#2-6-69">予備費</a></p>
-<p class="no-indent toc-lv4"><a href="#2-6-70">第70条</a></p>
-<p class="no-indent toc-sub"><a href="#2-6-70">財政上の緊急処分</a><span class="sep"> / </span><a href="#2-6-70">緊急勅令と財政緊急処分との差異</a><span class="sep"> / </span><a href="#2-6-70">性質上の差異</a><span class="sep"> / </span><a href="#2-6-70">条件の差異</a><span class="sep"> / </span><a href="#2-6-70">効力上の差異</a><span class="sep"> / </span><a href="#2-6-70">財政緊急処分の条件</a><span class="sep"> / </span><a href="#2-6-70">公共の安全を保持する目的によること</a><span class="sep"> / </span><a href="#2-6-70">帝国議会閉会中であり、かつ内外の情勢に起因して議会召集ができない場合であること</a><span class="sep"> / </span><a href="#2-6-70">緊急の必要があること</a></p>
-<p class="no-indent toc-lv4"><a href="#2-6-71">第71条</a></p>
-<p class="no-indent toc-sub"><a href="#2-6-71">予算不成立</a><span class="sep"> / </span><a href="#2-6-71">不成立の原因</a><span class="sep"> / </span><a href="#2-6-71">前年度予算の施行</a><span class="sep"> / </span><a href="#2-6-71">臨時費と継続費</a><span class="sep"> / </span><a href="#2-6-71">実行予算と追加予算</a></p>
-<p class="no-indent toc-lv4"><a href="#2-6-72">第72条</a></p>
-<p class="no-indent toc-sub"><a href="#2-6-72_m1">決算</a><span class="sep"> / </span><a href="#2-6-72">会計検査院の地位</a><span class="sep"> / </span><a href="#2-6-72">会計検査院の組織</a><span class="sep"> / </span><a href="#2-6-72">会計検査院の権限　</a></p>
-<p class="no-indent toc-lv1"><a href="#2-7">第7章　補則</a></p>
-<p class="no-indent toc-lv4"><a href="#2-7-73">第73条</a></p>
-<p class="no-indent toc-sub"><a href="#2-7-73">憲法改正</a><span class="sep"> / </span><a href="#2-7-73">憲法改正の発案権</a><span class="sep"> / </span><a href="#2-7-73">改正案議事手続き</a><span class="sep"> / </span><a href="#2-7-73">議事定足数</a><span class="sep"> / </span><a href="#2-7-73">議決に要する投票</a><span class="sep"> / </span><a href="#2-7-73">改正の時期</a><span class="sep"> / </span><a href="#2-7-73">憲法改正に関する問題</a><span class="sep"> / </span><a href="#2-7-73">議会は憲法の改正案を修正して決議することができるか</a><span class="sep"> / </span><a href="#2-7-73">憲法改正案は裁可を要するか</a><span class="sep"> / </span><a href="#2-7-73">憲法は議会の議決に反して改正することができるか</a></p>
-<p class="no-indent toc-lv4"><a href="#2-7-74">第74条</a></p>
-<p class="no-indent toc-sub"><a href="#2-7-74">皇室典範の改正</a><span class="sep"> / </span><a href="#2-7-74">皇室典範と憲法との関係</a></p>
-<p class="no-indent toc-lv4"><a href="#2-7-75">第75条</a></p>
-<p class="no-indent toc-sub"><a href="#2-7-75">憲法および皇室典範改正の制限</a></p>
-<p class="no-indent toc-lv4"><a href="#2-7-76">第76条</a></p>
-<p class="no-indent toc-sub"><a href="#2-7-76">憲法施行前における法令および契約の効力</a></p>
-<p class="no-indent toc-lv0"><a href="#conclusion">結語</a></p>
-</div>
-<div class="toc-section" style="margin-top: 16px; padding-top: 8px; border-top: 1px dashed #b0a080;">
-<p class="no-indent toc-lv3"><a href="#chart-kenpo1">図表1</a> <span class="sep">/</span> <a href="#chart-kenpo2">図表2</a> <span class="sep">/</span> <a href="#chart-kenpo3">図表3</a> <span class="sep">/</span> <a href="#chart-kenpo4">図表4</a> <span class="sep">/</span> <a href="#chart-kenpo5">図表5</a> <span class="sep">/</span> <a href="#chart-kenpo6">図表6</a></p>
-</div>
+<div class="toc-tree">
+<ul>
+<li class="toc-lv0"><a href="#1">第1編　緒論</a>
+<ul>
+</li>
+<li class="toc-lv1"><a href="#1-1">第1章　国家</a>
+<ul>
+</li>
+<li class="toc-lv2"><a href="#1-1-1">第1節　国家の観念</a>
+<ul>
+</li>
+<li class="toc-lv3"><a href="#1-1-1-1">第1款　国家の社会的観念</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#1-1-1-1">国家の構成三要素</a><span class="sep"> / </span><a href="#1-1-1-1">人民・領域・統治権</a><span class="sep"> / </span><a href="#1-1-1-1_m4">統治権の強制性</a><span class="sep"> / </span><a href="#1-1-1-1_m5">統治権支配の範囲</a><span class="sep"> / </span><a href="#1-1-1-1_m6">統治権の不可分性</a><span class="sep"> / </span><a href="#1-1-1-1_m7">統治権の固有性</a><span class="sep"> / </span><a href="#1-1-1-1_m8">統治権と主権との関係</a>
+</li></ul>
+<li class="toc-lv3"><a href="#1-1-1-2">第2款　国家の法理的観念</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#1-1-1-2_m1">国家は統治権の主体である</a><span class="sep"> / </span><a href="#1-1-1-2_m2">国家は公法人である</a>
+</li></ul>
+</li></ul>
+<li class="toc-lv2"><a href="#1-1-2">第2節　国家存在の意義</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#1-1-2_m1">国家の目的</a><span class="sep"> / </span><a href="#1-1-2_m2">国家の活動</a><span class="sep"> / </span><a href="#1-1-2_m3">国家生存の意義</a>
+</li></ul>
+<li class="toc-lv2"><a href="#1-1-3">第3節　国体と政体</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#1-1-3_m1">発生した理由が異なる</a><span class="sep"> / </span><a href="#1-1-3_m2">結果が異なる</a>
+</li>
+<li class="toc-lv3"><a href="#1-1-3-1">第1款　国体</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#1-1-3-1_m1">共和国体</a><span class="sep"> / </span><a href="#1-1-3-1_m2">貴族国体</a><span class="sep"> / </span><a href="#1-1-3-1_m3">普通君主国体</a><span class="sep"> / </span><a href="#1-1-3-1_m4">真正君主国体</a>
+</li></ul>
+<li class="toc-lv3"><a href="#1-1-3-2">第2款　政体</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#1-1-3-2_m1">専制政体</a><span class="sep"> / </span><a href="#1-1-3-2_m2">立憲政体</a><span class="sep"> / </span><a href="#1-1-3-2_m3">三権分立</a><span class="sep"> / </span><a href="#1-1-3-2_m4">民選議会</a>
+</li></ul>
+</li></ul>
+</li></ul>
+<li class="toc-lv1"><a href="#1-2">第2章　憲法</a>
+<ul>
+</li>
+<li class="toc-lv2"><a href="#1-2-1">第1節　法の観念</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#1-2-1_m1">法は規則</a><span class="sep"> / </span><a href="#1-2-1_m2">法は共同生活の規則</a><span class="sep"> / </span><a href="#1-2-1_m3">法は統治権者の命令</a>
+</li></ul>
+<li class="toc-lv2"><a href="#1-2-2">第2節　憲法の意義および性質</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#1-2-2_m1">憲法は統治権の所在を宣明する</a><span class="sep"> / </span><a href="#1-2-2_m2">憲法は統治権行使の形式を規定する</a><span class="sep"> / </span><a href="#1-2-2_m3">憲法は国家の構成要素について規定する</a>
+</li></ul>
+<li class="toc-lv2"><a href="#1-2-3">第3節　憲法の効力</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#1-2-3_m1">憲法の他の法令に対する効力</a><span class="sep"> / </span><a href="#1-2-3">憲法と皇室典範</a><span class="sep"> / </span><a href="#1-2-3_m2">憲法の時に関する効力</a><span class="sep"> / </span><a href="#1-2-3_m3">憲法の人に対する効力</a>
+</li>
+<li class="toc-sub-item"><a href="#1-2-3_m4">憲法の場所に関する効力</a><span class="sep"> / </span><a href="#1-2-3">新領土に関する憲法の効力</a>
+</li></ul>
+<li class="toc-lv2"><a href="#1-2-4">第4節　憲法の解釈</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#1-2-4">憲法の解釈は天皇の大権に属する</a>
+</li></ul>
+<li class="toc-lv2"><a href="#1-2-6">第6節　帝国憲法の特色</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#1-2-6_m1">解釈権者の特有性</a><span class="sep"> / </span><a href="#1-2-6_m2">憲法改正の発案権者の特有性</a><span class="sep"> / </span><a href="#1-2-6_m3">憲法の規定外の統治作用の総攬者の特有性</a>
+</li></ul>
+</li></ul>
+</li></ul>
+<li class="toc-lv0"><a href="#2">第2編　本論</a>
+<ul>
+</li>
+<li class="toc-lv1"><a href="#2-1">第1章　天皇</a>
+<ul>
+</li>
+<li class="toc-lv2"><a href="#2-1-1">第1条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-1-1">我が国の国体</a><span class="sep"> / </span><a href="#2-1-1">国体と憲法との関係</a><span class="sep"> / </span><a href="#2-1-1">万世一系の法理的観念</a><span class="sep"> / </span><a href="#2-1-1">統治権効果の帰属</a><span class="sep"> / </span><a href="#2-1-1">天皇は統治機関ではない</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-1-2">第2条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-1-2_m9">皇位継承の性質</a><span class="sep"> / </span><a href="#2-1-2_m10">皇位継承の原因</a><span class="sep"> / </span><a href="#2-1-2_m11">皇位継承の資格</a><span class="sep"> / </span><a href="#2-1-2_m3">皇位継承の順序</a><span class="sep"> / </span><a href="#2-1-2">皇太子・皇太孫</a><span class="sep"> / </span><a href="#2-1-2">胎中皇子</a><span class="sep"> / </span><a href="#2-1-2"><span class="fn" id="fn-ref-32-1" data-fn="32" onclick="openYakuchu(32)">践祚<sup class="fn-mark">*32</sup></span></a><span class="sep"> / </span><a href="#2-1-2">元号</a><span class="sep"> / </span><a href="#2-1-2">即位の大礼</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-1-3">第3条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-1-3">自然人としての天皇の特権</a><span class="sep"> / </span><a href="#2-1-3">不可侵権</a><span class="sep"> / </span><a href="#2-1-3_m1">栄誉権</a><span class="sep"> / </span><a href="#2-1-3_m7">財産上の特権</a><span class="sep"> / </span><a href="#2-1-3_m10">皇室首長権</a><span class="sep"> / </span><a href="#2-1-3">天皇一身上の特権と天皇の憲法上の大権</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-1-4">第4条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-1-4">元首および総攬の意義</a><span class="sep"> / </span><a href="#2-1-4">我が国の政体</a><span class="sep"> / </span><a href="#2-1-4">立憲政体と専制政体との利害</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-1-5">第5条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-1-5">天皇の立法権</a><span class="sep"> / </span><a href="#2-1-5">本条立法の意義</a><span class="sep"> / </span><a href="#2-1-5">協賛の意義</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-1-6">第6条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-1-6">我が国統治作用の形式</a><span class="sep"> / </span><a href="#2-1-6">大権作用</a><span class="sep"> / </span><a href="#2-1-6">憲法上の大権作用は機関に委任することができるのか</a><span class="sep"> / </span><a href="#2-1-6_m1">法律の裁可</a><span class="sep"> / </span><a href="#2-1-6">法律の公布</a><span class="sep"> / </span><a href="#2-1-6">法律施行時期</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-1-7">第7条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-1-7">帝国議会の召集・開会・閉会・停会および衆議院の解散権</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-1-8">第8条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-1-8_m5">緊急勅令</a><span class="sep"> / </span><a href="#2-1-8_m6">緊急勅令の要件</a><span class="sep"> / </span><a href="#2-1-8_m1">公共の安全を保持しまたはその災厄を避けるため必要なことを要する</a><span class="sep"> / </span><a href="#2-1-8_m2">帝国議会閉会中であることを要する</a><span class="sep"> / </span><a href="#2-1-8_m3">緊急の必要あることを要する</a><span class="sep"> / </span><a href="#2-1-8_m7">緊急勅令の承諾</a><span class="sep"> / </span><a href="#2-1-8_m8">緊急勅令に関する疑義</a><span class="sep"> / </span><a href="#2-1-8_m4">議会の不承諾とは不承諾の議決があるときに限るの意味であるか、承諾の議決のない場合をも含むの意味か</a><span class="sep"> / </span><a href="#2-1-8">緊急勅令は次の会期の議会開会前に廃止できるのか</a><span class="sep"> / </span><a href="#2-1-8">緊急勅令は次の会期の議会の開会中に廃止できるのか</a><span class="sep"> / </span><a href="#2-1-8">緊急勅令を以って既成の法律を改廃した場合、その勅令が議会の不承諾により失効したときには、当然に原規定に復するのか</a><span class="sep"> / </span><a href="#2-1-8">緊急勅令の他の法律に対する効力はどうか</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-1-9">第9条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-1-9">命令大権</a><span class="sep"> / </span><a href="#2-1-9_m1">執行命令</a><span class="sep"> / </span><a href="#2-1-9_m2">独立命令</a><span class="sep"> / </span><a href="#2-1-9_m3">委任命令</a><span class="sep"> / </span><a href="#2-1-9">複委任の制限</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-1-10">第10条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-1-10">官制</a><span class="sep"> / </span><a href="#2-1-10">官吏の任免および俸給</a><span class="sep"> / </span><a href="#2-1-10">官吏任命の性質</a><span class="sep"> / </span><a href="#2-1-10">官吏任命権</a><span class="sep"> / </span><a href="#2-1-10">俸給</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-1-11">第11条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-1-11">陸海軍の統帥</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-1-12">第12条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-1-12">陸海軍の編成および常備兵額の確定</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-1-13">第13条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-1-13">宣戦講和</a><span class="sep"> / </span><a href="#2-1-13">条約・条約締結の手続き</a><span class="sep"> / </span><a href="#2-1-13">条約の効力</a><span class="sep"> / </span><a href="#2-1-13">秘密条約</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-1-14">第14条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-1-14">戒厳宣告</a><span class="sep"> / </span><a href="#2-1-14">非常大権</a><span class="sep"> / </span><a href="#2-1-14">戒厳の要件</a><span class="sep"> / </span><a href="#2-1-14">戒厳の効力</a><span class="sep"> / </span><a href="#2-1-14">戒厳宣告の委任</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-1-15">第15条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-1-15">栄典授与</a><span class="sep"> / </span><a href="#2-1-15">王族および公族</a><span class="sep"> / </span><a href="#2-1-15">華族</a><span class="sep"> / </span><a href="#2-1-15">朝鮮貴族</a><span class="sep"> / </span><a href="#2-1-15">位階</a><span class="sep"> / </span><a href="#2-1-15">勲章</a><span class="sep"> / </span><a href="#2-1-15">褒章および褒状</a><span class="sep"> / </span><a href="#2-1-15">記章</a><span class="sep"> / </span><a href="#2-1-15">元帥</a><span class="sep"> / </span><a href="#2-1-15">金銀木杯および金円</a><span class="sep"> / </span><a href="#2-1-15">学位</a><span class="sep"> / </span><a href="#2-1-15">神社社格の昇進・贈位および贈官</a><span class="sep"> / </span><a href="#2-1-15">栄典授与の性質</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-1-16">第16条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-1-16">恩赦</a><span class="sep"> / </span><a href="#2-1-16">大赦</a><span class="sep"> / </span><a href="#2-1-16">特赦</a><span class="sep"> / </span><a href="#2-1-16">減刑</a><span class="sep"> / </span><a href="#2-1-16">復権</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-1-17">第17条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-1-17">摂政</a><span class="sep"> / </span><a href="#2-1-17">摂政の地位</a><span class="sep"> / </span><a href="#2-1-17">摂政の設置</a><span class="sep"> / </span><a href="#2-1-17">天皇がまだ成年に達していないとき</a><span class="sep"> / </span><a href="#2-1-17">天皇の長期間の故障により大政を親しくすることができないとき</a><span class="sep"> / </span><a href="#2-1-17">摂政の資格</a><span class="sep"> / </span><a href="#2-1-17">皇族であること</a><span class="sep"> / </span><a href="#2-1-17">成年に達していること</a><span class="sep"> / </span><a href="#2-1-17">皇后以外の女子で摂政に任じられるのは配偶者のない者に限る</a><span class="sep"> / </span><a href="#2-1-17">精神上もしくは身体上の重大な欠点のないこと</a><span class="sep"> / </span><a href="#2-1-17">摂政の順序</a><span class="sep"> / </span><a href="#2-1-17">摂政の就任</a><span class="sep"> / </span><a href="#2-1-17">摂政の更迭</a><span class="sep"> / </span><a href="#2-1-17">摂政の終了</a><span class="sep"> / </span><a href="#2-1-17">摂政の責任</a><span class="sep"> / </span><a href="#2-1-17">刑事上の責任</a><span class="sep"> / </span><a href="#2-1-17">民事上の責任</a><span class="sep"> / </span><a href="#2-1-17">監国</a>
+</li></ul>
+</li></ul>
+<li class="toc-lv1"><a href="#2-2">第2章　臣民権利義務</a>
+<ul>
+</li>
+<li class="toc-lv2"><a href="#2-2-18">第18条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-2-18">臣民の性質</a><span class="sep"> / </span><a href="#2-2-18">臣民の権利の性質</a><span class="sep"> / </span><a href="#2-2-18">公権と私権</a><span class="sep"> / </span><a href="#2-2-18">臣民の意義</a><span class="sep"> / </span><a href="#2-2-18">皇族</a><span class="sep"> / </span><a href="#2-2-18">華族</a><span class="sep"> / </span><a href="#2-2-18">憲法第二章の表示</a><span class="sep"> / </span><a href="#2-2-18">国籍</a><span class="sep"> / </span><a href="#2-2-18">国籍取得</a><span class="sep"> / </span><a href="#2-2-18">国籍喪失</a><span class="sep"> / </span><a href="#2-2-18">国籍抵触</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-2-19">第19条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-2-19">ひとしく公務に就く権利</a><span class="sep"> / </span><a href="#2-2-19">帰化人</a><span class="sep"> / </span><a href="#2-2-19">公侯爵</a><span class="sep"> / </span><a href="#2-2-19">外国人</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-2-20">第20条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-2-20">服従の義務</a><span class="sep"> / </span><a href="#2-2-20">忠実の義務</a><span class="sep"> / </span><a href="#2-2-20">兵役の義務</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-2-21">第21条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-2-21">納税の義務</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-2-22">第22条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-2-22">居住および移転の自由権</a><span class="sep"> / </span><a href="#2-2-22">営業の自由</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-2-23">第23条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-2-23">身体の自由権</a><span class="sep"> / </span><a href="#2-2-23">処罰</a><span class="sep"> / </span><a href="#2-2-23">逮捕・監禁および審問</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-2-24">第24条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-2-24">法定裁判官の裁判を受ける権利</a><span class="sep"> / </span><a href="#2-2-24">領事裁判</a><span class="sep"> / </span><a href="#2-2-24"><span class="fn" id="fn-ref-45-1" data-fn="45" onclick="openYakuchu(45)">違警罪<sup class="fn-mark">*45</sup></span>即決処分</a><span class="sep"> / </span><a href="#2-2-24">間接国税反則者処分</a><span class="sep"> / </span><a href="#2-2-24">陪審制度</a><span class="sep"> / </span><a href="#2-2-24">軍法会議</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-2-25">第25条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-2-25">住所の安全権</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-2-26">第26条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-2-26">信書の秘密を保つ権</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-2-27">第27条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-2-27">所有権不可侵権</a><span class="sep"> / </span><a href="#2-2-27_m1">本条第2項の処分とは所有権収用のみを指すものであるか</a><span class="sep"> / </span><a href="#2-2-27_m2">命令を以って所有権を制限することは本条に抵触しないか</a><span class="sep"> / </span><a href="#2-2-27">警察処分を以って所有権を制限することはできるか</a><span class="sep"> / </span><a href="#2-2-27_m4">公益の為必要な処分の範囲</a><span class="sep"> / </span><a href="#2-2-27_m5">所有権を侵す場合は補償を与えることを要するか</a><span class="sep"> / </span><a href="#2-2-27_m6">所有権の意義とは</a><span class="sep"> / </span><a href="#2-2-27_m7">公用徴収</a><span class="sep"> / </span><a href="#2-2-27">行政執行</a><span class="sep"> / </span><a href="#2-2-27_m9">徴発</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-2-28">第28条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-2-28">信教の自由</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-2-29">第29条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-2-29">意思発表の自由権</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-2-30">第30条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-2-30">請願権</a><span class="sep"> / </span><a href="#2-2-30">請願令</a><span class="sep"> / </span><a href="#2-2-30">請願と<span class="fn" id="fn-ref-46-1" data-fn="46" onclick="openYakuchu(46)">訴願<sup class="fn-mark">*46</sup></span></a><span class="sep"> / </span><a href="#2-2-30">請願と上奏</a><span class="sep"> / </span><a href="#2-2-30">請願と建議</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-2-31">第31条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-2-31">非常大権に依拠する臣民の権利の制限</a><span class="sep"> / </span><a href="#2-2-31">非常大権と戒厳</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-2-32">第32条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-2-32">軍人に対する特別制限</a>
+</li></ul>
+</li></ul>
+<li class="toc-lv1"><a href="#2-3">第3章　帝国議会</a>
+<ul>
+</li>
+<li class="toc-lv2"><a href="#2-3-33">第33条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-3-33">帝国議会の性質</a><span class="sep"> / </span><a href="#2-3-33">議会の地位</a><span class="sep"> / </span><a href="#2-3-33">統治権主体説</a><span class="sep"> / </span><a href="#2-3-33">立法権主体説</a><span class="sep"> / </span><a href="#2-3-33">国民代表機関説</a><span class="sep"> / </span><a href="#2-3-33">二院制採用の理由</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-3-34">第34条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-3-34">貴族院の組織</a><span class="sep"> / </span><a href="#2-3-34">貴族院令</a><span class="sep"> / </span><a href="#2-3-34">貴族院に専属する権限</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-3-35">第35条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-3-35">貴族院の組織</a><span class="sep"> / </span><a href="#2-3-35">衆議院議院選挙法</a><span class="sep"> / </span><a href="#2-3-35_m1">選挙区</a><span class="sep"> / </span><a href="#2-3-35_m2">選挙権および被選挙権</a><span class="sep"> / </span><a href="#2-3-35_m3">選挙人名簿</a><span class="sep"> / </span><a href="#2-3-35_m4">投票</a><span class="sep"> / </span><a href="#2-3-35_m5">当選</a><span class="sep"> / </span><a href="#2-3-35">議院の任期および再選挙と補欠選挙</a><span class="sep"> / </span><a href="#2-3-35_m7">選挙に関する訴訟</a><span class="sep"> / </span><a href="#2-3-35_m8">選挙運動</a><span class="sep"> / </span><a href="#2-3-35_m9">選挙罰則</a><span class="sep"> / </span><a href="#2-3-35">婦人参政</a><span class="sep"> / </span><a href="#2-3-35">比例選挙</a><span class="sep"> / </span><a href="#2-3-35">議院法</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-3-36">第36条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-3-36">両議院兼務の制限</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-3-37">第37条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-3-37">議会の権限</a><span class="sep"> / </span><a href="#2-3-37">法律案の協賛</a><span class="sep"> / </span><a href="#2-3-37">国民一般投票制を採用しない理由</a><span class="sep"> / </span><a href="#2-3-37">協賛と承諾</a><span class="sep"> / </span><a href="#2-3-37">貴族院令の改正増補</a><span class="sep"> / </span><a href="#2-3-37">憲法改正案の議決の性質</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-3-38">第38条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-3-38">両議院の議決権</a><span class="sep"> / </span><a href="#2-3-38">法律案提出権</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-3-39">第39条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-3-39">一事不再理</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-3-40">第40条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-3-40">両議院の建議権</a><span class="sep"> / </span><a href="#2-3-40_m1">法律についての建議</a><span class="sep"> / </span><a href="#2-3-40_m2">法律以外の事項に関する建議</a><span class="sep"> / </span><a href="#2-3-40">政府に対する議院の監視</a><span class="sep"> / </span><a href="#2-3-40_m3">決議</a><span class="sep"> / </span><a href="#2-3-40_m4">質問</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-3-41">第41条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-3-41">議会の召集</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-3-42">第42条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-3-42">通常会の会期</a><span class="sep"> / </span><a href="#2-3-42">会期の延長</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-3-43">第43条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-3-43">臨時会</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-3-44">第44条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-3-44">両院同時行動の原則</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-3-45">第45条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-3-45">衆議院の解散</a><span class="sep"> / </span><a href="#2-3-45">解散の効果</a><span class="sep"> / </span><a href="#2-3-45">解散後の議会の性質</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-3-46">第46条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-3-46">議事定足数</a><span class="sep"> / </span><a href="#2-3-46">議事日程</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-3-47">第47条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-3-47">表決数</a><span class="sep"> / </span><a href="#2-3-47">議会</a><span class="sep"> / </span><a href="#2-3-47">議案</a><span class="sep"> / </span><a href="#2-3-47">議案の発案</a><span class="sep"> / </span><a href="#2-3-47">議案の撤回および修正</a><span class="sep"> / </span><a href="#2-3-47_m1">委員会</a><span class="sep"> / </span><a href="#2-3-47_m2">委員会の種類</a><span class="sep"> / </span><a href="#2-3-47_m3">委員長</a><span class="sep"> / </span><a href="#2-3-47">委員会審査手続き</a><span class="sep"> / </span><a href="#2-3-47">委員会の継続</a><span class="sep"> / </span><a href="#2-3-47">再議</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-3-48">第48条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-3-48">会議の公開</a><span class="sep"> / </span><a href="#2-3-48">両院協議会</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-3-49">第49条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-3-49">両議院の上奏権</a><span class="sep"> / </span><a href="#2-3-49">上奏と奏上</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-3-50">第50条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-3-50">両議院の請願受理権</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-3-51">第51条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-3-51">両議院の規則制定権</a><span class="sep"> / </span><a href="#2-3-51">議院の資格審査</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-3-52">第52条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-3-52">議院の発言表決の自由権</a><span class="sep"> / </span><a href="#2-3-52">政党党議の拘束</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-3-53">第53条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-3-53">議院の刑法上の特権</a><span class="sep"> / </span><a href="#2-3-53">議院の財産上の特権</a><span class="sep"> / </span><a href="#2-3-53">議院の義務</a><span class="sep"> / </span><a href="#2-3-53_m1">召集に応ずる義務</a><span class="sep"> / </span><a href="#2-3-53_m2">本会議および委員会に出席する義務</a><span class="sep"> / </span><a href="#2-3-53_m3">自己の良心に従い発言表決を為す義務</a><span class="sep"> / </span><a href="#2-3-53_m4">院内整理の権に服従する義務</a><span class="sep"> / </span><a href="#2-3-53">議院の資格消滅</a><span class="sep"> / </span><a href="#2-3-53_m5">死亡</a><span class="sep"> / </span><a href="#2-3-53_m6">任期終了</a><span class="sep"> / </span><a href="#2-3-53_m7">衆議院の解散</a><span class="sep"> / </span><a href="#2-3-53_m8">辞職</a><span class="sep"> / </span><a href="#2-3-53_m9">除名</a><span class="sep"> / </span><a href="#2-3-53_m10">退職</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-3-54">第54条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-3-54">国務大臣と議会との関係</a>
+</li></ul>
+</li></ul>
+<li class="toc-lv1"><a href="#2-4">第4章　国務大臣および枢密顧問</a>
+<ul>
+</li>
+<li class="toc-lv2"><a href="#2-4-55">第55条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-4-55_m1">国務大臣の地位</a><span class="sep"> / </span><a href="#2-4-55_m2"><span class="fn" id="fn-ref-38-1" data-fn="38" onclick="openYakuchu(38)">輔弼<sup class="fn-mark">*38</sup></span>の範囲</a><span class="sep"> / </span><a href="#2-4-55_m3">副署</a><span class="sep"> / </span><a href="#2-4-55_m4">大臣責任</a><span class="sep"> / </span><a href="#2-4-55_m5">大臣責任の根拠</a><span class="sep"> / </span><a href="#2-4-55_m6">大臣責任の性質</a><span class="sep"> / </span><a href="#2-4-55_m7">大臣は何人に対して責任を負うか</a><span class="sep"> / </span><a href="#2-4-55_m8">大臣責任のあり方</a><span class="sep"> / </span><a href="#2-4-55_m9">憲法が特に大臣責任のみについて規定している理由</a><span class="sep"> / </span><a href="#2-4-55_m10">大臣の任免登用</a><span class="sep"> / </span><a href="#2-4-55_m11">政府の意義</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-4-56">第56条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-4-56">枢密顧問の地位</a><span class="sep"> / </span><a href="#2-4-56">枢密院の組織権限</a><span class="sep"> / </span><a href="#2-4-56">諮詢事項</a><span class="sep"> / </span><a href="#2-4-56_m1">枢密院官制に規定のあるもの</a><span class="sep"> / </span><a href="#2-4-56_m2">皇室典範に規定のあるもの</a><span class="sep"> / </span><a href="#2-4-56_m3">登極令</a><span class="sep"> / </span><a href="#2-4-56">皇族身位令</a><span class="sep"> / </span><a href="#2-4-56">皇室財産令に規定のあるもの</a><span class="sep"> / </span><a href="#2-4-56">国務大臣と枢密顧問との関係</a>
+</li></ul>
+</li></ul>
+<li class="toc-lv1"><a href="#2-5">第5章　司法</a>
+<ul>
+</li>
+<li class="toc-lv2"><a href="#2-5-57">第57条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-5-57">司法の観念</a><span class="sep"> / </span><a href="#2-5-57_m1">司法権は裁判所がこれを行う</a><span class="sep"> / </span><a href="#2-5-57_m2">裁判所は天皇の御名において司法権を行う</a><span class="sep"> / </span><a href="#2-5-57_m3">裁判所は法律に依り司法権を行う</a><span class="sep"> / </span><a href="#2-5-57">裁判所の法令審査権</a><span class="sep"> / </span><a href="#2-5-57">裁判所構成法</a><span class="sep"> / </span><a href="#2-5-57">陪審制度</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-5-58">第58条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-5-58">裁判官の資格および地位</a><span class="sep"> / </span><a href="#2-5-58">司法官定年制</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-5-59">第59条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-5-59">裁判の公開</a><span class="sep"> / </span><a href="#2-5-59">公開の例外</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-5-60">第60条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-5-60">特別裁判所</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-5-61">第61条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-5-61">行政裁判所</a><span class="sep"> / </span><a href="#2-5-61">行政裁判所の組織</a><span class="sep"> / </span><a href="#2-5-61">行政裁判所の権限</a><span class="sep"> / </span><a href="#2-5-61_m1">行政訴訟は行政上の処分に対すること</a><span class="sep"> / </span><a href="#2-5-61_m2">違法の行政処分に対すること</a><span class="sep"> / </span><a href="#2-5-61_m3">権利を傷害した行政処分に対すること</a><span class="sep"> / </span><a href="#2-5-61_m4">行政訴訟事項</a><span class="sep"> / </span><a href="#2-5-61">行政訴訟と訴願</a><span class="sep"> / </span><a href="#2-5-61">権限争議</a>
+</li></ul>
+</li></ul>
+<li class="toc-lv1"><a href="#2-6">第6章　会計</a>
+<ul>
+</li>
+<li class="toc-lv2"><a href="#2-6-62">第62条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-6-62">租税</a><span class="sep"> / </span><a href="#2-6-62">課税および税率の変更</a><span class="sep"> / </span><a href="#2-6-62">手数料</a><span class="sep"> / </span><a href="#2-6-62">租債</a><span class="sep"> / </span><a href="#2-6-62">予算外国庫負担の契約</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-6-63">第63条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-6-63">憲法施行当時の租税の存置</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-6-64">第64条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-6-64">予算の意義</a><span class="sep"> / </span><a href="#2-6-64">予算の国法上の性質</a><span class="sep"> / </span><a href="#2-6-64">予算は法律であるという説</a><span class="sep"> / </span><a href="#2-6-64">予算は財政事務処理の委任状であるという説</a><span class="sep"> / </span><a href="#2-6-64">予算は議会に対する政府の責任を予め解除するものであるという説</a><span class="sep"> / </span><a href="#2-6-64">予算の効力</a><span class="sep"> / </span><a href="#2-6-64">予算不分割の原則</a><span class="sep"> / </span><a href="#2-6-64">予算の協賛および裁可・公布</a><span class="sep"> / </span><a href="#2-6-64">予算超過または予算外の支出に対する議会の事後承認</a><span class="sep"> / </span><a href="#2-6-64">議会の承諾の性質</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-6-65">第65条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-6-65">衆議院の予算先議権</a><span class="sep"> / </span><a href="#2-6-65">貴族院の予算修正権</a><span class="sep"> / </span><a href="#2-6-65">予算発案権</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-6-66">第66条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-6-66">皇室経費</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-6-67">第67条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-6-67">予算審議権の制限</a><span class="sep"> / </span><a href="#2-6-67">憲法上の大権に基づく既定の歳出</a><span class="sep"> / </span><a href="#2-6-67">法律上の結果による歳出</a><span class="sep"> / </span><a href="#2-6-67">法律上政府の義務に属する歳出</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-6-68">第68条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-6-68">継続費</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-6-69">第69条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-6-69">予備費</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-6-70">第70条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-6-70">財政上の緊急処分</a><span class="sep"> / </span><a href="#2-6-70">緊急勅令と財政緊急処分との差異</a><span class="sep"> / </span><a href="#2-6-70">性質上の差異</a><span class="sep"> / </span><a href="#2-6-70">条件の差異</a><span class="sep"> / </span><a href="#2-6-70">効力上の差異</a><span class="sep"> / </span><a href="#2-6-70">財政緊急処分の条件</a><span class="sep"> / </span><a href="#2-6-70">公共の安全を保持する目的によること</a><span class="sep"> / </span><a href="#2-6-70">帝国議会閉会中であり、かつ内外の情勢に起因して議会召集ができない場合であること</a><span class="sep"> / </span><a href="#2-6-70">緊急の必要があること</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-6-71">第71条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-6-71">予算不成立</a><span class="sep"> / </span><a href="#2-6-71">不成立の原因</a><span class="sep"> / </span><a href="#2-6-71">前年度予算の施行</a><span class="sep"> / </span><a href="#2-6-71">臨時費と継続費</a><span class="sep"> / </span><a href="#2-6-71">実行予算と追加予算</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-6-72">第72条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-6-72_m1">決算</a><span class="sep"> / </span><a href="#2-6-72">会計検査院の地位</a><span class="sep"> / </span><a href="#2-6-72">会計検査院の組織</a><span class="sep"> / </span><a href="#2-6-72">会計検査院の権限　</a>
+</li></ul>
+</li></ul>
+<li class="toc-lv1"><a href="#2-7">第7章　補則</a>
+<ul>
+</li>
+<li class="toc-lv2"><a href="#2-7-73">第73条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-7-73">憲法改正</a><span class="sep"> / </span><a href="#2-7-73">憲法改正の発案権</a><span class="sep"> / </span><a href="#2-7-73">改正案議事手続き</a><span class="sep"> / </span><a href="#2-7-73">議事定足数</a><span class="sep"> / </span><a href="#2-7-73">議決に要する投票</a><span class="sep"> / </span><a href="#2-7-73">改正の時期</a><span class="sep"> / </span><a href="#2-7-73">憲法改正に関する問題</a><span class="sep"> / </span><a href="#2-7-73">議会は憲法の改正案を修正して決議することができるか</a><span class="sep"> / </span><a href="#2-7-73">憲法改正案は裁可を要するか</a><span class="sep"> / </span><a href="#2-7-73">憲法は議会の議決に反して改正することができるか</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-7-74">第74条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-7-74">皇室典範の改正</a><span class="sep"> / </span><a href="#2-7-74">皇室典範と憲法との関係</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-7-75">第75条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-7-75">憲法および皇室典範改正の制限</a>
+</li></ul>
+<li class="toc-lv2"><a href="#2-7-76">第76条</a>
+<ul>
+</li>
+<li class="toc-sub-item"><a href="#2-7-76">憲法施行前における法令および契約の効力</a>
+</li></ul>
+</li></ul>
+</li></ul>
+<li class="toc-lv0"><a href="#conclusion">結語</a>
+</li></ul>
+<div class="toc-charts"><a href="#chart-kenpo1">図表1</a> <span class="sep">/</span> <a href="#chart-kenpo2">図表2</a> <span class="sep">/</span> <a href="#chart-kenpo3">図表3</a> <span class="sep">/</span> <a href="#chart-kenpo4">図表4</a> <span class="sep">/</span> <a href="#chart-kenpo5">図表5</a> <span class="sep">/</span> <a href="#chart-kenpo6">図表6</a></div>
 </div>
 </div>
 
