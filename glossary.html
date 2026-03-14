@@ -21,19 +21,44 @@ html, body { height: 100%; font-family: "UD デジタル 教科書体 NK-R", "UD
     flex-shrink: 0;
 }
 .nav-pane a {
-    display: block;
     color: #1a1a1a;
     text-decoration: none;
-    padding: 2px 4px;
+    padding: 1px 4px;
     border-radius: 3px;
 }
 .nav-pane a:hover { background: #e0d8c8; }
-.nav-pane a.active { background: #d4c8a8; font-weight: bold; }
-.nav-pane .lv0 { font-weight: bold; font-size: 15px; margin-top: 10px; padding-left: 0; }
-.nav-pane .lv1 { padding-left: 12px; }
-.nav-pane .lv2 { padding-left: 24px; font-size: 13px; }
-.nav-pane .lv3 { padding-left: 36px; font-size: 13px; }
-.nav-pane .lv4 { padding-left: 24px; font-size: 13px; color: #444; }
+.nav-pane .nav-fixed { margin: 4px 0; }
+.nav-pane .nav-link { display: block; font-weight: bold; font-size: 15px; padding: 2px 4px; }
+.nav-pane .nav-link.active { background: #d4c8a8; }
+.nav-pane .nav-tree {
+    list-style: none; margin: 8px 0 0 0; padding: 0;
+}
+.nav-pane .nav-tree ul {
+    list-style: none; margin: 0; padding: 0 0 0 16px;
+}
+.nav-pane .nav-tree li {
+    position: relative; padding: 1px 0 1px 14px; line-height: 1.5;
+}
+.nav-pane .nav-tree > li { padding-left: 0; }
+.nav-pane .nav-tree ul li::before {
+    content: ""; position: absolute;
+    left: -10px; top: 0; bottom: 0;
+    border-left: 1px solid #b0a060;
+}
+.nav-pane .nav-tree ul li:last-child::before {
+    bottom: auto; height: calc(0.75em + 2px);
+}
+.nav-pane .nav-tree ul li::after {
+    content: ""; position: absolute;
+    left: -10px; top: 0.75em;
+    width: 9px; height: 0;
+    border-top: 1px solid #b0a060;
+}
+.nav-pane .nav-lv0 { font-weight: bold; font-size: 14px; margin-top: 6px; }
+.nav-pane .nav-lv1 { font-size: 13px; }
+.nav-pane .nav-lv2 { font-size: 12px; }
+.nav-pane .nav-lv3 { font-size: 12px; }
+.nav-pane .nav-lv4 { font-size: 12px; color: #444; }
 .nav-pane .nav-title {
     font-size: 16px; font-weight: bold; margin-bottom: 12px;
     padding-bottom: 8px; border-bottom: 2px solid #b0a080;
@@ -313,111 +338,255 @@ a.ext-link:visited { color: #7b2d8b; }
 <div class="container">
 <div class="nav-pane">
 <div class="nav-title">現代語訳『逐条帝国憲法講義』</div>
-<a href="index.html" class="lv0">訳者前書き</a>
-<a href="main.html#toc" class="lv0">目次</a>
-<a href="main.html#1" class="lv0">第1編 緒論</a>
-<a href="main.html#1-1" class="lv1">第1章 国家</a>
-<a href="main.html#1-1-1" class="lv2">第1節 国家の観念</a>
-<a href="main.html#1-1-1-1" class="lv3">第1款 国家の社会的観念</a>
-<a href="main.html#1-1-1-2" class="lv3">第2款 国家の法理的観念</a>
-<a href="main.html#1-1-2" class="lv2">第2節 国家存在の意義</a>
-<a href="main.html#1-1-3" class="lv2">第3節 国体と政体</a>
-<a href="main.html#1-1-3-1" class="lv3">第1款 国体</a>
-<a href="main.html#1-1-3-2" class="lv3">第2款 政体</a>
-<a href="main.html#1-2" class="lv1">第2章 憲法</a>
-<a href="main.html#1-2-1" class="lv2">第1節 法の観念</a>
-<a href="main.html#1-2-2" class="lv2">第2節 憲法の意義および性質</a>
-<a href="main.html#1-2-3" class="lv2">第3節 憲法の効力</a>
-<a href="main.html#1-2-4" class="lv2">第4節 憲法の解釈</a>
-<a href="main.html#1-2-5" class="lv2">第5節 帝国憲法制定の由来</a>
-<a href="main.html#1-2-6" class="lv2">第6節 帝国憲法の特色</a>
-<a href="main.html#2" class="lv0">第2編 本論</a>
-<a href="main.html#2-1" class="lv1">第1章 天皇</a>
-<a href="main.html#2-1-1" class="lv4">第1条</a>
-<a href="main.html#2-1-2" class="lv4">第2条</a>
-<a href="main.html#2-1-3" class="lv4">第3条</a>
-<a href="main.html#2-1-4" class="lv4">第4条</a>
-<a href="main.html#2-1-5" class="lv4">第5条</a>
-<a href="main.html#2-1-6" class="lv4">第6条</a>
-<a href="main.html#2-1-7" class="lv4">第7条</a>
-<a href="main.html#2-1-8" class="lv4">第8条</a>
-<a href="main.html#2-1-9" class="lv4">第9条</a>
-<a href="main.html#2-1-10" class="lv4">第10条</a>
-<a href="main.html#2-1-11" class="lv4">第11条</a>
-<a href="main.html#2-1-12" class="lv4">第12条</a>
-<a href="main.html#2-1-13" class="lv4">第13条</a>
-<a href="main.html#2-1-14" class="lv4">第14条</a>
-<a href="main.html#2-1-15" class="lv4">第15条</a>
-<a href="main.html#2-1-16" class="lv4">第16条</a>
-<a href="main.html#2-1-17" class="lv4">第17条</a>
-<a href="main.html#2-2" class="lv1">第2章 臣民権利義務</a>
-<a href="main.html#2-2-18" class="lv4">第18条</a>
-<a href="main.html#2-2-19" class="lv4">第19条</a>
-<a href="main.html#2-2-20" class="lv4">第20条</a>
-<a href="main.html#2-2-21" class="lv4">第21条</a>
-<a href="main.html#2-2-22" class="lv4">第22条</a>
-<a href="main.html#2-2-23" class="lv4">第23条</a>
-<a href="main.html#2-2-24" class="lv4">第24条</a>
-<a href="main.html#2-2-25" class="lv4">第25条</a>
-<a href="main.html#2-2-26" class="lv4">第26条</a>
-<a href="main.html#2-2-27" class="lv4">第27条</a>
-<a href="main.html#2-2-28" class="lv4">第28条</a>
-<a href="main.html#2-2-29" class="lv4">第29条</a>
-<a href="main.html#2-2-30" class="lv4">第30条</a>
-<a href="main.html#2-2-31" class="lv4">第31条</a>
-<a href="main.html#2-2-32" class="lv4">第32条</a>
-<a href="main.html#2-3" class="lv1">第3章 帝国議会</a>
-<a href="main.html#2-3-33" class="lv4">第33条</a>
-<a href="main.html#2-3-34" class="lv4">第34条</a>
-<a href="main.html#2-3-35" class="lv4">第35条</a>
-<a href="main.html#2-3-36" class="lv4">第36条</a>
-<a href="main.html#2-3-37" class="lv4">第37条</a>
-<a href="main.html#2-3-38" class="lv4">第38条</a>
-<a href="main.html#2-3-39" class="lv4">第39条</a>
-<a href="main.html#2-3-40" class="lv4">第40条</a>
-<a href="main.html#2-3-41" class="lv4">第41条</a>
-<a href="main.html#2-3-42" class="lv4">第42条</a>
-<a href="main.html#2-3-43" class="lv4">第43条</a>
-<a href="main.html#2-3-44" class="lv4">第44条</a>
-<a href="main.html#2-3-45" class="lv4">第45条</a>
-<a href="main.html#2-3-46" class="lv4">第46条</a>
-<a href="main.html#2-3-47" class="lv4">第47条</a>
-<a href="main.html#2-3-48" class="lv4">第48条</a>
-<a href="main.html#2-3-49" class="lv4">第49条</a>
-<a href="main.html#2-3-50" class="lv4">第50条</a>
-<a href="main.html#2-3-51" class="lv4">第51条</a>
-<a href="main.html#2-3-52" class="lv4">第52条</a>
-<a href="main.html#2-3-53" class="lv4">第53条</a>
-<a href="main.html#2-3-54" class="lv4">第54条</a>
-<a href="main.html#2-4" class="lv1">第4章 国務大臣および枢密顧問</a>
-<a href="main.html#2-4-55" class="lv4">第55条</a>
-<a href="main.html#2-4-56" class="lv4">第56条</a>
-<a href="main.html#2-5" class="lv1">第5章 司法</a>
-<a href="main.html#2-5-57" class="lv4">第57条</a>
-<a href="main.html#2-5-58" class="lv4">第58条</a>
-<a href="main.html#2-5-59" class="lv4">第59条</a>
-<a href="main.html#2-5-60" class="lv4">第60条</a>
-<a href="main.html#2-5-57_1" class="lv4">第57条</a>
-<a href="main.html#2-5-61" class="lv4">第61条</a>
-<a href="main.html#2-6" class="lv1">第6章 会計</a>
-<a href="main.html#2-6-62" class="lv4">第62条</a>
-<a href="main.html#2-6-63" class="lv4">第63条</a>
-<a href="main.html#2-6-64" class="lv4">第64条</a>
-<a href="main.html#2-6-65" class="lv4">第65条</a>
-<a href="main.html#2-6-66" class="lv4">第66条</a>
-<a href="main.html#2-6-67" class="lv4">第67条</a>
-<a href="main.html#2-6-68" class="lv4">第68条</a>
-<a href="main.html#2-6-69" class="lv4">第69条</a>
-<a href="main.html#2-6-70" class="lv4">第70条</a>
-<a href="main.html#2-6-71" class="lv4">第71条</a>
-<a href="main.html#2-6-72" class="lv4">第72条</a>
-<a href="main.html#2-7" class="lv1">第7章 補則</a>
-<a href="main.html#2-7-73" class="lv4">第73条</a>
-<a href="main.html#2-7-74" class="lv4">第74条</a>
-<a href="main.html#2-7-75" class="lv4">第75条</a>
-<a href="main.html#2-7-76" class="lv4">第76条</a>
-<a href="main.html#conclusion" class="lv0">結語</a>
-<a href="glossary.html" class="lv0" style="margin-top:16px;">訳註一覧</a>
+<div class="nav-fixed"><a href="index.html" class="nav-link">訳者前書き</a></div>
+<div class="nav-fixed"><a href="main.html#toc" class="nav-link">目次</a></div>
+<ul class="nav-tree">
+<li class="nav-lv0"><a href="main.html#1">第1編 緒論</a>
+<ul>
+<li class="nav-lv1"><a href="main.html#1-1">第1章 国家</a>
+<ul>
+<li class="nav-lv2"><a href="main.html#1-1-1">第1節 国家の観念</a>
+<ul>
+<li class="nav-lv3"><a href="main.html#1-1-1-1">第1款 国家の社会的観念</a>
+</li>
+<li class="nav-lv3"><a href="main.html#1-1-1-2">第2款 国家の法理的観念</a>
+</li></ul>
+</li>
+<li class="nav-lv2"><a href="main.html#1-1-2">第2節 国家存在の意義</a>
+</li>
+<li class="nav-lv2"><a href="main.html#1-1-3">第3節 国体と政体</a>
+<ul>
+<li class="nav-lv3"><a href="main.html#1-1-3-1">第1款 国体</a>
+</li>
+<li class="nav-lv3"><a href="main.html#1-1-3-2">第2款 政体</a>
+</li></ul>
+</li></ul>
+</li>
+<li class="nav-lv1"><a href="main.html#1-2">第2章 憲法</a>
+<ul>
+<li class="nav-lv2"><a href="main.html#1-2-1">第1節 法の観念</a>
+</li>
+<li class="nav-lv2"><a href="main.html#1-2-2">第2節 憲法の意義および性質</a>
+</li>
+<li class="nav-lv2"><a href="main.html#1-2-3">第3節 憲法の効力</a>
+</li>
+<li class="nav-lv2"><a href="main.html#1-2-4">第4節 憲法の解釈</a>
+</li>
+<li class="nav-lv2"><a href="main.html#1-2-5">第5節 帝国憲法制定の由来</a>
+</li>
+<li class="nav-lv2"><a href="main.html#1-2-6">第6節 帝国憲法の特色</a>
+</li></ul>
+</li></ul>
+</li>
+<li class="nav-lv0"><a href="main.html#2">第2編 本論</a>
+<ul>
+<li class="nav-lv1"><a href="main.html#2-1">第1章 天皇</a>
+<ul>
+<ul>
+<ul>
+<li class="nav-lv4"><a href="main.html#2-1-1">第1条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-1-2">第2条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-1-3">第3条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-1-4">第4条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-1-5">第5条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-1-6">第6条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-1-7">第7条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-1-8">第8条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-1-9">第9条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-1-10">第10条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-1-11">第11条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-1-12">第12条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-1-13">第13条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-1-14">第14条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-1-15">第15条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-1-16">第16条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-1-17">第17条</a>
+</li></ul>
+</li></ul>
+</li></ul>
+</li>
+<li class="nav-lv1"><a href="main.html#2-2">第2章 臣民権利義務</a>
+<ul>
+<ul>
+<ul>
+<li class="nav-lv4"><a href="main.html#2-2-18">第18条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-2-19">第19条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-2-20">第20条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-2-21">第21条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-2-22">第22条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-2-23">第23条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-2-24">第24条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-2-25">第25条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-2-26">第26条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-2-27">第27条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-2-28">第28条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-2-29">第29条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-2-30">第30条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-2-31">第31条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-2-32">第32条</a>
+</li></ul>
+</li></ul>
+</li></ul>
+</li>
+<li class="nav-lv1"><a href="main.html#2-3">第3章 帝国議会</a>
+<ul>
+<ul>
+<ul>
+<li class="nav-lv4"><a href="main.html#2-3-33">第33条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-3-34">第34条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-3-35">第35条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-3-36">第36条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-3-37">第37条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-3-38">第38条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-3-39">第39条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-3-40">第40条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-3-41">第41条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-3-42">第42条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-3-43">第43条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-3-44">第44条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-3-45">第45条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-3-46">第46条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-3-47">第47条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-3-48">第48条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-3-49">第49条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-3-50">第50条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-3-51">第51条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-3-52">第52条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-3-53">第53条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-3-54">第54条</a>
+</li></ul>
+</li></ul>
+</li></ul>
+</li>
+<li class="nav-lv1"><a href="main.html#2-4">第4章 国務大臣および枢密顧問</a>
+<ul>
+<ul>
+<ul>
+<li class="nav-lv4"><a href="main.html#2-4-55">第55条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-4-56">第56条</a>
+</li></ul>
+</li></ul>
+</li></ul>
+</li>
+<li class="nav-lv1"><a href="main.html#2-5">第5章 司法</a>
+<ul>
+<ul>
+<ul>
+<li class="nav-lv4"><a href="main.html#2-5-57">第57条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-5-58">第58条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-5-59">第59条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-5-60">第60条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-5-57_1">第57条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-5-61">第61条</a>
+</li></ul>
+</li></ul>
+</li></ul>
+</li>
+<li class="nav-lv1"><a href="main.html#2-6">第6章 会計</a>
+<ul>
+<ul>
+<ul>
+<li class="nav-lv4"><a href="main.html#2-6-62">第62条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-6-63">第63条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-6-64">第64条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-6-65">第65条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-6-66">第66条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-6-67">第67条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-6-68">第68条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-6-69">第69条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-6-70">第70条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-6-71">第71条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-6-72">第72条</a>
+</li></ul>
+</li></ul>
+</li></ul>
+</li>
+<li class="nav-lv1"><a href="main.html#2-7">第7章 補則</a>
+<ul>
+<ul>
+<ul>
+<li class="nav-lv4"><a href="main.html#2-7-73">第73条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-7-74">第74条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-7-75">第75条</a>
+</li>
+<li class="nav-lv4"><a href="main.html#2-7-76">第76条</a>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li>
+<li class="nav-lv0"><a href="main.html#conclusion">結語</a>
+</li></ul>
+<div class="nav-fixed" style="margin-top:12px;"><a href="glossary.html" class="nav-link">訳註一覧</a></div>
 
 </div>
 <div class="resizer"></div>
