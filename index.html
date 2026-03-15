@@ -3,987 +3,124 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>現代語訳『逐条帝国憲法講義』</title>
+<title>ふぐば文庫</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html, body { height: 100%; font-family: "UD デジタル 教科書体 NK-R", "UD Digi Kyokasho NK-R", "Noto Serif JP", serif; }
-.container { display: flex; height: 100vh; }
-.nav-pane {
-    width: 280px;
-    min-width: 150px;
-    max-width: 50vw;
-    overflow-y: auto;
-    background: #f5f0e8;
-    border-right: 1px solid #ccc;
-    padding: 12px 8px;
-    font-size: 14px;
-    line-height: 1.6;
-    flex-shrink: 0;
+html, body {
+    height: 100%;
+    font-family: "UD デジタル 教科書体 NK-R", "UD Digi Kyokasho NK-R", "Noto Serif JP", serif;
+    background: #faf8f2;
+    color: #2a1a0a;
 }
-.nav-pane a {
-    color: #1a1a1a;
-    text-decoration: none;
-    padding: 1px 4px;
-    border-radius: 3px;
+.page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 60px 24px;
 }
-.nav-pane a:hover { background: #e0d8c8; }
-.nav-pane .nav-fixed { margin: 4px 0; }
-.nav-pane .nav-link { display: block; font-weight: bold; font-size: 15px; padding: 2px 4px; }
-.nav-pane .nav-link.active { background: #d4c8a8; }
-.nav-pane .nav-tree {
-    list-style: none; margin: 8px 0 0 0; padding: 0;
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 8px;
+    letter-spacing: 0.15em;
 }
-.nav-pane .nav-tree ul {
-    list-style: none; margin: 0; padding: 0 0 0 10px;
+.subtitle {
+    text-align: center;
+    font-size: 15px;
+    color: #6a5a3a;
+    margin-bottom: 48px;
 }
-.nav-pane .nav-tree li {
-    position: relative; padding: 1px 0 1px 2px; line-height: 1.5;
+.works {
+    margin-top: 32px;
 }
-.nav-pane .nav-tree > li { padding-left: 0; }
-.nav-pane .nav-tree ul li::before {
-    content: ""; position: absolute;
-    left: -7px; top: 0; bottom: 0;
-    border-left: 1px solid #b0a060;
-}
-.nav-pane .nav-tree ul li:last-child::before {
-    bottom: auto; height: calc(0.75em + 2px);
-}
-.nav-pane .nav-tree ul li::after {
-    content: ""; position: absolute;
-    left: -7px; top: 0.75em;
-    width: 10px; height: 0;
-    border-top: 1px solid #b0a060;
-}
-.nav-pane .nav-lv0 { font-size: 14px; margin-top: 6px; }
-.nav-pane .nav-lv1 { font-size: 14px; }
-.nav-pane .nav-lv2 { font-size: 14px; }
-.nav-pane .nav-lv3 { font-size: 14px; }
-.nav-pane .nav-lv4 { font-size: 14px; }
-.nav-pane .nav-title {
-    font-size: 16px; font-weight: bold; margin-bottom: 12px;
-    padding-bottom: 8px; border-bottom: 2px solid #b0a080;
-    color: #4a3a1a;
-}
-.resizer {
-    width: 5px;
-    cursor: col-resize;
-    background: #ccc;
-    flex-shrink: 0;
-    transition: background 0.2s;
-}
-.resizer:hover, .resizer.active { background: #999; }
-.content-pane {
-    flex: 1;
-    overflow-y: auto;
-    padding: 40px 60px;
-    max-width: 100%;
-    background: #fffef8;
-}
-.content-pane h1 {
-    font-size: 32px; margin-bottom: 12px; color: #2a1a0a;
-    border-bottom: 2px solid #b0a080; padding-bottom: 8px;
-}
-.content-pane h2.hen {
-    font-size: 28px; margin: 48px 0 14px; color: #2a1a0a;
-    border-bottom: 3px double #b0a060; padding-bottom: 6px;
-}
-.content-pane h3.sho {
-    font-size: 24px; margin: 40px 0 12px; color: #3a2a0a;
-    border-left: 4px solid #b0a060; padding-left: 12px;
-}
-.content-pane h3.jo {
-    font-size: 22px; margin: 34px 0 10px; color: #3a2a0a;
-}
-.content-pane h4.setsu {
-    font-size: 21px; margin: 32px 0 10px; color: #4a3a1a;
-    border-bottom: 1px dotted #b0a080; padding-bottom: 4px;
-}
-.content-pane h5.kan {
-    font-size: 19px; margin: 26px 0 8px; color: #5a4a2a;
-    padding-left: 8px;
-}
-.content-pane h6.marker-lv1 {
-    font-size: 17px; margin: 28px 0 6px; color: #3a2a0a;
-    font-weight: bold; padding: 2px 0 2px 0;
-}
-.content-pane h6.marker-lv1::before {
-    content: ""; margin-right: 0;
-}
-.content-pane h6.marker-lv2 {
-    font-size: 17px; margin: 22px 0 5px; color: #4a3a1a;
-    font-weight: bold; padding: 0 0 0 12px;
-}
-.content-pane h6.marker-lv2::before {
-    content: "\2013"; color: #b0a060; margin-right: 6px;
-}
-.content-pane h6.marker-lv3 {
-    font-size: 16px; margin: 18px 0 4px; color: #5a4a2a;
-    font-weight: bold; padding: 0 0 0 24px;
-}
-.content-pane h6.marker-lv3::before {
-    content: "\25AB"; color: #c0b080; margin-right: 4px; font-size: 0.8em;
-}
-.content-pane h6.marker-lv4 {
-    font-size: 19px; margin: 6px 0; color: #111;
-    font-weight: normal; padding: 0 0 0 32px; line-height: 1.9;
-}
-.content-pane h6.marker-lv4::before {
-    content: ""; margin-right: 0;
-}
-.content-pane h6.marker-sub {
-    font-size: 17px; margin: 24px 0 4px; color: #3a2a0a;
-    font-weight: bold; padding: 0;
-}
-.content-pane .section-break { height: 18px; }
-.content-pane p {
-    text-indent: 1em; line-height: 1.9; margin: 6px 0;
-    font-size: 19px; color: #111; text-align: justify;
-}
-.content-pane p.no-indent { text-indent: 0; }
-.content-pane .joubun {
-    background: #f8f4e8; border-left: 3px solid #b0a060;
-    padding: 10px 18px; margin: 14px 0; font-size: 17px;
-}
-.content-pane .quote-block {
-    background: #f0ece0; border-left: 3px solid #8a7a5a;
-    padding: 12px 18px; margin: 14px 0; font-style: italic;
-    font-size: 17px;
-}
-.toc-tree {
-    background: #f8f4e8; padding: 20px 28px 20px 18px; margin: 20px 0;
-    border: 1px solid #d0c8a0; border-radius: 4px;
-}
-.toc-tree a { color: #0645ad; text-decoration: none; }
-.toc-tree a:hover { text-decoration: underline; }
-.toc-tree a:visited { color: #7b2d8b; }
-.toc-tree ul {
-    list-style: none; margin: 0; padding: 0 0 0 24px;
-}
-.toc-tree > ul { padding-left: 0; }
-.toc-tree li {
-    position: relative; padding: 3px 0 3px 4px; line-height: 1.7;
-}
-.toc-tree > ul > li { padding-left: 0; }
-.toc-tree ul ul { margin-left: 4px; }
-.toc-tree ul ul > li::before {
-    content: ""; position: absolute;
-    left: -16px; top: 0; bottom: 0;
-    border-left: 2px solid #b0a060;
-}
-.toc-tree ul ul > li:last-child::before {
-    bottom: auto; height: calc(0.85em + 2px);
-}
-.toc-tree ul ul > li::after {
-    content: ""; position: absolute;
-    left: -16px; top: 0.85em;
-    width: 19px; height: 0;
-    border-top: 2px solid #b0a060;
-}
-.toc-tree .toc-lv0 { font-size: 22px; font-weight: bold; }
-.toc-tree .toc-lv1 { font-size: 20px; }
-.toc-tree .toc-lv2 { font-size: 19px; }
-.toc-tree .toc-lv3 { font-size: 18px; }
-.toc-tree .toc-entry {
-    display: flex; align-items: baseline;
-}
-.toc-tree .toc-entry > a { flex-shrink: 0; white-space: nowrap; }
-.toc-tree .toc-sub-inline {
-    font-size: 16px; color: #6a5a3a; margin-left: 1em; font-weight: normal;
-    flex: 1; min-width: 0;
-}
-.toc-tree .sep { color: #c0b898; }
-.toc-tree .toc-charts {
-    margin-top: 16px; padding-top: 8px;
-    border-top: 1px dashed #b0a080; font-size: 19px; font-weight: bold;
-}
-.content-pane .subtitle {
-    font-size: 15px; color: #6a5a3a; margin: 4px 0 10px;
-    padding: 4px 0 4px 12px;
-    line-height: 1.5;
-}
-.to-honbun {
-    display: inline-block; margin-top: 40px; padding: 12px 24px;
-    background: #5a4a2a; color: #fff; text-decoration: none;
-    border-radius: 4px; font-size: 18px;
-}
-.to-honbun:hover { background: #7a6a4a; }
-.author { font-size: 18px; color: #333; margin-bottom: 20px; }
-.reference-box { margin: 40px 0 10px; font-size: 19px; line-height: 1.9; }
-.reference-box h2 { font-size: 22px; margin: 20px 0 10px; color: #5a4a2a; border: none; }
-.reference-box h2:first-child { margin-top: 0; }
-.reference-box h3 { font-size: 19px; margin: 16px 0 6px; color: #5a4a2a; border: none; }
-.reference-box p { margin: 6px 0; text-indent: 0; }
-.reference-box ul { margin: 6px 0; padding-left: 1.5em; }
-.reference-box li { margin: 4px 0; }
-.reference-box a.ext-link { word-break: break-all; }
-ruby rt { font-size: 0.55em; }
-.ocr-note { color: #c00; font-size: 0.9em; }
-.fn { cursor: pointer; }
-.fn:hover { background: #e8e0c8; border-radius: 2px; }
-.fn-mark { color: #8a6a2a; font-size: 0.7em; cursor: pointer; margin-left: 1px; }
-.content-wrapper { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
-.h-resizer { height: 0; cursor: row-resize; background: #ccc; flex-shrink: 0; overflow: hidden; transition: height 0.3s ease; }
-.h-resizer:hover, .h-resizer.active { background: #999; }
-.h-resizer.open { height: 5px; }
-.yakuchu-panel {
-    min-height: 0; max-height: 60vh;
-    overflow: hidden;
-    background: #faf8f2; border-top: 2px solid #b0a080;
-    padding: 0 24px; font-size: 14px;
-    height: 0;
-    transition: height 0.3s ease, padding 0.3s ease;
-    flex-shrink: 0;
-}
-.yakuchu-panel.open { height: 220px; padding: 12px 24px; overflow-y: auto; }
-.yakuchu-panel .yp-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-.yakuchu-panel .yp-title { font-weight: bold; font-size: 16px; color: #4a3a1a; }
-.yakuchu-panel .yp-close { background: none; border: 1px solid #999; border-radius: 3px; cursor: pointer; padding: 2px 8px; color: #666; font-size: 16px; }
-.yakuchu-panel .yp-close:hover { background: #e0d8c8; }
-.yakuchu-panel dl { margin: 0; }
-.yakuchu-panel dt { font-weight: bold; margin-top: 12px; padding: 4px; border-top: 1px solid #e0dcd0; color: #3a2a0a; }
-.yakuchu-panel dt:first-child { border-top: none; margin-top: 0; }
-.yakuchu-panel dt.highlight { background: #f0e8c8; transition: background 0.3s; }
-.yakuchu-panel dd { margin: 4px 0 0 16px; line-height: 1.7; color: #333; }
-.yakuchu-tab {
-    position: fixed; bottom: 0; right: 24px; z-index: 800;
-    background: #f5f0e8; border: 1px solid #b0a080; border-bottom: none;
-    border-radius: 6px 6px 0 0; padding: 3px 12px; cursor: pointer;
-    font-size: 14px; color: #4a3a1a; font-weight: bold;
-    box-shadow: 0 -1px 3px rgba(0,0,0,0.1);
-    transition: background 0.2s;
-}
-.yakuchu-tab:hover { background: #e8e0c8; }
-.fn-back-links { font-size: 12px; margin-left: 8px; font-weight: normal; }
-a.ext-link { color: #0645ad; text-decoration: none; }
-a.ext-link:hover { text-decoration: underline; }
-a.ext-link:visited { color: #7b2d8b; }
-.fn-back-links a { color: #0645ad; text-decoration: none; }
-.fn-back-links a:hover { text-decoration: underline; }
-.fn-back-links a:visited { color: #7b2d8b; }
-
-/* ---- Tree chart (図表) styling ---- */
-.chart-tree {
-    margin: 24px 0 28px 0;
-    padding: 18px 24px 18px 18px;
-    background: #faf8f0;
-    border: 1px solid #d0c8a0;
-    border-radius: 6px;
-    overflow-x: auto;
-}
-.chart-tree .chart-title {
-    font-size: 19px; font-weight: bold; color: #4a3a1a;
-    margin-bottom: 14px; padding-bottom: 6px;
+.works h2 {
+    font-size: 20px;
     border-bottom: 2px solid #b0a060;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
 }
-.chart-tree ul {
-    list-style: none;
-    margin: 0; padding: 0 0 0 24px;
+.work-card {
+    display: block;
+    background: #fff;
+    border: 1px solid #e0dcd0;
+    border-radius: 6px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.15s, border-color 0.15s;
 }
-.chart-tree > ul { padding-left: 0; }
-.chart-tree li {
-    position: relative;
-    padding: 2px 0 2px 20px;
+.work-card:hover {
+    border-color: #b0a060;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.work-card .work-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2a1a0a;
+    margin-bottom: 4px;
+}
+.work-card .work-author {
+    font-size: 14px;
+    color: #6a5a3a;
+    margin-bottom: 8px;
+}
+.work-card .work-desc {
+    font-size: 14px;
+    color: #555;
     line-height: 1.7;
-    font-size: 19px;
-    color: #4a3a1a;
 }
-.chart-tree > ul > li { padding-left: 0; }
-.chart-tree ul ul { margin-left: 4px; }
-/* vertical line per li */
-.chart-tree ul ul > li::before {
-    content: "";
-    position: absolute;
-    left: -16px; top: 0; bottom: 0;
-    border-left: 2px solid #b0a060;
+.about {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid #e0dcd0;
 }
-.chart-tree ul ul > li:last-child::before {
-    bottom: auto;
-    height: calc(0.85em + 2px);
+.about h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
 }
-/* horizontal connector */
-.chart-tree ul ul > li::after {
-    content: "";
-    position: absolute;
-    left: -16px; top: 0.85em;
-    width: 14px; height: 0;
-    border-top: 2px solid #b0a060;
+.about p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #555;
 }
-.chart-tree .node-label { font-weight: bold; color: #3a2a0a; }
-.chart-tree .node-sep { color: #b0a060; margin: 0 4px; }
-.chart-tree .node-detail { color: #5a4a2a; font-size: 19px; }
-
-.hamburger {
-    display: none; position: fixed; top: 8px; left: 8px; z-index: 1100;
-    background: #f5f0e8; border: 1px solid #b0a080; border-radius: 4px;
-    font-size: 24px; width: 40px; height: 40px; cursor: pointer;
-    color: #4a3a1a; line-height: 1;
+.about a {
+    color: #6a5a3a;
 }
-.hamburger:hover { background: #e8e0c8; }
-.nav-overlay {
-    display: none; position: fixed; top: 0; left: 0;
-    width: 100%; height: 100%; background: rgba(0,0,0,0.3);
-    z-index: 999;
+footer {
+    margin-top: 48px;
+    text-align: center;
+    font-size: 13px;
+    color: #999;
 }
-.nav-overlay.open { display: block; }
-@media (max-width: 768px) {
-    .hamburger { display: block; }
-    .nav-pane {
-        position: fixed; top: 0; left: -300px; width: 280px;
-        height: 100vh; z-index: 1000;
-        transition: left 0.3s ease;
-        font-size: 12px;
-    }
-    .nav-pane.open { left: 0; }
-    .resizer { display: none; }
-    .content-pane { padding: 50px 16px 20px; }
-}
-
 </style>
 </head>
 <body>
-<button class="hamburger" id="hamburger" aria-label="メニュー">&#9776;</button>
-<div class="nav-overlay" id="nav-overlay"></div>
-<button class="yakuchu-tab" id="yakuchu-tab">&#x2227;</button>
-<div class="container">
-<div class="nav-pane">
-<div class="nav-title">現代語訳『逐条帝国憲法講義』</div>
-<div class="nav-fixed"><a href="index.html" class="nav-link active">訳者前書き</a></div>
-<div class="nav-fixed"><a href="main.html#toc" class="nav-link">目次</a></div>
-<ul class="nav-tree">
-<li class="nav-lv0"><a href="main.html#h1">第1編 緒論</a>
-<ul>
-<li class="nav-lv1"><a href="main.html#h1-sh1">第1章 国家</a>
-<ul>
-<li class="nav-lv2"><a href="main.html#h1-sh1-st1">第1節 国家の観念</a>
-<ul>
-<li class="nav-lv3"><a href="main.html#h1-sh1-st1-k1">第1款 国家の社会的観念</a>
-</li>
-<li class="nav-lv3"><a href="main.html#h1-sh1-st1-k2">第2款 国家の法理的観念</a>
-</li></ul>
-</li>
-<li class="nav-lv2"><a href="main.html#h1-sh1-st2">第2節 国家存在の意義</a>
-</li>
-<li class="nav-lv2"><a href="main.html#h1-sh1-st3">第3節 国体と政体</a>
-<ul>
-<li class="nav-lv3"><a href="main.html#h1-sh1-st3-k1">第1款 国体</a>
-</li>
-<li class="nav-lv3"><a href="main.html#h1-sh1-st3-k2">第2款 政体</a>
-</li></ul>
-</li></ul>
-</li>
-<li class="nav-lv1"><a href="main.html#h1-sh2">第2章 憲法</a>
-<ul>
-<li class="nav-lv2"><a href="main.html#h1-sh2-st1">第1節 法の観念</a>
-</li>
-<li class="nav-lv2"><a href="main.html#h1-sh2-st2">第2節 憲法の意義および性質</a>
-</li>
-<li class="nav-lv2"><a href="main.html#h1-sh2-st3">第3節 憲法の効力</a>
-</li>
-<li class="nav-lv2"><a href="main.html#h1-sh2-st4">第4節 憲法の解釈</a>
-</li>
-<li class="nav-lv2"><a href="main.html#h1-sh2-st5">第5節 帝国憲法制定の由来</a>
-</li>
-<li class="nav-lv2"><a href="main.html#h1-sh2-st6">第6節 帝国憲法の特色</a>
-</li></ul>
-</li></ul>
-</li>
-<li class="nav-lv0"><a href="main.html#h2">第2編 本論</a>
-<ul>
-<li class="nav-lv1"><a href="main.html#h2-sh1">第1章 天皇</a>
-<ul>
-<ul>
-<ul>
-<li class="nav-lv4"><a href="main.html#h2-sh1-j1">第1条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh1-j2">第2条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh1-j3">第3条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh1-j4">第4条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh1-j5">第5条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh1-j6">第6条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh1-j7">第7条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh1-j8">第8条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh1-j9">第9条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh1-j10">第10条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh1-j11">第11条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh1-j12">第12条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh1-j13">第13条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh1-j14">第14条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh1-j15">第15条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh1-j16">第16条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh1-j17">第17条</a>
-</li></ul>
-</li></ul>
-</li></ul>
-</li>
-<li class="nav-lv1"><a href="main.html#h2-sh2">第2章 臣民権利義務</a>
-<ul>
-<ul>
-<ul>
-<li class="nav-lv4"><a href="main.html#h2-sh2-j18">第18条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh2-j19">第19条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh2-j20">第20条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh2-j21">第21条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh2-j22">第22条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh2-j23">第23条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh2-j24">第24条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh2-j25">第25条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh2-j26">第26条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh2-j27">第27条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh2-j28">第28条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh2-j29">第29条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh2-j30">第30条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh2-j31">第31条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh2-j32">第32条</a>
-</li></ul>
-</li></ul>
-</li></ul>
-</li>
-<li class="nav-lv1"><a href="main.html#h2-sh3">第3章 帝国議会</a>
-<ul>
-<ul>
-<ul>
-<li class="nav-lv4"><a href="main.html#h2-sh3-j33">第33条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh3-j34">第34条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh3-j35">第35条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh3-j36">第36条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh3-j37">第37条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh3-j38">第38条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh3-j39">第39条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh3-j40">第40条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh3-j41">第41条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh3-j42">第42条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh3-j43">第43条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh3-j44">第44条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh3-j45">第45条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh3-j46">第46条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh3-j47">第47条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh3-j48">第48条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh3-j49">第49条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh3-j50">第50条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh3-j51">第51条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh3-j52">第52条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh3-j53">第53条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh3-j54">第54条</a>
-</li></ul>
-</li></ul>
-</li></ul>
-</li>
-<li class="nav-lv1"><a href="main.html#h2-sh4">第4章 国務大臣および枢密顧問</a>
-<ul>
-<ul>
-<ul>
-<li class="nav-lv4"><a href="main.html#h2-sh4-j55">第55条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh4-j56">第56条</a>
-</li></ul>
-</li></ul>
-</li></ul>
-</li>
-<li class="nav-lv1"><a href="main.html#h2-sh5">第5章 司法</a>
-<ul>
-<ul>
-<ul>
-<li class="nav-lv4"><a href="main.html#h2-sh5-j57">第57条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh5-j58">第58条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh5-j59">第59条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh5-j60">第60条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh5-j57_1">第57条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh5-j61">第61条</a>
-</li></ul>
-</li></ul>
-</li></ul>
-</li>
-<li class="nav-lv1"><a href="main.html#h2-sh6">第6章 会計</a>
-<ul>
-<ul>
-<ul>
-<li class="nav-lv4"><a href="main.html#h2-sh6-j62">第62条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh6-j63">第63条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh6-j64">第64条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh6-j65">第65条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh6-j66">第66条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh6-j67">第67条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh6-j68">第68条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh6-j69">第69条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh6-j70">第70条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh6-j71">第71条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh6-j72">第72条</a>
-</li></ul>
-</li></ul>
-</li></ul>
-</li>
-<li class="nav-lv1"><a href="main.html#h2-sh7">第7章 補則</a>
-<ul>
-<ul>
-<ul>
-<li class="nav-lv4"><a href="main.html#h2-sh7-j73">第73条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh7-j74">第74条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh7-j75">第75条</a>
-</li>
-<li class="nav-lv4"><a href="main.html#h2-sh7-j76">第76条</a>
-</li></ul>
-</li></ul>
-</li></ul>
-</li></ul>
-</li>
-<li class="nav-lv0"><a href="main.html#conclusion">結語</a>
-</li></ul>
-<div class="nav-fixed" style="margin-top:12px;"><a href="glossary.html" class="nav-link">訳註一覧</a></div>
+<div class="page">
+
+<h1>ふぐば文庫</h1>
+<p class="subtitle">近代日本の古典を現代語訳で読む</p>
+
+<div class="works">
+<h2>翻訳一覧</h2>
+
+<a href="shimizu-icc/" class="work-card">
+    <div class="work-title">逐条帝国憲法講義</div>
+    <div class="work-author">清水澄 著（現代語訳：ふぐば）</div>
+    <div class="work-desc">枢密院議長を務めた憲法学者・清水澄による大日本帝国憲法の逐条解説。立法趣旨・比較法・実際の運用例を網羅した体系的註釈書の全文現代語訳。</div>
+</a>
 
 </div>
-<div class="resizer"></div>
-<div class="content-wrapper">
-<div class="content-pane">
-<h1>現代語訳『逐条帝国憲法講義』</h1>
-<p class="author">法学博士 清水澄 著　（ふぐば：訳）</p>
 
-<h2>訳者前書き</h2>
-<p>　本書は、清水 <ruby>澄<rp>（</rp><rt>とおる</rt><rp>）</rp></ruby>法学博士 著『逐条帝国憲法講義』（松華堂、初版 昭和7年／底本 第9版 昭和11年）の現代語訳版である。</p>
-<p>　清水博士は慶応4年8月12日（西暦1868年9月27日）、現在の石川県金沢市に生まれる。ときは戊辰戦争のさなか、二本松城陥落の3週間後のことであった。東京帝国大学法科を卒業し、明治38（1905）年には法学博士号を取得。その後、宮内省および東宮御学問所御用掛となり、大正天皇、昭和天皇に憲法学を進講した。行政裁判所長官、枢密院顧問官・副議長等を歴任し、敗戦後の昭和21（1946）年、最後の枢密院議長に任ぜられる。</p>
-<p>　枢密院が廃止され、公職追放となり、昭和22（1947）年5月3日に日本国憲法が施行された後の同年9月25日、日本の国体の危機を憂い、熱海<ruby>錦ヶ浦<rp>（</rp><rt>にしきがうら</rt><rp>）</rp></ruby>海岸から投身自殺を遂げた。「自決ノ辞」は次の通りである。</p>
-<div class="joubun">
-<p class="no-indent">新日本憲法の発布に先だち、私儀憲法案を公表したる団体および個人ありたり。その中には共和制を採用することを希望するものあり。或いは、戦争責任者として<ruby>今上<rp>（</rp><rt>きんじょう</rt><rp>）</rp></ruby>陛下の退位を主唱する人あり。我国の将来を考え、憂慮の至りに堪えず。しかし、小生微力にしてこれが対策なし。依って、自決し幽界より我が国体を護持し、今上陛下の御在位を祈願せんと欲す。これ、小生の自決する所以なり。而して、自決の方法として水死を<ruby>択<rp>（</rp><rt>えら</rt><rp>）</rp></ruby>びたるは、楚の名臣・<span class="fn" id="fn-ref-1-1" data-fn="1" onclick="openYakuchu(1)"><ruby>屈原<rp>（</rp><rt>くつげん</rt><rp>）</rp></ruby><sup class="fn-mark">*1</sup></span>に<ruby>倣<rp>（</rp><rt>なら</rt><rp>）</rp></ruby>いたるなり。</p>
-<p class="no-indent">元枢密院議長 八十翁 清水澄 法学博士 昭和22（1947）年5月 新憲法実施の<ruby>日認<rp>（</rp><rt>したた</rt><rp>）</rp></ruby>む</p>
-<br>
-<p class="no-indent">追言</p>
-<p class="no-indent">小生、昭和9（1934）年以後進講（宮内省御用係として十数年、1週に2回または1回）したること、従て龍顔を拝したること<ruby>夥敷<rp>（</rp><rt>おびただしき</rt><rp>）</rp></ruby>を以て、陛下の平和愛好の御性質を熟知せり。従て戦争を御賛成なかりしこと明らかなり。</p>
-<br>
-<p class="no-indent">（訳註：適宜新字新仮名に改め、仮名に開き、句読点・送り仮名を施した）</p>
+<div class="about">
+<h2>このサイトについて</h2>
+<p>ふぐば文庫は、近代日本の重要な法律・政治文献を現代語に訳し、広く読めるようにするプロジェクトです。底本はいずれも著作権保護期間の満了した作品を使用しています。</p>
+<p style="margin-top: 12px;"><a href="https://twitter.com/Fuguba">ふぐば（@Fuguba）</a></p>
 </div>
-<p>　清水博士はまさに、王政復古の大号令とともに誕生し、欽定憲法の停止に殉じた歴史の象徴のような人物であった。本書は、清水の憲法学の集大成とも言える『逐条帝国憲法講義』の意義が令和の世に再評価されることを望み、平易な現代語訳を試みたものである。漢文調の格調高い表現は、現代を生きる我々にはいささか難しくも思える。拙訳ながら、人口に<span class="fn" id="fn-ref-2-1" data-fn="2" onclick="openYakuchu(2)"><ruby>膾炙<rp>（</rp><rt>かいしゃ</rt><rp>）</rp></ruby><sup class="fn-mark">*2</sup></span>することに少しでも寄与できれば幸いである。</p>
-<p>　尚、なるべく原文に忠実を心掛けたが、完全を保証するものではない。国立国会図書館デジタルコレクション内・インターネット公開（保護期間満了） となっているため、原文を参照されたい。また、法令等の条文も読みやすさを考慮して新字新仮名にし、一部漢字を仮名に開く等したことを予め了承されたい。 </p>
-<div class="reference-box">
-<h3>底本</h3>
-<p>清水澄『逐条帝国憲法講義』第9版、松華堂、昭和11（1936）年<br>
-<a href="https://dl.ndl.go.jp/pid/1278317" class="ext-link">https://dl.ndl.go.jp/pid/1278317</a>（国立国会図書館デジタルコレクション）</p>
-<h3>凡例</h3>
-<ul>
-<li>旧字体は原則として新字体に改めた</li>
-<li>ルビは各セクションの初出箇所にのみ付した</li>
-<li>〔訳註：…〕は訳者による補足註記である</li>
-</ul>
-</div>
-<p style="margin-top: 30px; text-align: right;"><a href="https://twitter.com/Fuguba" class="ext-link">ふぐば（Twitter ID：@Fuguba）</a></p>
-<div style="text-align:center; margin-top: 30px;"><a href="main.html" class="to-honbun">本文へ &rarr;</a></div>
+
+<footer>
+&copy; ふぐば文庫
+</footer>
 
 </div>
-<div class="h-resizer" id="h-resizer"></div>
-<div class="yakuchu-panel" id="yakuchu-panel">
-<div class="yp-header"><span class="yp-title">訳註</span><button class="yp-close" onclick="closeYakuchu()">&times;</button></div><dl><dt id="fn-1">*1 屈原（くつげん）<span class="fn-back-links">→ <a href="index.html#fn-ref-1-1">訳者前書き</a></span></dt>
-<dd>支那戦国時代の楚の政治家・詩人。讒言により失脚し、汨羅江に身を投じた。「離騒」の作者として知られる。</dd>
-<dt id="fn-2">*2 膾炙（かいしゃ）<span class="fn-back-links">→ <a href="index.html#fn-ref-2-1">訳者前書き</a></span></dt>
-<dd>広く世間の人々に知れ渡ること。人口に膾炙する。</dd>
-<dt id="fn-3">*3 定著（ていちゃく）<span class="fn-back-links">→ <a href="main.html#fn-ref-3-1">1章1節1款</a></span></dt>
-<dd>「定着」に同じ。法律用語で「土地の定著物」（土地に固着した物）のように用いる。</dd>
-<dt id="fn-4">*4 軒輊（けんち）<span class="fn-back-links">→ <a href="main.html#fn-ref-4-1">1章2節</a>、<a href="main.html#fn-ref-4-2">65条</a></span></dt>
-<dd>優劣・高下の差があること。軒（のき）が上がり輊（おもき）が下がることから。</dd>
-<dt id="fn-5">*5 輿論（よろん）<span class="fn-back-links">→ <a href="main.html#fn-ref-5-1">1章3節</a>、<a href="main.html#fn-ref-5-2">33条</a>、<a href="main.html#fn-ref-5-3">33条</a></span></dt>
-<dd>世間一般の人々の議論・意見。世論。</dd>
-<dt id="fn-6">*6 大統（たいとう）<span class="fn-back-links">→ <a href="main.html#fn-ref-6-1">1章3節1款</a>、<a href="main.html#fn-ref-6-2">1条</a>、<a href="main.html#fn-ref-6-3">4条</a>、<a href="main.html#fn-ref-6-4">5条</a>、<a href="main.html#fn-ref-6-5">17条</a>、<a href="main.html#fn-ref-6-6">17条</a>、<a href="main.html#fn-ref-6-7">55条</a></span></dt>
-<dd>天子の位。帝位。また、国家統治の大本。</dd>
-<dt id="fn-7">*7 列聖（れっせい）<span class="fn-back-links">→ <a href="main.html#fn-ref-7-1">1章3節1款</a>、<a href="main.html#fn-ref-7-2">3条</a></span></dt>
-<dd>歴代の天皇。代々の聖天子。</dd>
-<dt id="fn-8">*8 鞏固（きょうこ）<span class="fn-back-links">→ <a href="main.html#fn-ref-8-1">1章3節1款</a></span></dt>
-<dd>堅固でゆるぎないこと。</dd>
-<dt id="fn-9">*9 綏撫（すいぶ）<span class="fn-back-links">→ <a href="main.html#fn-ref-9-1">1章3節2款</a></span></dt>
-<dd>慰めいたわること。民心を安んじ撫育すること。</dd>
-<dt id="fn-10">*10 親裁（しんさい）<span class="fn-back-links">→ <a href="main.html#fn-ref-10-1">1章3節2款</a>、<a href="main.html#fn-ref-10-2">2章6節</a>、<a href="main.html#fn-ref-10-3">3条</a>、<a href="main.html#fn-ref-10-4">4条</a>、<a href="main.html#fn-ref-10-5">5条</a>、<a href="main.html#fn-ref-10-6">5条</a>、<a href="main.html#fn-ref-10-7">9条</a>、<a href="main.html#fn-ref-10-8">11条</a>、<a href="main.html#fn-ref-10-9">17条</a>、<a href="main.html#fn-ref-10-10">17条</a>、<a href="main.html#fn-ref-10-11">57条</a>、<a href="main.html#fn-ref-10-12">57条</a></span></dt>
-<dd>天皇がみずから裁断・決定すること。特に統帥権の行使について用いる。</dd>
-<dt id="fn-11">*11 底止（ていし）<span class="fn-back-links">→ <a href="main.html#fn-ref-11-1">2章1節</a></span></dt>
-<dd>ゆくところまで行って止まること。行き着くところまで行くこと。</dd>
-<dt id="fn-12">*12 規矩（きく）<span class="fn-back-links">→ <a href="main.html#fn-ref-12-1">2章1節</a></span></dt>
-<dd>物事の規則・基準。コンパスと定規が原義。</dd>
-<dt id="fn-13">*13 勅裁（ちょくさい）<span class="fn-back-links">→ <a href="main.html#fn-ref-13-1">2章4節</a>、<a href="main.html#fn-ref-13-2">9条</a>、<a href="main.html#fn-ref-13-3">12条</a>、<a href="main.html#fn-ref-13-4">15条</a>、<a href="main.html#fn-ref-13-5">34条</a>、<a href="main.html#fn-ref-13-6">49条</a>、<a href="main.html#fn-ref-13-7">53条</a>、<a href="main.html#fn-ref-13-8">53条</a></span></dt>
-<dd>天皇の裁決・裁可を仰ぐこと。</dd>
-<dt id="fn-14">*14 横溢（おういつ）<span class="fn-back-links">→ <a href="main.html#fn-ref-14-1">2章5節</a></span></dt>
-<dd>水があふれるように、気力・勢いなどが満ちあふれること。</dd>
-<dt id="fn-15">*15 洪模（こうぼ）<span class="fn-back-links">→ <a href="main.html#fn-ref-15-1">2章5節</a></span></dt>
-<dd>大きな規模の計画・構想。壮大な事業の規模。</dd>
-<dt id="fn-16">*16 濫觴（らんしょう）<span class="fn-back-links">→ <a href="main.html#fn-ref-16-1">2章5節</a></span></dt>
-<dd>物事の起源・始まり。「觴（さかずき）を濫（うか）べる」ほどの細流が大河の源となることから。</dd>
-<dt id="fn-17">*17 鴻緒（こうしょ）<span class="fn-back-links">→ <a href="main.html#fn-ref-17-1">2章5節</a></span></dt>
-<dd>大きく立派な事業の端緒。特に皇統の大業について用いる。</dd>
-<dt id="fn-18">*18 乾綱（けんこう）<span class="fn-back-links">→ <a href="main.html#fn-ref-18-1">2章5節</a></span></dt>
-<dd>天子の政治の大綱。君主の統治の大本。「乾」は天・君主の意。</dd>
-<dt id="fn-19">*19 振張（しんちょう）<span class="fn-back-links">→ <a href="main.html#fn-ref-19-1">2章5節</a></span></dt>
-<dd>ゆるんだものを引き締め、奮い立たせること。綱紀を正すこと。</dd>
-<dt id="fn-20">*20 遺烈（いれつ）<span class="fn-back-links">→ <a href="main.html#fn-ref-20-1">2章5節</a></span></dt>
-<dd>先人が残した功績・偉業。</dd>
-<dt id="fn-21">*21 謨訓（ぼくん）<span class="fn-back-links">→ <a href="main.html#fn-ref-21-1">2章5節</a></span></dt>
-<dd>先人の遺した訓戒・教え。祖先の遺訓。</dd>
-<dt id="fn-22">*22 朝野（ちょうや）<span class="fn-back-links">→ <a href="main.html#fn-ref-22-1">2章5節</a></span></dt>
-<dd>朝廷と民間。政府と在野。官民。</dd>
-<dt id="fn-23">*23 躁急（そうきゅう）<span class="fn-back-links">→ <a href="main.html#fn-ref-23-1">2章5節</a></span></dt>
-<dd>落ち着きなく性急であること。焦って急ぐこと。</dd>
-<dt id="fn-24">*24 仰瞻（ぎょうせん）<span class="fn-back-links">→ <a href="main.html#fn-ref-24-1">1条</a></span></dt>
-<dd>仰ぎ見ること。尊敬の念をもって見上げること。</dd>
-<dt id="fn-25">*25 情誼（じょうぎ）<span class="fn-back-links">→ <a href="main.html#fn-ref-25-1">1条</a></span></dt>
-<dd>人と人との間の情愛と誠意。真心ある交わり。</dd>
-<dt id="fn-26">*26 油然（ゆうぜん）<span class="fn-back-links">→ <a href="main.html#fn-ref-26-1">1条</a></span></dt>
-<dd>自然に湧き出るさま。おのずからそうなるさま。</dd>
-<dt id="fn-27">*27 明鬯（めいちょう）<span class="fn-back-links">→ <a href="main.html#fn-ref-27-1">1条</a></span></dt>
-<dd>明らかにすること。道理を明白にすること。</dd>
-<dt id="fn-28">*28 戒飭（かいちょく）<span class="fn-back-links">→ <a href="main.html#fn-ref-28-1">1条</a></span></dt>
-<dd>戒め慎ませること。厳しく注意を与えること。</dd>
-<dt id="fn-29">*29 閑却（かんきゃく）<span class="fn-back-links">→ <a href="main.html#fn-ref-29-1">1条</a></span></dt>
-<dd>なおざりにすること。等閑に付すこと。</dd>
-<dt id="fn-30">*30 背戻（はいれい）<span class="fn-back-links">→ <a href="main.html#fn-ref-30-1">1条</a></span></dt>
-<dd>道理に背き反すること。道義にもとること。</dd>
-<dt id="fn-31">*31 帰著（きちゃく）<span class="fn-back-links">→ <a href="main.html#fn-ref-31-1">1条</a></span></dt>
-<dd>「帰着」に同じ。最終的にそこに行き着くこと。結局そうなること。</dd>
-<dt id="fn-32">*32 践祚（せんそ）<span class="fn-back-links">→ <a href="main.html#fn-ref-32-1">2条</a>、<a href="main.html#fn-ref-32-2">17条</a></span></dt>
-<dd>天皇が皇位を継承すること。即位とは異なる。</dd>
-<dt id="fn-33">*33 上諭（じょうゆ）<span class="fn-back-links">→ <a href="main.html#fn-ref-33-1">2条</a>、<a href="main.html#fn-ref-33-2">4条</a>、<a href="main.html#fn-ref-33-3">5条</a>、<a href="main.html#fn-ref-33-4">8条</a>、<a href="main.html#fn-ref-33-5">55条</a>、<a href="main.html#fn-ref-33-6">56条</a>、<a href="main.html#fn-ref-33-7">64条</a>、<a href="main.html#fn-ref-33-8">73条</a></span></dt>
-<dd>法律・勅令の冒頭に付される天皇の言葉。公布の趣旨を示す。</dd>
-<dt id="fn-34">*34 遜位（そんい）<span class="fn-back-links">→ <a href="main.html#fn-ref-34-1">2条</a></span></dt>
-<dd>君主が自らの意思で皇位を退くこと。譲位。</dd>
-<dt id="fn-35">*35 儲（もうけ）<span class="fn-back-links">→ <a href="main.html#fn-ref-35-1">2条</a>、<a href="main.html#fn-ref-35-2">2条</a></span></dt>
-<dd>ここでは「儲君（ちょくん）」すなわち皇太子の意。皇嗣を議論すること。</dd>
-<dt id="fn-36">*36 天津日嗣（あまつひつぎ）<span class="fn-back-links">→ <a href="main.html#fn-ref-36-1">2条</a></span></dt>
-<dd>皇位のこと。天照大神から代々受け継がれる日の神の系統の意。</dd>
-<dt id="fn-37">*37 志良須（しらす）<span class="fn-back-links">→ <a href="main.html#fn-ref-37-1">2条</a></span></dt>
-<dd>「知らす」「治らす」の万葉仮名表記。天皇が統治すること。「知ろしめす」の古語。</dd>
-<dt id="fn-38">*38 閏位（じゅんい）<span class="fn-back-links">→ <a href="main.html#fn-ref-38-1">2条</a></span></dt>
-<dd>正統でない皇位。臣下が不当に皇位を窺うこと。</dd>
-<dt id="fn-39">*39 諒闇（りょうあん）<span class="fn-back-links">→ <a href="main.html#fn-ref-39-1">2条</a></span></dt>
-<dd>天皇が先帝の喪に服する期間。一般に1年間。</dd>
-<dt id="fn-40">*40 遵由（じゅんゆう）<span class="fn-back-links">→ <a href="main.html#fn-ref-40-1">3条</a>、<a href="main.html#fn-ref-40-2">13条</a>、<a href="main.html#fn-ref-40-3">14条</a>、<a href="main.html#fn-ref-40-4">22条</a>、<a href="main.html#fn-ref-40-5">24条</a>、<a href="main.html#fn-ref-40-6">57条</a>、<a href="main.html#fn-ref-40-7">76条</a>、<a href="main.html#fn-ref-40-8">76条</a></span></dt>
-<dd>法令に従い守ること。遵守とほぼ同義。</dd>
-<dt id="fn-41">*41 輔弼（ほひつ）<span class="fn-back-links">→ <a href="main.html#fn-ref-41-1">3条</a>、<a href="main.html#fn-ref-41-2">11条</a>、<a href="main.html#fn-ref-41-3">12条</a>、<a href="main.html#fn-ref-41-4">14条</a>、<a href="main.html#fn-ref-41-5">15条</a>、<a href="main.html#fn-ref-41-6">55条</a>、<a href="main.html#fn-ref-41-7">55条</a>、<a href="main.html#fn-ref-41-8">55条</a>、<a href="main.html#fn-ref-41-9">55条</a>、<a href="main.html#fn-ref-41-10">55条</a>、<a href="main.html#fn-ref-41-11">55条</a>、<a href="main.html#fn-ref-41-12">55条</a>、<a href="main.html#fn-ref-41-13">55条</a>、<a href="main.html#fn-ref-41-14">55条</a>、<a href="main.html#fn-ref-41-15">55条</a>、<a href="main.html#fn-ref-41-16">55条</a>、<a href="main.html#fn-ref-41-17">56条</a>、<a href="main.html#fn-ref-41-18">56条</a>、<a href="main.html#fn-ref-41-19">56条</a></span></dt>
-<dd>天皇の国務上の行為を補佐すること。大日本帝国憲法下では国務大臣が天皇を輔弼する責任を負った。</dd>
-<dt id="fn-42">*42 要諦（ようてい）<span class="fn-back-links">→ <a href="main.html#fn-ref-42-1">4条</a>、<a href="main.html#fn-ref-42-2">18条</a>、<a href="main.html#fn-ref-42-3">57条</a>、<a href="main.html#fn-ref-42-4">64条</a>、<a href="main.html#fn-ref-42-5">64条</a></span></dt>
-<dd>物事の最も大切な点。要点。</dd>
-<dt id="fn-43">*43 有司（ゆうし）<span class="fn-back-links">→ <a href="main.html#fn-ref-43-1">5条</a></span></dt>
-<dd>役人。官吏。特定の職務を掌る者。</dd>
-<dt id="fn-44">*44 陥害（かんがい）<span class="fn-back-links">→ <a href="main.html#fn-ref-44-1">5条</a></span></dt>
-<dd>人を陥れ害すること。罪に陥れること。</dd>
-<dt id="fn-45">*45 煩瑣（はんさ）<span class="fn-back-links">→ <a href="main.html#fn-ref-45-1">5条</a>、<a href="main.html#fn-ref-45-2">62条</a></span></dt>
-<dd>事柄が細かく複雑で煩わしいこと。</dd>
-<dt id="fn-46">*46 衛戍（えいじゅ）<span class="fn-back-links">→ <a href="main.html#fn-ref-46-1">12条</a></span></dt>
-<dd>軍隊が一定の地域に常駐して警備にあたること。またその駐屯地。</dd>
-<dt id="fn-47">*47 騒擾（そうじょう）<span class="fn-back-links">→ <a href="main.html#fn-ref-47-1">14条</a>、<a href="main.html#fn-ref-47-2">14条</a>、<a href="main.html#fn-ref-47-3">35条</a></span></dt>
-<dd>集団が騒ぎを起こして社会の秩序を乱すこと。</dd>
-<dt id="fn-48">*48 嗣後（しご）<span class="fn-back-links">→ <a href="main.html#fn-ref-48-1">15条</a></span></dt>
-<dd>「以後」「その後」の意。法律文語で「それ以降」を意味する。</dd>
-<dt id="fn-49">*49 褫奪（ちだつ）<span class="fn-back-links">→ <a href="main.html#fn-ref-49-1">15条</a></span></dt>
-<dd>権利・資格・位階などを剥奪すること。</dd>
-<dt id="fn-50">*50 背馳（はいち）<span class="fn-back-links">→ <a href="main.html#fn-ref-50-1">22条</a>、<a href="main.html#fn-ref-50-2">33条</a></span></dt>
-<dd>互いに反対の方向に向かうこと。矛盾すること。</dd>
-<dt id="fn-51">*51 違警罪（いけいざい）<span class="fn-back-links">→ <a href="main.html#fn-ref-51-1">24条</a>、<a href="main.html#fn-ref-51-2">24条</a>、<a href="main.html#fn-ref-51-3">24条</a>、<a href="main.html#fn-ref-51-4">57条</a></span></dt>
-<dd>旧刑法上の軽微な犯罪の類型。拘留または科料に処される。</dd>
-<dt id="fn-52">*52 訴願（そがん）<span class="fn-back-links">→ <a href="main.html#fn-ref-52-1">30条</a>、<a href="main.html#fn-ref-52-2">50条</a>、<a href="main.html#fn-ref-52-3">61条</a>、<a href="main.html#fn-ref-52-4">61条</a></span></dt>
-<dd>行政処分に不服がある場合に上級行政庁に対して取消し・変更を求めること。現在の行政不服審査に相当。</dd>
-<dt id="fn-53">*53 徴する（ちょうする）<span class="fn-back-links">→ <a href="main.html#fn-ref-53-1">33条</a>、<a href="main.html#fn-ref-53-2">71条</a></span></dt>
-<dd>「証拠とする」「照らして確かめる」の意。「本条の沿革に徴するも」＝「本条の歴史的経緯に照らしてみても」。</dd>
-<dt id="fn-54">*54 偏倚（へんい）<span class="fn-back-links">→ <a href="main.html#fn-ref-54-1">33条</a></span></dt>
-<dd>一方に偏り片寄ること。不公平であること。</dd>
-<dt id="fn-55">*55 匡救（きょうきゅう）<span class="fn-back-links">→ <a href="main.html#fn-ref-55-1">33条</a></span></dt>
-<dd>誤りを正し弊害を救済すること。</dd>
-<dt id="fn-56">*56 関渉（かんしょう）<span class="fn-back-links">→ <a href="main.html#fn-ref-56-1">34条</a></span></dt>
-<dd>関係すること。関わりをもつこと。</dd>
-<dt id="fn-57">*57 剴切（がいせつ）<span class="fn-back-links">→ <a href="main.html#fn-ref-57-1">37条</a></span></dt>
-<dd>事柄にぴったりと当てはまること。適切であること。</dd>
-<dt id="fn-58">*58 劈頭（へきとう）<span class="fn-back-links">→ <a href="main.html#fn-ref-58-1">40条</a>、<a href="main.html#fn-ref-58-2">41条</a></span></dt>
-<dd>いちばん初め。冒頭。</dd>
-<dt id="fn-59">*59 不羈（ふき）<span class="fn-back-links">→ <a href="main.html#fn-ref-59-1">49条</a>、<a href="main.html#fn-ref-59-2">57条</a>、<a href="main.html#fn-ref-59-3">57条</a>、<a href="main.html#fn-ref-59-4">72条</a></span></dt>
-<dd>何物にも束縛されないこと。自由であること。</dd>
-<dt id="fn-60">*60 壟断（ろうだん）<span class="fn-back-links">→ <a href="main.html#fn-ref-60-1">52条</a></span></dt>
-<dd>利益を独占すること。本来は市場の高所を占めて商売を独占する意。</dd>
-<dt id="fn-61">*61 僭窃（せんせつ）<span class="fn-back-links">→ <a href="main.html#fn-ref-61-1">53条</a></span></dt>
-<dd>分不相応に上位の者の権限を奪い取ること。</dd>
-<dt id="fn-62">*62 啓沃（けいよく）<span class="fn-back-links">→ <a href="main.html#fn-ref-62-1">55条</a>、<a href="main.html#fn-ref-62-2">56条</a></span></dt>
-<dd>君主に対して十分に意見を申し述べること。</dd>
-<dt id="fn-63">*63 輔翼（ほよく）<span class="fn-back-links">→ <a href="main.html#fn-ref-63-1">55条</a>、<a href="main.html#fn-ref-63-2">56条</a>、<a href="main.html#fn-ref-63-3">56条</a></span></dt>
-<dd>天皇の皇族に関する事務を補佐すること。主に宮内大臣の職務について用いる。</dd>
-<dt id="fn-64">*64 任免黜陟（にんめんちゅつちょく）<span class="fn-back-links">→ <a href="main.html#fn-ref-64-1">55条</a>、<a href="main.html#fn-ref-64-2">55条</a></span></dt>
-<dd>官吏を任命し、罷免し、降格し、昇進させること。</dd>
-<dt id="fn-65">*65 覆審（ふくしん）<span class="fn-back-links">→ <a href="main.html#fn-ref-65-1">57条</a></span></dt>
-<dd>下級裁判所の裁判に対し上級裁判所が事実・法律の両面から再審理すること。</dd>
-<dt id="fn-66">*66 阿附（あふ）<span class="fn-back-links">→ <a href="main.html#fn-ref-66-1">57条</a></span></dt>
-<dd>権勢のある者にへつらい従うこと。おもねること。</dd>
-<dt id="fn-67">*67 侵遏（しんあつ）<span class="fn-back-links">→ <a href="main.html#fn-ref-67-1">57条</a></span></dt>
-<dd>侵害して阻止すること。権限を侵して抑えること。</dd>
-<dt id="fn-68">*68 衡平（こうへい）<span class="fn-back-links">→ <a href="main.html#fn-ref-68-1">58条</a></span></dt>
-<dd>公平・均衡であること。法の適用において実質的公正を図ること。</dd>
-<dt id="fn-69">*69 允許（いんきょ）<span class="fn-back-links">→ <a href="main.html#fn-ref-69-1">58条</a></span></dt>
-<dd>願い出を聞き届けて許可すること。天皇の許可について用いる。</dd>
-<dt id="fn-70">*70 司直（しちょく）<span class="fn-back-links">→ <a href="main.html#fn-ref-70-1">59条</a></span></dt>
-<dd>法を正しく執行する官吏。裁判官。転じて、裁判の公正さを意味する。</dd>
-<dt id="fn-71">*71 私曲（しきょく）<span class="fn-back-links">→ <a href="main.html#fn-ref-71-1">59条</a></span></dt>
-<dd>私情にとらわれて公正を欠くこと。えこひいき。</dd>
-<dt id="fn-72">*72 羈束（きそく）<span class="fn-back-links">→ <a href="main.html#fn-ref-72-1">61条</a>、<a href="main.html#fn-ref-72-2">61条</a>、<a href="main.html#fn-ref-72-3">61条</a>、<a href="main.html#fn-ref-72-4">65条</a></span></dt>
-<dd>法的に拘束し従わせること。行政法上、行政庁の判断を法令が制約する「羈束行為」の語で知られる。</dd>
-<dt id="fn-73">*73 非職（ひしょく）<span class="fn-back-links">→ <a href="main.html#fn-ref-73-1">61条</a>、<a href="main.html#fn-ref-73-2">72条</a></span></dt>
-<dd>官吏をその職務から離れさせること。休職に近い。</dd>
-<dt id="fn-74">*74 噸税（とんぜい）<span class="fn-back-links">→ <a href="main.html#fn-ref-74-1">62条</a></span></dt>
-<dd>船舶の積載量（トン数）に応じて課する税。</dd>
-<dt id="fn-75">*75 逓次（ていじ）<span class="fn-back-links">→ <a href="main.html#fn-ref-75-1">62条</a></span></dt>
-<dd>順を追って次々と。順次。</dd>
-<dt id="fn-76">*76 坤輿（こんよ）<span class="fn-back-links">→ <a href="main.html#fn-ref-76-1">2編</a></span></dt>
-<dd>大地。世界全体。</dd>
-<dt id="fn-77">*77 金甌無欠（きんおうむけつ）<span class="fn-back-links">→ <a href="main.html#fn-ref-77-1">2編</a></span></dt>
-<dd>国家の主権が完全で少しも欠けるところがないこと。金の器に欠けがないの意。</dd>
-</dl>
-</div>
-</div>
-</div>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const resizer = document.querySelector('.resizer');
-    const nav = document.querySelector('.nav-pane');
-    let isResizing = false;
-    resizer.addEventListener('mousedown', function(e) {
-        isResizing = true;
-        resizer.classList.add('active');
-        document.body.style.cursor = 'col-resize';
-        document.body.style.userSelect = 'none';
-        e.preventDefault();
-    });
-    document.addEventListener('mousemove', function(e) {
-        if (!isResizing) return;
-        let newWidth = e.clientX;
-        if (newWidth < 150) newWidth = 150;
-        if (newWidth > window.innerWidth * 0.5) newWidth = window.innerWidth * 0.5;
-        nav.style.width = newWidth + 'px';
-    });
-    document.addEventListener('mouseup', function() {
-        if (isResizing) {
-            isResizing = false;
-            resizer.classList.remove('active');
-            document.body.style.cursor = '';
-            document.body.style.userSelect = '';
-        }
-    });
-    // ---- アンカーリンクのhistory管理 ----
-    var contentPane = document.querySelector('.content-pane');
-    if (contentPane) {
-        document.addEventListener('click', function(e) {
-            var link = e.target.closest('a[href^="#"]');
-            if (!link) return;
-            var targetId = link.getAttribute('href').slice(1);
-            var target = document.getElementById(targetId);
-            if (!target) return;
-            e.preventDefault();
-            history.pushState({scrollTop: contentPane.scrollTop}, '', '#' + targetId);
-            target.scrollIntoView({behavior: 'smooth', block: 'start'});
-        });
-        window.addEventListener('popstate', function(e) {
-            if (e.state && typeof e.state.scrollTop === 'number') {
-                contentPane.scrollTop = e.state.scrollTop;
-            } else if (location.hash) {
-                var el = document.getElementById(location.hash.slice(1));
-                if (el) el.scrollIntoView({block: 'start'});
-            }
-        });
-        // 初期ロード時のhashジャンプ
-        if (location.hash) {
-            var initTarget = document.getElementById(location.hash.slice(1));
-            if (initTarget) {
-                history.replaceState({scrollTop: 0}, '', location.hash);
-                setTimeout(function() { initTarget.scrollIntoView({block: 'start'}); }, 100);
-            }
-        }
-    }
-    // ---- ハンバーガーメニュー ----
-    var hamburger = document.getElementById('hamburger');
-    var overlay = document.getElementById('nav-overlay');
-    if (hamburger && nav && overlay) {
-        hamburger.addEventListener('click', function() {
-            nav.classList.toggle('open');
-            overlay.classList.toggle('open');
-        });
-        overlay.addEventListener('click', function() {
-            nav.classList.remove('open');
-            overlay.classList.remove('open');
-        });
-        nav.addEventListener('click', function(e) {
-            if (e.target.tagName === 'A' && window.innerWidth <= 768) {
-                nav.classList.remove('open');
-                overlay.classList.remove('open');
-            }
-        });
-    }
-});
-
-var _tabAnimId = 0;
-function syncTabPosition() {
-    var tab = document.getElementById('yakuchu-tab');
-    var panel = document.getElementById('yakuchu-panel');
-    var resizer = document.getElementById('h-resizer');
-    if (!tab || !panel) return;
-    var ph = panel.offsetHeight;
-    var rh = resizer ? resizer.offsetHeight : 0;
-    tab.style.bottom = (ph + rh) + 'px';
-}
-function startTabSync() {
-    cancelAnimationFrame(_tabAnimId);
-    var start = performance.now();
-    function tick() {
-        syncTabPosition();
-        if (performance.now() - start < 400) {
-            _tabAnimId = requestAnimationFrame(tick);
-        }
-    }
-    _tabAnimId = requestAnimationFrame(tick);
-}
-function openYakuchu(num) {
-    var panel = document.getElementById('yakuchu-panel');
-    var resizer = document.getElementById('h-resizer');
-    var tab = document.getElementById('yakuchu-tab');
-    if (!panel) return;
-    panel.style.height = '';
-    panel.classList.add('open');
-    if (resizer) resizer.classList.add('open');
-    if (tab) tab.innerHTML = '\u2228';
-    startTabSync();
-    var dt = document.getElementById('fn-' + num);
-    if (dt) {
-        panel.querySelectorAll('dt.highlight').forEach(function(el) { el.classList.remove('highlight'); });
-        dt.classList.add('highlight');
-        setTimeout(function() { dt.scrollIntoView({behavior: 'smooth', block: 'start'}); }, 320);
-    }
-}
-function closeYakuchu() {
-    var panel = document.getElementById('yakuchu-panel');
-    var resizer = document.getElementById('h-resizer');
-    var tab = document.getElementById('yakuchu-tab');
-    if (panel) { panel.classList.remove('open'); panel.style.height = ''; }
-    if (resizer) resizer.classList.remove('open');
-    if (tab) tab.innerHTML = '\u2227';
-    startTabSync();
-}
-function scrollToFnRef(refId) {
-    closeYakuchu();
-    setTimeout(function() {
-        var el = document.getElementById(refId);
-        if (el) {
-            el.scrollIntoView({behavior: 'smooth', block: 'center'});
-            el.style.transition = 'background 0.3s';
-            el.style.background = '#f0e8c8';
-            setTimeout(function() { el.style.background = ''; }, 2000);
-        }
-    }, 350);
-}
-document.addEventListener('DOMContentLoaded', function() {
-    var hResizer = document.getElementById('h-resizer');
-    if (!hResizer) return;
-    var panel = document.getElementById('yakuchu-panel');
-    var wrapper = hResizer.parentElement;
-    var isHResizing = false;
-    var justResized = false;
-    hResizer.addEventListener('mousedown', function(e) {
-        isHResizing = true;
-        hResizer.classList.add('active');
-        document.body.style.cursor = 'row-resize';
-        document.body.style.userSelect = 'none';
-        e.preventDefault();
-    });
-    document.addEventListener('mousemove', function(e) {
-        if (!isHResizing) return;
-        var wrapperRect = wrapper.getBoundingClientRect();
-        var newHeight = wrapperRect.bottom - e.clientY;
-        if (newHeight < 100) newHeight = 100;
-        if (newHeight > wrapperRect.height * 0.6) newHeight = wrapperRect.height * 0.6;
-        panel.style.height = newHeight + 'px';
-        syncTabPosition();
-    });
-    document.addEventListener('mouseup', function() {
-        if (isHResizing) {
-            isHResizing = false;
-            justResized = true;
-            setTimeout(function() { justResized = false; }, 200);
-            hResizer.classList.remove('active');
-            document.body.style.cursor = '';
-            document.body.style.userSelect = '';
-        }
-    });
-    document.addEventListener('click', function(e) {
-        if (justResized) return;
-        if (e.target.closest('.content-pane') && !e.target.closest('.fn') && !e.target.closest('.fn-mark')) {
-            closeYakuchu();
-        }
-    });
-    var yakuchuTab = document.getElementById('yakuchu-tab');
-    if (yakuchuTab) {
-        yakuchuTab.addEventListener('click', function() {
-            var p = document.getElementById('yakuchu-panel');
-            if (p && p.classList.contains('open')) {
-                closeYakuchu();
-            } else {
-                openYakuchu(1);
-            }
-        });
-    }
-    // 逆リンク(fn-back-links)はPerl側で静的に生成済み
-});
-
-</script>
 </body>
 </html>
