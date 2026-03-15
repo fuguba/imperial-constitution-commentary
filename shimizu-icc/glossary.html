@@ -339,14 +339,27 @@ a.ext-link:visited { color: #7b2d8b; }
     .nav-pane .nav-tree ul { padding-left: 6px; }
     .nav-pane .nav-tree ul li::after { width: 6px; left: -4px; }
     .nav-pane .nav-tree ul li::before { left: -4px; }
+    /* TOC: フォント縮小・インデント縮小 */
+    .toc-tree { padding: 12px 12px 12px 8px; }
+    .toc-tree ul { padding-left: 12px; }
+    .toc-tree ul ul { margin-left: 2px; }
+    .toc-tree .toc-lv0 { font-size: 18px; }
+    .toc-tree .toc-lv1 { font-size: 16px; }
+    .toc-tree .toc-lv2 { font-size: 15px; }
+    .toc-tree .toc-lv3 { font-size: 14px; }
+    .toc-tree .toc-sub-inline { font-size: 13px; }
+    .toc-tree .toc-charts { font-size: 15px; }
+    .toc-tree ul ul > li::before { left: -10px; }
+    .toc-tree ul ul > li::after { left: -10px; width: 12px; }
+    /* 小見出し: 折り返しが左端に戻るようにする */
     .content-pane h6.marker-lv1,
     .content-pane h6.marker-sub {
         margin-left: 0;
         padding-left: 0;
     }
     .content-pane h6.marker-lv4 {
-        margin-left: 0;
-        padding-left: 1em;
+        padding-left: 0;
+        text-indent: 0;
     }
 }
 
