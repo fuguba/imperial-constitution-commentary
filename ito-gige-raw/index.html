@@ -3,172 +3,60 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>帝國憲法皇室典範義解 — ふぐば文庫</title>
+<title>帝國憲法義解 — ふぐば文庫</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body { height: 100%; font-family: "UD デジタル 教科書体 NK-R", "UD Digi Kyokasho NK-R", "Noto Serif JP", serif; }
 .container { display: flex; height: 100vh; }
 .nav-pane {
-    width: 280px;
-    min-width: 150px;
-    max-width: 50vw;
-    overflow-y: auto;
-    background: #f5f0e8;
-    border-right: 1px solid #ccc;
-    padding: 12px 8px;
-    font-size: 14px;
-    line-height: 1.6;
-    flex-shrink: 0;
+    width: 280px; min-width: 150px; max-width: 50vw;
+    overflow-y: auto; background: #f5f0e8; border-right: 1px solid #ccc;
+    padding: 12px 8px; font-size: 14px; line-height: 1.6; flex-shrink: 0;
 }
-.nav-pane a {
-    color: #1a1a1a;
-    text-decoration: none;
-    padding: 1px 4px;
-    border-radius: 3px;
-}
+.nav-pane a { color: #1a1a1a; text-decoration: none; padding: 1px 4px; border-radius: 3px; }
 .nav-pane a:hover { background: #e0d8c8; }
-.nav-pane .nav-title {
-    font-size: 16px; font-weight: bold; margin-bottom: 12px;
-    padding-bottom: 8px; border-bottom: 2px solid #b0a080;
-    color: #4a3a1a;
-}
-.breadcrumb {
-    font-size: 12px; color: #8a7a5a; margin-bottom: 8px; line-height: 1.6;
-}
+.nav-pane .nav-title { font-size: 16px; font-weight: bold; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #b0a080; color: #4a3a1a; }
+.breadcrumb { font-size: 12px; color: #8a7a5a; margin-bottom: 8px; line-height: 1.6; }
 .breadcrumb a { color: #6a5a3a; text-decoration: none; }
 .breadcrumb a:hover { text-decoration: underline; }
 .breadcrumb .sep { margin: 0 4px; color: #b0a080; }
-.nav-pane .nav-tree {
-    list-style: none; margin: 8px 0 0 0; padding: 0;
-}
-.nav-pane .nav-tree ul {
-    list-style: none; margin: 0; padding: 0 0 0 10px;
-}
-.nav-pane .nav-tree li {
-    position: relative; padding: 1px 0 1px 2px; line-height: 1.5;
-}
+.nav-pane .nav-tree { list-style: none; margin: 8px 0 0 0; padding: 0; }
+.nav-pane .nav-tree ul { list-style: none; margin: 0; padding: 0 0 0 10px; }
+.nav-pane .nav-tree li { position: relative; padding: 1px 0 1px 2px; line-height: 1.5; }
 .nav-pane .nav-tree > li { padding-left: 0; }
-.nav-pane .nav-tree ul li::before {
-    content: ""; position: absolute;
-    left: -7px; top: 0; bottom: 0;
-    border-left: 1px solid #b0a060;
-}
-.nav-pane .nav-tree ul li:last-child::before {
-    bottom: auto; height: calc(0.75em + 2px);
-}
-.nav-pane .nav-tree ul li::after {
-    content: ""; position: absolute;
-    left: -7px; top: 0.75em;
-    width: 10px; height: 0;
-    border-top: 1px solid #b0a060;
-}
+.nav-pane .nav-tree ul li::before { content: ""; position: absolute; left: -7px; top: 0; bottom: 0; border-left: 1px solid #b0a060; }
+.nav-pane .nav-tree ul li:last-child::before { bottom: auto; height: calc(0.75em + 2px); }
+.nav-pane .nav-tree ul li::after { content: ""; position: absolute; left: -7px; top: 0.75em; width: 10px; height: 0; border-top: 1px solid #b0a060; }
 .nav-pane .nav-lv0 { font-size: 14px; margin-top: 6px; }
-.nav-pane .nav-lv1 { font-size: 14px; margin-top: 4px; }
-.nav-pane .nav-lv2 { font-size: 13px; }
-
+.nav-pane .nav-lv1 { font-size: 14px; }
 a.self-link { color: inherit; text-decoration: none; }
 a.self-link:hover { text-decoration: underline; text-decoration-color: #b0a080; }
-.back-to-top {
-    margin-top: 48px; padding-top: 24px; border-top: 1px solid #e0dcd0;
-    text-align: center; font-size: 15px;
-}
+.back-to-top { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e0dcd0; text-align: center; font-size: 15px; }
 .back-to-top a { color: #6a5a3a; text-decoration: none; }
 .back-to-top a:hover { text-decoration: underline; }
-.resizer {
-    width: 5px;
-    cursor: col-resize;
-    background: #ccc;
-    flex-shrink: 0;
-    transition: background 0.2s;
-}
+.resizer { width: 5px; cursor: col-resize; background: #ccc; flex-shrink: 0; transition: background 0.2s; }
 .resizer:hover, .resizer.active { background: #999; }
-.content-breadcrumb {
-    font-size: 13px; color: #8a7a5a; margin-bottom: 16px;
-}
-.content-breadcrumb a { color: #6a5a3a; text-decoration: none; }
-.content-breadcrumb a:hover { text-decoration: underline; }
-.content-breadcrumb .sep { margin: 0 4px; color: #b0a080; }
-.content-pane {
-    flex: 1;
-    overflow-y: auto;
-    padding: 40px 60px;
-    max-width: 100%;
-    background: #fffef8;
-}
-.content-pane h1 {
-    font-size: 32px; margin-bottom: 12px; color: #2a1a0a;
-    border-bottom: 2px solid #b0a080; padding-bottom: 8px;
-}
-.content-pane h2.hen {
-    font-size: 28px; margin: 48px 0 14px; color: #2a1a0a;
-    border-bottom: 3px double #b0a060; padding-bottom: 6px;
-}
-.content-pane h3.sho {
-    font-size: 24px; margin: 40px 0 12px; color: #2a1a0a;
-    border-bottom: 1px solid #c0b090; padding-bottom: 4px;
-}
-.content-pane h3.jo {
-    font-size: 22px; margin: 34px 0 10px; color: #2a1a0a;
-}
-.content-pane p {
-    text-indent: 1em; line-height: 1.9; margin: 6px 0;
-    font-size: 19px; color: #111; text-align: justify;
-}
-.content-pane .joubun {
-    background: #f8f4e8; border-left: 3px solid #b0a060;
-    padding: 10px 18px; margin: 14px 0; font-size: 17px;
-}
+.content-pane { flex: 1; overflow-y: auto; padding: 40px 60px; max-width: 100%; background: #fffef8; }
+.content-pane h1 { font-size: 32px; margin-bottom: 12px; color: #2a1a0a; border-bottom: 2px solid #b0a080; padding-bottom: 8px; }
+.content-pane h2.hen { font-size: 28px; margin: 48px 0 14px; color: #2a1a0a; border-bottom: 3px double #b0a060; padding-bottom: 6px; }
+.content-pane h3.jo { font-size: 22px; margin: 34px 0 10px; color: #2a1a0a; }
+.content-pane p { text-indent: 1em; line-height: 1.9; margin: 6px 0; font-size: 19px; color: #111; text-align: justify; }
+.content-pane .joubun { background: #f8f4e8; border-left: 3px solid #b0a060; padding: 10px 18px; margin: 14px 0; font-size: 17px; }
 .content-pane .joubun p { text-indent: 0; font-size: 17px; }
-.content-pane .author {
-    font-size: 18px; color: #333; margin-bottom: 20px;
-}
-.content-pane .commentary {
-    margin: 10px 0 20px 0;
-}
-.content-pane .appendix {
-    margin: 16px 0;
-    padding: 12px 18px;
-    background: #f5f2ea;
-    border-left: 3px solid #8a7a5a;
-    font-size: 17px;
-}
+.content-pane .author { font-size: 18px; color: #333; margin-bottom: 20px; }
+.content-pane .commentary { margin: 10px 0 20px 0; }
+.content-pane .appendix { margin: 16px 0; padding: 12px 18px; background: #f5f2ea; border-left: 3px solid #8a7a5a; font-size: 17px; }
 .content-pane .appendix p { font-size: 17px; text-indent: 1em; }
-.content-pane .section-preamble {
-    margin: 20px 0;
-}
-.content-pane .section-preamble .joubun p {
-    text-indent: 0; line-height: 2.0;
-}
-.content-pane .section-intro p {
-    line-height: 1.9;
-}
-
-.hamburger {
-    display: none; position: fixed; top: 8px; left: 8px; z-index: 1100;
-    background: #f5f0e8; border: 1px solid #b0a080; border-radius: 4px;
-    font-size: 24px; width: 40px; height: 40px; cursor: pointer;
-    color: #4a3a1a; line-height: 1;
-}
+.content-pane .section-preamble { margin: 20px 0; }
+.content-pane .section-preamble .joubun p { text-indent: 0; line-height: 2.0; }
+.content-pane .section-intro p { line-height: 1.9; }
+.hamburger { display: none; position: fixed; top: 8px; left: 8px; z-index: 1100; background: #f5f0e8; border: 1px solid #b0a080; border-radius: 4px; font-size: 24px; width: 40px; height: 40px; cursor: pointer; color: #4a3a1a; line-height: 1; }
 .hamburger:hover { background: #e8e0c8; }
-.nav-overlay {
-    display: none; position: fixed; top: 0; left: 0;
-    width: 100%; height: 100%; background: rgba(0,0,0,0.3);
-    z-index: 999;
-}
+.nav-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3); z-index: 999; }
 .nav-overlay.open { display: block; }
 @media (max-width: 768px) {
     .hamburger { display: block; }
-    .nav-pane {
-        position: fixed; top: 0; left: -300px; width: 280px;
-        height: 100vh; height: 100dvh;
-        z-index: 1000;
-        transition: left 0.3s ease;
-        font-size: 12px;
-        padding-top: 48px;
-        padding-bottom: 60px;
-        box-sizing: border-box;
-        -webkit-overflow-scrolling: touch;
-    }
+    .nav-pane { position: fixed; top: 0; left: -300px; width: 280px; height: 100vh; height: 100dvh; z-index: 1000; transition: left 0.3s ease; font-size: 12px; padding-top: 48px; padding-bottom: 60px; box-sizing: border-box; -webkit-overflow-scrolling: touch; }
     .nav-pane.open { left: 0; }
     .resizer { display: none; }
     .content-pane { padding: 50px 16px 20px; }
@@ -184,1305 +72,679 @@ a.self-link:hover { text-decoration: underline; text-decoration-color: #b0a080; 
     .content-pane .appendix { font-size: 15px; }
     .content-pane .appendix p { font-size: 15px; }
 }
-.reference-box {
-    margin-top: 48px;
-    padding: 20px 24px;
-    background: #f5f0e8;
-    border: 1px solid #e0dcd0;
-    border-radius: 6px;
-}
-.reference-box h3 {
-    font-size: 16px;
-    margin-bottom: 8px;
-}
-.reference-box p, .reference-box ul {
-    font-size: 14px;
-    line-height: 1.8;
-    color: #555;
-}
-.reference-box ul {
-    padding-left: 1.5em;
-}
-.ext-link {
-    color: #6a5a3a;
-    text-decoration: underline;
-}
+.reference-box { margin-top: 48px; padding: 20px 24px; background: #f5f0e8; border: 1px solid #e0dcd0; border-radius: 6px; }
+.reference-box h3 { font-size: 16px; margin-bottom: 8px; }
+.reference-box p, .reference-box ul { font-size: 14px; line-height: 1.8; color: #555; }
+.reference-box ul { padding-left: 1.5em; }
+.ext-link { color: #6a5a3a; text-decoration: underline; }
 </style>
 </head>
 <body>
-<button class="hamburger" id="hamburger" aria-label="メニュー">&#9776;</button>
+<button class="hamburger" id="hamburger">&#9776;</button>
 <div class="nav-overlay" id="nav-overlay"></div>
 <div class="container">
-<div class="nav-pane" id="nav-pane">
-<div class="breadcrumb"><a href="/">ふぐば文庫</a><span class="sep">&gt;</span><a href="/ito-gige-raw/">帝國憲法皇室典範義解</a></div>
-<div class="nav-title"><a href="/ito-gige-raw/" style="color: inherit; text-decoration: none;">帝國憲法皇室典範義解</a></div>
+<nav class="nav-pane" id="nav-pane">
+<div class="breadcrumb"><a href="/">ふぐば文庫</a><span class="sep">&gt;</span><a href="/ito-gige-raw/">帝國憲法義解</a></div>
+<div class="nav-title">帝國憲法義解</div>
 <ul class="nav-tree">
-<li class="nav-lv0"><a href="#intro">序</a></li>
-<li class="nav-lv0"><a href="#kenpo">帝國憲法義解</a>
+<li class="nav-lv0"><a href="#jobun">序</a>
+</li>
+<li class="nav-lv0"><a href="#kokubun">告文</a>
+</li>
+<li class="nav-lv0"><a href="#chokugo">憲法發布勅語</a>
+</li>
+<li class="nav-lv0"><a href="#jouyu">上諭</a>
+</li>
+<li class="nav-lv0"><a href="#chokugo50">勅語（憲法50年）</a>
+</li>
+<li class="nav-lv0"><a href="#gige-intro">義解序文</a>
+</li>
+<li class="nav-lv0"><a href="#ch1">第一章 天皇</a>
 <ul>
-<li class="nav-lv1"><a href="#ch1">第一章 天皇</a>
-<ul>
-<li class="nav-lv2"><a href="#ch1-art1">第一條</a></li>
-<li class="nav-lv2"><a href="#ch1-art2">第二條</a></li>
-<li class="nav-lv2"><a href="#ch1-art3">第三條</a></li>
-<li class="nav-lv2"><a href="#ch1-art4">第四條</a></li>
-<li class="nav-lv2"><a href="#ch1-art5">第五條</a></li>
-<li class="nav-lv2"><a href="#ch1-art6">第六條</a></li>
-<li class="nav-lv2"><a href="#ch1-art7">第七條</a></li>
-<li class="nav-lv2"><a href="#ch1-art8">第八條</a></li>
-<li class="nav-lv2"><a href="#ch1-art9">第九條</a></li>
-<li class="nav-lv2"><a href="#ch1-art10">第十條</a></li>
-<li class="nav-lv2"><a href="#ch1-art11">第十一條</a></li>
-<li class="nav-lv2"><a href="#ch1-art12">第十二條</a></li>
-<li class="nav-lv2"><a href="#ch1-art13">第十三條</a></li>
-<li class="nav-lv2"><a href="#ch1-art14">第十四條</a></li>
-<li class="nav-lv2"><a href="#ch1-art15">第十五條</a></li>
-<li class="nav-lv2"><a href="#ch1-art16">第十六條</a></li>
-<li class="nav-lv2"><a href="#ch1-art17">第十七條</a></li>
+<li class="nav-lv1"><a href="#art1">第一條</a></li>
+<li class="nav-lv1"><a href="#art2">第二條</a></li>
+<li class="nav-lv1"><a href="#art3">第三條</a></li>
+<li class="nav-lv1"><a href="#art4">第四條</a></li>
+<li class="nav-lv1"><a href="#art5">第五條</a></li>
+<li class="nav-lv1"><a href="#art6">第六條</a></li>
+<li class="nav-lv1"><a href="#art7">第七條</a></li>
+<li class="nav-lv1"><a href="#art8">第八條</a></li>
+<li class="nav-lv1"><a href="#art9">第九條</a></li>
+<li class="nav-lv1"><a href="#art10">第十條</a></li>
+<li class="nav-lv1"><a href="#art11">第十一條</a></li>
+<li class="nav-lv1"><a href="#art12">第十二條</a></li>
+<li class="nav-lv1"><a href="#art13">第十三條</a></li>
+<li class="nav-lv1"><a href="#art14">第十四條</a></li>
+<li class="nav-lv1"><a href="#art15">第十五條</a></li>
+<li class="nav-lv1"><a href="#art16">第十六條</a></li>
+<li class="nav-lv1"><a href="#art17">第十七條</a></li>
 </ul>
 </li>
-<li class="nav-lv1"><a href="#ch2">第二章 臣民權利義務</a>
+<li class="nav-lv0"><a href="#ch2">第二章 臣民權利義務</a>
 <ul>
-<li class="nav-lv2"><a href="#ch2-art1">第十八條</a></li>
-<li class="nav-lv2"><a href="#ch2-art2">第十九條</a></li>
-<li class="nav-lv2"><a href="#ch2-art3">第二十條</a></li>
-<li class="nav-lv2"><a href="#ch2-art4">第二十一條</a></li>
-<li class="nav-lv2"><a href="#ch2-art5">第二十二條</a></li>
-<li class="nav-lv2"><a href="#ch2-art6">第二十三條</a></li>
-<li class="nav-lv2"><a href="#ch2-art7">第二十四條</a></li>
-<li class="nav-lv2"><a href="#ch2-art8">第二十五條</a></li>
-<li class="nav-lv2"><a href="#ch2-art9">第二十六條</a></li>
-<li class="nav-lv2"><a href="#ch2-art10">第二十七條</a></li>
-<li class="nav-lv2"><a href="#ch2-art11">第二十八條</a></li>
-<li class="nav-lv2"><a href="#ch2-art12">第二十九條</a></li>
-<li class="nav-lv2"><a href="#ch2-art13">第三十條</a></li>
-<li class="nav-lv2"><a href="#ch2-art14">第三十一條</a></li>
-<li class="nav-lv2"><a href="#ch2-art15">第三十二條</a></li>
+<li class="nav-lv1"><a href="#art18">第十八條</a></li>
+<li class="nav-lv1"><a href="#art19">第十九條</a></li>
+<li class="nav-lv1"><a href="#art20">第二十條</a></li>
+<li class="nav-lv1"><a href="#art21">第二十一條</a></li>
+<li class="nav-lv1"><a href="#art22">第二十二條</a></li>
+<li class="nav-lv1"><a href="#art23">第二十三條</a></li>
+<li class="nav-lv1"><a href="#art24">第二十四條</a></li>
+<li class="nav-lv1"><a href="#art25">第二十五條</a></li>
+<li class="nav-lv1"><a href="#art26">第二十六條</a></li>
+<li class="nav-lv1"><a href="#art27">第二十七條</a></li>
+<li class="nav-lv1"><a href="#art28">第二十八條</a></li>
+<li class="nav-lv1"><a href="#art29">第二十九條</a></li>
+<li class="nav-lv1"><a href="#art30">第三十條</a></li>
+<li class="nav-lv1"><a href="#art31">第三十一條</a></li>
+<li class="nav-lv1"><a href="#art32">第三十二條</a></li>
 </ul>
 </li>
-<li class="nav-lv1"><a href="#ch3">第三章 帝國議會</a>
+<li class="nav-lv0"><a href="#ch3">第三章 帝國議會</a>
 <ul>
-<li class="nav-lv2"><a href="#ch3-art1">第三十三條</a></li>
-<li class="nav-lv2"><a href="#ch3-art2">第三十四條</a></li>
-<li class="nav-lv2"><a href="#ch3-art3">第三十五條</a></li>
-<li class="nav-lv2"><a href="#ch3-art4">第三十六條</a></li>
-<li class="nav-lv2"><a href="#ch3-art5">第三十七條</a></li>
-<li class="nav-lv2"><a href="#ch3-art6">第三十八條</a></li>
-<li class="nav-lv2"><a href="#ch3-art7">第三十九條</a></li>
-<li class="nav-lv2"><a href="#ch3-art8">第四十條</a></li>
-<li class="nav-lv2"><a href="#ch3-art9">第四十一條</a></li>
-<li class="nav-lv2"><a href="#ch3-art10">第四十二條</a></li>
-<li class="nav-lv2"><a href="#ch3-art11">第四十三條</a></li>
-<li class="nav-lv2"><a href="#ch3-art12">第四十四條</a></li>
-<li class="nav-lv2"><a href="#ch3-art13">第四十五條</a></li>
-<li class="nav-lv2"><a href="#ch3-art14">第四十六條</a></li>
-<li class="nav-lv2"><a href="#ch3-art15">第四十七條</a></li>
-<li class="nav-lv2"><a href="#ch3-art16">第四十八條</a></li>
-<li class="nav-lv2"><a href="#ch3-art17">第四十九條</a></li>
-<li class="nav-lv2"><a href="#ch3-art18">第五十條</a></li>
-<li class="nav-lv2"><a href="#ch3-art19">第五十一條</a></li>
-<li class="nav-lv2"><a href="#ch3-art20">第五十二條</a></li>
-<li class="nav-lv2"><a href="#ch3-art21">第五十三條</a></li>
-<li class="nav-lv2"><a href="#ch3-art22">第五十四條</a></li>
+<li class="nav-lv1"><a href="#art33">第三十三條</a></li>
+<li class="nav-lv1"><a href="#art34">第三十四條</a></li>
+<li class="nav-lv1"><a href="#art35">第三十五條</a></li>
+<li class="nav-lv1"><a href="#art36">第三十六條</a></li>
+<li class="nav-lv1"><a href="#art37">第三十七條</a></li>
+<li class="nav-lv1"><a href="#art38">第三十八條</a></li>
+<li class="nav-lv1"><a href="#art39">第三十九條</a></li>
+<li class="nav-lv1"><a href="#art40">第四十條</a></li>
+<li class="nav-lv1"><a href="#art41">第四十一條</a></li>
+<li class="nav-lv1"><a href="#art42">第四十二條</a></li>
+<li class="nav-lv1"><a href="#art43">第四十三條</a></li>
+<li class="nav-lv1"><a href="#art44">第四十四條</a></li>
+<li class="nav-lv1"><a href="#art45">第四十五條</a></li>
+<li class="nav-lv1"><a href="#art46">第四十六條</a></li>
+<li class="nav-lv1"><a href="#art47">第四十七條</a></li>
+<li class="nav-lv1"><a href="#art48">第四十八條</a></li>
+<li class="nav-lv1"><a href="#art49">第四十九條</a></li>
+<li class="nav-lv1"><a href="#art50">第五十條</a></li>
+<li class="nav-lv1"><a href="#art51">第五十一條</a></li>
+<li class="nav-lv1"><a href="#art52">第五十二條</a></li>
+<li class="nav-lv1"><a href="#art53">第五十三條</a></li>
+<li class="nav-lv1"><a href="#art54">第五十四條</a></li>
 </ul>
 </li>
-<li class="nav-lv1"><a href="#ch4">第四章 國務大臣及樞密顧問</a>
+<li class="nav-lv0"><a href="#ch4">第四章 國務大臣及樞密顧問</a>
 <ul>
-<li class="nav-lv2"><a href="#ch4-art1">第五十五條</a></li>
-<li class="nav-lv2"><a href="#ch4-art2">第五十六條</a></li>
+<li class="nav-lv1"><a href="#art55">第五十五條</a></li>
+<li class="nav-lv1"><a href="#art56">第五十六條</a></li>
 </ul>
 </li>
-<li class="nav-lv1"><a href="#ch5">第五章 司法</a>
+<li class="nav-lv0"><a href="#ch5">第五章 司法</a>
 <ul>
-<li class="nav-lv2"><a href="#ch5-art1">第五十七條</a></li>
-<li class="nav-lv2"><a href="#ch5-art2">第五十八條</a></li>
-<li class="nav-lv2"><a href="#ch5-art3">第五十九條</a></li>
-<li class="nav-lv2"><a href="#ch5-art4">第六十條</a></li>
-<li class="nav-lv2"><a href="#ch5-art5">第六十一條</a></li>
+<li class="nav-lv1"><a href="#art57">第五十七條</a></li>
+<li class="nav-lv1"><a href="#art58">第五十八條</a></li>
+<li class="nav-lv1"><a href="#art59">第五十九條</a></li>
+<li class="nav-lv1"><a href="#art60">第六十條</a></li>
+<li class="nav-lv1"><a href="#art61">第六十一條</a></li>
 </ul>
 </li>
-<li class="nav-lv1"><a href="#ch6">第六章 會計</a>
+<li class="nav-lv0"><a href="#ch6">第六章 會計</a>
 <ul>
-<li class="nav-lv2"><a href="#ch6-art1">第六十二條</a></li>
-<li class="nav-lv2"><a href="#ch6-art2">第六十三條</a></li>
-<li class="nav-lv2"><a href="#ch6-art3">第六十四條</a></li>
-<li class="nav-lv2"><a href="#ch6-art4">第六十五條</a></li>
-<li class="nav-lv2"><a href="#ch6-art5">第六十六條</a></li>
-<li class="nav-lv2"><a href="#ch6-art6">第六十七條</a></li>
-<li class="nav-lv2"><a href="#ch6-art7">第六十八條</a></li>
-<li class="nav-lv2"><a href="#ch6-art8">第六十九條</a></li>
-<li class="nav-lv2"><a href="#ch6-art9">第七十條</a></li>
-<li class="nav-lv2"><a href="#ch6-art10">第七十一條</a></li>
-<li class="nav-lv2"><a href="#ch6-art11">第七十二條</a></li>
+<li class="nav-lv1"><a href="#art62">第六十二條</a></li>
+<li class="nav-lv1"><a href="#art63">第六十三條</a></li>
+<li class="nav-lv1"><a href="#art64">第六十四條</a></li>
+<li class="nav-lv1"><a href="#art65">第六十五條</a></li>
+<li class="nav-lv1"><a href="#art66">第六十六條</a></li>
+<li class="nav-lv1"><a href="#art67">第六十七條</a></li>
+<li class="nav-lv1"><a href="#art68">第六十八條</a></li>
+<li class="nav-lv1"><a href="#art69">第六十九條</a></li>
+<li class="nav-lv1"><a href="#art70">第七十條</a></li>
+<li class="nav-lv1"><a href="#art71">第七十一條</a></li>
+<li class="nav-lv1"><a href="#art72">第七十二條</a></li>
 </ul>
 </li>
-<li class="nav-lv1"><a href="#ch7">第七章 補則</a>
+<li class="nav-lv0"><a href="#ch7">第七章 補則</a>
 <ul>
-<li class="nav-lv2"><a href="#ch7-art1">第七十三條</a></li>
-<li class="nav-lv2"><a href="#ch7-art2">第七十四條</a></li>
-<li class="nav-lv2"><a href="#ch7-art3">第七十五條</a></li>
-<li class="nav-lv2"><a href="#ch7-art4">第七十六條</a></li>
+<li class="nav-lv1"><a href="#art73">第七十三條</a></li>
+<li class="nav-lv1"><a href="#art74">第七十四條</a></li>
+<li class="nav-lv1"><a href="#art75">第七十五條</a></li>
+<li class="nav-lv1"><a href="#art76">第七十六條</a></li>
 </ul>
 </li>
-</ul>
+<li class="nav-lv0"><a href="#tenpen-jouyu">皇室典範 上諭</a>
 </li>
-<li class="nav-lv0"><a href="#koshitsu">皇室典範義解</a>
+<li class="nav-lv0"><a href="#tenpen-gige">皇室典範義解</a>
 <ul>
-<li class="nav-lv1"><a href="#kt-ch1">第一章 皇位繼承</a>
+<li class="nav-lv1"><a href="#tp-ch1">第一章 皇位繼承</a>
 <ul>
-<li class="nav-lv2"><a href="#kt-art1">第一條</a></li>
-<li class="nav-lv2"><a href="#kt-art2">第二條</a></li>
-<li class="nav-lv2"><a href="#kt-art3">第三條</a></li>
-<li class="nav-lv2"><a href="#kt-art4">第四條</a></li>
-<li class="nav-lv2"><a href="#kt-art5">第五條</a></li>
-<li class="nav-lv2"><a href="#kt-art6">第六條</a></li>
-<li class="nav-lv2"><a href="#kt-art7">第七條</a></li>
-<li class="nav-lv2"><a href="#kt-art8">第八條</a></li>
-<li class="nav-lv2"><a href="#kt-art9">第九條</a></li>
+<li class="nav-lv1"><a href="#tp-art1">第一條</a></li>
+<li class="nav-lv1"><a href="#tp-art2">第二條</a></li>
+<li class="nav-lv1"><a href="#tp-art3">第三條</a></li>
+<li class="nav-lv1"><a href="#tp-art4">第四條</a></li>
+<li class="nav-lv1"><a href="#tp-art5">第五條</a></li>
+<li class="nav-lv1"><a href="#tp-art6">第六條</a></li>
+<li class="nav-lv1"><a href="#tp-art7">第七條</a></li>
+<li class="nav-lv1"><a href="#tp-art8">第八條</a></li>
+<li class="nav-lv1"><a href="#tp-art9">第九條</a></li>
 </ul>
 </li>
-<li class="nav-lv1"><a href="#kt-ch2">第二章 踐祚即位</a>
+<li class="nav-lv1"><a href="#tp-ch2">第二章 踐祚卽位</a>
 <ul>
-<li class="nav-lv2"><a href="#kt-art10">第十條</a></li>
-<li class="nav-lv2"><a href="#kt-art11">第十一條</a></li>
-<li class="nav-lv2"><a href="#kt-art12">第十二條</a></li>
+<li class="nav-lv1"><a href="#tp-art10">第十條</a></li>
+<li class="nav-lv1"><a href="#tp-art11">第十一條</a></li>
+<li class="nav-lv1"><a href="#tp-art12">第十二條</a></li>
 </ul>
 </li>
-<li class="nav-lv1"><a href="#kt-ch3">第三章 成年立后立太子</a>
+<li class="nav-lv1"><a href="#tp-ch3">第三章 成年立后立太子</a>
 <ul>
-<li class="nav-lv2"><a href="#kt-art13">第十三條</a></li>
-<li class="nav-lv2"><a href="#kt-art14">第十四條</a></li>
-<li class="nav-lv2"><a href="#kt-art15">第十五條</a></li>
-<li class="nav-lv2"><a href="#kt-art16">第十六條</a></li>
+<li class="nav-lv1"><a href="#tp-art13">第十三條</a></li>
+<li class="nav-lv1"><a href="#tp-art14">第十四條</a></li>
+<li class="nav-lv1"><a href="#tp-art15">第十五條</a></li>
+<li class="nav-lv1"><a href="#tp-art16">第十六條</a></li>
 </ul>
 </li>
-<li class="nav-lv1"><a href="#kt-ch4">第四章 敬稱</a>
+<li class="nav-lv1"><a href="#tp-ch4">第四章 敬稱</a>
 <ul>
-<li class="nav-lv2"><a href="#kt-art17">第十七條</a></li>
-<li class="nav-lv2"><a href="#kt-art18">第十八條</a></li>
+<li class="nav-lv1"><a href="#tp-art17">第十七條</a></li>
+<li class="nav-lv1"><a href="#tp-art18">第十八條</a></li>
 </ul>
 </li>
-<li class="nav-lv1"><a href="#kt-ch5">第五章 攝政</a>
+<li class="nav-lv1"><a href="#tp-ch5">第五章 攝政</a>
 <ul>
-<li class="nav-lv2"><a href="#kt-art19">第十九條</a></li>
-<li class="nav-lv2"><a href="#kt-art20">第二十條</a></li>
-<li class="nav-lv2"><a href="#kt-art21">第二十一條</a></li>
-<li class="nav-lv2"><a href="#kt-art22">第二十二條</a></li>
-<li class="nav-lv2"><a href="#kt-art23">第二十三條</a></li>
-<li class="nav-lv2"><a href="#kt-art24">第二十四條</a></li>
-<li class="nav-lv2"><a href="#kt-art25">第二十五條</a></li>
+<li class="nav-lv1"><a href="#tp-art19">第十九條</a></li>
+<li class="nav-lv1"><a href="#tp-art20">第二十條</a></li>
+<li class="nav-lv1"><a href="#tp-art21">第二十一條</a></li>
+<li class="nav-lv1"><a href="#tp-art22">第二十二條</a></li>
+<li class="nav-lv1"><a href="#tp-art23">第二十三條</a></li>
+<li class="nav-lv1"><a href="#tp-art24">第二十四條</a></li>
+<li class="nav-lv1"><a href="#tp-art25">第二十五條</a></li>
 </ul>
 </li>
-<li class="nav-lv1"><a href="#kt-ch6">第六章 太傅</a>
+<li class="nav-lv1"><a href="#tp-ch6">第六章 太傳</a>
 <ul>
-<li class="nav-lv2"><a href="#kt-art26">第二十六條</a></li>
-<li class="nav-lv2"><a href="#kt-art27">第二十七條</a></li>
-<li class="nav-lv2"><a href="#kt-art28">第二十八條</a></li>
-<li class="nav-lv2"><a href="#kt-art29">第二十九條</a></li>
+<li class="nav-lv1"><a href="#tp-art26">第二十六條</a></li>
+<li class="nav-lv1"><a href="#tp-art27">第二十七條</a></li>
+<li class="nav-lv1"><a href="#tp-art28">第二十八條</a></li>
+<li class="nav-lv1"><a href="#tp-art29">第二十九條</a></li>
 </ul>
 </li>
-<li class="nav-lv1"><a href="#kt-ch7">第七章 皇族</a>
+<li class="nav-lv1"><a href="#tp-ch7">第七章 皇族</a>
 <ul>
-<li class="nav-lv2"><a href="#kt-art30">第三十條</a></li>
-<li class="nav-lv2"><a href="#kt-art31">第三十一條</a></li>
-<li class="nav-lv2"><a href="#kt-art32">第三十二條</a></li>
-<li class="nav-lv2"><a href="#kt-art33">第三十三條</a></li>
-<li class="nav-lv2"><a href="#kt-art34">第三十四條</a></li>
-<li class="nav-lv2"><a href="#kt-art35">第三十五條</a></li>
-<li class="nav-lv2"><a href="#kt-art36">第三十六條</a></li>
-<li class="nav-lv2"><a href="#kt-art37">第三十七條</a></li>
-<li class="nav-lv2"><a href="#kt-art38">第三十八條</a></li>
-<li class="nav-lv2"><a href="#kt-art39">第三十九條</a></li>
-<li class="nav-lv2"><a href="#kt-art40">第四十條</a></li>
-<li class="nav-lv2"><a href="#kt-art41">第四十一條</a></li>
-<li class="nav-lv2"><a href="#kt-art42">第四十二條</a></li>
-<li class="nav-lv2"><a href="#kt-art43">第四十三條</a></li>
-<li class="nav-lv2"><a href="#kt-art44">第四十四條</a></li>
+<li class="nav-lv1"><a href="#tp-art30">第三十條</a></li>
+<li class="nav-lv1"><a href="#tp-art31">第三十一條</a></li>
+<li class="nav-lv1"><a href="#tp-art32">第三十二條</a></li>
+<li class="nav-lv1"><a href="#tp-art33">第三十三條</a></li>
+<li class="nav-lv1"><a href="#tp-art34">第三十四條</a></li>
+<li class="nav-lv1"><a href="#tp-art35">第三十五條</a></li>
+<li class="nav-lv1"><a href="#tp-art36">第三十六條</a></li>
+<li class="nav-lv1"><a href="#tp-art37">第三十七條</a></li>
+<li class="nav-lv1"><a href="#tp-art38">第三十八條</a></li>
+<li class="nav-lv1"><a href="#tp-art39">第三十九條</a></li>
+<li class="nav-lv1"><a href="#tp-art40">第四十條</a></li>
+<li class="nav-lv1"><a href="#tp-art41">第四十一條</a></li>
+<li class="nav-lv1"><a href="#tp-art42">第四十二條</a></li>
+<li class="nav-lv1"><a href="#tp-art43">第四十三條</a></li>
+<li class="nav-lv1"><a href="#tp-art44">第四十四條</a></li>
 </ul>
 </li>
-<li class="nav-lv1"><a href="#kt-ch8">第八章 世傅御料</a>
+<li class="nav-lv1"><a href="#tp-ch8">第八章 世傳御料</a>
 <ul>
-<li class="nav-lv2"><a href="#kt-art45">第四十五條</a></li>
-<li class="nav-lv2"><a href="#kt-art46">第四十六條</a></li>
+<li class="nav-lv1"><a href="#tp-art45">第四十五條</a></li>
+<li class="nav-lv1"><a href="#tp-art46">第四十六條</a></li>
 </ul>
 </li>
-<li class="nav-lv1"><a href="#kt-ch9">第九章 皇室經費</a>
+<li class="nav-lv1"><a href="#tp-ch9">第九章 皇室經費</a>
 <ul>
-<li class="nav-lv2"><a href="#kt-art47">第四十七條</a></li>
-<li class="nav-lv2"><a href="#kt-art48">第四十八條</a></li>
+<li class="nav-lv1"><a href="#tp-art47">第四十七條</a></li>
+<li class="nav-lv1"><a href="#tp-art48">第四十八條</a></li>
 </ul>
 </li>
-<li class="nav-lv1"><a href="#kt-ch10">第十章 皇族訴訟及懲戒</a>
+<li class="nav-lv1"><a href="#tp-ch10">第十章 皇族訴訟及懲戒</a>
 <ul>
-<li class="nav-lv2"><a href="#kt-art49">第四十九條</a></li>
-<li class="nav-lv2"><a href="#kt-art50">第五十條</a></li>
-<li class="nav-lv2"><a href="#kt-art51">第五十一條</a></li>
-<li class="nav-lv2"><a href="#kt-art52">第五十二條</a></li>
-<li class="nav-lv2"><a href="#kt-art53">第五十三條</a></li>
-<li class="nav-lv2"><a href="#kt-art54">第五十四條</a></li>
+<li class="nav-lv1"><a href="#tp-art49">第四十九條</a></li>
+<li class="nav-lv1"><a href="#tp-art50">第五十條</a></li>
+<li class="nav-lv1"><a href="#tp-art51">第五十一條</a></li>
+<li class="nav-lv1"><a href="#tp-art52">第五十二條</a></li>
+<li class="nav-lv1"><a href="#tp-art53">第五十三條</a></li>
+<li class="nav-lv1"><a href="#tp-art54">第五十四條</a></li>
 </ul>
 </li>
-<li class="nav-lv1"><a href="#kt-ch11">第十一章 皇族會議</a>
+<li class="nav-lv1"><a href="#tp-ch11">第十一章 皇族會議</a>
 <ul>
-<li class="nav-lv2"><a href="#kt-art55">第五十五條</a></li>
-<li class="nav-lv2"><a href="#kt-art56">第五十六條</a></li>
+<li class="nav-lv1"><a href="#tp-art55">第五十五條</a></li>
+<li class="nav-lv1"><a href="#tp-art56">第五十六條</a></li>
 </ul>
 </li>
-<li class="nav-lv1"><a href="#kt-ch12">第十二章 補則</a>
+<li class="nav-lv1"><a href="#tp-ch12">第十二章 補則</a>
 <ul>
-<li class="nav-lv2"><a href="#kt-art57">第五十七條</a></li>
-<li class="nav-lv2"><a href="#kt-art58">第五十八條</a></li>
-<li class="nav-lv2"><a href="#kt-art59">第五十九條</a></li>
-<li class="nav-lv2"><a href="#kt-art60">第六十條</a></li>
-<li class="nav-lv2"><a href="#kt-art62">第六十二條</a></li>
+<li class="nav-lv1"><a href="#tp-art57">第五十七條</a></li>
+<li class="nav-lv1"><a href="#tp-art58">第五十八條</a></li>
+<li class="nav-lv1"><a href="#tp-art59">第五十九條</a></li>
+<li class="nav-lv1"><a href="#tp-art60">第六十條</a></li>
+<li class="nav-lv1"><a href="#tp-art61">第六十一條</a></li>
+<li class="nav-lv1"><a href="#tp-art62">第六十二條</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="nav-lv0"><a href="#zouho">皇室典範増補</a>
+</li>
+<li class="nav-lv0"><a href="#fugen">附言</a>
+</li>
 </ul>
-
-</div>
+<div class="back-to-top"><a href="#">&#9650; ページ上部へ</a></div>
+</nav>
 <div class="resizer" id="resizer"></div>
-<div class="content-pane" id="content-pane">
-<div class="content-breadcrumb"><a href="/">ふぐば文庫</a><span class="sep">&gt;</span><a href="/ito-gige-raw/">帝國憲法皇室典範義解（原文）</a></div>
-<h1>帝國憲法皇室典範義解</h1>
-<div class="author">伊藤博文 著</div>
-<div class="reference-box">
-<h3>底本</h3>
-<p>伊藤博文『帝國憲法皇室典範義解』、國家學會、明治22（1889）年<br>
-<a href="https://dl.ndl.go.jp/pid/789186" class="ext-link">https://dl.ndl.go.jp/pid/789186</a>（国立国会図書館デジタルコレクション）</p>
-<h3>凡例</h3>
-<ul>
-<li>NDL OCR、Claude OCR、新訳版（平島及平訳、pid/1441516）の3種を照合し、原文の復元を試みた</li>
-<li>画質不良箇所等、なお原文と異なる箇所がありうる</li>
-</ul>
-</div>
-<p style="margin-top: 30px; text-align: right;"><a href="https://twitter.com/Fuguba" class="ext-link">ふぐば（Twitter ID：@Fuguba）</a></p>
-<div id="intro" class="section-intro">
-<p>侯爵伊藤博文原著　前東京控訴院判事法學士平島及平譯</p>
-<div class="commentary">
-<p>恭按、我國君民之分、肇國之初、業已定矣、中世式微、政綱弛廢、大命維新、皇運隆昌、誕頒聖詔、憲法乃立、上則統元首之大權、下則展股肱之力、大臣輔弼、議會協贊、機關調合得其所、而臣民之權利及其義務、以期進運隆昌之景福、此皆紹祖宗之遺烈、疏其源而通其流者也、</p>
-</div>
-</div>
-<h2 class="hen" id="kenpo"><a href="#kenpo" class="self-link">帝國憲法義解</a></h2>
-<div id="ch1" class="section-chapter">
-<h3 class="sho"><a href="#ch1" class="self-link">第一章 天皇</a></h3>
-<div class="commentary">
-<p>恭按、天皇寶祚、承之於祖宗、傳之子孫、國家統治權之所由出而存也、唯憲法特揭其大綱、乃明記於條章者、不以表新設之義、蓋示固有之國體、因之而益發達也、</p>
-</div>
-
-<h3 class="jo" id="ch1-art1"><a href="#ch1-art1" class="self-link">第一條</a></h3>
-<div class="joubun"><p>大日本帝國、萬世一系之天皇、統治之、</p></div>
-<div class="commentary">
-<p>恭按、神祖開國垂統、北極星之居其所、而衆星拱之、盛衰一治一亂、而皇統一系寶祚之隆、與天壤無窮、本條首揭立國之大義、示我日本帝國與古往今來之皇統、今古不變、以其君臣相保於萬世焉、</p>
-<p>統治者、居大位、總大權、而治國土及臣民之謂也、古典載天祖勅曰、豐葦原瑞穗國是吾子孫可王之地也、宜爾皇孫就而治焉、寶祚之隆、當與天壤無窮、又神祖稱曰始馭天下之天皇、日本武尊曰、吾者、居坐纏向之日代宮、而知大八島國之大帶日子淤斯呂和氣天皇之子也、文武天皇即位詔曰、天皇之子、繼々承々、以知此大八島國、又曰、平治天下、撫育公民、奕世天皇、咸奉此義、爲傳國訓、其後、遂以御大八洲天皇之稱、爲詔書式、所謂御者、統治之義也、蓋祖宗重其天職、示君主之德、在統治八洲臣民、非以天下奉一人、此乃憲法所據爲基礎也、</p>
-<p>我帝國版圖、古稱大八島者、曰淡路島、曰秋津島、曰伊豫之二名島、曰筑紫島、曰壹岐島、曰對馬島、曰隱岐島、曰佐渡島、是也、旣在古典、景行天皇、東征蝦夷、西平熊襲、疆土大定、推古天皇時、國造、凡百八十餘、延喜式乃載六十六國及二島之區域、明治元年、分陸奧出羽二國、爲之七國、二年、北海道、置十一國、於是、全國共八十四國、現在疆土、實爲古之大八島、延喜式所謂六十六國及二島、并北海道、沖繩諸島及小笠原諸島也、蓋土地人民者、國之所由而立、乃其原質也、一定之疆土、爲一定之邦國、而一定之典章、行於其間、故一國如一人、一國之疆土、如一人之軀體、如此而成統一完全之版圖、</p>
-</div>
-
-<h3 class="jo" id="ch1-art2"><a href="#ch1-art2" class="self-link">第二條</a></h3>
-<div class="joubun"><p>皇位、依皇室典範所定、皇男子孫、繼而承之、</p></div>
-<div class="commentary">
-<p>恭按、繼承皇位、祖宗以來、既有明訓、乃傳皇男子孫、萬世無易、而其繼承之次序、新所勅定之皇室典範具焉、蓋以此爲皇室之家法、憲法不載、所以示臣民不敢容干渉之義也、皇男子孫者、祖宗皇統之男系男子也、此文與皇室典範第一條、詳略相形、</p>
-</div>
-
-<h3 class="jo" id="ch1-art3"><a href="#ch1-art3" class="self-link">第三條</a></h3>
-<div class="joubun"><p>天皇神聖、不可以侵、</p></div>
-<div class="commentary">
-<p>恭按、天地剖判、尊卑正位、蓋天皇、天縱惟神、乃至尊至神、卓越臣民群類之表、可欽仰而不可干犯、是以、君主亦固不可不敬重法律、而法律無責問君主之權、蓋不但玉體、固也、併在指斥言議之外、</p>
-</div>
-
-<h3 class="jo" id="ch1-art4"><a href="#ch1-art4" class="self-link">第四條</a></h3>
-<div class="joubun"><p>天皇、國之元首、總攬統治權、依此憲法條規行之、</p></div>
-<div class="commentary">
-<p>恭按、統治大權、天皇承之於祖宗、傳之子孫、立法行政、百揆之事、一歸至尊、譬之人身、如四肢百骸、聽命於腦、大政之不可不統一、猶人心之不可二三也、特親裁憲法、爲君民共守之大典、明遵其條規、不愆不墜之義、乃所以重其天職、與世運共大成永遠之規模也、</p>
-<p>蓋總攬統治權者、爲主權之體、依憲法條規而行、爲主權之用、有其體無其用、則失之專制也、有其用無其體、則失之散漫也、</p>
-<p>附記、歐洲最近、論政理者之說曰、國家大權、分而爲二、曰立法權、曰行政權、是也、司法權亦爲行政權之支派、行此三權、輔翼在臣僚、而根原在元首、蓋國家大權、不歸於其所爲覺性之元首、則不能有其活動也、憲法者、具其所約定之分於國家各部機關、所以使之有其經絡機能也、約而言之、使各部機關經絡貫通、君主者、依憲法條規、行其天職、故羅馬所行君主權勢無限之說、固非立憲之義、而西曆第十八世紀之末三權分立、君主獨執行政權之說、亦於國家之義、非的解也、是說、實與我憲法之旨、足相發明、故附記之、以爲參考、</p>
-</div>
-
-<h3 class="jo" id="ch1-art5"><a href="#ch1-art5" class="self-link">第五條</a></h3>
-<div class="joubun"><p>天皇、以帝國議會之協賛、行立法權、</p></div>
-<div class="commentary">
-<p>恭按、立法爲天皇之大權、而其行之、必依議會之協贊、天皇命內閣起草、或議會提案、兩院合議、經其同意之後、天皇裁可之、而後始成法律、是以天皇不獨爲行政之中樞、又爲立法之淵源、</p>
-</div>
-<div class="appendix">
-<p>附記、歐洲百年來、偏理之論、投合時變、乃立法之事、歸議會專權、或以爲法律者、係上下之契約、傾向君民共同之說、要之、皆失其主權統一之大義者也、我日本建國之體、則國權所出、一而非二、譬之、如一意指使百骸、議會之設、在欲以贊助元首而全其機能、使國家意思、精練強健之效也、蓋立法之權、固天皇操之、議會乃任其協翼參贊之職耳、其本末間、儼然不可得而紊、</p>
-</div>
-
-<h3 class="jo" id="ch1-art6"><a href="#ch1-art6" class="self-link">第六條</a></h3>
-<div class="joubun"><p>天皇、裁可法律、命其公布及執行、</p></div>
-<div class="commentary">
-<p>恭按、裁可法律、依式使公布、及命其執行、裁可則終立法之事、公布則生臣民遵行之效、皆至尊之大權也、裁可之權、既屬至尊、其不裁可權、亦屬至尊、固勿論已、要之、裁可者、天皇立法之大權、所由而發動、乃經議會協贊、不蒙裁可、不成法律、蓋古言訓法爲宣、播磨風土記云、大法山、品太天皇、臨縣於此山宣大法、故曰大法山、抑言語爲徵古傳遺俗之一良材、而法律者、即爲王言、古人既有一定之訓詁、確不可動、</p>
-</div>
-<div class="appendix">
-<p>附記、歐洲論君主拒法案成議之權者、不一而足、英國則歸君主之立法權、以爲三權鼎峙之徵、法國學者、爲行政對于立法之節制權、抑彼所謂拒否之權、義主消極、其意謂立法者議會、而拒否者、乃爲君主、是局君主之大權於行政之一偏、或使君主僅占立法之一部耳、我憲法則不然、法律必由王命、義主積極、是故依裁可、始成法律、夫惟由王命、固有不裁可之權、此與彼拒否之權、其跡相似、而其實有霄壤之別也、</p>
-</div>
-
-<h3 class="jo" id="ch1-art7"><a href="#ch1-art7" class="self-link">第七條</a></h3>
-<div class="joubun"><p>天皇、召集帝國議會、命其開會閉會停會、及衆議院之解散、</p></div>
-<div class="commentary">
-<p>恭按、召集議會、專屬至尊大權、不由召集、議院自會集、憲法不與、乃其所議、一律無效、</p>
-<p>召集後、開閉議會、制兩院之始終、亦均由至尊大權、開會之初、天皇親臨議會、又特遣勅使傳其勅語、是爲其式、而議會開議、必於其後、開會前、閉會後、議事者、一律無效、</p>
-<p>停會者、使議會中止其議事之謂也、有期停會、逾期再續會議、</p>
-<p>解散衆議院、所以對其新選議員、問輿議之所向也、其不言貴族院、則貴族院者、可以停會、不可解散、</p>
-</div>
-
-<h3 class="jo" id="ch1-art8"><a href="#ch1-art8" class="self-link">第八條</a></h3>
-<div class="joubun"><p>天皇、爲保公共之安全、又避其災厄、事關緊要、在帝國議會不開會時、發代法律之勅令、</p><p>此勅令、於次會期、可提出帝國議會、若議會不承諾、政府可公布自此之後、失其效、</p></div>
-<div class="commentary">
-<p>恭按、國家一旦有急、又遭饑饉疫癘、及他災害、當速防禦之、保公共之安全、此時、偶議會不開、政府自推而任其責、發勅令、代法律、謀應急之策、乃國家自衞之道、固不得已、故第五條云立法權之行用、必經議會之協贊者、示其常也、本條許以勅令代法律者、緩急之際、示其變也、是爲緊急命令之權、緊急命令之權、憲法所許、又憲法之所戒其濫用也、憲法許保公共之安全、避災厄等、事關緊急、用此特權、而不許保護利益、增進幸福等、國家通常之事、以濫用之、故緊急命令者、其發之也、如式宣告、以表其據本條、或政府託此特權、輕易公議、漫破定律乎、即憲法條規、亦屬空文、不能爲臣民之保障也、故本條又以議會、爲此特權之監督、乃使檢査緊急命令於事後、以承諾之、</p>
-<p>憲法中、本條最多疑義、今逐一條問以辯之、其一、此勅令、止補法律之缺乎、抑得現行法律、停止之、變更之、廢棄之乎、曰此勅令、既依憲法、有代法律之力、凡法律所得爲、此勅令皆得爲之、但於次會期、議會不承諾、則政府公布自此之後、失此勅令之效、且、其所廢止或變更之法律、悉可以復其故也、其二、議會承諾此勅令、其效何如、曰議會既承諾之、不待公布、而此勅令之效、與法律同、永遠奉行、其三、議會不承諾、則政府有公布自此之後失其效之責、何也、曰公布、而後始人民知遵守之義務、其四、議會何據而得拒其承諾、曰明見此勅令與憲法背、或與本條旨趣違、或由其他立法之意見可以得拒、其五、政府或不提出此勅令於次議會、又議會既拒其承諾之後、政府不發廢止之令、何如、曰政府違憲法、可任其咎、其六、議會拒其承諾、則得追絕勅令已行之效乎、曰憲法既許君主發緊急命令以代法律、乃勅令成之日、固有其效、故議會不承諾之、第能拒自今而後、繼爲法律、不能追銷既往也、其七、議會得修正勅令而承諾之乎、曰據本條正文、議會、承諾不承諾兩端、止取其一、不得修正、</p>
-</div>
-
-<h3 class="jo" id="ch1-art9"><a href="#ch1-art9" class="self-link">第九條</a></h3>
-<div class="joubun"><p>天皇、爲執行法律、又爲保公共之安寧秩序及増進臣民之幸福、發必要之命令、又使發之、但命令不得以變更法律、</p></div>
-<div class="commentary">
-<p>恭按、本條揭行政命令之大權、蓋法律必經議會之協贊、而命令者、其裁定、出自天皇、命令之所由而發、其趣旨有二、曰執行法律、並定其節目、曰保公共之安寧、增臣民之福利、是也、要皆依至尊行政之大權、不由立法之軌轍、而得設臣民遵循之規也、抑法律與命令、均使臣民遵守之、唯法律可得變更命令、而命令不可以得變更法律也、或法律命令、兩者相對乎、即法律常仲於命令之上、命令、均由至尊之大權、而其出勅裁由親署者、爲之勅令、其他、閣省命令、皆承旨而發、本條云發命令、又使發之、兼言此兩般命令、前條所揭之緊急命令者、得代法律、本條所揭之行政命令者、在法律所定之中、而處其事、又補法律之缺、唯不得變更法律、又憲法特揭其要以法律之事件、不得規定之、行政命令、所以用其常、而緊急命令、所以處其變也、</p>
-</div>
-<div class="appendix">
-<p>（附記）歐洲論命令之界限者、說不一矣、其一、法國比國之憲法、是也、此兩國之憲法、則命令之界限、止爲執行法律、普國效之、是固拘君主行政之大權於一局者、不亦謬哉、蓋所謂行政者、不獨執行法律、何則法律所以爲普通準繩、定其大則、而事物之變、推移不定、對其變遷、權宜之術、一一示之、固不能也、譬之、如人之心志、所豫期者、可以定其方矣、唯其間變化無窮、乃臨機應變、欲不失其宜、亦必不可不熟慮而處其事、行政固執行法律之一局乎、即法律缺而不具之際、國家不能盡其職也、故命令者、不獨執行法律、又應其時宜、可以發揮其固有之義矣、其二、隨法理者、以保公共之安寧及其秩序、爲行政命令之目的、是也、是亦定行政之界限、猶安帖者也、蓋在昔歐洲各國、皆政府以保公共之安寧、爲其最大職任、而其內治、一尚苟簡、其後、人文漸開、政治益進、始悟措理財與教育、使人民開其智厚其生以增其福利、是以行政命令之目的、不獨局警察之消極行爲、而不可不取自理財而富殖國民、教育上啓發人智之積極行爲也、唯行政者、不可箝制其臣民由法律而所得之自由、乃就其的切範圍內、嚮導扶植、可振作之、行政固不踰法律所定之界限、且保護法律、而盡國家當盡之職、行政之訣、乃爾、</p>
-</div>
-
-<h3 class="jo" id="ch1-art10"><a href="#ch1-art10" class="self-link">第十條</a></h3>
-<div class="joubun"><p>天皇、定行政各部之官制、及文武官之俸給、及任免文武官、但此憲法又他法律所掲特例者、各依其條項、</p></div>
-<div class="commentary">
-<p>恭按、至尊之建官也、事關繫要、乃置行政各部之官定其職權、舉文武之材、及罷免之、凡此等大權、皆至尊執之。徵之於古、神武天皇定大業、置國造縣主、立官之見史者、是爲其始、孝徳天皇置八省、職官大備、維新之初、依大寶之舊、有所損益、自是厥後、屢經改革、定官制及俸給之制、而大臣則天皇親任免之、勅任以下高等官、則由大臣上奏、裁可而任免之、均皆出至尊之大命、雖裁判所及會計檢査院之構成、不依勅令、乃以法律定之、裁判官之罷免、依裁判而行此處法及法律所掲之特例也。分官設職、制屬王者之大權、給其俸祿、亦從而属之</p>
-</div>
-<div class="appendix">
-<p>（附記）考德國之史、昔時、任免官吏、專任君主及其長官之意、至第十七世紀、帝國大裁判所之裁判官。不由裁判、不能免其官、而推此原則、用之於參事官第十八世紀。行政官吏之任職。亦屬其確定權利之説、行于世焉、往往爲各國法律之所取、第十九世紀之初、説者曰、官吏者。就其俸給、雖有、確定權利、而其職則無有此權利、故與俸給、或與恩給、以免其職、行政處之、以爲足矣、此論、首爲巴威俗、甞更職制法之所取、乃使政府得不由懲戒裁判、由行政便宜、布官史之官陪及官階俸、而評其職務、職務学及職服、甲松臥毎唯英國與徳意志各國、異其撰、餘一部官吏之外、君主爲任免文武官、有任其意之特權、今仍如古所云也、</p>
-</div>
-
-<h3 class="jo" id="ch1-art11"><a href="#ch1-art11" class="self-link">第十一條</a></h3>
-<div class="joubun"><p>天皇、統帥陸海軍、</p></div>
-<div class="commentary">
-<p>恭按、大祖、實以神武、肇造帝國、統率物部、靫負部、來目部、自是厥後、歴世天子、内外有事、自帥元戎、親征討之勢、或使皇子皇孫代而行之、臣連二造、爲其輔弼、天武天皇置兵政官長、文武天皇、大修軍令、每總三軍、輒大將軍有一人、大將出征、必授節刀、而兵馬之權、仍在朝廷、其後、兵馬之權、一歸武門、政綱解體、今上、中興之初、發親征之詔、總攬大權、爾來、釐革兵制、漸除積弊、設帷幕之本部、親統轄陸海軍、祖宗之遺烈、於是乎、再復其舊矣、本條示統一兵馬、則至尊之大權、而專屬帷幄之大令也、</p>
-</div>
-
-<h3 class="jo" id="ch1-art12"><a href="#ch1-art12" class="self-link">第十二條</a></h3>
-<div class="joubun"><p>天皇、定陸海軍之編制、及常備兵額、</p></div>
-<div class="commentary">
-<p>恭按、本條示陸海軍之編制、及常備兵額、亦爲天皇所親裁也、此固雖依大臣之輔翼。而與帷幄之軍令、共爲至尊之大權、議會不得預聞、所謂編成之大權者從軍隊、擴隊之編制、及其管地之區劃、至軍器之具備、及其須給、軍人之教育、檢閲、紀律、禮式、服制、衛戍城塞、防海、守港、並出師準備之類、細大皆在其中也云定常備兵額、乃定毎年徴員之數、亦在其中、</p>
-</div>
-
-<h3 class="jo" id="ch1-art13"><a href="#ch1-art13" class="self-link">第十三條</a></h3>
-<div class="joubun"><p>天皇、宣戰講和、及締結諸般條約、</p></div>
-<div class="commentary">
-<p>恭按、與外國和戰、及締結條約。屬至尊之大權、不假議會之參贊、其故有二、其一、君主對干外國、欲其代表國家之主權、歸于統一、其二、和戰及條約者、應其時機、尚籌謀敏速、是也、所謂諸般條約者、言和親、貿易、及聯盟等諸式條約</p>
-</div>
-<div class="appendix">
-<p>（附記）據歐洲之舊例、中古、各國君主往往親理外交之事、如英國三世威廉、躬攬外務長官之任、時人稱其老於外交之事、近世、立憲之主義益進、各國其外交之事、皆屬宰相之任、君主則依其輔翼、由而行之、與他行政之事、無以異、拿破崙主法國時、作兩國講和書、致之英國君主、英主受書、而使外務大臣作書答之、今日之國際法、除慶弔親書外、凡各國交際條約、皆由執政大臣、泰西各國、從而是之、本條所揭者、專言不由議會之干涉、天皇依大臣之輔翼、行外交之事也、</p>
-</div>
-
-<h3 class="jo" id="ch1-art14"><a href="#ch1-art14" class="self-link">第十四條</a></h3>
-<div class="joubun"><p>天皇、宣告戒嚴、</p><p>戒嚴之要件及効力、以法律定之、</p></div>
-<div class="commentary">
-<p>恭按、戒嚴者、有外敵内變之時、停止常法、擧司法及行政之一部、委之軍事處分也、本條定戒嚴之要件及其効力、而據法律條項、臨時宣告、又止其宣告、均屬至尊之大權、所謂要件者、言宣告時機、其地之區域、關其宣告、緊要之規程也、効力者、言由宣告戒嚴、其權力所及之界限、在合圍之地、施行戰時之權力、臨時宣告戒嚴、委之於其地之司令官、許便宜處分之後、乃上奏之、此即法律從便宜、委至尊之大權於將帥也、</p>
-</div>
-
-<h3 class="jo" id="ch1-art15"><a href="#ch1-art15" class="self-link">第十五條</a></h3>
-<div class="joubun"><p>天皇、授與爵位勳章、及其他榮典、</p></div>
-<div class="commentary">
-<p>恭按、至尊者、榮譽之源泉也、蓋賞其功、酬其勞、及表彰其卓行善擧、以授與顯榮之品位、祀章、及殊典、屬至尊之大權、非臣子所敢僭竊也、我國太古冠位之制、以加婆彌、爲貴賤之別、推古天皇、始定冠位十二階、頒賜諸臣、天武天皇、定爲四十八階、文武天皇、停賜冠、易以位記、大寳令所載、凡三十階、今之位階、所由而原也、又以勳位十二等、賞武功及賜力田者、中古而還、武門專權、當是時、賞罰之柄、既移幕府、而敍授之典、仍屬朝廷、維新之後、明治二年、定位制、從一位至正八位、定勳等賞牌之制、十七年、定五等爵之制、要皆酬其勳勞、以示顯榮之大典也、</p>
-</div>
-
-<h3 class="jo" id="ch1-art16"><a href="#ch1-art16" class="self-link">第十六條</a></h3>
-<div class="joubun"><p>天皇、命大赦、特赦、減刑、及復權、</p></div>
-<div class="commentary">
-<p>恭按、國家既設法廷、置司法、以正理公道、一齊平等保護臣民之權利。而法律不足曲盡人事之紛、時而有犯人之情、可哀矜者、或恐立法及司法不能周匝無以補其缺漏、故恩赦之權、以至尊慈仁之特典補法律所不及、以期無一民不獲其所者也、大赦、特別之際、施殊恩之典、者也、而對同一類之犯罪、悉皆赦之、特赦、對一犯人、以赦其刑者也、減刑者、減其宣告之刑、而復權、則復其既奪之公權也、</p>
-</div>
-<div class="appendix"><p>以下、至第十六條。列舉元首之大權、抑元首</p></div>
-<div class="commentary">
-<p>之大權、除憲法正條制限之外、無所不及、猶日光無物藏之。則無所不照也。此固不待逐條列舉而後始存焉、憲法所揭、既舉其大綱、又列其節目中之重要者、抑不過示其標準耳、唯然、是以如鑄幣之權、如定度量之權、不復列舉、其略之者、乃所以廣之也、</p>
-</div>
-
-<h3 class="jo" id="ch1-art17"><a href="#ch1-art17" class="self-link">第十七條</a></h3>
-<div class="joubun"><p>置攝政、依皇室典範所定、</p><p>攝政、於天皇之名、行大權、</p></div>
-<div class="commentary">
-<p>恭按、攝政者、攝行天皇之事、故除至尊名分之外、一切大政、於天皇名行之、又關其大政、不任其責、一如天皇、但第七十五條、有其制限、於天皇名者、猶言代天皇、蓋攝政之政令者、代天皇而宣布之也、置攝政、依皇室典範、攝政總攬王者之大權、其事關於國體、故大權、揭之憲法、攝政、定於皇室典範、蓋置攝政之可否、專屬皇室、非臣民所敢議也、天子不豫、不能親裁、是實爲希見之變局、而國家動亂之機、往往伏於此時、某國憲法、召集兩院、兩院相會、議置攝政、如此者、以皇室之大事、委民議之多數、干犯皇統尊嚴之漸、於是啓矣、本條以置攝政之要件、歸於皇室典範、其不入憲法者、蓋重國體、而防微慎漸、抑所以塞禍亂之源也、</p>
-</div>
-</div>
-<div id="ch2" class="section-chapter">
-<h3 class="sho"><a href="#ch2" class="self-link">第二章 臣民權利義務</a></h3>
-<div class="commentary">
-<p>第二章、次第一章、掲臣民權利及義務、蓋祖宗之政、愛重臣民、名曰大寶、歷世天子、其即位日、集皇親以下天下人民、以宣大詔、其詞云、詔集侍皇子等、王臣百官人等、天下公民、諸聞食、諸聞食者、猶言咸欽聞之也、史臣草詔、譯大寶、爲公民、臣民亦自稱曰御民、蓋上以愛重下爲心、待其下、爲邦因之賣、下服從上、自以爲景福之臣民、是亦我國之故典、傳畫俗者也、而本章所掲之臣民權利義務、亦原於此義、中古武門之政、士民分族、士獨據公權、民不預聞、寧獨此而已、并其私權而失之、公民之義、幾乎熄矣、維新之後、屢發大令、廢士族之殊權、日本臣民、始得均保其權利、同盡其義務、本章所揭、使中興之果、益培殖厥美、保之久安、以證明其義、</p>
-</div>
-
-<h3 class="jo" id="ch2-art1"><a href="#ch2-art1" class="self-link">第十八條</a></h3>
-<div class="joubun"><p>爲日本臣民之要件、依法律所定、</p></div>
-<div class="commentary">
-<p>恭按、日本臣民者、別于外國臣民之稱也、爲日本臣民者、各可以享有法律上之公權及私權、乃爲臣民之要件、則必以法律定之、所以爲其慎重也、而其爲日本臣民、有二類、其一、因生者、其二、歸化者、其他有依法律之効者、國民身分、依別法所定、但不離國民之身分者、私權公權之享有、是也。故憲法掲特以別法定之之旨、是以別法所掲、即憲法之所指也、又爲憲法所言臣民權利義務之所由而屬、選舉被選之權、任官之權等、爲之公權、公權者、依憲法及法律、指定其義、專爲國人所享有、外人無與、各國普通之公法、乃爾、至私權、内外之間、分其畛域省、既郷往昔、今則除一二例外。各國大抵使外人得與其國人共享受之、</p>
-</div>
-
-<h3 class="jo" id="ch2-art2"><a href="#ch2-art2" class="self-link">第十九條</a></h3>
-<div class="joubun"><p>日本臣民、應法律命令所定之資格、均得任文武官、及就其他公務、</p></div>
-<div class="commentary">
-<p>任文武官、及就他公務、任文武官、及就他公務、不拘門閥、是爲維新改革之美之一、曩昔、以門第別品流、當是時、以官屬其家、依族襲其職、寒族雖有智能、顯要之地、未由登進、維新之後、一掃陋習、除門閥之宿弊、定爵位之等、凡其就官者、一齊平等、不復問門系之貴賤、此憲法之所證明於本條也、但法律命令、所定之資格、即爲年齡、納稅、及考試才力等、凡此等諸資格、仍爲就官職及公務之要件爾、曰日本臣民、均得任文武官、及就他公務、乃依特定條章之外、外國臣民、無此權利可知、</p>
-</div>
-
-<h3 class="jo" id="ch2-art3"><a href="#ch2-art3" class="self-link">第二十條</a></h3>
-<div class="joubun"><p>日本臣民、從法律所定、有兵役之義務、</p></div>
-<div class="commentary">
-<p>日本臣民者、日本帝國成立之一分質也。有護一國獨立、及其光榮之責、上古以還、一旦有急、我臣民以不顧惜身家之私、護本國、爲丈夫之事、其忠義之心、與戒恥之情、人人皆根於其祖先以來之遺傳爲浸漸心肝、自成風氣、聖武天皇之詔、引大伴佐伯宿禰言、可以徴之、又其詔所引之古謠、則武臣相傳、以爲忠武之教。可就而見、大寶以來、設軍團、募天下丁壯、勝兵役者、持統天皇時、毎國抽正丁、四分之一、即徴兵之制之所由而始也。武門執權、兵農分職、兵事爲一族世業、舊創之失、亦久矣、維新後、明治四年、解武士之常職、五年、原於舊制、頒徴兵令、全國男子、滿二十歳者、使其充陸軍海軍之役、平時毎年徴員、從常備軍編制、而自十七歳、至四十歳者、盡爲國民軍、當其戰時召集、此爲現行之徵兵法、本條依法律所定。使全國臣民、有服兵役之義務、不論門族、一律訓練、以期於保一國雄武之風、永無失墜、</p>
-</div>
-
-<h3 class="jo" id="ch2-art4"><a href="#ch2-art4" class="self-link">第二十一條</a></h3>
-<div class="joubun"><p>日本臣民、從法律所定、有納税之義務、</p></div>
-<div class="appendix">
-<p>（附記）法國學者、論其租税、往々不免一偏之見、千七百八十九年、密拉巴、向法國人民、募國費之文曰、租税者。爲酬其所享利益之價。欲得公共安寧之先付金也、第拉爾了之説曰、租稅之爲名、謂之保險費盖一會社之社員、所納之金也、此會社、名之曰國、乃租税者、國人由得權利之享受、利益之保護、爲其巳的、所納之保險費也、此兩説、皆據民約之義、視納税一事、爲政府職務與人民義務、互相交易、立説雖巧、豈非謬以千里者乎、租税者、一國之公費也、臣民者、其國之一分質也、爲一國分質者、均可以負其共同之義務、是故臣民不獨納税於現在政府、就上世既往之負債。亦不得不納其税、因此。觀之、不徒爲其所得之利益以供給之、乃不享受其利益者、亦不得不供給也、抑用度者、欲以檢之、租税者、欲以薄之、此固三三-政府之本務、而議會監督財政、議定租税、立憲要義、亦不外此、然若、以租税、税、之義務、爲上下相酬、之市道諾納税與否。則爲與。其所寧之利、乘除相關、乃人人自斷其胸膜、可以得拒年租也、國家成立。欲無危殆豈可得哉、近時諭者、力折前説、既無餘蘊、租税定義、於是乎始有歸宿、姑擧其一二、法國盧利曰、租税。爲保國家、以設之者也、非關政府職務之儀、何也非政府與國民之間、有契約而存、徳國須太兒曰、國家有課租税之權、而臣民有納租稅、之義務也、租稅、所於法律之理。在、臣民之純粹義。務、乃就國家本分與其目的。從其不可缺之費。爲一國分質之。臣民者。不可不供給之、抑國民者、爲無形之一體、而爲國家即自已職分、可以論斷、從各人不可不納之也。盖各人者、爲國民之一分質、如彼國民及各個臣民、立國家外、而受其財產之保護。以租税爲之報酬、其説甚謬、</p>
-</div>
-
-<h3 class="jo" id="ch2-art5"><a href="#ch2-art5" class="self-link">第二十二條</a></h3>
-<div class="joubun"><p>日本臣民、於法律範圍内、有居住及移轉之自由、</p></div>
-<div class="commentary">
-<p>轉之自由、本條、申明各人有任其便、而居住移徙之自由。封建之時、藩國畫疆、各設關欄、人民居其本籍之外者、右禁、無其許可、不得旅行移徒、束縛之甚、如草木然、草木樹地、不能自移、維新之後、乃廢各藩、凡日本臣民、於帝國疆内、不問何地、有定住、借住、居留、及營業之自由、而憲法爲制限其自由、必由法律、在行政處分之外、盖誠重之也、以下各條、保明臣民各自之自由、及其財産之安全盖其所於法律之自由。乃臣民之權利、而其生計與智識之所由而發達之本源也、抑自由之民者、爲文明之良民、可以得贊襄其國家之昌榮。故立憲國、咸以臣民各自之自由、及其財産之安全、爲其所貴重之權利、無以不確保之、但自由者、必存其有條理之社會、而法律者、保護各人之自由、又對于由其國權必要之制限、分劃範圍、以爲其調和於兩者間、凡各人在法律所許之區域、享受自由、可以得綽然有餘裕、此乃憲法所確保之法律上之自由者也、</p>
-</div>
-
-<h3 class="jo" id="ch2-art6"><a href="#ch2-art6" class="self-link">第二十三條</a></h3>
-<div class="joubun"><p>日本臣民、非依法律、無受逮捕、監禁、審問、處罰、</p></div>
-<div class="commentary">
-<p>問、處罰、本條保明人身之自由、抑逮捕。監禁、審問者、限法律所載、從其所載之規程、可以得行之、又非依法律正條、不論何事、不得處罰、必如是而後人身之自由、始得以安全、盖人身之自由、與警察及治罪之處分、關係甚密、其間無地可容、而一則保持治安、防制犯罪、遂其檢探、糾治、尤要迅速、一則重各人之自由、此二者嚴其界限、不使爲威權所壓、立憲之制。此爲至重之要義、故警察及司法官吏、不據法律、擅逮捕人、或監禁之、爲苛刻之行、其罰、視之平人、加等、 至審問之法、亦不委警察官、必屬之司法官、且設其辯護、及公開之制、司法官或警察官、日本帝國憲法義解欲使被告人供其罪、加拷問之者、亦加等、凡處罰不照法律正條者、其裁判、爲無効、從前此等刑訊之習、務致其周密之意、以保護臣民、而使其他中古折獄之慘、空屬既往、使之永不復見也本條確保之、使人身之自由、益安且固、</p>
-</div>
-
-<h3 class="jo" id="ch2-art7"><a href="#ch2-art7" class="self-link">第二十四條</a></h3>
-<div class="joubun"><p>日本臣民、不被奪受法律所定裁判官裁判之權、</p></div>
-<div class="commentary">
-<p>裁判之權、本條亦爲保護各人權利之要義。裁判官依法律而設、乃不受威權牽制、持、衡於兩造之間、孤弱貧賤之臣民、得與富豪權門、爭其曲直於訟廷、而檢斷官吏、辯護其權利、是以憲法不許、法律所定之定爲裁判官外、設臨時裁判所及其委員、侵裁判之權限、奪各人之權利。如是而各人得倚其獨立裁判所、爲其司直也、</p>
-</div>
-
-<h3 class="jo" id="ch2-art8"><a href="#ch2-art8" class="self-link">第二十五條</a></h3>
-<div class="joubun"><p>日本臣民、除法律所定之外、不被無其許諾侵入住所及搜索、</p></div>
-<div class="commentary">
-<p>許諾、而侵入住所、及搜索之、本條保明住所之安全、盖家宅爲臣民安居之地、故他人無宅主許諾、不得侵入其住所、且不論警察司法、及收税之官吏、不依法律所定、擅入臣民之家宅、或搜索之、憲法以之爲不法所爲、均不免爲刑法所罰、</p>
-</div>
-
-<h3 class="jo" id="ch2-art9"><a href="#ch2-art9" class="self-link">第二十六條</a></h3>
-<div class="joubun"><p>日本臣民、除法律所定之外、無被侵其信書之祕密、</p></div>
-
-
-<h3 class="jo" id="ch2-art10"><a href="#ch2-art10" class="self-link">第二十七條</a></h3>
-<div class="joubun"><p>日本臣民、無被侵其所有權、</p><p>爲公益所必要之處分、依法律所定、</p></div>
-<div class="commentary">
-<p>必要處分、依法律所定、本條。保明所有權之安全、所有權者存立于國家公權之下、故所有權服屬法律也、不可不受法條限制、所有權固。爲不可侵權、而非無限權也。故如城壘要圖線一定距離、禁建築造、不要賠償。鑛物、屬鑛法管理、山林、使由依山林經濟標準所規定之條則、自鐵路線、一定距離、禁植栽樹木、自城域一定距離、禁鑿井之類。是皆爲所有權之限制。足知各個人之所有與身體同、負對國家服從之義務、蓋所有權、私法上權利而與統治最高權之專屬公法者、非有所牴觸也、上古、臣民獻私地、有罰、領地爲沒官、賣私地索價之事、見于史籍、孝徳天皇大化二年、處々廢屯倉及田莊、以除兼併之弊、倣隋唐制、行班田之制、其後所領莊園之弊、仍盛行、從成封建之勢、至徳川氏時代、農民概不過爲領主佃戶、維新之初、元年十二月、發大令、定村々土地、總可爲百姓持地、四年、各藩奉還版籍、私領之遺制始廢、五年、二月、解地所永代賣買之禁、又發行地券、六年三月、發地所名稱之令、設公有私有地之稱、七年、私有地改民有地、八年、地券記載所有名稱。此皆在歐洲、或用巨大金額、以賠償佃戶之權利矣、在我邦、各藩推讓、容易歸一般統治、得以惠賜小民、實自有史以前而來、各國所未曾見、其例爲中興新政之紀念、爲公共利益、有必要、反各個人民之意、收用其財產、以應國家要需、是即根據乎全國統治最高主權者、而其條則、從法律、所創定、蓋公益收用處分之要件、在於私產、付相當之補償、而必要以法律、制定、在命令範圍之外、又憲法之所證明、</p>
-</div>
-
-<h3 class="jo" id="ch2-art11"><a href="#ch2-art11" class="self-link">第二十八條</a></h3>
-<div class="joubun"><p>日本臣民、以不妨安寧秩序及不背臣民之義務爲限、有信教之自由、</p></div>
-<div class="commentary">
-<p>民義務爲限、有信教之自由、中古、西歐宗教之盛、混淆諸內外之政事、而致流血之慘、而東方諸國、亦嚴法峻刑以防範之、四百年來、信教自由之說、始萌芽、以至佛國革命、北美獨立公然宣告、漸次爲各國。所是認。現在各國政府不拘或存。其圖教或社會組織、又教育、仍偏祖乎一派宗教、在法律上、則莫不予一般各人以信教之自由、而歧視異宗之人、於公權私權之享有、設差等之陋習、已居史乘過去之事、不復留其跡、乃信、教自由、可得看做近世文明之一大美果、而人類至貴至重之。本心自由、與正理伸長、數百年間、沈淪於茫昧之境、纔達於發揚光輝之今日、蓋本心之自由、存於人之内部者、固在於國法干渉區域之外、而以國教。強偏信、尤障害人智自然之發達、與學術競進之運歩者、故何國不有用政治上威權、制壓無形之信仰之權利及機能也、本條、實從維新以來所取之針路、向各人無形權利、予博大之進路者、但信仰之儀、雖專屬內部心識、而至其向外部爲禮拜儀式布教演説及結社集會等、自當遵法律、又維持警察上安寧秩序之一般制限、雖何等宗教、不得因奉事神明、逍遙于法憲之外、逃臣民之義務、故內部信教自由、則完全而無限制、然外部禮拜布教之自由、則不可不受法律規則所要限制、及服從臣民一般之義務、是憲法所裁定、而爲政教互相關係之界域</p>
-</div>
-
-<h3 class="jo" id="ch2-art12"><a href="#ch2-art12" class="self-link">第二十九條</a></h3>
-<div class="joubun"><p>日本臣民、苟不背法律、有言論著作印行集會及結社之自由、</p></div>
-<div class="commentary">
-<p>行集會及結社之自由、言論印行集會結社等項、皆行勢力於政治社會之上者。故立憲之國、除。其變亂犯罪與妨害治安之外。予以自由、所以、發達思想交通、爲人文進化、供有益之資料也、然鋭利之器尤易濫用、故稽此而害人之榮譽。妨治安、教唆罪惡者、則依法律處罰之。又以法律委任之警察處分防制之、是亦出於保持公共秩序之必要也。但此限制必要由法律、固在命令區域之外、</p>
-</div>
-
-<h3 class="jo" id="ch2-art13"><a href="#ch2-art13" class="self-link">第三十條</a></h3>
-<div class="joubun"><p>日本臣民、能守相當之敬禮、循別定之規程、得爲請願、</p></div>
-<div class="commentary">
-<p>者、得爲請願、請願之權、所以由至尊仁愛之至意、開言路而通民情也、孝徳天皇、懸鐘設匱、開諫言要訴之道、中古以還、天子坐朝、讀百姓申文、以大臣納言之輔佐、親聽斷之、考之史乘、古昔明良君主、皆力開通言路、伸流冤屈、盖當議會未設、憲法未備之時、察邇言、通民情、非獨盛德之事也。政事上出於集衆衆志廣鴻益之必要、維新而後、綱紀肅然、公議之府已有定所、而猶存請、願之權、便匹夫之呼籲、與野老獻芹之微衷、洞達九重之上、得無所沮障、此由於憲法貴重民權、愛護民生。以無遺漏爲歸宿、故草上之恩養、至是亦可謂至厚矣、但、請。願者須守相當之敬禮、設或濫用憲法之權利、干瀆宸聰、及揭發人之隱事、徒長詐誣、不可不懲、依法律命命令又議院規則、設有規程者、又出于不得已、請願之權、其始請願君主、推之于議院及官衙。不問爲公益私益、彼此之間、法律上不設限制、</p>
-</div>
-
-<h3 class="jo" id="ch2-art14"><a href="#ch2-art14" class="self-link">第三十一條</a></h3>
-<div class="joubun"><p>本章所掲之條規、若遇有戰時及國家事變之場合、不妨天皇大權之施行、</p></div>
-<div class="commentary">
-<p>事變、則無妨天皇大權之施行、本條所掲之條規、憲法保明臣民之權利者、盖立憲之主義、不獨臣民服從於法律、即勢力在臣民以上之國權、其運用亦須受法律之檢束、唯然、故臣民得倚以享有其權利財産之安全。免專橫不法之患、此爲本章大義也、然憲法猶爲非常之變而揭非常之特例者、蓋國家有最大目的焉、曰保持存立而已。試以他事徵之、舟師遇風、則傾積荷而生航客、良將受敵、則棄偏師而保全軍、國權者當危急之時、爲救濟社稷民生、保持其存立、認定此專一之要法、乃不可不忍犧牲法律及臣民權利之一部、務保最大目的、國家若無此特權、一旦事出非常、國權不由盡非常之職、而應其變也、各國憲法、不拘此義或明職、或不明職、其實均認定保全存立之爲固權問有之權力、何以徴之、蓋各國皆施行戰時必要之處分、爲不可誣之事、但常變之時、固不容疑也、若夫非時過急迫、假託非常權。以壓制臣民之權利、則又爲各國憲法所不准矣。盖正條。揭非常權、又示其條件者、爲非常之時、不欲留憲法上之空缺也、別國或措之不論者、以臨權之處分。置憲法區域之外、以任議院之判定、解其違法之責也而近世論國法學者則稱前方法之爲最完全云</p>
-</div>
-
-<h3 class="jo" id="ch2-art15"><a href="#ch2-art15" class="self-link">第三十二條</a></h3>
-<div class="joubun"><p>本章所掲之條規、與陸海軍之法令紀律不牴觸者、準行于軍人、</p></div>
-<div class="commentary">
-<p>律、不牴觸者、準行于軍人。軍人在軍旗之下、恪守軍法軍令、專以服從爲第一義、故本章權利之條規、而與軍法軍令相牴牾者、不通行于軍人。即如現役軍人、不得集會結社及論軍制若政事、又不有就事上言論著作印行及請願之自由、</p>
-</div>
-</div>
-<div id="ch3" class="section-chapter">
-<h3 class="sho"><a href="#ch3" class="self-link">第三章 帝國議會</a></h3>
-<div class="commentary">
-<p>本章、掲帝國議會之成立及權利之大綱、盖議會者參立法、非分主權者也、有議法權、無定法權、議會之參贊、止於憲法所附與範圍、非無制限之權也。議會之參贊立法、所以爲立憲政要素機關也、不啻參立法、併有監視行政之責、故我憲法、及議院法、爲議會、認左之權利、一、受請願之權、二、上奏及建議之權、三、議員質問政府求辯明之權、四、監督財政之權、若議會以老熟穩實之態、平利弊穩之功、行此四權而不愆、則抑權力之偏重、而立法行政之際、調和平衡、庶乎不負爲善良人民之代表、</p>
-</div>
-
-<h3 class="jo" id="ch3-art1"><a href="#ch3-art1" class="self-link">第三十三條</a></h3>
-<div class="joubun"><p>帝國議會、以貴族衆議兩院而成立、</p></div>
-<div class="commentary">
-<p>貴族院、集貴紳、衆議院、選於庶民、合兩院以成一帝國議會、代表全國之公議、故曰兩院除特例外、權力平等、不能以一院獨參贊立法之事、期謀議周匝、不流於偏私、二院之制、歐洲各國、因變已尚矣、成效畢竟、反之與一院之制者、皆不免有流弊、近來說者云、二院之制、却關得社會之發達、抑主持二院論者、已有成套之論、不俟引擧、但貴族院之設、豈獨爲屏翰王室、蓋存保守分子已哉、立憲之道、固見其須要也、何則凡貴重之生物、已包含各種元素、以爲成体、又倚各種機器以補中心、目掩一則失明、耳塞一則失聽、元言惟一、而集思之機、非兩不爲功、恰如車之兩輪、其一不可缺矣、代議者所以收公議也、若聚。勢力於一院。任一時感情之反射、與一方之偏向、而使勿互相牽制持其平衡、孰知其傾流奔注之勢、不容易歸就防範、一變爲多數制壓、再變爲橫暴亂政乎、其弊却有甚於無代議制之一日者矣、故代議之制、無二則已、發則不分二院。必至偏重、此物理之自然、非一時済况之所得掩也、要之、二院制之於代議法、照之學理、徵之事實、而不愆者、某國痛論貴族院懶怠遷延之弊、是不過摘發一時之短、非國家長計之論也、</p>
-</div>
-
-<h3 class="jo" id="ch3-art2"><a href="#ch3-art2" class="self-link">第三十四條</a></h3>
-<div class="joubun"><p>貴族院、依貴族院令所定、以皇族華族及勅任之議員組織之、</p></div>
-<div class="commentary">
-<p>及勅任議員而組織、貴族院議員、或世襲、或選舉、或勅選、均所以代表上流之社會也。貴族院而稱其義、則政權保其平衡、制政黨之偏張、籌積漸之傾勢、扶憲法之鞏固、以作上下調和之機關、於維持國利民福、收其效果盖不爲鮮矣、貴族院者、不獨選貴族、而使參預立法之議、國之有勳勞學識及富豪之士、咸令列焉、代表國民穩重練熟耐久之氣風、抱合鋭利、拔萃爲上流一種、以全其効用、其組織規則、別定貴族院令、不載于憲法</p>
-</div>
-
-<h3 class="jo" id="ch3-art3"><a href="#ch3-art3" class="self-link">第三十五條</a></h3>
-<div class="joubun"><p>衆議院、依選擧法所定、以公選之議員組織之、</p></div>
-<div class="commentary">
-<p>而組織、衆議院議員。定其資格及任期、廣公選於全國人民。本條以其選擧之規則、讓於別定之法、所以便隨時修補也、衆議院議員、所以代表全國衆民之心志者也、衆議員選舉、設選舉之區、不外使代議士選舉、普及全國及便選擧方法、故爲代議士者、皆當爲之間其良心自由發言、自視爲全國委任之人、而非爲一區委任使、代行委囑使也、西史載、昔時議員、往々依委囑之主旨、主張一部之利盆、無通觀全局之公義。以致多數議決代議之大法、幾於廢棄、此其病、坐不知代議之本分耳、</p>
-</div>
-
-<h3 class="jo" id="ch3-art4"><a href="#ch3-art4" class="self-link">第三十六條</a></h3>
-<div class="joubun"><p>不問何人、不得同時爲兩議院之議員、</p></div>
-
-
-<h3 class="jo" id="ch3-art5"><a href="#ch3-art5" class="self-link">第三十七條</a></h3>
-<div class="joubun"><p>凡法律、須經帝國議會之協賛、</p></div>
-<div class="appendix">
-<p>（附記）問、何等之事物、猶以法律而定乎、此非一言所能盡也、普國公布普通法之勅令、云本法所包括者、依別法所定、可判明臣民權利義務之條規、巴城尚千八百十八年五月二十、六日窓法、第七章第二條、云將關於人身之。自由及國民財産之書通法、法律頒行、及將現行法變更又廢止者、均須國會協賛、然學者多非之、謂法律之區域不止權利義務及自由財產、且以事物分法律與命令之區域、則於憲法學及政學、無結果、盖法律及命令、之區劃、專視各國政治發達之程度、此可以憲法史審判之也、但依憲法明文。特須法律者、爲第一限界、已以法律制定者、則非以法律、不得變更、爲第二限界、此乃立憲各國之所同也。</p>
-</div>
-
-<h3 class="jo" id="ch3-art6"><a href="#ch3-art6" class="self-link">第三十八條</a></h3>
-<div class="joubun"><p>兩議院、得議決政府所提出之法律案、及各提出法律案、</p></div>
-<div class="commentary">
-<p>及各自提出法律案政府由天皇之命、起草法律案、是爲議案、交兩議院、可決之、否決之、修正之、若兩議院認有發布法律之必要、各得提出法案、而甲院提出、乙院同意、或修正而可決之後、蒙天皇之裁可、亦與政府起案無異、</p>
-</div>
-
-<h3 class="jo" id="ch3-art7"><a href="#ch3-art7" class="self-link">第三十九條</a></h3>
-<div class="joubun"><p>法律案、已經一議院否決者、不得於同會期中再提出之、</p></div>
-<div class="commentary">
-<p>會期中、再提出付議、再提出議案、不但毀損議院之權利、又有遷延會期拘滯一事之弊、故本條禁其再提出、</p>
-</div>
-
-<h3 class="jo" id="ch3-art8"><a href="#ch3-art8" class="self-link">第四十條</a></h3>
-<div class="joubun"><p>兩議院、得於法律及他事件、各以其意見建議政府、但不得採納者、不得於同會期中再建議之、</p></div>
-<div class="commentary">
-<p>恭按、建議者、議院爲國事之利害、陳述意見于政府之謂也、本條明示議院有建議之權、蓋議院既有自提法律案之權、又有建議之權者、或議院自起草法律案提出之、或議決改正廢止某法律之旨、而不具成案、單以意見建議于政府、使政府起草制定之、此二途任擇其一、從議院之便宜也、但採納不得者同會期中不得再建議之者、所以防紛議强迫之弊也、</p>
-</div>
-
-<h3 class="jo" id="ch3-art9"><a href="#ch3-art9" class="self-link">第四十一條</a></h3>
-<div class="joubun"><p>帝國議會、毎年必召集之、</p></div>
-
-
-<h3 class="jo" id="ch3-art10"><a href="#ch3-art10" class="self-link">第四十二條</a></h3>
-<div class="joubun"><p>帝國議會、以三箇月爲會期、有必要之場合、以勅命延長之、</p></div>
-<div class="commentary">
-<p>事件、以勅令延長之、以三個月爲會期、恭按、所揭會期三箇月、爲常期、又有依敕命延長之特別規定、</p>
-</div>
-
-<h3 class="jo" id="ch3-art11"><a href="#ch3-art11" class="self-link">第四十三條</a></h3>
-<div class="joubun"><p>有臨時緊急之必要、於常會之外、可召集臨時會、</p><p>臨時會之會期、依勅命定之、</p></div>
-<div class="commentary">
-<p>恭按、常會在冬期、會期之外有急需議會者、臨時會必爲之、
-
-<h3 class="jo" id="ch3-art12"><a href="#ch3-art12" class="self-link">第四十四條</a></h3>
-<div class="joubun"><p>帝國議會之開會閉會、會期之延長及停會、兩院同時行之、</p><p>衆議院被命解散、貴族院同時被停會、</p></div>
-<div class="commentary">
-<p>恭按、衆議院解散之時、貴族院亦不可不同時停會、</p>
-</div></p>
-</div>
-
-<h3 class="jo" id="ch3-art13"><a href="#ch3-art13" class="self-link">第四十五條</a></h3>
-<div class="joubun"><p>衆議院被命解散、以勅命新選議員、自解散之日五箇月以内召集之、</p></div>
-<div class="commentary">
-<p>恭按、本條定議會解散後、速行新選舉、限五箇月以內、招集新議會、</p>
-</div>
-
-<h3 class="jo" id="ch3-art14"><a href="#ch3-art14" class="self-link">第四十六條</a></h3>
-<div class="joubun"><p>兩議院、非各有總議員三分之一以上出席、不得開議事爲議決、</p></div>
-<div class="commentary">
-<p>出席、不得開議事爲議决、恭按、出席議員不滿三分之一、則會議無由、不得開議事、亦不得議決也、所謂總議員者、選舉法所定議員之總數也、而其三分之一以上不出席、則不得告議院之成立、固勿論矣、</p>
-</div>
-
-<h3 class="jo" id="ch3-art15"><a href="#ch3-art15" class="self-link">第四十七條</a></h3>
-<div class="joubun"><p>兩議院議事、以過半數而決、可否同數、依議長所決、</p></div>
-<div class="commentary">
-<p>恭按、過半數決之、爲議事之常則也、本條所謂過半數者、出席議員之半數以上之義也、可否同數之時、議長決之、亦事理之當然也、但第七十三條所規定憲法改正之議事、爲其例外也、又議院選舉議長其他委員之場合、及委員會之規程等、各從其規則、不受本條之干涉也、</p>
-</div>
-
-<h3 class="jo" id="ch3-art16"><a href="#ch3-art16" class="self-link">第四十八條</a></h3>
-<div class="joubun"><p>兩議院之會議、公開之、但因政府要求、又其院之決議、得爲祕密會、</p></div>
-<div class="commentary">
-<p>恭按、議院代表衆庶、其討論之可否、公開之、使衆人得見聞焉、但秘密之議事、外交事件、人事之問題、職員委員之選舉、又或財政問題、兵政問題、或治安之行政法等、爲變例、因政府之要求、又各院之決議、特爲秘密會、得閉公開焉、</p>
-</div>
-
-<h3 class="jo" id="ch3-art17"><a href="#ch3-art17" class="self-link">第四十九條</a></h3>
-<div class="joubun"><p>兩議院、得各上奏天皇、</p></div>
-<div class="commentary">
-<p>恭按、上奏者、上呈文書、奏聞于天皇之謂也、或奉答勅語、或呈慶賀弔傷之表辭、或建白意見、或陳續請願、皆含於上奏也、上奏之時、或上呈文書而止、或以總代請覲而上呈之、須致相當之敬禮、不得干犯天皇之尊嚴也、</p>
-</div>
-
-<h3 class="jo" id="ch3-art18"><a href="#ch3-art18" class="self-link">第五十條</a></h3>
-<div class="joubun"><p>兩議院、得受臣民之請願書、</p></div>
-<div class="commentary">
-<p>恭按、臣民得請願于至尊、亦得請願于行政官衙、亦得請願于議院、任其意而擇之、議院受請願、審查之、或單紹介于政府、或附意見書送政府求其報告、但議院不必有議定請願之義務、政府亦不必有許可請願之義務、若請願中有關立法者、不得以其請願直提議會爲法律案之動議、但議員得汲其旨依通常動議之方法提出法律案焉、</p>
-</div>
-
-<h3 class="jo" id="ch3-art19"><a href="#ch3-art19" class="self-link">第五十一條</a></h3>
-<div class="joubun"><p>兩議院、除此憲法及議院法所掲者外、得定内部整理所必要之諸規則、</p></div>
-<div class="commentary">
-<p>恭按、整理院內諸規則者、謂議長之推選、議長及事務局之職務、各部分設委員之推選、與委員事務、議事規則、議事紀錄、請願取扱規則、歲費請假規則、紀律及議院會計之類、於憲法及議院法之範圍內、議院自制定之、</p>
-</div>
-
-<h3 class="jo" id="ch3-art20"><a href="#ch3-art20" class="self-link">第五十二條</a></h3>
-<div class="joubun"><p>兩議院議員、在議院發意見、與表決、不負責於院外、但議員自以演説刊行筆記又其他之方法公布其言論、依一般法律處分之、</p></div>
-<div class="commentary">
-<p>恭按、本條認議員言論之自由、蓋議院之內部、屬議院自治、故言論如越規矩、傷德義、又譏毀人私事、據議院紀律、議院自制止及懲戒之、而司法官不得與聞、蓋議決所以成爲法律之案、議員辯難討論、異同相應、是歸結于一之資也、故議院之議、與刑事民事之責無涉、所以尊議員之權利、使議員之言論有價量也、但至議員自公布其言論、冒用其自由、普及外部、則無論動議駁議、不得逸法律之責、</p>
-</div>
-
-<h3 class="jo" id="ch3-art21"><a href="#ch3-art21" class="self-link">第五十三條</a></h3>
-<div class="joubun"><p>兩議院議員、除現行犯罪、及關内亂外患之罪、會期中無其院之許諾、不被逮捕、</p></div>
-<div class="commentary">
-<p>患之罪外、會期中、議院未經許諾、不被逮捕者、恭按、兩院參贊立法之大事、故會期之間、予議員以例外特權、蓋有不羈之體面、而後能盡重大之職務也、其現行犯罪、及內亂外患之罪、非議院特典之所得庇護、會期中者、謂召集後、閉會前、非現行犯及普通之犯罪、通牒議院、經其許諾、而後逮捕之、現行犯及內亂外患之犯、先行逮捕後通知議院、</p>
-</div>
-
-<h3 class="jo" id="ch3-art22"><a href="#ch3-art22" class="self-link">第五十四條</a></h3>
-<div class="joubun"><p>國務大臣及政府委員、何時不拘、得出席各議院、發言、</p></div>
-<div class="commentary">
-<p>恭按、議會議事之時、詣議場辯明、爲大臣重任之所存、對萬衆開心腑、訴正理於公議、求嘉謀於時論、盡其底蘊使無遺憾、不如是不足收立憲之效也、但出席及發言之權、任政府之自由、或大臣自至、或令委員代行、或時宜未可不爲討論、亦隨其意焉可也、</p>
-</div>
-</div>
-<div id="ch4" class="section-chapter">
-<h3 class="sho"><a href="#ch4" class="self-link">第四章 國務大臣及樞密顧問</a></h3>
-<div class="commentary">
-<p>國務大臣、居輔弼之任、奉詔命、施行政務、而樞密顧問、應重要諮詢、展樞密謀議、均爲天皇最高輔翼、</p>
-</div>
-
-<h3 class="jo" id="ch4-art1"><a href="#ch4-art1" class="self-link">第五十五條</a></h3>
-<div class="joubun"><p>國務大臣、輔弼天皇、而負其責、</p><p>凡法律敕令、及其他關國務之詔敕、要國務大臣之副署、</p></div>
-<div class="commentary">
-<p>恭按、國務各大臣、入則參贊于內閣、出則當行政各部之事務、任大政之責者、凡大政施行、必出自內閣及各部、非有二途、蓋立憲政治之目的、在使主權之行使、由正當之軌道、依公議之機關、與宰相之輔弼、而行之、故大臣努力將順、如愆其道、自負其責、不得藉口君命以逃其責也、
-我國上古、大臣大連居輔弼之任、孝德天皇詔曰、夫君於天地之間而事萬民者、不可獨制、要須臣翼、天智天皇始置太政官、爾來太政大臣左大臣右大臣統理政務、大納言參議政務宣旨、中務卿司審議詔敕發布之事、且太政官統中務式部治部民部兵部刑部大藏宮內八省、官制粗備、</p>
-</div>
-
-<h3 class="jo" id="ch4-art2"><a href="#ch4-art2" class="self-link">第五十六條</a></h3>
-<div class="joubun"><p>樞密顧問、依樞密院官制所定、應天皇之諮詢、審議重要之國務、</p></div>
-<div class="commentary">
-<p>恭按、樞密顧問、應至尊之諮詢、審議重要之國務、必以忠誠、不隱不諱、而細大不論、非至尊特別御許可、不得洩之於外、蓋樞機密勿之府、非人臣向外求譽之所、專對至尊之御諮詢而奉答者也、</p>
-</div>
-</div>
-<div id="ch5" class="section-chapter">
-<h3 class="sho"><a href="#ch5" class="self-link">第五章 司法</a></h3>
-<div class="commentary">
-<p>司法權者、依法律所定、以正理公道、囘復臣民權利之被侵害者、及判斷刑罰者也、古政治簡朴之時、各國政廳之設、未有司法行政之分、其後文化益進、人事益繁、始分司法行政之職司、殊其構制、愼不相侵其畛域、立憲之政體、由是成最大之進步焉、</p>
-</div>
-
-<h3 class="jo" id="ch5-art1"><a href="#ch5-art1" class="self-link">第五十七條</a></h3>
-<div class="joubun"><p>司法權、以天皇之名、依法律、裁判所行之、</p><p>裁判所之構成、以法律定之、</p></div>
-<div class="commentary">
-<p>恭按、行政者、執行法律、保公共之安寧秩序、增人民之幸福、爲便宜之經理處分者也、司法者、對權利之被侵害、依法律之規準而判斷者也、故司法服從法律爲第一、不酌便益也、行政者、從社會之活動、依便益與必要而行之、法律唯限劃其範圍、防濫越也、行政權與司法權、性質殊如此、故無別置司法官、則各人之權利、爲社會之便益隨時移動、權勢威力侵犯人民之權利矣、
-裁判必依法律、法律爲裁判之基準、裁判所實施之、但君主爲正理法之源泉、司法權亦爲主權發動之一光線、故裁判必以天皇之名宣告、以代表至尊之大權也、
-裁判所之構成、必以法律定之、別於行政組織、而司法官立法律之基址、有不羈獨立之地位焉、
-我中古之制、刑部省與他各省倶隸太政官、刑部卿掌鞫獄定刑名、判事屬刑部卿按覆鞫狀斷定刑名及判斷諸爭訟、是民事刑事併歸一省也、其後武門盛、大柄移武家、檢斷之權歸檢非違使、行武斷政治、維新之初、置刑法官、司法權亦歸天皇統攬、四年始置東京裁判所、設專門官廳爲裁判、是爲其始、翌五年設開市場裁判所、嗣置司法裁判所府縣裁判所區裁判所各等裁判所、始許控訴及覆審、八年置大審院、專維法憲之統一、又定司法卿之職制、使統理檢察事務而不干與裁判、爾後漸次釐革、期裁判之獨立不羈、是爲司法事務沿革之概略也、
-歐洲前世紀末、所行三權分立之說、已爲學理上實際上俱所排斥、而司法權、乃行政權之支派、均屬君主所統攬、但君主任命裁判官、裁判所以君主之名宣告裁判、君主則不親行裁判、使不羈裁判所專依遵法律、於行政威權外施行之、是爲司法權之獨立、乃非依三權分立之說而然、而仍不失爲不易之大則、</p>
-</div>
-
-<h3 class="jo" id="ch5-art2"><a href="#ch5-art2" class="self-link">第五十八條</a></h3>
-<div class="joubun"><p>裁判官、以具備法律所定資格者任之、</p><p>裁判官、由刑法宣告又懲戒處分之外、無被免其職、轉其職及減其俸、</p><p>懲戒條規、以法律定之、</p></div>
-<div class="commentary">
-<p>恭按、裁判官、主持法律、人民上執衡平之柄者、故以專科學識及經驗、爲裁判官要件、而臣民倚以託其權利財產、亦莫不實願其有法律上資格、故本條第一項、保明可以法律定其資格、
-欲保裁判之公正、須使裁判官、離威權之干涉、立不偏之地、不爲勢位得失與政論冷熱所牽制、故裁判官、除由刑法又懲戒判決被罷免之外、終身在其職者、而其懲戒條規、又以法律定之、而由裁判所決行之、不爲行政長官所干涉、此所以憲法特保明裁判官之獨立也、
-其他停職革職轉任老退等、歸於各其法律、</p>
-</div>
-
-<h3 class="jo" id="ch5-art3"><a href="#ch5-art3" class="self-link">第五十九條</a></h3>
-<div class="joubun"><p>裁判之對審及判決、公開行之、</p><p>但以安寧秩序又風俗之所妨、以法律又裁判所之決議、得停其公開、</p></div>
-<div class="commentary">
-<p>恭按、裁判公開、公衆之前對理口審、爲保障人民權利最有效力者也、又使裁判官自尊其義務、爲正理公道之代表、公開之助亦不少焉、我國從來白洲裁判之習久用之、明治八年以來始許對審判決之公開、實爲司法上一大進步也、
-刑事之審理有豫審有對審、此所謂對審者、不含豫審也、安寧秩序又風俗害之否、專任裁判所之所見焉、法律依之者、依治罪法訴訟法之明文也、裁判所之決議者、法律無明文之場合亦得決定者也、對審之公開停之者、判決之宣告、雖停公開之場合、亦必公開焉、</p>
-</div>
-
-<h3 class="jo" id="ch5-art4"><a href="#ch5-art4" class="self-link">第六十條</a></h3>
-<div class="joubun"><p>特別裁判所之管轄所屬者、別以法律定之、</p></div>
-<div class="commentary">
-<p>恭按、陸海軍軍人屬軍法會議、即普通司法裁判所之外、特別裁判所之管轄所屬也、其他如商工裁判所之類、亦以法律規定之、不得以命令設法律上之除外例也、若法律之外設非常裁判所、以行政威勢侵蝕司法權、褫奪人民司直之府、憲法斷不認之也、</p>
-</div>
-
-<h3 class="jo" id="ch5-art5"><a href="#ch5-art5" class="self-link">第六十一條</a></h3>
-<div class="joubun"><p>行政官廳之違法處分、由權利被傷害之訴訟、屬別以法律所定行政裁判所之裁判者、司法裁判所不受理之、</p></div>
-<div class="commentary">
-<p>恭按、行政裁判者、裁判行政處分之訴訟也、蓋法律既與臣民之權利以一定界限、安固之、則政治之機關、亦不可不服從法律、不損臣民之權利、故行政官廳依職務上之處置、違法律或超職權、傷害臣民之權利者、不免受行政裁判所之斷定也、
-訴訟之判定、本屬司法裁判所之職務、而別有行政裁判所者、蓋司法裁判所以判定民法上之爭訟爲當然之職務、無取消憲法法律所委任行政官處分之權力也、蓋司法權之獨立、與行政權亦須從司法權獨立、同其理也、若行政權之措置受司法權之監督、裁判所居判定行政當否取捨之任、則行政官全隸屬於司法官、經理社會之便益與人民之幸福之餘地失矣、行政官之措置、依其職務有憲法上之責任、故有除抗拒其措置之障害之權、及裁定由其措置所起訴訟之權、固當然也、此司法裁判之外、別要行政裁判之一理由也、又行政之處分、爲保公益而行、時或重公益枉私益、亦從事宜之必要也、而行政上之事宜、司法官不慣熟、委之司法官判決却危殆、故行政上之訴訟、必得密切行政事務練達之人聽理之、此別要行政裁判之第二理由也、但行政裁判所之構成、亦必以法律定之、與司法裁判所同一之理由也、</p>
-</div>
-</div>
-<div id="ch6" class="section-chapter">
-<h3 class="sho"><a href="#ch6" class="self-link">第六章 會計</a></h3>
-<div class="commentary">
-<p>會計者、整理國家歲出歲入之行政上重要部分、而與臣民之生計有密切之關鏈、故憲法殊愼重考慮之、明確帝國議會之協贊與監督之權限焉、</p>
-</div>
-
-<h3 class="jo" id="ch6-art1"><a href="#ch6-art1" class="self-link">第六十二條</a></h3>
-<div class="joubun"><p>新課租稅及變更稅率、以法律定之、</p><p>但屬報償之行政上手數料及其他收納金、不在前項之限、</p><p>國債起之、及除豫算所定外、爲國庫負擔之契約、須經帝國議會之協贊、</p></div>
-<div class="commentary">
-<p>恭按、新課租稅、必經議會之協贊、不任政府之專行、爲立憲政治之美果、直接保護臣民之幸福者也、蓋旣定現在之稅外、新起徵額或變更稅率、適當之程度、專倚議會之公論、若無此有效之憲法上防範、臣民之富苦於際限無之徵稅、不能保護其安全固定也、
-報償所屬行政上手數料及其他收納金者、各個人之要求所由政府之事業事務、或與各個人利益之政府事業事務、使上納之金也、與普通義務所賦課之租稅、性質殊也、鐵道切符料倉庫料學校授業料之類、其一種、以行政命令定之、不必依法律也、
-國債者、將來繼續的國庫負擔義務之約束也、故新起國債、必經議會之協贊、又豫算外涉將來國家負擔之補助保證其他契約、皆須議會之協贊、</p>
-</div>
-
-<h3 class="jo" id="ch6-art2"><a href="#ch6-art2" class="self-link">第六十三條</a></h3>
-<div class="joubun"><p>現行租稅、不更以法律、仍舊徵收之、</p></div>
-<div class="appendix">
-<p>恭按、租稅旣定、不待毎年議會之議決、仍舊徵收焉、蓋國家之歲入、不可使因議會之意見而中斷也、</p>
-</div>
-
-<h3 class="jo" id="ch6-art3"><a href="#ch6-art3" class="self-link">第六十四條</a></h3>
-<div class="joubun"><p>歲出歲入之豫算、毎年經帝國議會之議決、</p><p>超過豫算之項目、又豫算之外所生之支出、須後日帝國議會之承諾、</p></div>
-<div class="appendix">
-<p>恭按、豫算者、毎年歲出歲入之槪計也、政府作之、提出議會、議會議決之、以爲執行之準繩也、超過豫算之支出及豫算外之支出、須事後議會之承諾、是爲立憲制之成果也、</p>
-</div>
-
-<h3 class="jo" id="ch6-art4"><a href="#ch6-art4" class="self-link">第六十五條</a></h3>
-<div class="joubun"><p>豫算、先議於衆議院、</p></div>
-<div class="commentary">
-<p>恭按、本條與衆議院以豫算先議之特權、蓋豫算之議、須對照政府之財務與國民之生計、兩者顧慮、得豐儉適宜之度、就此衆民公選之代議士、有密切之關係、故使衆議院先議焉、</p>
-</div>
-
-
-<h3 class="jo" id="ch6-art5"><a href="#ch6-art5" class="self-link">第六十六條</a></h3>
-<div class="joubun"><p>皇室經費、依現在之定額、毎年由國庫支出、</p><p>除將來需要增額之場合之外、無要帝國議會之議決、</p></div>
-
-<div class="appendix"><p>、定豫算可經帝圓議會協賛、而本條爲皇室費、示其例外。</p></div>
-<div class="commentary">
-<p>恭按、皇室經費、爲供給爲保天皇尊嚴不可缺之經費、屬圍庫最先義務、其使用、一係宮延之事、非禮會之所可問、從不要經識會之承諾及檢査、掲載皇室費額千豫算及决算、不過示支出總額之成分、非以之爲付議會議之一欲、而當其將來要増額、仍要經議會協賛者、因其與臣民負損租税、右密切、關係、故欲詢之於衆議也、</p>
-</div>
-
-<h3 class="jo" id="ch6-art6"><a href="#ch6-art6" class="self-link">第六十七條</a></h3>
-<div class="joubun"><p>基於既定之歲出、及由法律之結果、又法律上屬政府義務之歲出、無經帝國議會之同意、政府不得廢除又削減之、</p></div>
-<div class="appendix">
-<p>恭按、旣定之歲出者、舊來經議會議決而確定之經常費額也、法律之結果所由歲出者、議院之費用歲費手當、諸般恩給年金、法律所依官制之費用俸給之類也、法律上屬政府義務之歲出者、會社營業之補助保證、政府民法上之義務、及諸般賠償之類也、</p>
-</div>
-
-<h3 class="jo" id="ch6-art7"><a href="#ch6-art7" class="self-link">第六十八條</a></h3>
-<div class="joubun"><p>爲特別之需要、政府豫定年限、得設繼續費、</p></div>
-<div class="commentary">
-<p>費、求帝國議會之協賛、歳費、以毎年議定、爲常則、盖國家之務、活動變移、不可律以一定之繩尺、國家費用、亦不可以前年定額推乎後年、但本條、爲特別須要、設例外、如陸海軍費一部、又工作製造之類、非期數年不見成效者、得以議會之協賛、定亘數年之年限、</p>
-</div>
-
-<h3 class="jo" id="ch6-art8"><a href="#ch6-art8" class="self-link">第六十九條</a></h3>
-<div class="joubun"><p>爲補無可避之不足、又豫算外之必要、得設豫備費、</p></div>
-<div class="appendix">
-<p>（附記）參之歐州、荷蘭、各省、置豫備費五萬布、又爲政府、置五萬布、以借補給定額之不足。伊國千八百六十九年。禽計法。豫算中設豫備費。以備豫算定額之不足、一、因義務及命令所生之溢費、四百萬佛、二、非常經費之豫備費、四百萬佛、使用節一豫備費、經會計檢査院登記、大藏長官、施行之、第二豫備費、由大廳長官發議、經内閣會議、以勅令定之。普固各省、置豫備費、大藏省、更置非。當豫備費。是或爲補充豫算不足、及豫算外必要、而設者、瑞典、豫備費、取自國軍。局收入中、爲二種、其一、備國防、及其他重緊急事件、其二、備戰爭之用、此亦一法。</p>
-</div>
-
-<h3 class="jo" id="ch6-art9"><a href="#ch6-art9" class="self-link">第七十條</a></h3>
-<div class="joubun"><p>爲保公共之安全、有避之不得之災厄、依國家內外之情形、政府不得召集帝國議會之時、可以發敕令、爲財政上必要之處分、</p><p>但於次會期、提出帝國議會、求其承諾、</p></div>
-<div class="commentary">
-<p>恭按、本條者、緊急之際、事關財政、議會不能召集之時、許政府以敕令爲財政上必要之處分也、但須事後求議會之承諾焉、</p>
-</div>
-
-<h3 class="jo" id="ch6-art10"><a href="#ch6-art10" class="self-link">第七十一條</a></h3>
-<div class="joubun"><p>帝國議會、於豫算議定不成立之時、政府施行前年度之豫算、</p></div>
-<div class="commentary">
-<p>恭按、議會不成立豫算之議定時、政府施行前年度之豫算、蓋國家之成立、不可一日缺歲出之經費也、</p>
-</div>
-
-<h3 class="jo" id="ch6-art11"><a href="#ch6-art11" class="self-link">第七十二條</a></h3>
-<div class="joubun"><p>國家歲出歲入之決算、會計檢査院檢査確定之、</p><p>政府以其決算及檢査報告、提出帝國議會、</p></div>
-<div class="commentary">
-<p>査確定之後、政府與其檢査報告、倶提出之於議會、會計檢査院之組織、及權限、以法律、定之、豫算者、會計之初、决算、爲會計之終、議會之監督會計、其方法、有二端、剛一。期前監督、二・期後監督、是也、期前監督者、承諾次年度」豫算之期、期後監督者、藩賚經過、年度决算考、爲取此期後監督之法、政府有以經、會計檢査院檢査之決算。及該號報告、提出於議會之義務、檢査院咄掌、如下、三檢査各部出納官之證明、而解除其責任、二監督支付命令官之處分、而檢査其豫算、超過、豫算外支出、違反舊、又法律勅令。之事件、三檢査。別車認决算。及各省決算報告。以各出墾旨所呈報各部會計被數對照、而確定之。會社檢査、査院。行政上之檢査、爲議會立法上檢査理備之増、故識會接受儉、査訖報皆、及政府决算書、獻諾其正當、而决定、會計檢査院。監督政府之會計者、不可不有獨立養新、故其種鶏及載符。同察判官、以法律定之、而在於行政命令區域之外、但如其檢査上規利、以勅令、定之、此僅異裁判官耳</p>
-</div>
-</div>
-<div id="ch7" class="section-chapter">
-<h3 class="sho"><a href="#ch7" class="self-link">第七章 補則</a></h3>
-
-<h3 class="jo" id="ch7-art1"><a href="#ch7-art1" class="self-link">第七十三條</a></h3>
-<div class="joubun"><p>將來此憲法條項、有改正之必要時、以敕命議案付帝國議會、</p><p>此時兩議院、各以總員三分之二以上出席、非出席議員三分之二以上之多數、不得爲改正之議決、</p></div>
-<div class="commentary">
-<p>恭按、憲法改正之發議、屬天皇之大權、而議會之議決、以特別多數爲要件、蓋憲法者、國家根本之大典、不可以輕率變更也、</p>
-</div>
-
-<h3 class="jo" id="ch7-art2"><a href="#ch7-art2" class="self-link">第七十四條</a></h3>
-<div class="joubun"><p>皇室典範之改正、不要經帝國議會之議、</p><p>以皇室典範、不得變更此憲法之條規、</p></div>
-<div class="commentary">
-<p>恭按、皇室典範者、皇室之家法也、其改正不經議會之議、以示皇室之事不容臣民干涉之義也、又以皇室典範不得變更憲法之條規、使兩者各守其畛域也、</p>
-</div>
-
-<h3 class="jo" id="ch7-art3"><a href="#ch7-art3" class="self-link">第七十五條</a></h3>
-<div class="joubun"><p>憲法及皇室典範、置攝政之間、不得變更之、</p></div>
-<div class="commentary">
-<p>恭按、攝政者、代天皇行大權者、非天皇本身也、故攝政之間、不得變更憲法及皇室典範、以重國家根本之大典也、</p>
-</div>
-
-<h3 class="jo" id="ch7-art4"><a href="#ch7-art4" class="self-link">第七十六條</a></h3>
-<div class="joubun"><p>法律規則命令、又不拘用何等名稱、不矛盾此憲法之現行法令、總有遵由之效力、</p><p>歲出上係政府義務之現在契約又命令、總依第六十七條之例、</p></div>
-<div class="commentary">
-<p>恭按、本條規定憲法施行之際、現行法令之效力存續也、法律規則命令、不拘何等名稱、不矛盾憲法者、總有遵由之效力、又歲出上係政府義務之現在契約又命令、依第六十七條之例、議會不得廢除削減之也、</p>
-</div>
-</div>
-<div class="section-break"></div>
-<h2 id="koshitsu"><a href="#koshitsu" class="self-link">皇室典範義解</a></h2>
-<p>恭按、皇室之典範、益其基礎鞏固、維持尊嚴於無窮、缺不可之憲章也、</p>
-<p>祖宗擧國、一系相承、與天壤無窮、此蓋不假言說、既有一定之模範、以爲不易之規準也、今人文漸進、萬由之路必依憲章、而皇室典範之成、實明徵祖宗之遺意、爲子孫貽永遠之銘典之所以也、</p>
-<p>皇室典範、皇室自修定其家法者也、故不依公式公布之於臣民、而將來已不得之必要、其條章更定之、亦不經帝國議會之協贊、蓋皇室之家法、承祖宗傳子孫、既非君主任意制作之所、又非臣民敢干渉之所也、</p>
-<h3 class="sho" id="kt-ch1"><a href="#kt-ch1" class="self-link">第一章　皇位繼承</a></h3>
-<div class="article-block">
-<h3 class="jo" id="kt-art1"><a href="#kt-art1" class="self-link">第一條</a></h3>
-<div class="joubun"><p>大日本國皇位祖宗之皇統男系之男子繼承之</p></div>
-<div class="commentary">
-<p>恭按、皇位繼承、祖宗以來、已有明訓、和氣清麻呂遺奏之言曰、我國家開闢以來、君臣分定矣、以臣爲君未之有也、天之日嗣、必立皇緒、</p>
-<p>皇統限於男系、不及女系之出、爲皇家成法、上代不獨不取女系、自神武天皇至崇峻天皇三十二世、未曾有立女帝之例、神功皇后當國六十九年、以攝位而終焉、飯豐青尊攝政、承清寧天皇之後、亦未即皇位、清寧天皇崩、無皇子、亦無近親皇族男、而有皇妹春日大娘、然皇妹不即位、群臣推奉從祖履中天皇之孫顯宗天皇、可見上代已有不文之常典、而成不可易之家法也、其後推古天皇以來、雖非無皇后皇女即位之例、推原當時事情、蓋不外一時當國、候幼帝歳長而傳位之權宜、要之非祖宗常憲、終不可作後世模範也、</p>
-<p>本條皇位繼承以男系男子爲限、又第二十一條揭皇后皇女攝政者、蓋咸紹述先王之遺意、苟非創新例也、</p>
-<p>祖宗皇統者、謂承一系正統之皇胤、與和氣清麻呂所謂皇緒者同其義、皇統而繼皇位、必限於一系、不可分割也、天智天皇曰、天無雙日、國無二王、後深草天皇以來數世之間、兩統互代、終致南北二朝、是皇家變遷、而非祖宗之典憲也、</p>
-<p>以上約說本條意義、乃祖宗以來皇祚繼承之大義、炳焉如日星、亘萬世而不可易者、蓋左之三大則、</p>
-<p>第一　踐皇祚、以皇胤爲限、</p>
-<p>第二　踐皇祚、限於男系、</p>
-<p>第三　皇祚一系、而不可分裂、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art2"><a href="#kt-art2" class="self-link">第二條</a></h3>
-<div class="joubun"><p>皇位傳皇長子</p></div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art3"><a href="#kt-art3" class="self-link">第三條</a></h3>
-<div class="joubun"><p>皇長子不在傳皇長孫皇長子及其子孫皆不在傳皇次子及其子孫以下皆例之</p></div>
-<div class="commentary">
-<p>恭按、菟道稚郎子曰、兄上而季下、爲古今常典、葛野王進奏持統天皇言曰、我國家爲法也、神代以來、子孫相承、以襲天位、若兄弟相及、則亂從此興、此乃祖宗以來子孫直系相傳、以長幼從序、爲天位繼承之正法、而其兄弟相傳、自反正天皇之於履中天皇、允恭天皇之於反正天皇、咸出於不得已、非其正也、第二條第三條定繼承之法、爲後王貽常典、不敢容權宜左右、蓋所以恪祖宗遺範、永絕亂萌於後裔也、凡子孫云者、曾孫以下咸在其中、長子之子孫先次子者、重宗統也、至長子子孫不在、始移次子、次子子孫之於第三子以下亦同例、次條云皇庶子孫之繼承皇位以皇嫡子孫皆不在爲限、則第二條第三條就嫡子孫擇其長、而嫡子孫咸不在、於庶子孫擇其長亦依本法可知、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art4"><a href="#kt-art4" class="self-link">第四條</a></h3>
-<div class="joubun"><p>皇子孫之繼承以嫡出爲先皇庶子孫之繼承皇位限皇嫡子孫皆不在之時</p></div>
-<div class="commentary">
-<p>恭按、祖宗先嫡後庶、始於神武天皇措庶長子手研耳命、立綏靖天皇、是爲繼嗣之常典、但皇緒萬世一日不可斷、故無嫡出、庶出亦使得繼位、蓋清寧天皇崩御、無皇子、履中天皇之孫顯宗天皇繼位、而天皇實與其姉飯豐青尊、兄仁賢天皇倶爲庶出、武烈天皇崩御、無皇嗣、迎應神天皇五世之孫繼體天皇即位、而天皇實爲應神天皇庶出稚淳毛二派皇子之後、當此時皇統不絕如線、若無庶子而立、豈有不可言之事矣、我國不絕庶出、實出於不得已、</p>
-<p>以皇嫡子孫皆不在爲限者、通長子及次子以下及其子孫而謂之、故皇庶長子不得先皇嫡幼子孫、又長系庶皇孫不得先次系皇嫡子孫、</p>
-<p>問、皇庶子之子而嫡出、可得謂之嫡皇孫乎、答、皇庶子子孫即爲庶流、故皇庶子嫡出子先其庶出兄弟、而不得先皇嫡子孫、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art5"><a href="#kt-art5" class="self-link">第五條</a></h3>
-<div class="joubun"><p>皇子孫皆不在傳皇兄弟及其子孫</p></div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art6"><a href="#kt-art6" class="self-link">第六條</a></h3>
-<div class="joubun"><p>皇兄弟及其子孫皆不在傳皇伯叔父及其子孫</p></div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art7"><a href="#kt-art7" class="self-link">第七條</a></h3>
-<div class="joubun"><p>皇伯叔父及其子孫皆不在其以上最近親之皇族傳之</p></div>
-<div class="commentary">
-<p>恭按、第五條第六條第七條、示皇子孫不在、定繼嗣以最近親也、皇子孫爲現在天皇至親宗系、皇子孫嫡庶倶不在、以皇兄弟爲最近親、故繼承之權移皇兄弟中之一、其與現在天皇爲同父也、皇兄又皇弟之子及孫、屬皇兄又皇弟系統、皇兄弟及其子孫嫡庶咸不在時、次之以皇伯叔爲最近親、故繼承之權移皇伯叔中之一、其與現在天皇之父爲同父也、皇伯又皇叔之子及孫、屬皇伯又皇叔系統也、皇伯叔以上最近親皇族云者、皇大伯叔及其以上咸準之、一系之下尊卑相承、而宗系盡及于支系、近系盡及于遠系、蓋所以絕繼承疑義於將來、而保皇緒慶福于永遠也、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art8"><a href="#kt-art8" class="self-link">第八條</a></h3>
-<div class="joubun"><p>皇兄弟以上於同等內先嫡後庶先長後幼</p></div>
-<div class="commentary">
-<p>恭按、皇兄弟一等、皇伯叔父一等、皇大伯叔又爲一等、皇兄弟等內擇其嫡長、無嫡時庶出中選其長、皇兄弟之子孫、同皇子孫之例、皇伯叔等內先嫡先長者、其例與皇兄弟之等同、其於皇大伯叔等亦同、蓋皇子孫之庶出先皇兄弟嫡出者、皇家重其宗系之例典、天皇之下尊卑相承、嫡庶倶盡不移支系、本條推及之各等、每一等先嫡長後庶幼、每嫡庶倶盡上其等、咸同其例、故云於同等內、先嫡者謂先嫡出先嫡系、先長者謂先長子先長系、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art9"><a href="#kt-art9" class="self-link">第九條</a></h3>
-<div class="joubun"><p>皇嗣精神若身體有不治重患又重大事故則諮詢皇族會議及樞密顧問得依前數條換繼承順序</p></div>
-<div class="commentary">
-<p>恭按、皇嗣居循先王常典之所存、繼大統傳神器之位、而非人主之所任意左右、故換繼承順序、必以精神又身體有不治重患、又重大事故、不堪承神器之重時爲限、而又經諮詢皇族會議及樞密顧問、始得決行、若夫不依本條所定而易置繼嗣、典範之所不認、而如一時過失、不足以爲重大事故、</p>
-</div>
-</div>
-<h3 class="sho" id="kt-ch2"><a href="#kt-ch2" class="self-link">第二章　踐祚即位</a></h3>
-<div class="article-block">
-<h3 class="jo" id="kt-art10"><a href="#kt-art10" class="self-link">第十條</a></h3>
-<div class="joubun"><p>天皇崩御皇嗣即踐祚承祖宗之神器</p></div>
-<div class="commentary">
-<p>恭按、御祖以來、鏡劍璽三種神器、以爲皇位御守、歷代即位必以承神器爲例、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art11"><a href="#kt-art11" class="self-link">第十條</a></h3>
-<div class="joubun"><p>天皇崩御皇嗣即踐祚承祖宗之神器</p></div>
-<div class="commentary">
-<p>恭按、御祖以來、鏡劍璽三種神器、以爲皇位御守、歷代即位必以承神器爲例、上古踐祚即即位、非兩事、令義解云、天皇即位謂之踐祚、祚位也、蓋天子之位一日不可曠、故繼體天皇爲群臣所迎、未踐帝位、而史臣已書天皇移樟葉宮、然天智天皇承統、仍稱皇太子七年之後行即位之禮、是爲踐祚與即位區別之初、其後歷代踐祚之後數年而行即位之禮、然神器必遽即時奉之、與上古無異、本條示皇位之一日不可曠、及揭神器相承之大義、以昭明舊章、</p>
-<p>自神武天皇至舒明天皇三十四世、未嘗有讓位之事、讓位之例殆於皇極天皇、蓋自女帝假攝而來者、自此至聖武天皇光仁天皇遂爲定制矣、是爲世變之一、其後至有因權臣強迫兩統互立爲例之事、而南北朝之亂亦源因於此、本條以踐祚爲先帝崩御後即行者、因上代恒典、而改中古以來讓位慣例者也、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art12"><a href="#kt-art12" class="self-link">第十一條</a></h3>
-<div class="joubun"><p>即位之禮及大嘗祭於京都行之</p></div>
-<div class="commentary">
-<p>恭按、天智天皇稱制之後、更行即位之禮以來、歷代因襲以爲大典、即位之式行大極殿、服冕服即高御座、維新明治元年八月廿七日舉行即位之禮、臣民得再仰望祖宗遺典、本條定即位之禮及大嘗祭可行於京都、所以明重大禮、又不忘本之意也、</p>
-<p>大嘗祭神武天皇元年以來歷代相因而爲大典者、一世一行者也、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art13"><a href="#kt-art13" class="self-link">第十二條</a></h3>
-<div class="joubun"><p>踐祚之後建定元號一世之間不再改從明治元年之定制</p></div>
-<div class="commentary">
-<p>恭按、孝德天皇紀云、改天豐財重日足姫天皇四年爲大化元年、是建元之始而爲歷代例制、其後因陰陽占卜之說、一世間屢改年號、徒爲史乘之煩、明治元年九月八日布告曰、今般御即位御大禮被爲濟、先例之通被爲改年號候、就而從來隨吉凶之象兆屢改號有之候得共、自今御一代一號被定候、依之改慶應四年可爲明治元年旨被仰出候事、此爲本條所依之典禮、</p>
-</div>
-</div>
-<h3 class="sho" id="kt-ch3"><a href="#kt-ch3" class="self-link">第三章　成年立后立太子</a></h3>
-<div class="article-block">
-<h3 class="jo" id="kt-art14"><a href="#kt-art14" class="self-link">第十三條</a></h3>
-<div class="joubun"><p>天皇及皇太子皇太孫以滿十八年爲成年</p></div>
-<div class="commentary">
-<p>恭按、中古以來設天皇元服之制、大抵自十一歲至十五歲行元服、明治九年定民法上丁年爲滿二十年、本條爲天皇及皇太子皇太孫定成年爲十八年者、以天皇及皇嗣當神器之重、非尋常通法所拘也、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art15"><a href="#kt-art15" class="self-link">第十四條</a></h3>
-<div class="joubun"><p>前條之外皇族以滿二十年爲成年</p></div>
-<div class="commentary">
-<p>恭按、天皇及皇嗣之成年、不以及他皇族者、不在前條特例之限也、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art16"><a href="#kt-art16" class="self-link">第十五條</a></h3>
-<div class="joubun"><p>儲嗣之皇子爲皇太子皇太子不在儲嗣之皇孫爲皇太孫</p></div>
-<div class="commentary">
-<p>恭按、皇太子古稱「日嗣之御子」、神武天皇紀立皇子神渟名川耳尊爲皇太子、此乃史臣用皇太子之稱以當日嗣御子之名、中古以來取爲典禮、本條皇太子皇太孫之名稱、限皇子皇孫、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art17"><a href="#kt-art17" class="self-link">第十六條</a></h3>
-<div class="joubun"><p>立皇后皇太子皇太孫之時以詔書公布之</p></div>
-<div class="commentary">
-<p>恭按、立后之事、自神武天皇以來載歷世帝紀、而立后之詔始見於聖武天皇紀、本條定立后大禮必以詔書公布者、重先王之典故、且中古以來有中宮准后之設、從缺册立之儀、明將來不可爲所依之模範也、</p>
-</div>
-</div>
-<h3 class="sho" id="kt-ch4"><a href="#kt-ch4" class="self-link">第四章　敬稱</a></h3>
-<div class="article-block">
-<h3 class="jo" id="kt-art18"><a href="#kt-art18" class="self-link">第十七條</a></h3>
-<div class="joubun"><p>天皇太皇太后皇太后皇后之敬稱爲陛下</p></div>
-<div class="commentary">
-<p>恭按、陛下、臣下自天子敷奏之敬稱也、本條以陛下之敬稱通爲對至尊之稱謂、不限敷奏陛見之辭、敷衍舊典而廣之內外也、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art19"><a href="#kt-art19" class="self-link">第十八條</a></h3>
-<div class="joubun"><p>皇太子皇太子妃皇太孫皇太孫妃親王親王妃內親王王王妃女王之敬稱爲殿下</p></div>
-<div class="commentary">
-<p>恭按、本條因舊制皇太子稱殿下之例、推而及之皇族也、</p>
-</div>
-</div>
-<h3 class="sho" id="kt-ch5"><a href="#kt-ch5" class="self-link">第五章　攝政</a></h3>
-<div class="article-block">
-<h3 class="jo" id="kt-art20"><a href="#kt-art20" class="self-link">第十九條</a></h3>
-<div class="joubun"><p>天皇未達成年置攝政天皇由久亘之故障不能親大政經皇族會議及樞密顧問之議置攝政</p></div>
-<div class="commentary">
-<p>恭按、攝政所以救濟皇室不可避之變局、一保持皇統之常久、二疏通大政之便宜、兩無失墜之患也、攝政攝行天皇之天職、一切大政及皇室內事皆代天皇總攬之、而不居至尊之名位、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art21"><a href="#kt-art21" class="self-link">第二十條</a></h3>
-<div class="joubun"><p>攝政依左之順序成年以上皇族任之</p></div>
-<div class="commentary">
-<p>一　皇太子又皇太孫</p>
-<p>二　親王及王</p>
-<p>三　皇后</p>
-<p>四　皇太后</p>
-<p>五　太皇太后</p>
-<p>六　內親王及女王</p>
-<p>恭按、推古天皇紀立厩戶豐聰耳皇子爲皇太子、仍錄攝政以萬機悉委焉、是皇太子攝政之例、本條定攝政之制限皇族不及人臣者、蓋嚴大政所繫、愼神器之重也、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art22"><a href="#kt-art22" class="self-link">第二十一條</a></h3>
-<div class="joubun"><p>皇族女子無皇位繼承之權但攝政任之順序比準皇族男子繼承之順序而定先後</p></div>
-<div class="commentary">
-<p>恭按、上代有皇太子任攝政之事、是已創併攝政重任與皇位繼承順序爲一條軌轍之義例者、參考各國古史、攝政擇長年德器之人任之、而繼統之變多因此而起、本條以攝政之任使專從皇位繼承順序者、所以以宗統倫序併及于攝政、絕危疑之門于將來也、故當依第十九條要置攝政之時、當皇位繼承順序之皇族、不俟群臣推舉、而進任攝政之權利及義務、與皇太子繼大位無異、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art23"><a href="#kt-art23" class="self-link">第二十二條</a></h3>
-<div class="joubun"><p>皇族男子攝政任之從皇位繼承之順序其女子亦準之</p></div>
-<div class="commentary">
-<p>恭按、上代皇太子當攝政之任者、是既以攝政重任與皇位繼承之順序併爲一條軌轍之義例始也、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art24"><a href="#kt-art24" class="self-link">第二十三條</a></h3>
-<div class="joubun"><p>皇族女子攝政任之限無配偶者</p></div>
-<div class="commentary">
-<p>恭按、上代既無嫁之皇族女子任攝政之例、蓋與從夫之義不可並行也、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art25"><a href="#kt-art25" class="self-link">第二十四條</a></h3>
-<div class="joubun"><p>最近親皇族未達成年又由他事故他皇族任攝政之時後來最近親皇族達成年又其事故既除雖然對皇太子及皇太孫之外不讓其任</p></div>
-<div class="commentary">
-<p>恭按、攝政又可爲攝政者、因重患又重故有換順序之必要時、皇族會議及樞密顧問、不得不和衷同心致其誠以定皇家之大計、本條曰重患、而不曰不治重患、與第九條異其文、乃因彼此之間有輕重之別、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art26"><a href="#kt-art26" class="self-link">第二十五條</a></h3>
-<div class="joubun"><p>攝政又攝政應爲之者精神若身體重患又有重大事故之時經皇族會議及樞密顧問之議得換其順序</p></div>
-<div class="commentary">
-<p>恭按、太子傅之職、見於大寶令、而持統天皇紀載以直廣壹當麻國見爲東宮太傅、蓋其所由來尚矣、本條定天皇幼冲置太傅、因保傅之任、其重亞于攝政也、而太傅專止於保育教導之任、不干預乎大政、攝政專攝行大政、不干涉於保育及天皇私事、</p>
-</div>
-</div>
-<h3 class="sho" id="kt-ch6"><a href="#kt-ch6" class="self-link">第六章　太傅</a></h3>
-<div class="article-block">
-<h3 class="jo" id="kt-art27"><a href="#kt-art27" class="self-link">第二十六條</a></h3>
-<div class="joubun"><p>天皇未達成年之時置太傅掌保育</p></div>
-<div class="commentary">
-<p>恭按、太子傅之職見於大寶令、本條定爲天皇幼冲置太傅者、以保傅之任其重亞於攝政也、而太傅專止於保育教導之任、不干預大政、攝政攝行大政、不干涉保導及天皇私事、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art28"><a href="#kt-art28" class="self-link">第二十七條</a></h3>
-<div class="joubun"><p>先帝遺命未任太傅之時攝政諮詢皇族會議及樞密顧問選任之</p></div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art29"><a href="#kt-art29" class="self-link">第二十八條</a></h3>
-<div class="joubun"><p>太傅攝政及其子孫不得任之</p></div>
-<div class="commentary">
-<p>恭按、攝政不獨總攝大政、又監督皇家內事、故不有先帝遺命時、攝政不怠任太傅、而攝政及其子孫不得任之、又任免太傅必經諮詢皇族會議及樞密顧問而後決行者、所以愼危疑之門、使攝政全其忠順、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art30"><a href="#kt-art30" class="self-link">第二十九條</a></h3>
-<div class="joubun"><p>攝政非諮詢皇族會議及樞密顧問之後不得退職太傅</p></div>
-<div class="commentary">
-<p>恭按、攝政不獨總攝大政、兼監督皇家內事、故先帝遺命不在、攝政不怠選任太傅、而攝政及其子孫不得任太傅、及太傅任免必諮詢皇族會議及樞密顧問而後決行、愼危疑之門、使攝政全其忠順也、</p>
-</div>
-</div>
-<h3 class="sho" id="kt-ch7"><a href="#kt-ch7" class="self-link">第七章　皇族</a></h3>
-<div class="article-block">
-<h3 class="jo" id="kt-art31"><a href="#kt-art31" class="self-link">第三十條</a></h3>
-<div class="joubun"><p>稱皇族者謂太皇太后皇太后皇后皇太子皇太子妃皇太孫皇太孫妃親王親王妃內親王王王妃女王</p></div>
-<div class="commentary">
-<p>恭按、皇族者凡皇胤之男子及其正配及皇胤之女子之謂、凡皇族男子皆有皇位繼承之權利者也、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art32"><a href="#kt-art32" class="self-link">第三十一條</a></h3>
-<div class="joubun"><p>自皇子至皇玄孫男爲親王女爲內親王五世以下男爲王女爲女王</p></div>
-<div class="commentary">
-<p>恭按、大寶令凡皇兄弟皇子皆爲親王、是皇兄弟與皇子同稱親王、既有成典、天皇自支系入承大統、則皇兄弟姉妹皆得親王內親王之尊號、光仁天皇繼大統、陞皇弟湯原王榎井王爲親王、是爲始例、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art33"><a href="#kt-art33" class="self-link">第三十二條</a></h3>
-<div class="joubun"><p>天皇自支系入承大統之時皇兄弟姉妹之王女王者特宣賜親王內親王之號</p></div>
-<div class="commentary">
-<p>恭按、皇太子皇太孫立坊以詔書公布之外、凡皇族之生死婚及命名、自宮內大臣公告、蓋皇族爲皇統所係、臣民仰望所集、故公之臣民、使皆聞知也、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art34"><a href="#kt-art34" class="self-link">第三十三條</a></h3>
-<div class="joubun"><p>皇族之誕生命名婚嫁薨去宮內大臣公告之</p></div>
-<div class="commentary">
-<p>恭按、圖書寮尚藏之皇統譜及皇族記錄、徵明大統源流、疏證宗室本末、本條特揭之、以明皇室圖書之登錄爲定嫌疑絕亂萌之典籍、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art35"><a href="#kt-art35" class="self-link">第三十四條</a></h3>
-<div class="joubun"><p>皇統譜及前條所關記錄圖書寮尚藏之</p></div>
-<div class="commentary">
-<p>恭按、天皇爲皇室家父、故皇族處俸自皇室經費給賜、皇族各人結婚又外國旅行要經勅許、無父之幼男幼女教育及保護由勅命、凡皇族在天皇監督之下、猶家人之於家父、此乃所以保皇族幸福及榮譽、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art36"><a href="#kt-art36" class="self-link">第三十五條</a></h3>
-<div class="joubun"><p>皇族天皇監督之</p></div>
-<div class="commentary">
-<p>恭按、天皇爲皇室家父、故皇族處俸自皇室經費給賜、皇族各人結婚又旅行外國要勅許、父無之幼男幼女教育及保護由勅命、凡皇族總在天皇監督之下、如家人之於家父、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art37"><a href="#kt-art37" class="self-link">第三十六條</a></h3>
-<div class="joubun"><p>攝政在任之時攝行前條之事</p></div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art38"><a href="#kt-art38" class="self-link">第三十七條</a></h3>
-<div class="joubun"><p>皇族男女幼年而父無者命宮內官僚掌保育事宜依天皇認可其父母選舉之後見人又勅選之</p></div>
-<div class="commentary">
-<p>恭按、天皇監督皇族、故皇族幼年而無父時、由勅旨命宮內官僚掌保育、或由其父遺囑選舉後見人、又其母選舉後見人、天皇認可之、或特勅選後見人當保育、皆從事宜、而後見人所行之事、仍天皇親監督之、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art39"><a href="#kt-art39" class="self-link">第三十八條</a></h3>
-<div class="joubun"><p>皇族後見人限成年以上皇族</p></div>
-<div class="commentary">
-<p>恭按、皇族婚嫁、皇后之擇固在其中、本條存重祖宗古法、又許婚嫁華族之家者、兼斟酌中世以來慣例、廣擇貞淑之道也、而又限特認許之家者、欲擇名門右族也、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art40"><a href="#kt-art40" class="self-link">第三十九條</a></h3>
-<div class="joubun"><p>皇族婚嫁限同族又由勅旨特認許之華族</p></div>
-<div class="commentary">
-<p>恭按、皇族婚嫁、擇皇后固在其中、本條存重祖宗古法、又許婚嫁華族之家者、兼斟酌中世以來慣例、廣擇貞淑之道也、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art41"><a href="#kt-art41" class="self-link">第四十條</a></h3>
-<div class="joubun"><p>皇族婚嫁由勅許</p></div>
-<div class="commentary">
-<p>恭按、皇族之婚嫁、違本法而不得勅許者、不認其婚嫁、其婦不許用皇族禮遇及名稱、故當付勅許、亦特致愼重之意、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art42"><a href="#kt-art42" class="self-link">第四十一條</a></h3>
-<div class="joubun"><p>許可皇族婚嫁之勅書宮內大臣副署之</p></div>
-<div class="commentary">
-<p>恭按、皇家養子猶子之習、始于嵯峨天皇皇子源定爲淳和天皇之子、源融爲仁明天皇之子、而未有養子猶子之稱、皇族支孫而爲天皇養子、始于融之孫是茂爲光孝天皇養子、本條不獨禁於異姓、皇族互不得爲男女養子者、塞宗系紊亂之門也、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art43"><a href="#kt-art43" class="self-link">第四十二條</a></h3>
-<div class="joubun"><p>皇族不得爲養子</p></div>
-<div class="commentary">
-<p>恭按、本條不獨異姓、禁皇族互爲男女養子者、塞宗系紊亂之門也、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art44"><a href="#kt-art44" class="self-link">第四十三條</a></h3>
-<div class="joubun"><p>皇族欲旅行國疆之外請勅許</p></div>
-<div class="commentary">
-<p>恭按、女子而嫁者、各從其夫之身分、故皇族女子之嫁臣籍者、不在皇族之列、此云臣籍者、專謂異姓臣籍、仍使有內親王又女王之稱、依近時前例、然亦必要有特旨者、其特賜之尊稱、而非依身分也、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art45"><a href="#kt-art45" class="self-link">第四十四條</a></h3>
-<div class="joubun"><p>皇族入臣籍者不在皇族之列</p></div>
-<div class="commentary">
-<p>恭按、世傅御料、係屬皇室、天皇傅之後嗣、以爲皇統遺物、不得隨意分割又讓與、</p>
-</div>
-</div>
-<h3 class="sho" id="kt-ch8"><a href="#kt-ch8" class="self-link">第八章　世傅御料</a></h3>
-<div class="article-block">
-<h3 class="jo" id="kt-art46"><a href="#kt-art46" class="self-link">第四十五條</a></h3>
-<div class="joubun"><p>定爲世傅御料之土地物件不得分割讓與</p></div>
-<div class="commentary">
-<p>恭按、世傅御料係屬皇室、天皇傳之後嗣爲皇統遺物、不得隨意分割又讓與、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art47"><a href="#kt-art47" class="self-link">第四十六條</a></h3>
-<div class="joubun"><p>編入世傅御料之土地物件諮詢樞密顧問以勅書定之宮內大臣公告之</p></div>
-<div class="commentary">
-<p>恭按、皇室經費、特定常額、爲國庫至重之義務每年支出之、蓋天皇爲一國元首統治臣民、從臣民正供奉其需要、爲當然之權利、故議會無議皇室經費既定歲額及檢查之權、但新要增額之時、更要經議會協贊、故曰常額、</p>
-</div>
-</div>
-<h3 class="sho" id="kt-ch9"><a href="#kt-ch9" class="self-link">第九章　皇室經費</a></h3>
-<div class="article-block">
-<h3 class="jo" id="kt-art48"><a href="#kt-art48" class="self-link">第四十七條</a></h3>
-<div class="joubun"><p>皇室諸般經費特定常額自國庫支出</p></div>
-<div class="commentary">
-<p>恭按、皇室經費特定常額、爲國庫至重義務每年支出、蓋天皇爲一國元首統治臣民、從臣民正供奉其需要、爲當然之權利、故議會無議皇室經費既定歲額及檢查之權、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art49"><a href="#kt-art49" class="self-link">第四十八條</a></h3>
-<div class="joubun"><p>皇室經費豫算決算檢查及其他規則依皇室會計法所定</p></div>
-<div class="commentary">
-<p>恭按、皇族與皇族間之訴訟、當依內廷裁判、故於宮內省勸解、勸解不成時、命裁判員令裁判、更經勅裁而執行、其他依普通民法要裁判所登錄又處分者、皆宮內省當之、</p>
-</div>
-</div>
-<h3 class="sho" id="kt-ch10"><a href="#kt-ch10" class="self-link">第十章　皇族訴訟及懲戒</a></h3>
-<div class="article-block">
-<h3 class="jo" id="kt-art50"><a href="#kt-art50" class="self-link">第四十九條</a></h3>
-<div class="joubun"><p>皇族相互民事訴訟依勅旨於宮內省命裁判員裁判經勅裁執行之</p></div>
-<div class="commentary">
-<p>恭按、本條自人民對皇族民事訴訟、東京控訴院裁判之者、示皇族特權也、自皇族對人民之訴訟、則依普通訴訟原則、被告人所在地裁判所管轄之、普通訴訟人、裁判所要本人訊問、而爲召喚時、不得不出訟廷、而皇族不要自出者、此亦特權也、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art51"><a href="#kt-art51" class="self-link">第五十條</a></h3>
-<div class="joubun"><p>人民對皇族民事訴訟於東京控訴院裁判之但皇族以代人當訴訟不要自出訟廷</p></div>
-<div class="commentary">
-<p>恭按、皇族有犯罪、不得勾引之、其於現行犯時亦同、又不得爲刑事審問召喚於裁判所、須豫審判事伴書記就其所在聽陳述、但得天皇勅許時爲例外、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art52"><a href="#kt-art52" class="self-link">第五十一條</a></h3>
-<div class="joubun"><p>皇族非得勅許不得勾引又召喚於裁判所</p></div>
-<div class="commentary">
-<p>恭按、皇族犯罪亦不得勾引之、其現行犯亦同、又不得爲刑事審問召喚於裁判所、但得天皇勅許爲例外、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art53"><a href="#kt-art53" class="self-link">第五十二條</a></h3>
-<div class="joubun"><p>皇族有辱其品位之所行又缺對皇室忠順之時以勅旨懲戒之其重者停止皇族特權一部又全部若剝奪之</p></div>
-<div class="commentary">
-<p>恭按、有蕩產之行之皇族、宣告民法上禁治產、及命其管財者使管理財產、亦由勅旨、此固屬天皇監督之權、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art54"><a href="#kt-art54" class="self-link">第五十三條</a></h3>
-<div class="joubun"><p>皇族有蕩產之所行以勅旨宣告治產之禁任其管財者</p></div>
-<div class="commentary">
-<p>恭按、皇族會議、就皇室內事、應天皇諮詢者、而皇族之懲戒又治產處分、特以諮詢爲必要、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art55"><a href="#kt-art55" class="self-link">第五十四條</a></h3>
-<div class="joubun"><p>前二條諮詢皇族會議之後勅裁之</p></div>
-</div>
-<h3 class="sho" id="kt-ch11"><a href="#kt-ch11" class="self-link">第十一章　皇族會議</a></h3>
-<div class="article-block">
-<h3 class="jo" id="kt-art56"><a href="#kt-art56" class="self-link">第五十五條</a></h3>
-<div class="joubun"><p>皇族會議以成年以上皇族男子組織之以內大臣樞密院議長宮內大臣司法大臣大審院長參列之</p></div>
-<div class="commentary">
-<p>恭按、皇族會議、第一受皇室典範改正之諮詢、第二於第十九條第二項及第二十五條之場合經其議、第三受換皇嗣之諮詢、第四受皇族懲戒及治產處分之諮詢、其他受皇室重要事件及民法親族會議所係事件之諮詢、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art57"><a href="#kt-art57" class="self-link">第五十六條</a></h3>
-<div class="joubun"><p>天皇親臨皇族會議又命皇族中一員爲議長</p></div>
-<div class="commentary">
-<p>恭按、依典範所定、五世以下之王、不得稱親王、本條定現在宣下親王、不奪其既得尊榮、而其繼嗣以下未有宣下者、依典範本則可知、</p>
-</div>
-</div>
-<h3 class="sho" id="kt-ch12"><a href="#kt-ch12" class="self-link">第十二章　補則</a></h3>
-<div class="article-block">
-<h3 class="jo" id="kt-art58"><a href="#kt-art58" class="self-link">第五十七條</a></h3>
-<div class="joubun"><p>現在皇族五世以下宣賜親王號者依舊</p></div>
-<div class="commentary">
-<p>恭按、依典範所定、五世以下王不得稱親王、本條爲現在宣下親王、不奪其既得之尊榮、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art59"><a href="#kt-art59" class="self-link">第五十八條</a></h3>
-<div class="joubun"><p>皇位繼承順序總依實系現在皇養子皇猶子又他繼嗣之故不以混之</p></div>
-<div class="commentary">
-<p>恭按、皇位繼承順序總依宗支遠近實系、不拘養子猶子之名稱及甲家之子爲乙家繼嗣、其間雖有多少紛錯、不以其名混其實、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art60"><a href="#kt-art60" class="self-link">第五十九條</a></h3>
-<div class="joubun"><p>親王內親王王女王品位廢之</p></div>
-<div class="commentary">
-<p>恭按、皇族既以品位爲班別、而親疎長幼倫序從失、抑皇族生居尊榮、非人臣位階所陞敍之比、本條廢品位舊制者、一以倫序爲重也、</p>
-</div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art61"><a href="#kt-art61" class="self-link">第六十條</a></h3>
-<div class="joubun"><p>親王家格及其他牴觸此典範之例規總廢之</p></div>
-</div>
-<div class="article-block">
-<h3 class="jo" id="kt-art62"><a href="#kt-art62" class="self-link">第六十二條</a></h3>
-<div class="joubun"><p>改正又增補此典範條項之時諮詢皇族會議及樞密顧問勅定之</p></div>
-</div>
-<div style="text-align: right; font-size: 12px; color: #999; margin-top: 60px; padding-bottom: 20px;">Updated: 2026-03-25 13:59</div>
-<div class="back-to-top"><a href="#">&#x25B2; ページ先頭に戻る</a></div>
-</div>
+<main class="content-pane" id="content-pane">
+<h1>帝國憲法義解</h1>
+<p class="author">伊藤博文 著 — 丸善、昭和12（1937）年 第17版</p>
+<h2 class="hen" id="jobun"><a class="self-link" href="#jobun">序</a></h2>
+<div class="section-preamble"><div class="joubun">
+<p>伊藤博文著帝國憲法國家學會藏版雜誌靜靜筑覆士四皇室御輿雑日鳫さの遺訓を祖述して常乾せ馬炉制相尽法は国家の大極を招事し天民の1783t(A)同樣式 ( ) ( ) ( ) ( ) ( (考へる○國金蔵を明制すれ。黄粉砕明じて日星のみし文松源貞寺の焚またまなし此辺四日空晴遠形一ト薬載にゆるものなりやけと焼励集候難魔考窮するの舎解て華記と為に伝を南へ従写名つけて首忽と謂ふなく大この荘疏と為すにあらす町侍老の一に元てむたり最上のし若者失市院正しく類を拝し戴をなするに到ては六十人口油にかりありかぶして事の改て合同手紙取糺候以上明治二十二年四月伯爵伊藤博文謹誌藤彌</p>
+</div></div>
+<h2 class="hen" id="kokubun"><a class="self-link" href="#kokubun">告文</a></h2>
+<div class="section-preamble"><div class="joubun">
+<p>皇朕レ謹ミ畏ミ皇祖皇宗ノ神靈ニ誥ケ白サク皇朕レ天壤無窮ノ宏謨ニ循ヒ惟神ノ寶祚ヲ承繼シ舊圖ヲ保持シテ敢テ失墜スルコト無シ願ミルニ世局ノ進運ニ膺リ人文ノ發達ニ隨ヒ宜ク皇祖皇宗ノ遺訓ヲ明徴ニシ典憲ヲ成立シ條章ヲ昭示シ内ハ以テ子孫ノ率由スル所ト爲シ外ハ以テ臣民翼贊ノ道ヲ廣メ永遠ニ遵行セシメ盆國家ノ丕基ヲ鞏固ニシ八洲民生ノ慶幅ヲ増進スヘシ茲ニ皇室典範及憲法ヲ制定ス惟フニ此レ皆皇祖皇宗ノ後裔ニ貽シタマヘル統治ノ洪範ヲ紹述スルニ外ナラス而シテ朕カ躬ニ逮テ時ト倶ニ擧行スルコトヲ得ルハ洵ニ皇祖皇宗及我カ皇考ノ威靈ニ倚藉スルニ由ラサルハ無シ皇朕レ仰テ皇祖皇宗及皇考ノ神祐ヲ祷リ併セテ朕カ現在及將來ニ臣民ニ率先シ此ノ憲章ヲ履行シテ愆ラサラムコトヲ誓フ庶幾クハ神靈此レヲ鑒ミタマヘ憲法發布勅語</p>
+</div></div>
+<h2 class="hen" id="chokugo"><a class="self-link" href="#chokugo">憲法發布勅語</a></h2>
+<div class="section-preamble"><div class="joubun">
+<p>朕國家ノ隆昌ト臣民ノ慶福トヲ以テ中心ノ欣榮トシ朕カ祖宗ニ承クルノ大權ニ依リ現在及將來ノ臣民ニ對シ此ノ不磨ノ大典ヲ宣布ス惟フニ我カ祖我カ宗ハ我カ臣民祖先ノ協力輔翼ニ倚リ我カ帝國ヲ肇造シ以テ無窮ニ垂レタリ此レ我カ神聖ナル祖宗ノ威徳ト竝ニ臣民ノ忠實勇武ニシテ國ヲ愛シ公ニ殉ヒ以テ此ノ光輝アル國史ノ成跡ヲ貽シタルナリ朕我カ臣民ハ即チ祖宗ノ忠良ナル臣民ノ子孫ナルヲ囘想シ其ノ朕カ意ヲ奉體シ朕カ事ヲ獎願シ相與ニ和衷協同シ盆〻我カ帝國ノ光榮ヲ中外ニ宣揚シ祖宗ノ遺業ヲ永久ニ鞏固ナラシムルノ希望ヲ同クシ此ノ負擔ヲ分ツニ堪フルコトヲ疑ハサルナリ</p>
+</div></div>
+<h2 class="hen" id="jouyu"><a class="self-link" href="#jouyu">上諭</a></h2>
+<div class="section-preamble"><div class="joubun">
+<p>朕祖宗ノ遺烈ヲ承ケ萬世一系ノ帝位ヲ踐ミ朕カ親愛スル所ノ臣民ハ即チ朕カ祖宗ノ惠撫慈養シタマヒシ所ノ臣民ナルヲ念ヒ其ノ康福ヲ増進シ其ノ懿徳良能ヲ發達セシメムコトヲ願ヒ又其ノ翼贊ニ依リ與ニ倶ニ國家ノ進運ヲ扶持セムコトヲ望ミ乃チ明治十四年十月十二日ノ詔命ヲ履踐シ茲ニ大憲ヲ制定シ朕カ率由スル所ヲ示シ朕カ後嗣及臣民及臣民ノ子孫タル者ヲシテ永遠ニ循行スル所ヲ知ラシム國家統治ノ大權ハ朕カ之ヲ祖宗ニ承ケテ之ヲ子孫ニ傳フル所ナリ朕及朕カ子孫ハ將來此ノ憲法ノ條章ニ循ヒ之ヲ行フコトヲ愆ラサルヘシ朕ハ我カ臣民ノ權利及財産ノ安全ヲ貴重シ及之ヲ保護シ此ノ憲法及法律ノ範圍内ニ於テ其ノ享有ヲ完全ナラシムヘキコトヲ宣言ス帝國議會ハ明治二十三年ヲ以テ之ヲ召集シ議會開會ノ時ヲ以テ此ノ憲法ヲシテ有效ナラシムルノ期トスヘシ將來若此ノ憲法ノ或ル條章ヲ改定スルノ必要ナル時宜ヲ見ルニ至ラハ農及朕カ繼統ノ子孫ハ發議ノ權ヲ執リ之ヲ議會ニ付シ議會ハ此ノ憲法ニ定メタル要件ニ依リ之ヲ議決スルノ外朕カ子孫及臣民ハ敢テ之カ紛更ヲ試ミルコトヲ得サルヘシ朕カ在廷ノ大臣ハ朕カ爲ニ此ノ憲法ヲ施行スルノ責ニ任スヘク朕カ現在及將來ノ臣民ハ此ノ憲法ニ對シ永遠ニ從順ノ義務ヲ負フヘシ御名御璽明治二十二年二月十一日内閣總理大臣伯爵黒田清隆樞密院議長伯爵伊藤博文外務大臣伯爵大隈重信海軍大臣伯爵西郷從道農商務大臣伯爵井上馨司法大臣伯爵山田顯義大 藏 大 臣伯爵松方正義兼内務大臣陸 軍 大 伯爵 巖文部大臣子爵森有禮遞信大臣子爵榎本武揚</p>
+</div></div>
+<h2 class="hen" id="chokugo50"><a class="self-link" href="#chokugo50">勅語（憲法50年）</a></h2>
+<div class="section-preamble"><div class="joubun">
+<p>朕惟フニ皇祖考夙ニ大憲ヲ制定シ難精治ヲ圖リタマヒ民情以テ暢達シ國運以テ興隆シ茲ニ五十年ニ及ヘリ今ヤ希有ノ時局ニ際會セリ朕カ忠良ナル臣民宜シク憲章ヲ奉遵シテ愆ラス至公無私唯國家ヲ是レ念ヒ擧國一體億兆一心日ニ新ニスルノ氣運ヲ振興シ日ニ進ムノ事勢ヲ振作シ戰ヲシテ皇祖考不顯ノ速猷ヲ對揚シ以テ不承ノ美ヲ濟スコトヲ得シメヨ</p>
+</div></div>
+<h2 class="hen" id="gige-intro"><a class="self-link" href="#gige-intro">義解序文</a></h2>
+<div class="section-intro">
+<p>恭テ按スルニ我カ國君民ノ分義ハ既ニ肇造ノ時ニ定マル中世屢〻變亂ヲ經政綱其ノ統一ヲ弛ヘシニ大命維新製運隆興シ聖詔ヲ渙發シテ立憲ノ洪猷ヲ宣ヘタマヒ上元首ノ大權ヲ統ヘ下肢肱ノ力ヲ展ヘ大臣ノ輔弼ト議會ノ翼督トニ依リ機關各其ノ所ヲ得テ而シテ臣民ノ權利及義務ヲ明ニシ益〻其ノ幸福ヲ述ムルコトヲ期セムトス此レ皆祖宗ノ遺業ニ依リ其ノ源ヲ疏シテ其ノ流ヲ通スル者ナリ</p>
+</div>
+<h2 class="hen" id="ch1"><a class="self-link" href="#ch1">第一章 天皇</a></h2>
+<div class="section-intro"><p>恭テ按スルニ天皇ノ寶祚ハ之ヲ祖宗ニ承ケ之ヲ子孫ニ傳フ國家統治權ノ存スル所ナリ而シテ憲法ニ殊ニ大權ヲ掲ケテ之ヲ條章ニ明記スルハ憲法ニ依テ新設ノ義ヲ表スルニ非スシテ固有ノ國體ハ憲法ニ由テ盆〻鞏固ナルコトヲ示スナリ</p></div>
+<h3 class="jo" id="art1"><a class="self-link" href="#art1">第一條</a></h3>
+<div class="joubun"><p>大日本帝國ハ萬世一系ノ天皇之ヲ統治ス</p></div>
+<div class="commentary"><p>神祖開國以來時ニ盛衰アリト雖、世ニ治亂アリト雖、皇統一系寶祚ノ隆ハ天地ト與ニ窮ナシ本條首メニ立國ノ大義ヲ掲ケ我カ日本帝國ハ一系ノ皇統ト相依テ終始シ古今永遠ニ亙リ一アリテ二ナク常アリテ變ナキコトヲ示シ以テ君民ノ關係ヲ萬世ニ昭カニス統治ハ大位ニ居リ大權ヲ統ヘテ國土及臣民ヲ治ムルナリ古典ニ天祖ノ勅ヲ擧ケテ瑞穗國是吾子孫可王之地宜爾坐孫就而治焉ト云ヘリ又神祖ヲ稱ヘタテマツリテ治御國天皇ト謂ヘリ日本武尊ノ言ニ吾者纒向ノ日代宮ニ坐シテ大八島國知ロシメス大帶日子游斯呂和氣天皇ノ御子トアリ文武天皇即位ノ詔ニ天皇カ御子ノアレマサム彌繼繼ニ大八島國知ラサム次トノクマヒ又天下ヲ調ヘタマヒ平ケクマヒ公民ヲ惠ミタマヒ撫テタマハムトノタマヘリ世々ノ天皇皆此ノ義ヲ以テ傳國ノ大訓トシタマハサルハナク其ノ後御大八洲天皇ト謂フヲ以テ詔書ノ例式トハナサレタリ所謂シラストハ卽チ統治ノ義ニ外ナラス蓋祖宗其ノ天職ヲ重ンシ君主ノ徳ハ八洲臣民ヲ統治スルニ在テ一人一家ニ享奉スルノ私事ニ非サルコトヲ示サレタリ此レ乃憲法ノ據テ以テ其ノ基礎ト爲ス所ナリ我カ帝國ノ版圖、古ニ大八島ト謂ヘルハ淡路島 ノ秋津島御本伊豫ノ二名島嶼筑紫島縣九壹岐島佐波島佐渡島佐渡島佐渡島ヲ謂ヘルコト古典ニ載セタリ景行天皇東蝦夷ヲ征シ西熊襲ヲ平ケ疆土大ニ定マル推古天皇ノ時、百八十餘ノ國造アリ延喜式ニ至リ六十六國及二島ノ區畫ヲ載セタリ明治元年陸奧(出羽ノ二國ヲ分チ七國トス二年北海道ニ十一國ヲ置ク是ニ於テ全國合セテ八十四國トス現在ノ疆土ハ實ニ古ノ所謂大八島延喜式六十六國及各島幷ニ北海道沖繩諸島及小笠原諸島トス蓋土地ト人民トハ國ノ以テ成立スル附ノ元質ニシテ一定ノ疆土ハ以テ一定ノ邦國ヲ爲シ而シテ一定ノ憲章其ノ間ニ行ハル故ニ一國ハ一個人ノ如ク一國ノ疆土ハ一個人ノ體編ノ如ク以テ統一完全ノ版圖ヲ成ス</p></div>
+<h3 class="jo" id="art2"><a class="self-link" href="#art2">第二條</a></h3>
+<div class="joubun"><p>皇位ハ皇室典範ノ定ムル所ニ依リ皇男子孫之ヲ繼承ス</p></div>
+<div class="commentary"><p>皇位ノ繼承ハ祖宗以來既ニ明訓アリ以テ皇子孫ニ傳ヘ萬世易フルコト無シ若夫繼承ノ順序ニ至テハ新ニ勅定スル所ノ皇室典範ニ於テ之ヲ詳明ニシ以テ皇室ノ家法トシ更ニ憲法ノ條章ニ之ヲ掲クルコトヲ用ヰサルハ將來ニ臣民ノ干渉ヲ容レサルコトヲ示スナリ皇男子孫トハ祖宗ノ皇統ニ於ケル男系ノ男子ヲ謂フ此ノ文皇室典範第一條ト詳略相形ハス</p></div>
+<h3 class="jo" id="art3"><a class="self-link" href="#art3">第三條</a></h3>
+<div class="joubun"><p>天皇ハ神聖ニシテ侵スヘカラス</p></div>
+<div class="commentary"><p>天地剖判シテ神聖位ヲ正ス 佛蓋天皇ハ天繼惟神至聖ニシテ臣民群類ノ表ニ在リ欽判スヘクシテ干犯スヘカラス故ニ君主ハ固ヨリ法律ヲ敬重セサルヘカラス而シテ法律ハ君主ヲ責問スルノ力ヲ有セス獨不敵ヲ以テ其ノ身體ヲ干續スヘカラサルノミナラス併セテ指斥言議ノ外ニ在ル者トス</p></div>
+<h3 class="jo" id="art4"><a class="self-link" href="#art4">第四條</a></h3>
+<div class="joubun"><p>天皇ハ國ノ元首ニシテ統治權ヲ總攬シ此ノ憲法ノ條規ニ依リ之ヲ行フ</p></div>
+<div class="commentary"><p>統治ノ大權ハ天皇之ヲ祖宗ニ承ケ之ヲ子孫ニ傳フ立法行政百揆ノ事凡ソ以テ國家ニ臨御シ臣民ヲ緩撫スル所ノ者一ニ皆之ヲ至尊ニ總ヘテ其ノ綱領ヲ獲ラサルコトナキハ譬ヘハ人身ノ四支百値アリテ而シテ精神ノ經絡ハ總テ皆其ノ本源ヲ首腦ニ取ルカ如キナリ故ニ大政ノ統一ナラサルヘカラサルハ宛モ人心ノ貳三ナルヘカラサルカ如シ但シ憲法ヲ親裁シテ以テ君民倶ニ守ルノ大典トシ其ノ條規ニ遵由シテ愆ラス遣レサルノ盛意ヲ明カニシタマフハ即チ自ラ天職ヲ重ンシテ世運ト倶ニ永遠ノ規模ヲ大成スル者ナリ蓋統治權ヲ總攬スルハ主權ノ體ナリ憲法ノ條規ニ依リ之ヲ行フハ主權ノ用ナリ體有リテ用無ケレハ之ヲ專制ニ失ツ用有リテ體無ケレハ之ヲ散慢ニ失フ</p></div>
+<div class="appendix"><p><strong>（附記）</strong></p><p>歐洲輓近政理ヲ論スル者ノ説ニ曰、國家ノ大權大別シテ二トナス、曰立法權行政權而シテ司法ノ權ハ實ニ行政權ノ支派タリ三權各其ノ機關ノ輔翼ニ依リ之ヲ行フコト一ニ皆元首ニ淵源ス蓋國家ノ大權ハ之ヲ國家ノ覺性タル元首ニ總ヘサレハ以テ其ノ生機ヲ有ウコト能ハサルナリ憲法ハ卽チ國家ノ各部機關ニ向テ適當ナル定分ヲ與ヘ其ノ經絡機能ヲ有タシムル者ニシテ君主ハ憲法ノ條規ニ依リテ其ノ天職ヲ行フ者ナリ故ニ彼ノ羅馬ニ行ハレタル無限權勢ノ説ハ固ヨリ立憲ノ主義ニ非ス而シテ西暦第十八世紀ノ末ニ行ハレタル三權分立シテ君主ハ特ニ行政權ヲ執ルノ説ノ如キハ又國家ノ正當ナル解義ヲ謬ル者ナリト是ノ説ハ我カ憲法ノ主義ト相發揮スルニ足ル者アルヲ以テ茲ニ之ヲ附記シテ以テ參考ニ當ツ</p></div>
+<h3 class="jo" id="art5"><a class="self-link" href="#art5">第五條</a></h3>
+<div class="joubun"><p>天皇ハ帝國議會ノ協賛ヲ以テ立法權ヲ行フ</p></div>
+<div class="commentary"><p>立法ハ天皇ノ大權ニ屬シ而シテ之ヲ行フハ必議會ノ協賛ニ依ル天皇ハ內閣ヲシテ起草セシメ或ハ議會ノ提案ニ由リ兩院ノ同意ヲ經ルノ後之ヲ裁可シテ始メテ法律ヲ成ス故ニ至尊ハ獨行政ノ中極タルノミナラス又立法ノ淵源タリ</p></div>
+<div class="appendix"><p><strong>（附記）</strong></p><p>之ヲ歐洲ニ參考スルニ百年以來偏理ノ論一タヒ時變ト投合シ立法ノ事ヲ以テ主トシテ議會ノ權ニ歸シ或ハ法律ヲ以テ上下ノ約束トシ君民共同ノ事トスルノ重點ニ傾向シタルハ要スルニ主權統一ノ大義ヲ誤ル者タルコトヲ免レス我カ建國ノ體ニ在テ國權ノ出ル所一ニシテ二ナラサルハ譬ヘハ主一ノ意思ハ以テ能ク百骸ヲ指使スヘキカ如シ而シテ議會ノ設ハ以テ元首ヲ助ケテ其ノ機能ヲ全クシ國家ノ意思ヲシテ精錬強健ナラシムルノ效用ヲ見ムトスルニ外ナラス蓋立法ノ大權ハ固ヨリ天皇ノ總フル所ニシテ議會ハ乃協寫參賛ノ任ニ居ル本末ノ間儼然トシテ紊ルヘカラサル者ナリ</p></div>
+<h3 class="jo" id="art6"><a class="self-link" href="#art6">第六條</a></h3>
+<div class="joubun"><p>天皇ハ法律ヲ裁可シ其ノ公布及執行ヲ命ス</p></div>
+<div class="commentary"><p>法律ヲ裁可シ式ニ依リ公布セシメ及執行ノ處分ヲ宣命ス裁可ハ以テ立法ノ事ヲ完結シ公布ハ以テ臣民遵行ノ效力ヲ生ス此レ皆至尊ノ大權ナリ裁可ノ權既ニ至尊ニ屬スルトキハ其ノ裁可セサルノ權ハ之ニ從フコト言ハスシテ知ルヘキナリ裁可ハ天皇ノ立法ニ於ケル大權ノ發動スル所ナリ故ニ議會ノ協贊ヲ經ト雖裁可ナケレハ法律ヲ成サス蓋古旨ニ法ヲ訓ミテ宣トス播磨風土記云大法山テ宜トス播磨風土記云大法山 藤昌太ノ天皇 於此山宜大此山宜大法山天皇ト言語ハ古傳遺俗ヲ徴明スルノ一大資料タリ而シテ法律ハ即チ王言ナルコトハ古人既ニ一定ノ釋義アリテ謬ラサリシナリ</p></div>
+<div class="appendix"><p><strong>（附記）</strong></p><p>之ヲ歐洲ニ參考スルニ君主法案ノ成議ヲ拒ムノ權ヲ論スル者其ノ説一ニ非ス英國ニ於テハ此レヲ以テ君主ノ立法權ニ屬シ三體君主及上院下院ヲ云フ平衡ノ兆證トシ佛國ノ學者ハ此レヲ以テ行政ノ立法ニ對スル節制ノ權トス抑〻彼ノ所謂拒否ノ權ハ消極ヲ以テ主義トシ法ヲ立ツル者ハ議會ニシテ之ヲ拒否スル者ハ君主タリ此レ或ハ君主ノ大權ヲ以テ行政ノ一偏ニ限局シ或ハ君主ヲシテ立法ノ一部分ヲ占領セシムルノ論理ニ出ル者ナルニ適キス我カ憲法ハ法律ハ必王命ニ由ルノ積極ノ主義ヲ取ル者ナリ故ニ裁可ニ依テ始メテ法律ヲ成ス夫レ唯王命ニ由ル故ニ從テ裁可セサルノ權アリ此レ彼ノ拒否ノ權ト其ノ跡相似テ其ノ實ハ霄壤ノ別アル者ナリ。</p></div>
+<h3 class="jo" id="art7"><a class="self-link" href="#art7">第七條</a></h3>
+<div class="joubun"><p>天皇ハ帝國議會ヲ召集シ其ノ開會開會停會及衆議院ノ解散ヲ命ス</p></div>
+<div class="commentary"><p>議會ヲ召集スルハ專ラ至尊ノ大權ニ屬ス召集ニ由ラスシテ議院自ラ會集スルハ憲法ノ認ムル所ニ非ス而シテ其ノ議スル所ノ事總テ效力ナキ者トス召集ノ後議會ヲ開閉シ兩院ノ始終ヲ制スルハ亦均ク至尊ノ大權ニ由ル開會ノ初天皇親ラ議會ニ臨ミ又ハ特命勅使ヲ派シテ勅語ヲ傳ヘシムルヲ式トシ而シテ議會ノ議事ヲ開始スルハ必其ノ後ニ於テス開會ノ前閉會ノ後ニ於テ議事ヲナス者ハ總テ無效トス停會ハ議會ノ議事ヲ中絕セシムルノ謂ナリ有期ノ停會ハ其ノ期ヲ經テ再ヒ會議ヲ繼續ス衆議院ヲ解散スルハ更ニ新選ノ議院ニ向テ輿論ノ屬スル所ヲ問フ所以ナリ此ニ貴族院ヲ謂ハサルハ貴族院ハ停會スヘクシテ解散スヘカラサレハナリ</p></div>
+<h3 class="jo" id="art8"><a class="self-link" href="#art8">第八條</a></h3>
+<div class="joubun"><p>天皇ハ公共ノ安全ヲ保持シ又ハ其ノ災厄ヲ避クル爲緊急ノ必要ニ由リ帝國議會閉會ノ場合ニ於テ法律ニ代ルヘキ勅令ヲ發ス此ノ勅令ハ次ノ會期ニ於テ帝國議會ニ提出スヘシ若議會ニ於テ承諾セサルトキハ政府ハ將來ニ向テ其ノ效力ヲ失フコトヲ公布スヘシ</p></div>
+<div class="commentary"><p>國家一旦急迫ノ事アルニ臨ミ又ハ國民凶荒癘疫及其ノ他ノ災害アルニ當テ公共ノ安全ヲ保チ其ノ災厄ヲ豫防救濟スル爲ニ力ノ及フ所ヲ極メテ必要ノ處分ヲ施サヽルコトヲ得ス此ノ時ニ於テ議會偶〻開會ノ期ニ在ラサルニ當テハ政府ハ述テ其ノ資ヲ執リ勅令ヲ發シテ法律ニ代ヘ遺計無ラシムルハ國家自衞及保護ノ道ニ於テ固ヨリ已ムヲ得サルニ出ル者ナリ故ニ前第五條ニ於テ立法權ノ行用ハ議會ノ協贊ヲ經ト云ヘルハ其ノ常ヲ示スナリ本條ニ勅令ヲ以テ法律ニ代フルコトヲ許スハ緊急時機ノ爲ニ除--例ヲ示スナリ是ヲ緊急命令ノ權トス抑〻緊急命令ノ權ハ憲法ノ許ス所ニシテ又憲法ノ亢濫用ヲ戒ムル所ナリ憲法ハ公共ノ安全ヲ保持シ又ハ災厄ヲ避クル爲ノ緊急ナル必要ニ限リ此ノ特權ヲ用ヰルコトヲ許シ而シテ利益ヲ保護シ幸福ヲ増述スルノ通常ノ理由ニ因リ之ヲ濫用スルコトヲ許サス故ニ緊急命令ハ其ノ之ヲ發スルニ當テ本條ニ準據スルコトヲ宣告スルヲ式トスヘキナリ若政府ニシテ此ノ特權ニ託シ容易ニ議會ノ公議ヲ囘避スルノ方便トナシ又以テ容易ニ既定ノ法律ヲ破壞スルニ至ルコトアラハ憲法ノ條規ハ亦空文ニ歸シ一モ臣民ノ爲ニ保障ヲ爲スコト能ハサラムトス故ニ本條ハ又議會ヲ以テ此ノ特權ノ監督者タラシメ緊急命令ヲ事後ニ檢査シテ之ヲ承諾セシムヘキコトヲ定メタリ本條ハ憲法ノ中ニ於テ疑問尤多キ者トス今遂一問目ヲ設ケテ以テ之ヲ解釋セムトス第一此ノ勅令ハ以テ法律ノ臟缺ヲ補充スルニ止マルカ又ハ現行ノ法律ヲ停止シ變更シ廢止スルコトヲ得ルカ曰此ノ勅令ハ既ニ憲法ニ依リ法律ニ代ルノ力ヲ有スルトキハ凡ソ法律ノ爲スコトヲ得ルノ事ハ皆此ノ勅令ノ爲スコトヲ得ル所タリ但シ次ノ會期ニ於テ議會若之ヲ承諾セサルトキハ政府ハ此ノ勅令ノ效力ヲ失フコトヲ公布スルト同時ニ其ノ廢止又ハ變更シタル所ノ法律ハ總テ其ノ袍ニ復スヘキナリ第二議會ニシテ此ノ勅令ヲ承認スルトキハ其ノ效力ハ如何曰更ニ公布ヲ待タスシテ勅令ハ將來ニ法律ノ效力ヲ繼續スヘキナリ第三議會ニシテ此ノ勅令ノ承諾ヲ拒ムトキハ政府ハ更ニ將來ニ效力ヲ失フノ旨ヲ公布スルノ義務ヲ負フハ何ソ乎曰公布ニ依テ始メテ人民迄由ノ義務ヲ解ケハナリ第四議會ハ何ノ理由ニ因リ其ノ承諾ヲ拒ムコトヲ得ヘキヤ曰此ノ勅令ノ憲法ニ矛盾シ又ハ本條ニ掲ケタル要件ヲ缺サタルコトヲ發見シタルトキ又ハ其ノ他ノ立法上ノ意見ニ由リ承諾ヲ拒ムコトヲ得ヘシ第五此ノ勅令ニシテ政府若次ノ會期ニ於テ之ヲ議會ニ提出セサルトキ或ハ議會其ノ承諾ヲ拒ムノ後政府ニ於テ仍廢止ノ令ヲ發セサルトキハ如何曰政府ハ憲法違反ノ責ヲ負フヘキナリ第六議會若承諾ヲ拒ムトキハ前日ニ泝リ勅令ノ效力ヲ取消スコトヲ求ムルコトヲ得ルカ曰憲法既ニ君主ノ緊急命令ヲ發シテ以テ法律ニ代フルコトヲ許シタルトキハ其ノ勅令ノ成存スルノ日ハ其ノ效力ヲ有スヘキハ固ヨリ當然タリ故ニ議會之ヲ承諾セサルトキハ單ニ將來ニ法律トシテ繼續ノ效力ヲ有スルコトヲ拒ムコトヲ得而シテ之ヲ過去ニ及ホスコトヲ得サルナリ第七議會ハ勅令ヲ修正シテ以テ之ヲ承諾スルコトヲ得ヘキカ曰本條ノ正文ニ依レハ議會ハ之ヲ承諾シ又ハ承諾セサルノ二塗ノ一ヲ取ルコトヲ得而シテ之ヲ修正スルコトヲ得サルナリ</p></div>
+<h3 class="jo" id="art9"><a class="self-link" href="#art9">第九條</a></h3>
+<div class="joubun"><p>天皇ハ法律ヲ執行スル爲ニ又ハ公共ノ安寧秩序ヲ保持シ及臣民ノ幸福ヲ増進スル爲ニ必要ナル命令ヲ發シ又ハ發セシム但シ命令ヲ以テ法律ヲ變更スルコトヲ得ス</p></div>
+<div class="commentary"><p>本條ハ行政命令ノ大權ヲ揭クルナリ蓋法律ハ必議會ノ協贊ヲ經而シテ命令ハ專ラ天皇ノ裁定ニ因ツ命令ニ由テ發スル所ノ目的二アリ一ニ曰法律ヲ執行スル爲ノ處分并ニ詳節ヲ規定ス二ニ曰公共ノ安寧秩序ヲ保持シ及臣民ノ幸謳ヲ増進スル爲ノ必要ニ於テス此レ皆至尊行政ノ大權ニ依リ立法ノ軌轍ニ由ラスシテ一般遵由ノ條規ヲ設クルコトヲ得ル者ナリ蓋法律ト命令トハ均ク臣民ニ遵守シ義務ヲ負ハシムル者ナリ但シ法律ハ以テ命令ヲ變更スルコトヲ得ヘク命令ハ以テ法律ヲ變更スルコトヲ得ス若輔々相矛盾スルノ事アルニ至レハ法律ハ常ニ命令ノ上ニ效力ヲ有スヘキナリ命令ハ均ク至尊ノ大權ニ由ル而シテ其ノ勅裁ニ因テ親署ヲ經ル者之ヲ勒令トス其ノ他閣省ノ命令ハ皆天皇大權ノ委任ニ由ル本條ニ命令ヲ發シ又ハ發セシムト謂ヘルハ此ノ兩般ノ命令ヲ兼ネテ之ヲ指言スルナリ前條ニ揭ケタル緊急命令ハ以テ法律ニ代ハルコトヲ得本條ニ揭クル行政命令ハ以テ法律ノ範圍ノ内ニ處分シ又ハ法律ノ醫闕ヲ補充スルコトヲ得ルモ法律ヲ變更シ及憲法ニ特ニ掲ケテ法律ヲ要スル所ノ事件ヲ規定スルコトヲ得ス行政命令ハ常ニ用ヰル所ニシテ緊急命令ハ變ニ處スル所ナリ</p></div>
+<div class="appendix"><p><strong>（附記）</strong></p><p>之ヲ歐洲ニ參考スルニ命令ノ區域ヲ論スル者其ノ主義一ナラス第一ニ佛國白國ノ憲法ハ命令ノ區域ヲ以テ專ラ法律ヲ執行スルニ止メ而シテ普國ノ憲法亦之ニ模倣シタルハ君主行政ノ大權ヲ狹局ノ範圍ノ内ニ制限スルノ謬見タルコトヲ免レス蓋所謂行政ハ固ヨリ法律ノ條則ヲ執行スルニ止マラス何トナレハ法律ハ普通準繩ノ爲ニ其ノ大則ヲ定ムルノ能力アリテ而シテ萬殊事物ノ活動ニ對シ逐一ニ其ノ權宜ヲ指示スルコト能ハサルハ宛モ一個人ノ豫定セル心志ハ以テ行動ノ方嚮ヲ指導スヘシト雖變化窮リナキノ事緒ニ順應シテ其ノ機宜ヲ愆ラサルハ又必臨時ノ思慮ヲ要スルカ如シ若行政ニシテ法律ヲ執行スルノ限圍ニ止マラシメハ國家ハ法律ノ膣闕ナル地ニ於テハ其ノ當然ノ職ヲ盡スニ由ナカラムトス故ニ命令ハ獨執行ノ作用ニ止マラスシテ又時宜ノ必要ニ應シ其ノ固有ノ意思ヲ發動スルコトアル者ナリ第二ニ法理ヲ論スル者安寧秩序ヲ保持スルヲ以テ行政命令ノ唯一ノ目的トスル者アルハ此レ亦行政ノ區域ヲ定ムルニ適當ナル釋義ヲ缺ク者ナリ蓋古歐陸各國政府ハ安寧ヲ保持スルヲ以テ最大戰任トシ其ノ内治ニ於ケルハ一ニ苟簡ヲ以テ主ト爲シタリシニ人文漸ク開ケ政治盆進ムニ及テ始メテ經濟及教育ノ方法ニ倚リ人民ノ生活及智識ヲ發達セシメ其ノ幸福ヲ増進スルノ必要ヲ發見スルニ至レリ故ニ行政命令ノ目的ハ獨警察ノ消極手段ニ止マラスシテ更ニ一歩ヲ進メ經濟上國民ノ生活ヲ富殖シ教育上其ノ智識ヲ開發スルノ積極手段ヲ取ルコトヲ務メサルヘカラサルナリ但シ行政ハ固ヨリ各人ノ法律上ノ自由ヲ干スヘカラス其ノ適當ナル範圍ニ於テ勸導扶掖シテ其ノ發達ヲ喚起スヘキナリ行政ハ固ヨリ法律ノ既ニ制定セル限界ヲ離レスシテ法律ヲ保護シ以テ國家ノ職ヲ當然ノ區域ノ内ニ盡スヘキナリ</p></div>
+<h3 class="jo" id="art10"><a class="self-link" href="#art10">第十條</a></h3>
+<div class="joubun"><p>天皇ハ行政各部ノ官制及文武官ノ俸給ヲ定メ及文武官ヲ任免ス但シ此ノ憲法又ハ他ノ法律ニ特例ヲ掲ケタルモノハ各〻其ノ條項ニ依ル</p></div>
+<div class="commentary"><p>至尊ハ建國ノ必要ニ依リ行政各部ノ官局ヲ設置シ其ノ適當ナル組織及職權ヲ定メ文武ノ材能ヲ任用シ及之ヲ罷免スルノ大權ヲ執ル之ヲ上古ニ考フルニ神武天皇大業ヲ定メ國廷縣主ヲ置ク是ヲ立官ノ始メテ史乘ニ見ユル者トス孝徳天皇八省ヲ置キ職官大ニ備ハル維新ノ初大寶ノ舊ニ依リ增損スル所アリ其ノ後屢、更張ヲ經官制及俸給ノ制ヲ定メラル而シテ大臣ハ天皇ノ親ク任免スル所タリ勅任以下高等官ハ大臣ノ上奏ニ由リ裁可シテ之ヲ任免ス均ク皆至尊ノ大命ニ出サルハアラス但シ裁判所及會計檢査院ノ構成ハ勅令ニ依ラスシテ法律ヲ以テ之ヲ定メ裁判官ノ罷免ハ裁判ニ依リ之ヲ行フハ此レ憲法及法律ノ掲クル所ノ特例ニ依ルモノナリ官ヲ分チ職ヲ設タルコト既ニ王者ノ大權ニ屬スルトキハ俸祿ヲ給與スルコト亦從テ之ニ附屬スヘキナリ</p></div>
+<div class="appendix"><p><strong>（附記）</strong></p><p>之ヲ獨逸ノ史乘ニ考ルニ昔時、官吏ノ任免ハ專ラ君主及長官ノ隨意ニ任セタリシニ第十七世紀ニ及テ帝國大裁判所ノ裁判官ハ裁判ニ由ラサレハ其ノ官ヲ免スルコト能ハストナシ此ノ原則ヲ帝國參事官ニモ適用シタリ其ノ後第十八世紀ニ至リテ行政官吏ノ任職モ亦其ノ確定權利ニ屬スルノ設行ハレ往々各國法律ノ採用スル所トナリタリシニ第十九世紀ノ初ニ及テ官吏ハ俸給ニ就キ確定ノ權利ヲ有スト雖其ノ職ニ就キ之ヲ有スルコトナシ故ニ俸給又ハ恩給ヲ與ヘテ其ノ職ヲ免スルハ行政上ノ處分ヲ以テ足レリトストノ主義ヲ論スル者アリ此ノ論理ハ首々ニ巴威倫ノ官吏ノ職制法ノ揭クル所トナリ政府ハ懲戒裁判ニ由ラスシテ行政上ノ便宜ニ由リ官吏ノ官階及官階俸ヲ存シテ其ノ職務及職務俸及職服ヲ解クコトヲ得セシメタリ八年法十獨英國ハ獨逸各國ト固ヨリ其ノ例ヲ殊ニシ或ル一部ノ官吏ヲ除ク外ハ君主ハ隨意ニ文武官ヲ任免スルノ特權アルモノトスルコト今仍古ノ如キナリ</p></div>
+<h3 class="jo" id="art11"><a class="self-link" href="#art11">第十一條</a></h3>
+<div class="joubun"><p>天皇ハ陸海軍ヲ統帥ス</p></div>
+<div class="commentary"><p>太祖實ニ神武ヲ以テ帝國ヲ肇達シ物部靱負部來目部ヲ統率シ刪後歷代ノ天子內外事アレハ自ラ元戎ヲ削キ征討ノ勞ヲ親ラシ或ハ皇子皇孫ヲシテ代リ行カシメ而シテ臣達二邊ハ其ノ編碑ケリ天武天皇兵政官長ヲ置キ文武天皇大ニ軍令ヲ修メ三軍ヲ總フルコトニ大將軍一人アリ大將ノ出征ニハ必節刀ヲ授ク兵馬ノ權ハ仍朝廷ニ在リ其ノ後兵兩一クヒ武門ニ歸シテ政綱從テ衰ヘタリ今上中興ノ初現征ノ詔ヲ發シ大權ヲ總攬シ爾來兵制ヲ發革シ横弊ヲ洗除シ桂幕ノ本部ヲ設ケ自ラ陸海軍ヲ總ヘタマフ而シテ祖宗ノ歌光道烈再ヒ其ノ舊ニ復スルコトヲ得タリ本條ハ兵馬ノ統一ハ至尊ノ大權ニシテ專ラ帷幄ノ大令ニ屬スルコトヲ示スナリ</p></div>
+<h3 class="jo" id="art12"><a class="self-link" href="#art12">第十二條</a></h3>
+<div class="joubun"><p>天皇ハ陸海軍ノ編制及常備兵額ヲ定ム</p></div>
+<div class="commentary"><p>本條ハ陸海軍ノ編制及常備兵額モ亦天皇ノ親裁スル所ナルコトヲ示ス此レ固ヨリ責任大臣ノ輔翼ニ依ルト雖亦帷幄ノ軍令ト均ク至尊ノ大權ニ屬スヘクシテ而シテ議會ノ干渉ヲ須タサルヘキナリ所謂編制ノ大權ハ之ヲ細言スレハ軍隊艦隊ノ編制及管區方面ヨリ兵器ノ備用、給與、軍人ノ教育、檢閲、紀律、禮式、服制、衞戍、城塞、及海防、守港並ニ出師準備ノ類、皆其ノ中ニ在ルナリ常備兵額ヲ定ムト謂フトキハ毎年ノ徴員ヲ定ムルコト亦其ノ中ニ在ルナリ</p></div>
+<h3 class="jo" id="art13"><a class="self-link" href="#art13">第十三條</a></h3>
+<div class="joubun"><p>天皇ハ戰ヲ宣シ和ヲ講シ及諸般ノ條約ヲ締結ス恭チ按スルニ外國ト交戰ヲ宣告シ和親ヲ講盟シ及條約ヲ締結スルノ事ハ總テ至尊ノ大權ニ屬シ議會ノ參賛ヲ假ラス此レ一ハ君主ハ外國ニ對シ國家ヲ代表スル主權ノ統一ヲ欲シ二ハ和戰及條約ノ事ハ專ラ時彼ニ應シ爾謀航速ナルヲ尚フニ由ルナリ諸般ノ條約トハ和親貿易及聯盟ノ約ヲ謂フナリ(附記)歐洲ノ舊例ニ依ルニ中古各國ノ君主ハ往々外交ノ事ヲ親ラシ英國「ウヰリヤム」三世ノ如キハ躬外務長官ノ任ニ當リ當時ノ人其ノ丈外交事務ニ長シタルコトヲ稱賛シタリ近時立憲ノ主義漸クニ進歩ヲ加フルニ及テ各國外交ノ事務亦責任宰相ノ管掌ニ屬シ君主ハ其ノ輔翼ニ倚リテ之ヲ行フコト他ノ行政事務ト一般ナルニ至レリ那破列始佛國ノ執權タリシ時兩國講和ノ文函ヲ作リ直ニ英國ノ君主ニ贈リシニ英國ハ其ノ書ヲ受ケテ而シテ外務執政ノ書ヲ以テ之ニ答ヘタリ今日國際法ニ於テ慶弔ノ親書ヲ除ク外各國交際條約ノ事總テ皆執政大臣ヲ經由スルハ列國ノ是認スル所ナリ本條ノ掲クル所ハ專ラ議會ノ關渉ニ由ラスシテ天皇其ノ大臣ノ輔翼ニ依リ外交事務ヲ行フヲ謂フナリ</p></div>
+<h3 class="jo" id="art14"><a class="self-link" href="#art14">第十四條</a></h3>
+<div class="joubun"><p>天皇ハ戒嚴ヲ宣告ス戒嚴ノ要件及效力ハ法律ヲ以テ之ヲ定ム</p></div>
+<div class="commentary"><p>戒嚴ハ外敵内變ノ時機ニ臨ミ常法ヲ停止シ司法及行政ノ一部ヲ擧ケテ之ヲ軍事處分ニ委ヌル者ナリ本條ハ戒嚴ノ要件及效力ヲ以テ法律ノ定ムル所トシ其ノ法律ノ條項ニ準據シテ時ニ臨テ之ヲ宣告シ又ハ其ノ宣告ヲ解クハ之ヲ至尊ノ大權ニ歸シタリ要件トハ戒嚴ヲ宣告スルノ時機及區域ニ於ケル必要ナル限局及宣告スル爲ノ必要ナル規程ヲ謂フ效力トハ或嚴ヲ宣告スルノ結果ニ依リ權力ノ及フ所ノ限界ヲ謂フ合團ノ地ニ在テ戰權ヲ施行シ臨時戒嚴ヲ宣告スルハ之ヲ其ノ地ノ司令官ニ委ネ處分シテ後ニ上申スルコトヲ許ス此レ又法律ニ於テ便宜ニ至尊ノ大權ヲ將帥ニ委任スル者ナリ六號布告</p></div>
+<h3 class="jo" id="art15"><a class="self-link" href="#art15">第十五條</a></h3>
+<div class="joubun"><p>天皇ハ爵位勳章及其ノ他ノ榮典ヲ授與ス</p></div>
+<div class="commentary"><p>至尊ハ榮譽ノ源泉ナリ蓋功ヲ賞シ勞ニ酬イ及卓行善擧ヲ表彰シ顯榮ノ晶位記章及殊典ヲ授與スルハ專ラ至尊ノ大權ニ屬ス而シテ臣子ノ竊弄ヲ容サヽル所ナリ我カ國太古筒朴ノ世加客禰ヲ以テ貴賤ノ別ヲ爲ス推古天皇始メテ冠位十二階ヲ定メ諸臣ニ頒チ賜フ天武天皇定メテ四十八階トナス文武天皇賜冠ヲ停メテ易フルニ位記ヲ以テス大寶令載スル所凡ソ三十階是レ今ノ位階ノ因テ起ル所ナリ又勳値十二等ハ以テ武功ヲ賞シ及孝必力田ノ人ニ賜ヘリ中古以降武門專權ノ時ニ當テ賞罰ノ柄既ニ幕府ニ移ルト雖叙授ノ儀典ハ猶朝廷ニ屬スルコトヲ失ハサリシ維新ノ後明治二年位制ヲ定メ一位ヨリ九位ニ至ル八年勳等賞牌ノ制ヲ定メ十七年五等爵ノ制ヲ定ム此レ皆以テ賞獎ヲ昭ニシ顯榮ノ大典ヲ示ス者ナリ</p></div>
+<h3 class="jo" id="art16"><a class="self-link" href="#art16">第十六條</a></h3>
+<div class="joubun"><p>天皇ハ大赦特赦減刑及復權ヲ命ス</p></div>
+<div class="commentary"><p>國家既ニ法廷ヲ設ケ法司ヲ置キ正理公道ヲ以テ平等ニ臣民ノ權利ヲ保護セシム而シテ猶法律ノ未タ各般ノ人事ヲ曲悉スルニ足ラスシテ時アリテ犯人事情仍觸諒スヘキ者アリ立法及司法ノ軌轍遂ニ以テ其ノ闕漏ニ周匝ナルコト能ハサラムコトヲ恐ル故ニ思救ノ權ハ至尊慈仁ノ特典ヲ以テ法律ノ及ハサル所ヲ補濟シ一民ノ其ノ情ヲ得サル者無ラシメムコトヲ期スルナリ大赦ハ特別ノ場合ニ於テ殊例ノ恩典ヲ施行スル者ニシテ一ノ種類ノ犯罪ニ對シ之ヲ赦スナリ特赦ハ一個犯人ニ對シ其ノ刑ヲ赦スナリ滅刑ハ既ニ宣告セラレタルノ刑ヲ減スルナリ復權ハ既ニ制奪セラレタルノ公權ヲ復スルナリ第四條以下第十六條ニ至ルマテ元首ノ大權ヲ列擧ス抑〻元首ノ大權ハ憲法ノ正條ヲ以テ之ヲ制限スルノ外及ハサル所ナキコト宛モ太陽ノ光線ノ遮蔽ノ外ニ映射セサル所ナキカ如シ此レ固ヨリ逐節叙列スルヲ待チテ始メテ存立スル者ニ非ス而シテ憲法ノ掲クル所ハ既ニ其ノ大綱ヲ擧ケ又其ノ節目中ノ要領ナル者ヲ羅列シテ以テ標準ヲ示スニ過キサルノミ故ニ鑄幣ノ權度量ヲ定ムルノ權ノ如キハ一々之ヲ詳ニスルニ及ハス其ノ之ヲ略スルハ即チ之ヲ包括スル所以ナリ</p></div>
+<h3 class="jo" id="art17"><a class="self-link" href="#art17">第十七條</a></h3>
+<div class="joubun"><p>攝政ヲ置クハ皇室典範ノ定ムル所ニ依ル攝政ハ天皇ノ名ニ於テ大權ヲ行フ</p></div>
+<div class="commentary"><p>攝政ハ天皇ノ事ヲ攝行ス故ニ凡ソ至尊ノ名分ヲ除ク外一切ノ大政總テ天皇ノ名ニ於テ之ヲ行ヒ又大政ニ付キ其ノ責ニ任セサルコト一ニ天皇ニ同シ但シ第七十五條ノ場合ニ於テ制限スル所アルノミ天皇ノ名ニ於テト謂ヘルハ天皇ニ代チト謂ヘルノ義ノ如シ蓋攝政ノ政令ハ即チ天皇ニ代リ之ヲ宣布スルナリ攝政ヲ置クハ皇室ノ家法ニ依ル攝政ニシテ王者ノ大權ヲ總攬スルハ事國憲ニ係ル故ニ後者ハ之ヲ憲法ニ掲ケ前否ハ堅宝典範ノ定ムル所ニ依ル責接政ヲ置クノ當否ヲ定ムルハ專ラ皇室ニ屬スヘクシテ而シテ臣民ノ容議スル所ニ非ス抑〻天子道豫ノ事アリテ政治ヲ親ラスルコト能ハサルハ稀ニ見ル所ノ變局ニシテ而シテ國家動亂ノ機亦往々此時ニ伏ス彼ノ或國ニ於テ兩院ヲ召集シ兩院合會シテ攝政ヲ設クルノ必要ヲ議決スルコトヲ憲法ニ掲クルカ如キハ皇室ノ大事ヲ以テ民議ノ多數ニ委ネ皇統ノ尊厳ヲ干渡スルノ術ヲ啓ク者ニ近シ本條攝政ヲ置クノ要件ヲ樂主典範ニ讓リ之ヲ憲法ニ載セサルハ蓋專ラ國體ヲ重ンシ微ヲ防キ漸ヲ愼ムナリ</p></div>
+<h2 class="hen" id="ch2"><a class="self-link" href="#ch2">第二章 臣民權利義務</a></h2>
+<h3 class="jo" id="art18"><a class="self-link" href="#art18">第十八條</a></h3>
+<div class="joubun"><p>日本臣民タルノ要件ハ法律ノ定ムル所ニ依ル日本臣民トハ外國臣民ト之ヲ區別スルノ謂ナリ日本臣民タル者ハ各〻法律上ノ公權及私權ヲ享有スヘシ此レ臣民タルノ要件ハ法律ヲ以テ之ヲ定ムルヲ必要トスル所以ナリ日本臣民タルニ二ツノ類アリ第一ハ出生ニ因ル者第二ハ歸化又ハ其ノ他法律ノ效力ニ依ル者國民ノ身分ハ別法ノ定ムル所ニ依ル但シ私權ノ完全ナル事有ト及公權ハ專ラ國民ノ身分ニ伴隨スルヲ以テ特ニ別法ヲ以テ之ヲ定ムルノ旨ヲ憲法ニ掲クルコトヲ怠ラス故ニ別法ノ掲クル所ハ即チ憲法ノ指命スル所タリ又案法ニ於ケル臣民權利義務ノ由テ係屬スル所タリ選擧被選ノ權任官ノ權ノ類之ヲ公權トス公權ハ憲法又ハ其ノ他ノ法律ニ依テ之ヲ認定シ專ラ本國人ノ享有スル所トシテ之ヲ外國人ニ許サヽルハ各國普通ノ公法ナリ私權ニ至テハ內外ノ間ニ懸絕ノ區別ヲナシタルハ既ニ歷史上ノ往事ニ屬シ今日ハ一二ノ例外ヲ除ク外各國大抵外國人ヲシテ本國人ト同樣ニ之ヲ享受スルコトヲ得セシムルノ傾向ヲ取リタリ</p></div>
+<h3 class="jo" id="art19"><a class="self-link" href="#art19">第十九條</a></h3>
+<div class="joubun"><p>日本臣民ハ法律命令ノ定ムル所ノ資格ニ應シ均ク文武官ニ任セラレ及其ノ他ノ公務ニ就ケコトヲ得文武官ニ登任シ及其ノ他ノ公務ニ就クハ門閥ニ拘ラス是ヲ維新改革ノ美果ノ一トス往昔門地ヲ以テ品流ヲ差別セシ時ニ當テハ官ヲ以テ家ニ屬シ候ニ依テ職ヲ襲キ賤類ニ出ル者ハ才能アリト雖顯妾ニ登用セラルヽコトヲ得ス維新ノ後陋習ヲ一流シテ門閥ノ弊ヲ除キ爵位ノ等級ハ一モ就官ノ平等タルニ妨クルコトナシ此レ乃憲法ノ之ヲ本條ニ保明スル所ナリ但シ法律命令ヲ以テ定ムル所ノ相當資格即チ年齡納税及試驗能力ノ諸般資格ハ仍官職及公務ニ就クノ要件タルノミ日本臣民ハ均ク文武官ニ任セラレ及其ノ他ノ公務ニ就クコトヲ得ト謂フトキハ特別ノ規定アルニ依ルノ外外國臣民ニ此ノ權利ヲ及ホサヽルコト知ルヘキナリ</p></div>
+<h3 class="jo" id="art20"><a class="self-link" href="#art20">第二十條</a></h3>
+<div class="joubun"><p>日本臣民ハ法律ノ定ムル所ニ從ヒ兵役ノ義務ヲ有ス日本臣民ハ日本帝國成立ノ分子ニシテ倶ニ國ノ生存預立及光榮ヲ護ル者ナリ上古以來我カ臣民ハ事アルニ當テ其ノ身家ノ私ヲ犧牲ニシ本國ヲ防護スルヲ以テ丈夫ノ事トシ忠義ノ精神ハ榮譽ノ感情ト倶ニ人々祖先以來ノ遺傳ニ根囘シ心肝ニ浸漸シテ以テ一般ノ風氣ヲ結成シタリ聖武天皇ノ詔ニ曰大伴佐伯ノ宿禰ハ常モ云フゴトク天皇カ朝守リ仕ヘ奉ル事顧ミナヰ人等ニアレハ汝等ノ祖ドモノ云ヒ來ラク、、海行カバ、ミヅク同、山行カバ奉ムス屍、王ノヘニコツ死ナメ。ノドニハ死ナジ」ト云ヒ來ル人等トナモ聞シメスト、此ノ教師チ武臣ノ相傳ヘテ以テ忠武ノ敎育ヲナセル所ナリ大寶以來軍團ノ設アリ海內丁壯兵役ニ堪フル者ヲ募ル持統天皇ノ時每國正丁四分ノ一ヲ取レルハ卽チ徵兵ノ制ノ由テ始マル所ナリ武門執權ノ際ニ至テ兵農職ヲ分チ兵武ノ事ヲ以テ一種族ノ專業トシ舊制久ク失ヒタリシニ雜新ノ後明治四年武士ノ常職ヲ解キ五年古制ニ基キ徵兵ノ令ヲ頒行シ全國男兒二十歲ニ至ル者ハ陸軍海軍ノ役ニ充タシメ平時毎年ノ徴員ハ常備軍ノ編制ニ從ヒ而シテ十七歳ヨリ四十歳迄ノ人員ハ盡ク國民軍トシ戰時ニ當リ臨時召集スルノ制トシタリ此レ徴兵法ノ現行スル所ナリ本條ハ法律ノ定ムル所ニ依リ全國臣民ヲシテ兵役ニ服スルノ義務ヲ執ラシメ類族門葉ニ拘ラス又一般ニ其ノ志氣身體ヲ併セテ平生ニ敎養セシメ一同雄武ノ風ヲ保持シテ將來ニ失墜セシメサラムコトヲ期スルナリ</p></div>
+<h3 class="jo" id="art21"><a class="self-link" href="#art21">第二十一條</a></h3>
+<div class="joubun"><p>日本臣民ハ法律ノ定ムル所ニ從ヒ納税ノ義務ヲ有ス納税ハ一國共同生存ノ必要ニ供應スル者ニシテ兵役ト均ク臣民ノ國家ニ對スル義務ノ一タリ租税ハ古言ニチカラ」ト云民力ヲ輸スノ義ナリ税ヲ課スルヲ「オフス」ト云各人ニ負ハシムルノ義ナリ祖宗既ニ統治ノ養ヲ以テ國ニ臨ミタマヒ國庫ノ費ハ之ヲ全國ノ正供ニ取ル租税ノ法由テ來ル所久シ孝徳天皇租庸調ノ制ヲ行ヒ維新ノ後地租ノ改正ヲ行フ是ヲ税法ノ二大變革トス其ノ詳ナルハ志籍ニ備ハルヲ以テ茲ニ之ヲ註明セス蓋租税ハ臣民國家ノ公費ヲ分擔スルモノニシテ徵求ニ供給スル獻饋ノ類ニ非サルナリ又承諾ニ起因スル德澤ノ報酬ニ非サルナリ(附記)佛國ノ學者ハ其ノ偏理ノ見ヲ以テ租稅ノ義ヲ論シタリ千七百八十九年ミラボー氏カ佛國人民ニ向テ國費ヲ募ルノ公文ニ曰租税ハ享ル所ノ利盆ニ酬ユル代價ナリ公共安寧ノ保護ヲ得ムカ爲ノ前拂ナリト、エミル、ドヂラルヂン氏ハ又説ヲ爲シテ曰租税ハ權利ノ率受、利盆ノ保護ヲ得ルノ目的ノ爲ニ國ト名ケタル一會社ノ社員ヨリ納ムル所ノ保險料ナリト此レ皆民約ノ主義ニ淵源シ納税ヲ以テ政府ノ職務ト人民ノ義務ト互相交換スルノ物トスル者ニシテ其ノ説巧ナリト雖、實ニ千里ノ謬タルコトヲ免レス蓋租税ハ一國ノ公費ニシテ一國ノ分子タル者ハ均ク其ノ共同義務ヲ負フヘキナリ故ニ臣民ハ獨現在ノ政府ノ爲ニ納税スヘキノミナラス又前世過去ノ負債ノ爲ニモ納税セサルコトヲ得ス獨得ル所ノ利盆ノ爲ニ供給スヘキノミナラス其ノ利盆ヲ享受セサルモ亦之ヲ供給セサルコトヲ得ス、抑〻經費ハ所及儉省ナラムコトヲ欲シ租稅ハ所及薄カラムコトヲ欲ス此レ固ヨリ政府ノ本務ニシテ而シテ議會ノ財政ヲ監督シ租税ヲ議定スルニ於ケル立憲ノ要義亦此レニ外ナラス然ルニ若租税ノ義務ヲ以テ之ヲ上下相酬ノ市道ナリトシ納稅ノ諾否ハ專ラ享タル所ノ利益ト乘除相關ル者トセハ人々自ラ其ノ胸障ニ斷定シテ以テ年粗ヲ拒ムコトヲ得ム而シテ國家ノ成立危殆ナラサラムコトヲ欲スルモ得ヘカラサルヘシ近時ノ論者既ニ前說ノ非ヲ辯シテ餘蘊ナカラシメ而シテ租税ノ定義纔ニ歸着スル所ヲ得タリ今其ノ一二ヲ擧クルニ曰、租税ハ國家ヲ保持スル爲ニ設クル者ナリ政府ノ職務ニ酬ユルノ代價ニ非ス何トナレハ政府ト國民トノ間ニ契約アリテ存セサレハナリ((佛國フオン、エリー氏表)曰國家ハ租税ヲ賦課スルノ權アリ而シテ臣民ハ之ヲ納ムルノ義務アリ租税ノ法律上ノ理由ハ臣民ノ純然タル義務ニ在リ國家ノ本分ト其ノ目的トニ於テ缺クヘカラサルノ費用アルニ從ヒ國ノ分子タル臣民ハ之ヲ供納セサルヘカラス國民ハ無形ノ一體トシテ國家ナル自個ノ職分ノ爲ニ資需ヲ給スヘク而シテ各人ハ從テ之ヲ納メサルヘカラス何トナレハ各人ハ國民ノ一個分子ナレハナリ彼ノ國民及各個ノ臣民ハ國家ノ外ニ立チ其ノ財産ノ保護ヲ受クル爲ノ報酬ナリトシテ租税ノ義ヲ〃)此ニ記シテ以テ參考ニ充ツ</p></div>
+<h3 class="jo" id="art22"><a class="self-link" href="#art22">第二十二條</a></h3>
+<div class="joubun"><p>日本臣民ハ法律ノ範圍内ニ於テ居住及移轉ノ自由ヲ有ス本條ハ居住及移轉ノ自由ヲ保明ス封建ノ時藩國疆ヲ畫リ各〻關柵ヲ設ケ人民互ニ其ノ本籍ノ外ニ居住スルコトヲ許サス竝ニ許可ナクシテ旅行及移轉スルコトヲ得ス其ノ自然ノ運動及營業ヲ束縛シテ植物ト其ノ類ヲ同クセシメタリシニ雜新ノ後廢藩ノ擧ト倶ニ居住及移轉ノ自由ヲ認メ凡ソ日本臣民タル者ハ帝國疆内ニ於テ何レノ地ヲ問ハス定住シ借住シ寄留シ及營業スルノ自由アラシメタリ而シテ憲法ニ其ノ自由ヲ制限スルハ必法律ニ由リ行政處分ノ外ニ在ルコトヲ揭ケタルハ此レヲ貴重スルノ意ヲ明ニスルナリ以下各條ハ臣民各個ノ自由及財產ノ安全ヲ保明ス蓋法律上ノ自由ハ臣民ノ權利ニシテ其ノ生活及智識ノ發達ノ本源タリ自由ノ民ハ文明ノ良民トシテ以テ國家ノ昌榮ヲ翼賛スルコトヲ得ル者ナリ故ニ立憲ノ國ハ皆臣民各個ノ自由及財産ノ安全ヲ以テ貴重ナル權利トシテ之ヲ確保セサルハナシ但シ自由ハ秩序アル社會ノ下ニ棲息スル者ナリ法律ハ各個人ノ自由ヲ保護シ又國權ノ必要ヨリ生スル制限ニ對シテ其ノ範圍ヲ分劃シ以テ兩者ノ間ニ適當ノ調和ヲ爲ス者ナリ而シテ各個臣民ハ法律ノ許ス所ノ區域ノ中ニ於テ其ノ自由ヲ享受シ棹然トシテ餘裕アルコトヲ得ヘシ此レ乃憲法ニ確保スル所ノ法律上ノ自由ナル者ナリ</p></div>
+<h3 class="jo" id="art23"><a class="self-link" href="#art23">第二十三條</a></h3>
+<div class="joubun"><p>日本臣民ハ法律ニ依ルニ非スシテ逮捕監禁審問處罰ヲ受クルコトナシ本條ハ人身ノ自由ヲ保明ス逮捕監禁審問ハ法律ニ載スル所ノ場合ニ限リ其ノ載スル所ノ規程ニ從ヒ之ヲ行フコトヲ得ヘク而シテ又法律ノ正條ニ依ルニ非スシテ何等ノ所爲ニ對シテモ處罰スルコトヲ得ス必是ノ如クニシテ然後ニ人身ノ自由、始メテ安全ナルコトヲ得ヘキナリ蓋人身ノ自由ハ警察及治罪ノ處分ト密切ノ關係ヲ有シ其ノ間分毫ノ餘地ヲ容ルヽコト能ハス一方ニ於テハ治安ヲ保持シ罪惡ヲ防制シ及檢探料治スルノ必要ナル處分ヲシテ敏捷強勁ナラシムルニ拘ラス他ノ一方ニ於テハ各人ノ自由ヲ尊重シテ其ノ界限ヲ岐贖ニシ威權ノ蹂躪スル所クラシメサルハ立憲ノ制ニ於テ尤至重ノ要件トスル所ナリ故ニ警察及司獄官吏法律ニ依ラスシテ人ヲ逮捕シ又ハ監禁シ又ハ苛刻ノ所爲ヲ施シタル者ハ其ノ罰私人ヨリ重カラシメ利世第二項肥二瓩十瓩 酸面シテ素問ノ方法ニ至テハ亦之ヲ警察官ニ委ネスシテ必之ヲ司法官ニ訴ヘシメ辯護及公開ヲ行ヒ司法官又ハ警察官被告人ニ對シ罪状ヲ刑法第二百 凡ソ處罰ノ法律ノ正條ニ依ラサル者ハ裁判ノ效ナキモノトス船制法第四而十此レ皆務メテ周匝組密ノ意ヲ致シテ以テ臣民ヲ保護スル所以ニシテ而シテ拷問及其ノ他中古ノ斷獄ハ歴史上既往ノ事蹟トシテ復現時ニ再生スルコトヲ得セシメス本條更ニ之ヲ確保シ以テ人身ノ自由ヲシテ安固ノ塗糧ニ入ラシメタリ</p></div>
+<h3 class="jo" id="art24"><a class="self-link" href="#art24">第二十四條</a></h3>
+<div class="joubun"><p>日本臣民ハ法律ニ定メタル裁判官ノ裁判ヲ受クルノ權ヲ奪ハルヽコトナシ本條亦各人ノ權利ヲ保護スル爲ノ要件タリ法律ニ依リ構成設置スル所ノ裁判官ハ威權ノ牽制ヲ受ケスシテ兩造ノ間ニ衡平ヲ持シ臣民ハ其ノ孤弱貧賤ニ拘ラス勢家權門ト曲直ヲ訟廷ニ爭ヒ檢斷ノ官吏ニ對シ情状ヲ辯護スルコトヲ得ヘシ故ニ憲法ハ法律ニ定メタル正當ナル裁判官ノ外ニ特ニ臨時ノ裁判所又ハ委員ヲ設ケテ以テ裁判ノ權限ヲ侵犯シ各人ノ爲ニ其ノ權利ヲ奪フコトヲ許サス而シテ各人ハ獨立ノ裁判所ニ倚頼シテ以テ司直ノ父トスルコトヲ得ヘシ</p></div>
+<h3 class="jo" id="art25"><a class="self-link" href="#art25">第二十五條</a></h3>
+<div class="joubun"><p>日本臣民ハ法律ニ定メタル場合ヲ除ク外其ノ許諾ナクシテ住所ニ侵入セラレ及搜索セラルヽコトナシ本條ハ住所ノ安全ヲ保明ス蓋家宅ハ臣民各個安權ノ地タリ故ニ私人ニシテ家主ノ承諾ナクシテ他人ノ住所ニ侵入スルコトヲ得サルノミナラス警察司法及收税ノ官吏民事又ハ刑事又ハ行政ノ處分ヲ問ハス凡テ法律ニ指定シタル場合ニ非スシテ及法律ノ規程ニ依ラスシテ臣民ノ家宅ニ侵入シ又ハ之ヲ搜索スルコトアレハ總テ憲法ノ見テ以テ不法ノ所爲ト做ス所ニシテ刑法ヲ以テ論セラルヽコトヲ免レサルヘキナリ刑法第百七十條第百七十二條一條</p></div>
+<h3 class="jo" id="art26"><a class="self-link" href="#art26">第二十六條</a></h3>
+<div class="joubun"><p>日本臣民ハ法律ニ定メタル場合ヲ除ク外信書ノ秘密ヲ侵サルヽコトナシ信書ノ秘密ハ近世文明ノ惠賜ノ一クリ本條ハ刑事ノ檢探又ハ戰時及事變及其ノ他法律ノ正條ヲ以テ指定シタル必要ノ場合ノ外信書ヲ開披シ又ハ破毀シテ以テ其ノ秘密ヲ侵スヲ許サヽルコトヲ保明ス</p></div>
+<h3 class="jo" id="art27"><a class="self-link" href="#art27">第二十七條</a></h3>
+<div class="joubun"><p>日本臣民ハ其ノ所有權ヲ侵サルヽコトナシ公盆ノ爲必要ナル處分ハ法律ノ定ムル所ニ依ル本條ハ所有權ノ安全ヲ保明ス所有權ハ國家公權ノ下ニ存立スル者ナリ故ニ所有權ハ國權ニ服屬シ法律ノ制限ヲ受ケサルヘカラス所有權ハ固ヨリ不可侵ノ權ニシテ而シテ無限ノ權ニ非サルナリ故ニ城壘ノ周圍線一定ノ距離ニ於テ或ル建築ヲ禁スルハ賠償ヲ要セス鑛物ハ鑛法ノ管理ニ屬シ山林ハ山林經濟ノ標準ニ依リ規定シタル條則ニ由ラシメ鐵道線ヨリ一定ノ距離ニ於テ樹ヲ植ルコトヲ禁シ墓城ヨリ一定ノ距離ニ於テ井ヲ鑿ルコトヲ禁スルカ如キノ類此レ皆所有權ニ制限アルノ證徴ニシテ而シテ各個人ノ所有ハ各個ノ身體ト同ク國權ニ對シ服屬ノ義務ヲ負フ者ナルコトヲ認知スルニ足ル者ナリ蓋所有權ハ私法上ノ權利ニシテ全國統治ノ最高權ノ專ラ公法ニ屬スル者ト牴觸スル所アルニ非サルナリ歐洲ニ於テ和蘭ノ「グロシユス」氏其ノ萬有權ヲ有スルノ説ヲ唱ヘタリ近時ノ國法學者ハ其ノ意ヲ取リ而シテ國土主權ノ義ヲ以テ最高所有權ノ名ニ換ヘタリ上古臣民私地ヲ獻シ罪アリテ領地ヲ沒官セラレ私地ヲ賣リ價ヲ索ムルノ事史籍ニ見ユ孝徳天皇大化二年處々ノ屯倉及田莊ヲ廢シ以テ兼併ノ害ヲ除キ而シテ隋唐ノ制ニ傚ヒ班田ノ制ヲ行ヒタリシモ其ノ後所領莊園ノ弊仍盛ニ行ハレ從テ封建ノ勢ヲ成シ徳川氏ノ時ニ至テ農民ハ概ネ領主ノ佃戸タルニ過キサリシ維新ノ初元年十二月大令ヲ發シテ村々ノ地面ハ總デ百姓ノ持地タルヘキコトヲ定メタリ四年ニ各藩版籍ヲ奉還シテ私領ノ遺物始メテ跡ヲ絶チタリ五年二月地所永代賣買ノ禁ヲ解キ又地券ヲ發行シ六年三月地所名稱ノ達ヲ發シ公有地私有地ノ稱ヲ設ケ七年ニ私有地ヲ改メテ民有地トシ八年ニ地劵ニ所有ノ名稱ヲ記載シタリ抛參權形ニ日本帝國ノ土地ヲ所此レ皆歐洲ニ在テ或ハ兵革ヲ用ヰテ領主ノ專權ヲ廢棄シ或ハ巨大ノ金額ヲ用ヰテ以テ佃戸ノ爲ニ權利ヲ償却シタル者ニシテ而シテ我カ國ニ於テハ各藩ノ推議ニ依テ容易ニ一般ノ統治ニ歸シ以テ之ヲ小民ニ惠賜スルコトヲ得タリ此レ實ニ史籍アリテ以來各國ニ其ノ例ヲ見サル所ニシテ中興新政ノ紀念タル者ナリ公共利益ノ爲ニ必要ナルトキハ各個人民ノ意嚮ニ反シテ其ノ私產ヲ收用シ以テ需要ニ應セシム此レ即チ全國統治ノ最高主權ニ根據スル者ニシテ而シテ其ノ條則ノ制定ハ之ヲ法律ニ屬シタリ蓋公盆收用處分ノ要件ハ其ノ私産ニ對シ相當ノ補償ヲ付スルニ在リ而シテ必法律ヲ以テ制定スルヲ要シ命令ノ範圍ノ外ニ在ルハ又憲法ノ證明スル所ナリ</p></div>
+<h3 class="jo" id="art28"><a class="self-link" href="#art28">第二十八條</a></h3>
+<div class="joubun"><p>日本臣民ハ安寧秩序ヲ妨ケス及臣民タルノ義務ニ背カサル限ニ於テ信教ノ自由ヲ有ス中古西歐宗教ノ盛ナル之ヲ内外ノ政事ニ混用シ以テ流血ノ禍ヲ致シ而シテ東方諸國ハ又嚴法峻刑ヲ以テ之ヲ防禁セムト試ミタリシニ四百年來信教自由ノ説始メテ萠芽ヲ發シ以テ佛國ノ革命北米ノ獨立ニ至リ公然ノ宣告ヲ得漸次ニ各國ノ是認スル所トナリ現在各國政府ハ或ハ其ノ國教ヲ存シ或ハ社會ノ組織又ハ教育ニ於テ仍一派ノ宗教ニ偏袒スルニ拘ラス法律上一般ニ各人ニ對シ信教ノ自由ヲ予ヘサルハアラス而シテ異宗ノ人ヲ戮辱シ或ハ公權私權ノ享受ニ向テ差別ヲ設クルノ陋習ハ既ニ史乘過去ノ事トシテ 通略教徒ニ向テ政權ヲ予ヘサリシテ復其ノ跡ヲ留メサルニ至レリ此レ乃信教ノ自由ハ之ヲ近世文明ノ一大美果トシテ看ルコトヲ得ヘク而シテ人類ノ尤至貴至重ナル本心ノ自由ト正理ノ伸長ハ數百年間沈淪茫昧ノ境界ヲ經過シテ縫ニ光輝ヲ發揚スルノ今日ニ達シタリ蓋本心ノ自由ハ人ノ内部ニ存スル者ニシテ固ヨリ國法ノ干渉スル區域ノ外ニ在リ而シテ國教ヲ以テ偏信ヲ強フルハ尤人知自然ノ發達ト學術競進ノ運歩ヲ障害スル者ニシテ何レノ國モ政治上ノ威權ヲ用ヰテ以テ教門無形ノ偏依ヲ制壓セムトスルノ權利ト機能トヲ有セサルヘシ本條ハ實ニ維新以來取ル所ノ針路ニ從ヒ各人無形ノ權利ニ向テ濶大ノ進路ヲ予ヘタルナリ但シ信仰歸依ハ專ラ内部ノ心識ニ屬スト雖其ノ更ニ外部ニ向ヒテ禮拜儀式布敎演說及結社集會ヲ爲スニ至テハ固ヨリ法律又ハ警察上安寧秩序ヲ維持スル爲ノ一般ノ制限ニ遵ハサルコトヲ得ス而シテ何等ノ宗教モ神明ニ奉事スル爲ニ法憲ノ外ニ立チ國家ニ對スル臣民ノ義務ヲ述ルヽノ權利ヲ有セス故ニ内部ニ於ケル信教ノ自由ハ完全ニシテ一ノ制限ヲ受ケス而シテ外部ニ於ケル禮拜布教ノ自由ハ法律規則ニ對シ必要ナル制限ヲ受ケサルヘカラス及臣民一般ノ義務ニ服從セサルヘカラス此レ憲法ノ裁定スル所ニシテ以敎互相關係スル所ノ界域ナリ</p></div>
+<h3 class="jo" id="art29"><a class="self-link" href="#art29">第二十九條</a></h3>
+<div class="joubun"><p>日本臣民ハ法律ノ範圍内ニ於テ言論著作印行集會及結社ノ自由ヲ有ス言論著作印行集會結社ハ皆政治及社會ノ上ニ勢力ヲ行フ者ニシテ而シテ立憲ノ國ハ其ノ變シテ罪惡ヲ成シ又ハ治安ヲ妨害スル者ヲ除ク外總テ其ノ自由ヲ予ヘテ以テ思想ノ交通ヲ發達セシメ且以テ人文進化ノ爲ニ有盆ナル資料タラシメサルハナシ但シ他ノ一方ニ於テハ此レ等ノ所爲ハ容易ニ濫用スヘキ銳利ナル器械タルカ故ニ此レニ由テ他人ノ榮譽權利ヲ傷害シ治安ヲ妨ケ罪惡ヲ教唆スルニ至テハ法律ニ依リ之ヲ處罰シ又ハ法律ヲ以テ委任スル所ノ警察處分ニ依リ之ヲ防制セサルコトヲ得サルハ是レ亦公共ノ秩序ヲ保持スルノ必要ニ出ル者ナリ但シ此ノ制限ハ必法律ニ由リ而シテ命令ノ區域ノ外ニ在リ</p></div>
+<h3 class="jo" id="art30"><a class="self-link" href="#art30">第三十條</a></h3>
+<div class="joubun"><p>日本臣民ハ相當ノ敬禮ヲ守リ別ニ定ムル所ノ規程ニ從ヒ請願ヲ爲スコトヲ得請願ノ權ハ至尊仁愛ノ至意ニ由リ言路ヲ開キ民情ヲ通スル所以ナリ孝徳天皇ノ時ニ鐘ヲ懸ケ置ヲ設ケ諫言憂訴ノ道ヲ開キタマヒ中古以後歴代ノ天皇朝殿ニ於テ百姓ノ中文ヲ讀マセ大臣納言ノ輔佐ニ依リ親ケ之ヲ聽斷シタマヘリ嵯峨天皇以後此ノ事之ヲ史乘ニ考フルニ古昔明良ノ君主ハ皆言路ヲ洞通シ室屈ヲ伸硫スルコトヲ力メサルハアラス驚議會未タ設ケス裁判聽訟ノ法未タ備ハラサルノ時ニ當テ民言ヲ容納シ民情ヲ疏通スルハ獨君主仁熟ノ懿徳タルノミナラス又政事上業思ヲ集メ鴻盆ヲ廣ムルノ必要ニ出ル者ナリ今ハ諸般ノ機關既ニ整備ニ就キ公議ノ府亦一定ノ所アリ而シテ猶臣民請願ノ權ヲ存シ匹夫匹婦疾苦ノ訴ト父老獻芹ノ微衷トヲシテ九重ノ上ニ嗣達シ阻障スル所ナキヲ得セシム此レ憲法ノ民權ヲ貴重シ民生ヲ愛護シ一ノ遺漏ナキヲ以テ終局ノ目的ト爲スニ由ル而シテ政事上ノ德義是ニ至テ至厚ナリト謂フコトヲ得ヘシ但シ請願者ハ正當ノ敬禮ヲ守ルヘク憲法上ノ權利ヲ濫用シテ以テ至尊ヲ干漬シ又ハ他人ノ隱私ヲ摘發シテ徒ニ讒誣ヲ長スルカ如キハ徳義上ノ尤モ戒愼スヘキ所ニシテ而シテ法律命令又ハ議院規則ニ依リ規程ヲ設クルハ又已ムヲ得サルニ出ル者ナリ請願ノ權ハ君主ニ進ムルニ始マリ而シテ推廣シテ議院及官街ニ呈出スルニ及フ其ノ各個人ノ利盆ニ係ルト又ハ公盆ニ係ルトヲ問ハス法律上彼此ノ間ニ互ニ制限ヲ設ケサルナリ</p></div>
+<h3 class="jo" id="art31"><a class="self-link" href="#art31">第三十一條</a></h3>
+<div class="joubun"><p>本章ニ掲ケタル條規ハ戰時又ハ國家事變ノ場合ニ於テ天皇大權ノ施行ヲ妨クルコトナシ本章掲クル所ノ條規ハ憲法ニ於テ臣民ノ權利ヲ保明スル者ナリ蓋立憲ノ主義ハ獨臣民ノミ法律ニ服從スルニ非ス又臣民ノ上ニ勢力ヲ有スル國權ノ運用ヲシテ法律ノ檢束ヲ受ケシムルニ在リ唯然リ故ニ臣民橋テ以テ其ノ權利財産ノ安全ヲ享有シテ專横不法ノ疑懼ヲ免ルヽコトヲ得ヘシ此レヲ木章ノ大義トス但シ憲法ハ猶非常ノ變局ノ爲ニ非常ノ例外ヲ掲クルコトヲ怠ラス蓋國家ノ最大目的ハ其ノ存立ヲ保持スルニ在リ練熟ナル船長ハ覆沒ヲ避ケ航客ノ生命ヲ救フ爲ニ必要ナルトキハ其ノ積荷ヲ海中ニ投棄セサルヘカラス良務ハ全軍ノ歌ヲ避クル爲ニ已ムヲ得サルノ時機ニ當リテ其ノ一部曲ヲ棄テサルコトヲ得ス國權ハ危難ノ時機ニ際シ國家及國民ヲ救濟シテ其ノ存立ヲ保全スル爲ニ唯一ノ必要方法アリト認ムルトキハ斷シテ法律及臣民權利ノ一部ヲ犧牲ニシテ以テ其ノ最大目的ヲ達セサルヘカラス此レ乃元首ノ權利ナルノミナラス亦其ノ最大義務タリ國家ニシテ若此ノ非常權ナカリセハ國權ハ非常ノ時機ニ際リテ其ノ職ヲ盡スニ由ナカラムトス各國ノ憲法ニ或ハ此ノ義ヲ明示シ或ハ明示セサルトニ拘ラス其實際ニ於テ存立ヲ保全スル國權ノ權力ヲ認許セサルハアラス何トナレハ各國總テ皆戰時ノ爲ニ必要ナル處分ヲ施行スルハ謬フヘカラサルノ事實ナレハナリ但シ常變ノ際、則ニ髮ヲ容ルヽコト能ハス夫ノ時機ノ必要ニ非スシテ妄ニ非常權ニ挂托シ以テ臣民ノ權利ヲ蹂躪スルカ如キハ各國憲法ノ決シテ許サヽル所ナリ蓋正條ニ非常權ヲ掲ケ及其ノ要件ヲ示ス者ハ非常ノ時機ノ爲ニ憲法上ノ空缺ヲ遣スコトヲ肯ムセサルナリ或ル國ニ於テ之ヲ不言ニ附スル者ハ臨機ノ處分ヲ以テ憲法區域ノ外ニ置キ議院ノ判決ニ任セ以テ其ノ違法ノ責ヲ解カムトスルナリ而シテ近世ノ國法學ヲ論スル者甲ノ方法ノ尤完全ナルヲ賛稱ス</p></div>
+<h3 class="jo" id="art32"><a class="self-link" href="#art32">第三十二條</a></h3>
+<div class="joubun"><p>本章ニ掲ケタル條規ハ陸海軍ノ法令又ハ紀律ニ牴觸セサルモノニ限リ軍人ニ準行ス軍人ハ軍旗ノ下ニ在テ軍法軍令ヲ恪守シ專ラ服從ヲ以テ第一義務トス故ニ本章ニ掲クル權利ノ條規ニシテ軍法軍令ト相牴觸スル者ハ軍人ニ通行セス即チ現役軍人ハ集會結社シテ軍制又ハ政事ヲ論スルコトヲ得ス政事上ノ言論著述印行及請願ノ自由ヲ有セサルノ類是ナリ</p></div>
+<h2 class="hen" id="ch3"><a class="self-link" href="#ch3">第三章 帝國議會</a></h2>
+<h3 class="jo" id="art33"><a class="self-link" href="#art33">第三十三條</a></h3>
+<div class="joubun"><p>帝國議會ハ貴族院衆議院ノ兩院ヲ以テ成立ス貴族院ハ貴紳ヲ集メ衆議院ハ庶民ニ選フ兩院合同シテ一ノ帝國議會ヲ成立シ以テ全國ノ公議ヲ代表ス故ニ兩院ハ或ル特例ヲ除ク外平等ノ權力ヲ有チ一院獨立法ノ事ヲ參賛スルコト能ハス以テ謀議周匝ニシテ輿論ノ公平ヲ得ルヲ期セムトス二院ノ制ハ歐洲各國ノ既ニ久シク囚襲スル所ニシテ其ノ效績ヲ史乘ニ黴驗シ而シテ此ニ反スルノ一院制ヲ取レル者ハ皆其ノ流禍ヲ免レサルコトヲ證明シタリ十八年四五五千八百十二年度)近來二院制ノ祖國ニ於テ論省却テ其ノ社會發達ノ淹滯障碍タルノ説ヲ爲ス者アリ抑、二院ノ利ヲ主持スル者既ニ熟養ノ論アリテ今茲ニ引擧スルヲ必要トセサルヘシ但シ貴族院ノ設ハ以テ王室ノ屏翰ヲ爲シ保守ノ分子ヲ貯存スルニ止マルニ非ス蓋立國ノ機關ニ於テ固ヨリ其ノ必要ヲ見ル者ナリ何トナレハ凡ソ高尚ナル有機物ノ組織ハ獨各種ノ元素ヲ包合シテ以テ成體ヲ爲スノミナラス又必各種ノ機器ニ倚テ以テ中心ヲ輔翼セサルハアラス兩目各〻其ノ位ヲ殊ニセサレハ以テ視力ノ角點ヲ得ヘカラス兩耳各〻其ノ方ヲ異ニセサレハ以テ聽官ノ偏聾ヲ免ルヘカラス故ニ元首ハ一ナラサルヘカラス而シテ衆庶ノ意思ヲ集ムルノ機關ハ兩個ノ一ヲ缺クヘカラサルコト宛モ兩輪ノ其ノ一ヲ失フヘカラサルカ如シ夫レ代議ノ制ハ以テ公議ノ結果ヲ收メムトスルナリ而シテ勢力ヲ一院ニ集メ一時感情ノ反射ト一方ノ偏向トニ任シテ互相牽制其ノ平衡ヲ持スル者ナカラシメハ孰レカ其ノ傾流奔注ノ勢容易ニ範防ヲ踰越シ一變シテ多數壓制トナリ再變シテ横議亂政トナラサルコトヲ保證スル者アラム乎此レ其ノ弊ハ却テ代議ノ制ナキノ日ヨリ猶甚キモノアラムトス故ニ代議ノ制設ケサレハ已ム之ヲ設ケテ二院ナラサレハ必偏重ヲ招クコトヲ免レス此レ乃物理ノ自然ニ原由スル。者ニシテ一時ノ情況ヲ以テ之ヲ掩蔽スヘキニ非サルナリ要スルニ二院ノ制ノ代議法ニ於ケルハ之ヲ學理ニ照シ之ヲ事實ニ徹シテ其ノ不易ノ機關タルコトヲ結論スルコトヲ得ヘキナリ後ノ或國ニ於ケル貴族院ノ懶脂ニシテ議事延滯ノ弊アルヲ論スルカ如キハ此レ一時ノ短ヲ捕發スルニ過キス而シテ國家ノ長計ニ對シテハ其ノ言ノ價直アルヲ見サルナリ</p></div>
+<h3 class="jo" id="art34"><a class="self-link" href="#art34">第三十四條</a></h3>
+<div class="joubun"><p>貴族院ハ貴族院令ノ定ムル所ニ依リ皇族華族及勅任セラレタル議員ヲ以テ組織ス貴族院議員ハ其ノ或ハ世襲タリ或ハ選擧又ハ勅任タルニ拘ラス均ク上流ノ社會ヲ代表スル者タリ貴族院ニシテ其ノ職ヲ得ルトキハ政權ノ平衡ヲ保チ政黨ノ偏張ヲ制シ横議ノ領勢ヲ搆ヘ憲法ノ筆圖ヲ扶ケ上下調和ノ機關トナリ國縣民慶ヲ永久ニ維持スルニ於テ其ノ效果ヲ收ムルコト多キニ居ラムトス蓋貴族院ハ以テ貴冑ヲシテ立法ノ議ニ參預セシムルノミニ非ス又以テ國ノ勳勞學識及富豪ノ士ヲ集メテ國民愼重練熟耐久ノ氣風ヲ代表セシメ抱合親和シテ倶ニ上流ノ一團ヲ成シ其ノ效用ヲ全クセシムル所以ナリ其ノ構成制規ハ貴族院令ニ具ハルヲ以テ憲法ニ之ヲ列擧セサルナリ</p></div>
+<h3 class="jo" id="art35"><a class="self-link" href="#art35">第三十五條</a></h3>
+<div class="joubun"><p>衆議院ハ選擧法ノ定ムル所ニ依リ公選セラレタル議員ヲ以テ組織ス衆議院ノ議員ハ其ノ資格ト其ノ任期トヲ定メテ廣ク全國人民ノ公選スル所ヲ取ラムトス本條議員選擧ノ制規ヲ以テ之ヲ別法ニ讓ル者ハ蓋選擧ノ方法ハ時宜ノ必要ヲ將來ニ見ルニ從ヒ之ヲ補修スルノ便ヲ取ルコトアラムトス故ニ憲法ハ其ノ細節ニ渉ルコトヲ欲セサルナリ衆議院ノ議員ハ總テ皆全國ノ衆民ヲ代表スル者タリ而シテ衆議院ノ選擧ニ選擧區ヲ設クルハ代議士ノ選擧ヲシテ全國ニ普通ナラシメ及選擧ノ方法ニ便リスルニ外ナラス故ニ代議士ハ各側ノ良心ニ從ヒ自由ニ發言スル者ニシテ其ノ所屬選擧區ノ人民ノ爲ニ一地方ノ委任使トナリ委囑ヲ代行スル者ニ非サルナリ之ヲ歐洲ノ史乘ニ參考スルニ往昔ノ議會ハ其ノ議員タル者、々委囑ノ主旨ニ依リ一部ノ利盆ヲ主張シテ全局ヲ達觀スルノ公義ヲ忘レ從テ多數ヲ以テ議決トスルノ代議ノ大則ヲ抛棄スルニ至ル者往々ニシテコレアリ此レ代議士ノ本分ヲ知ラサルノ過ニ由ルナリ</p></div>
+<h3 class="jo" id="art36"><a class="self-link" href="#art36">第三十六條</a></h3>
+<div class="joubun"><p>何人モ同時ニ兩議院ノ議員タルコトヲ得ス兩院ハ一ノ議會ニシテ分チテ兩局トシ其ノ成素ヲ殊ニシ平衡相持スルノ位置ニ居ル故ニ一人ニシテ同時ニ兩院ノ議員ヲ兼ヌルハ兩院分設ノ制ノ許サヽル所ナリ</p></div>
+<h3 class="jo" id="art37"><a class="self-link" href="#art37">第三十七條</a></h3>
+<div class="joubun"><p>凡テ法律ハ帝國議會ノ協賛ヲ經ルヲ要ス法律ハ國家主權ヨリ出ル軌範ニシテ而シテ必議會ノ協贊ヲ經ルヲ要スルハ之ヲ立憲ノ大則トス故ニ議會ノ議ヲ經サル者ハ之ヲ法律トスルコトヲ得サルナリ一院ノ可トスル所ニシテ他ノ一院ノ否トスル所ハ亦之ヲ法律トスルコトヲ得サルナリ(附記)何等ノ事物ハ法律ヲ以テ定ムルヲ要スル乎ノ問題ニ至テハ蓋一ノ例言ヲ以テ之ヲ廢括シ難シ普國ノ普通法ヲ公布セル勅令ニ本法ハ別段ノ法律ニ依テ定メサル國民ノ權利義務ヲ判明スヘキ條規ヲ包括スト云ヘリ又巴咸倫千八百十八年五月二十六日憲法ノ第七章第二條ニ人身ノ自由又ハ國民ノ財産ニ關ル普通ノ法ヲ發シ或ハ現行法ヲ變更シ解釋シ廢止スルニハ國會ノ協同ヲ要スト云ヘリ然ルニ學者多クハ法律ノ區域ハ權利義務若ハ自由財産ニ止マルヘカラサルコトヲ裝シ且事物ヲ以テ法律ト命令トノ區域ヲ分割セムトスルハ憲法上及學問上ノ試驗ニ於テ一モ其ノ結果ヲ得サルコトヲ論シタリ蓋法律及命令ノ區域ハ專ラ各國政治發達ノ程度ニ從フ而シテ唯憲法史以テ之ヲ論斷スヘキノミ但シ憲法ノ明文ニ依リ特ニ法律ヲ要スル者ハ之ヲ第一ノ限界トシ既ニ法律ヲ以テ制定シタル者ハ法律ニ非サレハ之ヲ變更スルコトヲ得サルハ之ヲ第二ノ限界トス此レ乃立憲各國ノ同キ所ナリ</p></div>
+<h3 class="jo" id="art38"><a class="self-link" href="#art38">第三十八條</a></h3>
+<div class="joubun"><p>兩護院ハ政府ノ提出スル法律案ヲ議決シ及各法律案ヲ提出スルコトヲ得政府ニ於テ法律ヲ起草シ天皇ノ命ニ由リ之ヲ議案トナシ兩議院ニ付スルトキハ兩議院ハ之ヲ可トシ之ヲ否トシ又ハ之ヲ修正スルコトヲ得若兩議院ニ於テ或ル法律ヲ發行スルヲ必要ナリトスルトキハ各其ノ案ヲ提出スルコトヲ得而シテ甲議院之ヲ提出シ乙議院之ニ同意シ又ハ之ヲ修正シテ可決シタル後天皇ノ裁可アルトキハ亦法律トナルコト政府ノ起案ニ異ナルコトナシ至尊ノ議會ニ於ケルハ召集開閉ノ勅命及法律裁可ノ外會期中總テ國務大圖ヲシテ議案及其ノ他ノ往復ニ當ラシム故ニ之ヲ政府ノ提出ト謂フナリ</p></div>
+<h3 class="jo" id="art39"><a class="self-link" href="#art39">第三十九條</a></h3>
+<div class="joubun"><p>兩議院ノ一ニ於テ否決シタル法律案ハ同會期中ニ於テ再ヒ提出スルコトヲ得ス再議ノ提出ハ議院ノ權利ヲ毀損スルノミナラス又會期遷延シテ一事ニ拘滯スルノ弊アラムトス故ニ本條ニ之ヲ禁止セリ既ニ否決ヲ經タル同一ノ議案ヲ以テ其ノ名稱文字ヲ變更シ再ヒ之ヲ提出シ以テ本條ノ規定ヲ避ルハ亦憲法ノ許サヽル所ナリ君主ノ裁可ヲ得サルノ法案ハ同一會期ノ中ニ議院ヨリ提出スルコトヲ得サルハ此レ固ヨリ元首ノ大權ニ對スル事理ノ當然ニシテ更ニ言明ヲ假ラス但シ仍建議ノ條ニ於テ其ノ再ヒ建議スルコトヲ禁スルコトヲ揭クルハ提出議案ノ裁可ノ有無ハ至尊ノ勅命ニ由リ而シテ建議採納ノ有無ハ政府ノ取捨帝國憲法 三十九條</p></div>
+<h3 class="jo" id="art40"><a class="self-link" href="#art40">第四十條</a></h3>
+<h3 class="jo" id="art41"><a class="self-link" href="#art41">第四十一條</a></h3>
+<div class="joubun"><p>ニ存ス其ノ間固ヨリ輕重ノ差アリ、從テ豫メ疑義ヲ判明スルノ要用ヲ見レハナリ第四十條兩議院ハ法律又ハ其ノ他ノ事件ニ付各其ノ意見ヲ政府ニ建議スルコトヲ得但シ其ノ採納ヲ得サルモノハ同會期中ニ於テ再ヒ建議スルコトヲ得ス本條ハ議院ニ建議ノ權アルコトヲ掲クルナリ上條既ニ兩議院ニ各「法律案ヲ提出スルノ權ヲ予ヘタリ而シテ本條ニ又法律ニ付意見ヲ建議スルコトヲ得ト謂ヘルハ何ソ乎議院自ラ法律ヲ起案シテ之ヲ提出スルト或ハ某ノ新法ノ制定スヘク某ノ舊法ノ改正又ハ廢止スヘキコトヲ決議シ成案ヲ具ヘス單ニ其ノ意見ヲ以テ政府ニ啓陳シ政府ノ採ル所トナルトキハ其ノ起草制定スルニ任スルト兩樣ノ方法ニ就テ議院ヲシテ其ノ一ヲ擇ハシムルナリ寵之ヲ歐洲ニ參考スルニ議院自ラ議案提出ノ權ヲ有スルハ各國ノ同キ所ナリ(暗西ヲ除ク外)但シ議院自ラ多數ニ倚頼シテ法律ノ條項ヲ制定スルハ往々議事遷延ト成條ノ踈漏ニシテ首尾完察ナラサルトノ弊ヲ免レス寧政府ノ委員ノ練熟ナルニ倚任スルノ愈レルニ若カス此レ各國學者ノ之ヲ事實ニ徴驗シテ其ノ得失ヲ論スル所ナリ議會ハ立法ノ事ニ參預スルノミナラス併セテ間接ニ行政ヲ監視スルノ任ヲ負フ者ナリ故ニ兩議院ハ又立法ノ外ノ事件ニ付意見ヲ以テ政府ニ建議シ利弊得失ヲ論白スルコトヲ得但シ法律又ハ其ノ他ノ事件ニ拘ラス議院ノ意見ニシテ政府ノ採納ヲ得サル者ハ同一會期ノ間再ヒ建議スルコトヲ得サラシムルハ蓋紛議强迫ニ渉ルノ塗ヲ防ク所以ナリ第四十一條帝國議會ハ每年之ヲ召集ス議會ヲ召集スルハ專ラ天皇ノ大權タリ然ルニ本條ニ毎年召集スルコトヲ定ムルハ憲法ニ於テ議會ノ存立ヲ保障スル所以ナリ但シ第七十條ニ掲ケタル場合ノ如キハ非常ノ例外ナリ</p></div>
+<h3 class="jo" id="art42"><a class="self-link" href="#art42">第四十二條</a></h3>
+<div class="joubun"><p>帝國議會ハ三箇月ヲ以テ會期トス必要アル場合ニ於テハ勅命ヲ以テ之ヲ延長スルコトアルヘシ三箇月ヲ以テ會期トスル者ハ議事遲延シ窮期ナキコトアルヲ防クナリ其ノ巳ムヲ得サルノ必要アルニ當リ會期ヲ延長シ閉會ヲ延期スルハ亦勅命ニ由ル議會自ラ之ヲ行フコトヲ得サルナリ議會閉會シタルトキハ會期ノ事務ハ終ヲ告ル者トシ特別ノ規定アル者ヲ除ク外議事ノ巳ニ議決シタルト未タ議決セサルトヲ問ハス次囘ノ會期ニ繼續スルコトナシ</p></div>
+<h3 class="jo" id="art43"><a class="self-link" href="#art43">第四十三條</a></h3>
+<div class="joubun"><p>臨時緊急ノ必要アル場合ニ於テ常會ノ外臨時會ヲ召集スヘシ臨時會ノ會期ヲ定ムルハ勅命ニ依ル議會ハ一年ニ一會ヲ開ク之ヲ常會トス憲法ニ常會ノ時期ヲ掲ケスト雖蓋常會ハ以テ毎年ノ豫算ヲ議スルノ便ヲ取ル故ニ冬季ニ開會スルヲ例トス而シテ常會ノ外臨時緊急ノ必要アルトキハ特ニ勅命ヲ發シテ臨時會ヲ召集ス臨時會ノ會期ハ憲法ニ之ヲ限定セス而シテ臨時召集スル所ノ勅命ノ定ムル所ニ從フ亦其ノ必要如何ニ依ラシムルナリ</p></div>
+<h3 class="jo" id="art44"><a class="self-link" href="#art44">第四十四條</a></h3>
+<div class="joubun"><p>帝國議會ノ開會閉會會期ノ延長及停會ハ兩院同時ニ之ヲ行フヘシ衆議院解散ヲ命セラレタルトキハ貴族院ハ同時ニ停會セラルヘシ貴族院ト衆議院ハ兩局ニシテ一揆ノ議會タリ故ニ一議院ノ議ヲ經スシテ他ノ議院ノ成議ヲ以テ法律ト爲スヘカラス又一議院ノ會期ノ外ニ他ノ議院ノ會議ヲ有效ナラシムヘカラス本條ニ兩院ハ必同時ニ開閉始終スルヲ定ムルハ此ノ義ニ依レルナリ貴族院ノ一部ハ世襲議員ヲ以テ組織ス故ニ貴族院ハ停會スヘクシテ解散スヘカラス衆議院ノ解散ヲ命セラレタルニ當テハ貴族院ハ同時ニ停會ヲ命セラルヽニ止マルナリ</p></div>
+<h3 class="jo" id="art45"><a class="self-link" href="#art45">第四十五條</a></h3>
+<div class="joubun"><p>衆議院解散ヲ命セラレタルトキハ勅命ヲ以テ新ニ議員ヲ選擧セシメ解散ノ日ヨリ五箇月以内ニ之ヲ召集スヘシ本條ハ議會ノ爲ニ永久ノ保障ヲ與フルナリ蓋解放ハ將ニ舊議員ヲ解散シテ新議員ヲ召集セムトスル者ナリ而シテ憲法若議院解散ノ後新ニ召集スルノ時期ヲ一定セサルトキハ議會ノ存立ハ政府ノ隨意ニ廢止スル所ニ任スルニ至ラムトス</p></div>
+<h3 class="jo" id="art46"><a class="self-link" href="#art46">第四十六條</a></h3>
+<div class="joubun"><p>兩議院ハ各其ノ總議員三分ノ一以上出席スルニ非サレハ議事ヲ開キ議決ヲ爲スコトヲ得ス出席議員三分ノ一ニ充タサルトキハ以テ會議ヲ成立スルニ足ラス故ニ議事ヲ開クコトヲ得ス及議決ヲ爲スコトヲ得サルナリ總議員トハ選擧法ニ定メタル議員ノ總數ヲ謂フ三分ノ一以上出席スルニ非サレハ議事ヲ開クコトヲ得サルトキハ三分ノ一以上召集ニ應スルニ非サレハ議院ノ成立ヲ告クルコト能ハサルコト亦知ルヘキナリ</p></div>
+<h3 class="jo" id="art47"><a class="self-link" href="#art47">第四十七條</a></h3>
+<div class="joubun"><p>兩議院ノ議事ハ過半數ヲ以テ決ス可否同數ナルトキハ議長ノ決スル所ニ依ル過半數ヲ以テ決ヲ擧ルハ議事ノ常則タリ本條過半數トハ出席議員ニ就テ之ヲ謂ヘルナリ兩議平分シテ各〻同數ヲ得ルノ場合ニ當テ議長ノ見ル所ニ依リ決ヲ爲スハ事理宜ク然ルヘキナリ但シ第七十三條ニ於ケル憲法改正ノ議事ハ例外トス又議院ニ於テ議長及其他ノ委員ヲ選擧スルニ付特ニ定ムルノ多數及委員會ノ規程ハ各〻其ノ規則ニ依ルヘクシテ本條ニ干渉ナキナリ</p></div>
+<h3 class="jo" id="art48"><a class="self-link" href="#art48">第四十八條</a></h3>
+<div class="joubun"><p>兩議院ノ會議ハ公開ス但シ政府ノ要求又ハ其ノ院ノ決議ニ依リ秘密會ト爲スコトヲ得議院ハ衆庶ヲ代表ス故ニ討論可否之ヲ衆目ノ前ニ公ニス但シ議事ノ祕密ヲ要スル者外交事件人事及職員委員ノ選擧又ハ或ル財政兵政或ル治安ニ係ル行政法ノ如キハ其ノ變例トシ政府ノ要求ニ依リ又ハ各院ノ決議ニ依リ祕密會ト爲シ公開ヲ閉ツルコトヲ得</p></div>
+<h3 class="jo" id="art49"><a class="self-link" href="#art49">第四十九條</a></h3>
+<div class="joubun"><p>兩議院ハ各天皇ニ上奏スルコトヲ得上奏ハ文書ヲ上呈シテ天皇ニ奏聞スルヲ謂フ或ハ勅語ニ奉對シ或ハ慶賀吊傷ノ表辭ヲ上リ或ハ意見ヲ建白シ請願ヲ陳疏スルノ類皆其ノ中ニ在リ而シテ或ハ文書ヲ上呈スルニ止マリ或ハ總代ヲ以テ觀謁ヲ請ヒ之ヲ上呈スルモ皆相當ノ敬禮ヲ用ウヘク逼迫強抗ニシテ尊嚴ヲ干犯スルコトアルヲ得サルヘキナリ</p></div>
+<h3 class="jo" id="art50"><a class="self-link" href="#art50">第五十條</a></h3>
+<div class="joubun"><p>兩議院ハ臣民ヨリ呈出スル請願書ヲ受クルコトヲ得臣民ハ至尊ニ請願シ又ハ行政官衙ニ請願シ議院ニ請願スルコト總テ其ノ意ニ隨フコトヲ得其ノ議院ニ在テハ各人ノ請願ヲ受ケテ之ヲ審査シ或ハ單ニ之ヲ政府ニ紹介シ或ハ之ニ意見書ヲ附シテ政府ノ報告ヲ求ムルコトヲ得但シ議院ハ必シモ請願ヲ議定スルノ義務アルコトナク政府ハ必シモ請願ヲ許可スルノ義務アルコトナシ若夫請願ノ立法ニ係ル者ハ淸願ヲ以テ直ニ提出法律案ノ動議ト爲スヘカラスト雖議員ハ其ノ請願ノ主旨ニ依リ通常勅議ノ方法ニ從フコトヲ得ヘシ</p></div>
+<h3 class="jo" id="art51"><a class="self-link" href="#art51">第五十一條</a></h3>
+<div class="joubun"><p>兩議院ハ此ノ憲法及議院法ニ掲クルモノヽ外内部ノ整理ニ必要ナル諸規則ヲ定ムルコトヲ得內部ノ整理ニ必要ナル諸規則トハ議長ノ推選議長及事務局ノ議務各部ノ分該委員ノ推選委員ノ事務議事規則議事記録議則取扱規則議員講暇規則紀律及議院會計ノ類ヲ謂フ而シテ憲法及議院法ノ範圍内ニ於テ議院ノ自ラ之ヲ制定スルニ任スルナリ</p></div>
+<h3 class="jo" id="art52"><a class="self-link" href="#art52">第五十二條</a></h3>
+<div class="joubun"><p>兩議院ノ議員ハ議院ニ於テ發言シタル意見及表決ニ付院外ニ於テ責ヲ負フコトナシ但シ議員自ラ其ノ言論ヲ演説刊行筆記又ハ其ノ他ノ方法ヲ以テ公布シタルトキハ一般ノ法律ニ依リ處分セラルヘシ本條ハ議院ノ爲ニ言論ノ自由ヲ認ム蓋議院ノ内部ハ議院ノ自治ニ屬ス故ニ言論ノ規矩ヲ越エ徳義ヲ紊リ又ハ人ノ私事ヲ護毀スルカ如キハ議院ノ紀律ニ據リ議院自ラ之ヲ制止シ及懲戒スヘキ所ニシテ而シテ司法官ハ之ニ干渉セサルヘキナリ議決ハ以テ法律ノ成案ヲ爲サムトス而シテ議員ノ討論ハ異同相摩シテ其ノ一ニ歸結スルノ資料ヲ爲ス者ナリ故ニ議院ノ議ハ以テ刑事及民事ノ責ヲ問フヘカラサルナリ此レ一ハ議院ノ權利ヲ尊重シ二ハ議員ノ言論ヲシテ十分ニ價量アラシメムトナリ但シ議員自ラ議院ノ言論ヲ公布シ其ノ自由ヲ旨用シテ之ヲ外部ニ普及スルニ至テハ動議ト駁議トヲ問ハス總テ責問ヲ免ルコトヲ得ス</p></div>
+<h3 class="jo" id="art53"><a class="self-link" href="#art53">第五十三條</a></h3>
+<div class="joubun"><p>兩議院ノ議員ハ現行犯罪又ハ内亂外患ニ關ル罪ヲ除ク外會期中其ノ院ノ許諾ナクシテ逮捕セラルヽコトナシ兩議院ハ立法ノ大事ヲ參賛ス故ニ會期ノ間議員ニ予フルニ例外特權ヲ以テシ議員ヲシテ不願ノ體面ヲ有チ其ノ重要ノ職務ヲ盡スコトヲ得セシメムトス若夫現行犯罪又ハ内亂外患ニ係ルノ罪ニ至テハ議院ノ特典ノ庇護スル所ニ非サルナリ會期中トハ召集ノ後閉會ノ前ヲ謂フ非現行犯及普通ノ罪犯ハ議院ニ通牒シ其ノ許諾ヲ得テ後ニ之ヲ逮捕シ其ノ現行犯及内亂外患ニ關ル罪犯ハ先ツ逮捕シテ後ニ議院ニ通知スヘキナリ</p></div>
+<h3 class="jo" id="art54"><a class="self-link" href="#art54">第五十四條</a></h3>
+<div class="joubun"><p>國務大臣及政府委員ハ何時タリトモ各議院ニ出席シ及發言スルコトヲ得議會ノ議事ニ當リ議場ニ辯明スルハ大臣重任ノ在ル所ニシテ萬衆ニ對シ心胸ヲ開キ正理ヲ公儀ニ訴ヘ嘉謀ヲ時論ニ求メ其ノ底蘊ヲ叩キ遺憾ナカラシム蓋此ノ如クナラサレハ以テ立憲ノ效用ヲ收ムルニ足ラサルナリ但シ出席及發言ノ權ハ政府ノ自由ニ任セ或ハ大臣自ラ討論シ又ハ辯明シ或ハ他ノ委員ヲシテ討論辯明セシメ或ハ時宜ノ許サヽルヲ以テ討論辯明ヲ爲サヽルコトヲ得皆其ノ意ニ隨フナリ</p></div>
+<h2 class="hen" id="ch4"><a class="self-link" href="#ch4">第四章 國務大臣及樞密顧問</a></h2>
+<h3 class="jo" id="art55"><a class="self-link" href="#art55">第五十五條</a></h3>
+<div class="joubun"><p>國務各大臣ハ天皇ヲ輔弼シ其ノ責ニ任ス凡テ法律勅令其ノ他國務ニ關ル詔勅ハ國務大臣ノ副署ヲ要ス國務各大臣ハ入テ内閣ニ參贊シ出テ各部ノ事務ニ當リ大政ノ責ニ任スル者ナリ凡ソ大政ノ施行ハ必内閣及各部ニ由リ其ノ門ヲ二ニセス蓋立憲ノ目的ハ主權ノ使用ヲシテ正當ナル軌道ニ由ラシメムトスルニ在リ即チ公議ノ機關ト宰相ノ輔弼ニ依ルヲ謂フナリ故ニ大臣ノ君ニ於ケルハ務メテ獎順匡救ノ力ヲ致シ若其ノ道ヲ愆ルトキハ君命ヲ滿口シテ以テ其ノ責ヲ送ルヽコトヲ得サルナリ我カ國上古大臣大連輔弼ノ任ニ居ル孝徳天皇ノ語ニ夫君於天地之間而宗萬民者不可可製劑要須翼ト云ヘリ天智天皇ノ時始メテ太政官ヲ置キ而來太政大臣左右大臣ハ政務ヲ統理シ大納言ハ參議シ旨ヲ宣ヘ中務卿ハ詔勅ヲ審署シ太政官ハ中務式部治部民部兵部刑部大藏官内ノ八省ヲ統ヘ官制組備ル其ノ後重臣專ラ太政ヲ關白シ宮禁ノ中賤人ノ小臣亦王命ヲ出納シ院宜内旨或ハ女官ノ文書ヲ以テ大事ヲ下行スルニ至ル而シテ朝綱全ク廢レタリ維新ノ初首メニ攝關及傳奏議奏ヲ廢シ又特ニ宮中ニ令シ内議請謁ノ禁ヲ嚴ニシ尋テ太政官制ヲ復ス明治二年七月左右大臣參議及六省ヲ置ク四年太政大臣ヲ置ク六年十月參議諸省卿ニ兼任ス其ノ後又更革ヲ經十八年十二月ニ至テ太政大臣參議各省卿ノ職制ヲ廢シ更ニ内閣總理大臣及外務内務大藏陸軍海軍司法文部農商務遞信ノ十大臣ヲ以テ内閣ヲ組織シタリ蓋大寶ノ制ニ據ルトキハ太政官ハ諸省ノ上ニ冠首トシ諸省ハ其ノ下ノ分司タリ諸省卿ノ職ハ太政官符ヲ施行スルニ過キス而シテ事ヲ天皇ニ受ケ重責ニ任スル者ニ非ス維新ノ後歷次潤色ヲ經十八年ノ詔命ニ至リ大ニ内閣ノ組織ヲ改メ諸省大臣ヲシテ天皇ニ奉對シ各〻其ノ責ニ當ラシメ統フルニ内閣總理大臣ヲ以テシ一ハ以テ各大臣ノ職權ヲ重クシ擔任スル所ヲ知ラシメ二ハ以テ内閣ノ統一ヲ保チ多岐分裂ノ弊無ラシメタリ歐洲ノ學者大臣ノ責任ヲ論スル者其ノ説一ナラスシテ各國ノ制度亦各〻趣ヲ異ニス或ハ政事ノ責ノ爲ニ特ニ糾彈ノ法ヲ設ケ下院告訴シテ上院之ヲ裁斷スルアリ 或ハ大審院又ハ特ニ設ケタル政事法院ニ委ヌルニ裁斷ノ權ヲ以テスルアリ和漢法主トシテ政事業ヲ繼續ス機關ハ開催者ノ集計畫教事法院主トシテ政事罪ヲ裁斷シ併セテ刑事罪ヲ裁斷ス指別法未タ設ケサルヲ以テ之ヲ實行セン或ハ政事ノ責ヲ以テ刑事ト分離シ裁決ノ結果ハ屢免剝職ニ止マルトスルアリ ス ハ ハ ハ或ハ或ハ謀反獄腫濫費及違犯憲法ノ類ヲ指定シ特ニ大臣ノ責トスルアリ株普補及佛千七百九ノ纎律の結題殘シ溷精ハ歐液證班表ハ曩ニ對スルノ責任トシ神唯形一譯難ニ類似ハバレ狂動肆人類ニ或ハ人民即チ議院ニ對スルノ責任トス禮詞此法ヲ刑法ハ國王ノ命令ハ大犯ノ責任總テ之ヲ論スルニ憲法上ノ疑義ニシテ未タ一定ノ論決ヲ經サルコト未タ大臣責任ノ條ヨリ甚シキハアラサルナリ蓋之ヲ正理ニ酌ミ之ヲ事情ニ考フルニ大臣ハ憲法ニ依リ輔弼ノ重局ニ當リ行政上ノ強大ナル權柄ヲ掌有シ獨奬順賛襄ノ職ニ在ルノミナラス又困救矯正ノ任ニ居ル宜ク躬ヲ以テ責ニ任スヘキナリ若大臣ニシテ責ニ任スルノ義ナカラシメハ行政ノ權力ハ容易ニ法律ノ外ニ論越スルコトヲ得法律ハ徒ニ空文タルニ歸セムトス故ニ大臣ノ責任ハ憲法及法律ノ支柱タル所以ナリ但シ大臣ノ責ハ其ノ執ル所ノ政務ニ屬ス而シテ刑事ノ責ニ非サルナリ故ニ大臣其ノ職ヲ愆ルトキハ其ノ責ヲ裁制スル者專ラ一國ノ主權者ニ屬セサルヘカラス唯之ヲ任スル者能之ヲ聽クヘシ大臣ヲ任シ又之ヲ黜ケ又之ヲ懲罰スル者人主ニ非スシテ孰カ敢テ此ニ預ラム乎憲法既ニ大臣ノ任免ヲ以テ君主ノ大權ニ屬シタリ其ノ大臣責任ノ裁制ヲ以テ之ヲ議院ニ屬セサルハ固ヨリ當然ノ結果トス但シ議員ハ質問ニ由リ公衆ノ前ニ大臣ノ答辯ヲ求ムルコトヲ得ヘク議院ハ君主ニ奏上シテ意見ヲ陳疏スルコトヲ得ヘク而シテ君主ノ材能ヲ器用スルハ憲法上其ノ任意ニ屬スト雖衆心ノ嚮フ所ハ亦其ノ採酌ノ一ニ洩レサルコト知ルヘキトキハ此レ亦間接ニ大臣ノ責ヲ問フ者ト謂フコトヲ得ヘシ故ニ我カ憲法ハ左ノ結論ヲ取ル者ナリ第一大臣ハ其ノ固有職務ナル輔弼ノ責ニ任ス而シテ君主ニ代リ責ニ任スルニ非サルナリ第二大臣ハ君主ニ對シ直接ニ責任ヲ負ヒ又人民ニ對シ間接ニ責任ヲ負フ者ナリ第三大臣ノ資ヲ裁判スル者ハ君主ニシテ人民ニ非サルナリ何トナレハ君主ハ國ノ主權ヲ有スレハナリ第四大臣ノ責任ハ政務上ノ責ニシテ刑事及民事ノ責ト相關渉スルコトナク又相牴觸シ及乘除スルコトナカルヘキナリ而シテ刑事民事ノ訴ハ之ヲ通常裁判所ニ付シ行政職務ノ訴ハ之ヲ行政裁判所ニ付スヘキノ外政務責任ハ君主ニ由リ懲罰ノ處分ニ付セラルヘキナリ内閣總理大臣ハ機務ヲ奏宜シ旨ヲ承ケテ大政ノ方向ヲ指示シ各部統督セサル所ナシ職掌既ニ廣ク責任從テ重カラサルコトヲ得ス各省大臣ニ至テハ其ノ主任ノ事務ニ就キ各別ニ其ノ責ニ任スル者ニシテ連帶ノ責任アルニ非ス蓋總理大臣各省大臣ハ均ク天皇ノ選任スル所ニシテ各相ノ進退ハ一ニ數旨ニ由リ首相旣ニ各相ヲ左右スルコト能ハス各相亦首相ニ繫屬スルコトヲ得サレハナリ彼ノ或國ニ於テ内開ヲ以テ團結ノ一體トナシ大臣ハ各個ノ資格ヲ以テ參政スルニ非サル者トシ連帶責任ノ一點ニ偏傾スルカ如キハ其ノ弊ハ或ハ黨援聯結ノ力遂ニ以テ天皇ノ大權ヲ左右スルニ至ラムトス此レ我カ憲法ノ取ル所ニ非サルナリ若夫レ國ノ内外ノ大事ニ至テハ政府ノ全局ニ關係シ各部ノ專任スル所ニ非ス而シテ謀猷措畫必各大臣ノ協同ニ依リ互相推護スルコトヲ得ス此ノ時ニ當テ各大臣ヲ擧ケテ全體責任ノ位置ヲ取ラサルヘカラサルハ固ヨリ其ノ本分ナリ大臣ノ副署ハ左ノ二樣ノ效果ヲ生ス一ニ法律勅令及其ノ他國事ニ係ル詔軸ハ大臣ノ副署ニ依テ始メテ實施ノ力ヲ得大臣ノ副著ナキ者ハ從テ詔命ノ效ナク外ニ付シテ宜下スルモ所司ノ官吏之ヲ奉行スルコトヲ得サルナリ二ニ大臣ノ副署ハ大臣擔當ノ權ト責任ノ義ヲ表示スル者ナリ蓋國務大臣ハ內外ヲ貫流スル王命ノ溝渠タリ而シテ副署ニ依テ其ノ義ヲ昭明ニスルナリ但シ大臣政事ノ責任ハ獨法律ヲ以テ之ヲ論スヘカラス又道義ノ關ル所タラサルヘカラス法律ノ限界ハ大臣ヲ待ツ爲ノ單一ナル範圍トスルニ足ラサルナリ故ニ朝廷ノ失政ハ署名ノ大臣其ノ責ヲ逃レサルコト固ヨリ淪ナキノミナラス即チ議ニ預カルノ大臣ハ署名セサルモ亦其ノ過ヲ負ハサルコトヲ得サルヘシ若專ラ署名ノ有無ヲ以テ責任ノ在ル所ヲ判セムト欲セハ形式ニ拘リ事情ニ戻ル者タルコトヲ免レス故ニ副署ハ以テ大臣ノ責任ヲ表示スヘキモ副署ニ依テ始メテ責任ヲ生スルニ非サルナリ大寶公式令ニ據ルニ詔書案成リ御畫日訖テ中務卿ニ給フ其ノ御畫日アル者ハ之ヲ中務省ニ留メテ案ト爲シ別ニ一通ヲ寫シ中務卿宣中務大輔率中務少輔行ト署シ太政官ニ送ル太政官ニ於テ太政大臣左右大臣及大納言四人署名シテ覆奏シ外ニ付シテ施行セムト請フ乃御畫可シ其ノ御靈可アル者ハ官ニ留メテ案ト爲シ更ニ謄寫シテ天下ニ布告ス蓋審署ノ式尤愼重ヲ加ヘタリ維新ノ後明治四年七月勅書ニ加名針印スルヲ以テ太政大臣ノ任トス但シ宣布ノ詔多クハ奉勅ノ署名ナキハ草創ノ際未タ一定ニ至ラサリシナリ十四年十一月各省卿其ノ主管ノ事務ニ屬スル法律規則及布達ニ署名スルノ制ヲ定▲十九年一月副署ノ式ヲ定ム公文施行ノ法是ニ至テ蓋大ニ備ハレリ</p></div>
+<h3 class="jo" id="art56"><a class="self-link" href="#art56">第五十六條</a></h3>
+<div class="joubun"><p>樞密顧問ハ樞密院官制ノ定ムル所ニ依リ天皇ノ諮詢ニ應ヘ重要ノ國務ヲ審議ス恭ヲ按スルニ天皇ハ既ニ内閣ニ倚テ以テ行政ノ機務ヲ總持シ又樞密顧問ヲ設ケテ以テ幽謀ノ府トシ聰明ヲ摶補シテ偏聽ナキヲ期セムトス蓋內閣大臣ハ内外ノ局ニ當リ航給技活以テ事機ニ應ス而シテ優裕靜暇思ヲ潛メ慮ヲ凝シ之ヲ今古ニ考ヘ之ヲ學理ニ照シ永圖ヲ籌畵シ制作ニ從事スルニ至テハ別ニ專局ヲ設ケ継迷學識其ノ人ヲ得テ之ニ營任セサルヘカラス此レ乃他ノ人事ト均ク一般ノ常則ニ從ヒ二種ノ要素各〻其ノ業ヲ分ツナリ萓君主ハ其ノ天職ヲ行フニ當リ謀リテ而シテ後之ヲ斷セムトス即チ樞密顧問ノ設實ニ内閣ト倶ニ憲法上至高ノ輔翼タラサルコトヲ得ス若夫レ輒密顧問ニシテ聖聴ヲ啓沃シ偏セス黨セス而シテ又能ク問疑ヲ斟解スルノ補盆ヲ爲スニ至テハ果シテ憲法上ノ機關タルニ負カサルヘク巨大ニシテハ緊急命令又ハ戒嚴令ノ發布ニ當リ小ニシテハ會計上法規ノ外ニ臨時處分ノ必要アルノ類之ヲ語例シテ然後ニ決行スルハ卽チ爲政ノ愼重ヲ加フル所以ニシテ此ノ場合ニ於テハ樞密顧問ハ憲法又ハ法律ノ一ノ屏翰タルノ任ニ居ルヘキナリ樞密顧問ノ職是ノ如キノ重キナリ故ニ凡ソ勅令ニシテ顧問ノ議ヲ經ル者ハ其ノ上論ニ於テ之ヲ宣言スルヲ例式トス但シ樞密顧問ハ至尊ノ諮詢アルヲ待テ始メテ審議スルコトヲ得而シテ其ノ意見ノ採擇ハ亦皆一ニ至尊ノ聖裁ニ由ルノミ樞密顧問ノ職守ハ可否ヲ獻替シ必忠誠ヲ以テシ隱避スル所ナク而シテ審議ノ事ハ細大トナク至尊ノ特別ノ許可ヲ得ルニ非サレハ之ヲ公洩スルコトヲ得ス蓋樞機密勿ノ府ハ人臣外ニ向テ譽ヲ求ムルノ地ニ非サルナリ</p></div>
+<h2 class="hen" id="ch5"><a class="self-link" href="#ch5">第五章 司法</a></h2>
+<h3 class="jo" id="art57"><a class="self-link" href="#art57">第五十七條</a></h3>
+<div class="joubun"><p>司法權ハ天皇ノ名ニ於テ法律ニ依リ裁判所之ヲ行フ裁判所ノ構成ハ法律ヲ以テ之ヲ定ム行政ト司法ト兩權ノ區別ヲ明ニスル爲ニ茲ニ之ヲ約説スヘシ曰行政ハ法律ヲ執行シ又ハ公共ノ安寧秩序ヲ保持シ人民ノ幸福ヲ増進スル爲ニ便宜ノ經理及處分ヲ爲ス者ナリ司法ハ權利ノ侵害ニ對シ法律ノ規準ニ依リ之ヲ判斷スル者ナリ司法ニ在テハ專ラ法律ニ從屬シ便盆ヲ酌量セス行政ニ在テハ社會ノ活動ニ從ヒ便盆ト必要トニ依リ法律ハ其ノ範圍ヲ限劃シテ區域ノ外ニ濫越スルヲ防クニ止マルノミ行政司法ノ兩權其ノ性質ヲ殊ニスルコト此ノ如シ故ニ行政ノ官アリテ司法ノ職ヲ分ツコトナカリセハ各個人民ノ權利ハ社會ノ便盆ノ爲ニ隨時移動スルコトヲ免レスシテ而シテ其ノ流弊ハ遂ニ權勢威力ノ侵犯ヲ被ルニ至ラントス唯然リ故ニ裁判ハ必法律ニ依ル法律ハ裁判ノ單純ノ準繩タリ而シテ又必裁判所ニ由リ之ヲ行フ但シ君主ハ正理ノ源泉ニシテ司法ノ權亦主權ノ發動スル光線ノ一タルニ外ナラス故ニ裁判ハ必天皇ノ名ニ於テ宣告シ以テ至尊ノ大權ヲ代表ス裁判所ノ構成ハ必法律ヲ以テ之ヲ定メ行政ノ組織ト別異スル所アラシム而シテ司法ノ官ハ實ニ法律ノ基址ニ立チ不覊ノ地位ヲ有ツ者タリ我カ中古ノ制刑部省ノ設ハ他ノ各省ト倶ニ太政官ニ隷屬シ而シテ刑部卿ハ鞫獄定刑名決疑議員睦名籍囚禁債員ノ事ヲ掌ル判事ハ刑部卿ニ屬シ案權鞠状、斷定刑名判訴ヲ掌ル是レ民刑二事ヲ併セテ之ヲ一省ニ總ヘクリ武門ノ盛ナルニ至テ大柄一クヒ移リ檢斷ノ權檢非違使ニ歸シ武斷ヲ以テ政ヲ爲シ封建ノ際概ネ其ノ陋習ヲ因襲シ越訴ヲ以テ大禁ト爲ルニ至レリ維新ノ初刑法官ヲ置キ司法ノ權復天皇ノ統攬ニ歸ス四年始メテ東京裁判所ヲ置ク裁判ノ爲ニ專廳ヲ設クルハ此レヲ以テ始トス是歳大藏省ノ聽訟事務ヲ以テ改メテ司法省ニ屬ス五年開市場裁判所ヲ設ク嗣テ司法裁判府縣裁判區裁判ノ各等裁判ヲ置キ始メテ控訴覆審ヲ許ス八年大審院ヲ置キ以テ法憲ノ統一ヲ主持スルノ所トシ司法卿ノ職制ヲ定メテ檢務ヲ統理シ裁判ニ干預セサル者トス是ヨリ後漸次釐革スル所アリ以テ裁判獨立ヲ期スルノ針路ヲ取リタリ是ヲ司法事務沿革ノ概略トス歐洲前世紀ノ末ニ行ハレタル三權分立ノ説ハ既ニ學理上及實際上ニ排斥セラレタリ而シテ司法權ハ行政權ノ一支派トシテ均ク君主ノ統攬スル所ニ屬シ立法權ニ對シテ之ヲ謂フトキハ行政權ハ概括ノ意義ヲ有チ司法ハ行政ノ一部タルニ過キス更ニ行政權中ニ就キ職司ノ分派ヲ論スルトキハ又司法ト行政ト各〻其ノ一部ヲ占ムル者タリ此レ蓋近時國法學者ノ普通ニ是認スル所ニシテ茲ニ詳論スルヲ假ラサル者ナリ但シ君主ハ裁判官ヲ任命シ裁判所ハ君主ノ名義ヲ以テ裁判ヲ宣告スルニ拘ラス君主自ラ裁判ヲ施行セス不覊ノ裁判所ヲシテ專ラ法律ニ依遵シ行政威權ノ外ニ之ヲ施行セシム是ヲ司法權ノ獨立トス此レ乃三權分立ノ説ニ依ルニ非スシテ仍不易ノ大則タルコトヲ失ハス</p></div>
+<h3 class="jo" id="art58"><a class="self-link" href="#art58">第五十八條</a></h3>
+<div class="joubun"><p>裁判官ハ法律ニ定メタル資格ヲ具フル者ヲ以テ之ニ任ス裁判官ハ刑法ノ宣告又ハ懲戒ノ處分ニ由ルノ外其ノ職ヲ免セラルヽコトナシ懲戒ノ條規ハ法律ヲ以テ之ヲ定ム裁判官ハ法律ヲ主持シ人民ノ上ニ衡平ノ柄ヲ執ラムトス故ニ專科ノ學識及經驗ハ裁判官タルノ要件タリ而シテ臣民ノ倚テ以テ其ノ權利財産ヲ託スルハ亦實ニ其ノ法律上正當ノ資格アルヲ頼マスムハアラス故ニ本條第一項ハ法律ヲ以テ其ノ資格ヲ定ムヘキコトヲ保明シタリ裁判ノ公正ヲ保タムト欲セハ裁判官ヲシテ威權ノ干渉ヲ離レ不覊ノ地ニ立チ勢位ノ得失ト政論ノ冷熱ヲ以テ牽束ヲ受ルコトナカラシムヘシ故ニ裁判官ハ刑法又ハ懲戒裁判ノ判決ニ由リ罷免セラルヽヲ除ク外終身其ノ職ニ在ル者トス而シテ裁判官ノ懲戒條規ハ又法律ヲ以テ之ヲ定メ裁判所ノ判決ヲ以テ之ヲ行ヒ行政長官ノ干渉スル所トナラス此レ憲法ニ於テ特ニ裁判官ノ獨立ヲ保明スル所ナリ其ノ他停職非職轉任老退ニ於ケル詳節ハ總テ法律ノ掲クル所タリ</p></div>
+<h3 class="jo" id="art59"><a class="self-link" href="#art59">第五十九條</a></h3>
+<div class="joubun"><p>裁判ノ對審判決ハ之ヲ公開ス但シ安寧秩序又ハ風俗ヲ害スルノ虞アルトキハ法律ニ依リ又ハ裁判所ノ決議ヲ以テ對審ノ公開ヲ停ムルコトヲ得裁判ヲ公開シ公衆ノ前ニ於テ對理口審スルハ人民ノ權利ニ對シ尤效力アルノ保障タリ裁判官ヲシテ自ラ其ノ義務ヲ尊重シ正理公道ノ代表ト爲ラシムルハ蓋亦公開ノ助ニ倚ル者少シトセサルナリ我カ國從來白洲裁判ノ習久シク慣用スル所タリシニ明治八年以來始メテ對審判決ノ公開ヲ許シタルハ實ニ司法上ノ一大進歩タリ刑事ノ審理ニ豫審アリ對審アリ此ニ對審ト謂ヘハ豫審ハ其ノ中ニ在ラサルナリ安寧秩序ヲ害ストハ内亂外患ニ關ル罪及哺聚教唆ノ類人心ヲ煽起刺術スル者ヲ謂フナリ風俗ヲ害ストハ内行ノ事之ヲ公衆ノ視聽ニ暴ストキハ醜辱ヲ流シ風教ヲ傷ル者ヲ謂フナリ安寧秩序又ハ風俗ヲ害スルノ虞アリト謂ヘルハ其ノ果シテ害アルト然ラサルトヲ判定スルハ專ラ裁判所ノ所見ニ任スルナリ法律ニ依ルト謂ヘルハ治罪法訴訟法ノ明文ニ依ルナリ裁判所ノ決議ヲ以テト謂ヘルハ法律ノ明文ナシト雖亦裁判所ノ議ヲ以テ之ヲ決スルコトヲ得ルナリ對審ノ公開ヲ停ムト謂フトキハ判決宣告ハ仍必之ヲ公開スルナリ</p></div>
+<h3 class="jo" id="art60"><a class="self-link" href="#art60">第六十條</a></h3>
+<div class="joubun"><p>特別裁判所ノ管轄ニ屬スヘキモノハ別ニ法律ヲ以テ之ヲ定ム陸海軍人ノ軍法會議ニ屬スルハ卽チ普通ナル司法裁判所ノ外ニ於ケル特別裁判所ノ管轄ニ屬スルモノトス其ノ他商工ノ爲ニ商工裁判所ヲ設クルノ必要アルニ至ラハ亦普通ノ民事裁判ノ外ニ特別ノ管轄ニ屬スルモノトス凡ツ此レ皆法律ヲ以テ之ヲ規定スヘクシテ命令ヲ以テ法律ノ除外例ヲ設クルコトヲ得ス若夫レ法律ノ外ニ於テ非常裁判ヲ設ケ行政ノ勢威ヲ以テ司法權ヲ侵蝕シ人民ノ爲ニ司直ノ府ヲ褫奪スルカ如キハ憲法ノ之ヲ認メサル所ナリ</p></div>
+<h3 class="jo" id="art61"><a class="self-link" href="#art61">第六十一條</a></h3>
+<div class="joubun"><p>行政官廳ノ違法處分ニ由リ權利ヲ傷害セラレタリトスルノ訴訟ニシテ別ニ法律ヲ以テ定メタル行政裁判所ノ裁判ニ屬スヘキモノハ司法裁判所ニ於テ受理スルノ限ニ在ラス行政裁判ハ行政處分ニ對スルノ訟ヲ裁判スルノ謂ナリ蓋法律既ニ臣民ノ權利ニ向テ一定ノ限界ヲ爲シ以テ之ヲ安固ナラシメタリ而シテ政治ノ機關タル者亦之ニ服從セサルコトヲ得ス故ニ行政官廳ニシテ其ノ職務上ノ處置ニ依リ法律ニ違ヒ又ハ職權ヲ超エ臣民ノ權利ヲ傷害スルコトアルニ當リテハ行政裁判所ノ斷定ヲ受クルコトヲ免レス抑〻訴訟ヲ判定スルハ司法裁判所ノ職任トス而シテ別ニ行政裁判所アルハ何ソヤ司法裁判所ハ民法上ノ爭訟ヲ判定スルヲ以テ當然ノ職トシ而シテ憲法及法律ヲ以テ委任サレタル行政官ノ處分ヲ取消スノ權力ヲ有セサルナリ何トナレハ司法權ノ獨立ヲ要スルカ如ク行政權モ亦司法權ニ對シ均ク其ノ獨立ヲ要スレハナリ若行政權ノ處置ニシテ司法權ノ監督ヲ受ケ裁判所ヲシテ行政ノ當否ヲ判定取合スルノ任ニ居ラシメハ即チ行政官ハ正ニ司法官ニ隷屬スル者タルコトヲ免レス而シテ社會ノ便盆ト人民ノ幸福ヲ便宜ニ經理スルノ餘地ヲ失フヘキナリ行政官ノ措置ハ其ノ職務ニ依リ憲法上ノ責任ヲ有シ從テ其ノ措置ニ抗拒スル障害ヲ除去シ及其ノ措置ニ由リ起ル所ノ訴訟ヲ裁定スルノ權ヲ有スヘキハ固ヨリ當然ニシテ若此ノ裁定ノ權ヲ有セサルトキハ行政ノ效力ハ麻痺消燼シテ憲法上ノ責任ヲ盡スニ由ナカルヘキナリ此レ司法裁判ノ外ニ行政裁判ノ設ヲ要スル所以ノ一ナリ行政ノ處分ハ以テ公盆ヲ保持セムトス故ニ時アリテ公盆ノ爲ニ私盆ヲ枉ルコトアルハ亦事宜ノ必要ニ出ル者アリ而シテ行政ノ事宜ハ司法官ノ通常慣熟セサル所ニシテ之ヲ其ノ判決ニ任スルハ危道タルコトヲ免レス故ニ行政ノ訴訟ハ必行政ノ事務ニ密切練達ナルノ人ヲ得テ以テ之ヲ聽理セサルコトヲ得ス此レ司法裁判ノ外ニ行政裁判ノ設ヲ要スル所以ノ二ナリ但シ行政裁判所ノ構成ハ亦必法律ヲ以テ之ヲ定ムルヲ要スルコト司法裁判所ト異ナルコトナキナリ明治五年司法省第四十六號達ハ凡ソ地方官ヲ訟フル者皆裁判所ニ於テセシメタリシニ地方官吏ヲ訟フルノ文書法廷ニ蝟集シ俄ニ司法官行政ヲ牽制スルノ弊端ヲ見ルニ至レリ七年第二十四號ノ途ハ始メテ行政裁判ノ名稱ヲ設ケ地方官ヲ訟フル者ハ司法官ニ於テ具献シテ太政官ニ申票セシム是レ妨ク一時ノ弊ヲ救フニ遲キスシテ而シテ行政裁判所ノ構成ハ仍之ヲ將來ニ期シタリ本條ニ行政官廳ノ違法ノ處分ト謂フトキハ法律又ハ正當ナル職權ニ依ルノ處分ハ之ヲ訴フルコトヲ得サルコト知ルヘキナリ例之ハ公盆ノ爲ニ所有ヲ制限スルノ法律ニ依ル處分ヲ受クル者ハ之ヲ訴フルコトヲ得サルナリ本條ニ又權利ヲ傷害セラレタリトスル者ト謂フトキハ單ニ利益ヲ傷害セラレタリトスル者ハ諸類ノ自由アリテ行政訴訟ノ權ナキコト知ルヘキナリ例之ハ鐵道ヲ開クノ工事アリ行政官ハ定規ノ手續ニ塞由シテ其ノ線路ヲ定メタルニ地方ノ人民他ノ線路ヲ取ルノ利益アリトシテ之ヲ爭フ者アラム此レ其ノ爭ハ單ニ利盆ニ關シテ權利ニ屬セサルカ故ニ之ヲ當該官廳ニ請願スルコトヲ得ルモ之ヲ行政裁判ニ訴フルコトヲ得サルナリ</p></div>
+<h2 class="hen" id="ch6"><a class="self-link" href="#ch6">第六章 會計</a></h2>
+<h3 class="jo" id="art62"><a class="self-link" href="#art62">第六十二條</a></h3>
+<div class="joubun"><p>新ニ租税ヲ課シ及税率ヲ變更スルハ法律ヲ以テ之ヲ定ムヘシ但シ報償ニ屬スル行政上ノ手數料及其ノ他ノ收納金ハ前項ノ限ニ在ラス國債ヲ起シ及豫算ニ定メタルモノヲ除ク外國庫ノ負擔トナルヘキ契約ヲ爲スハ帝國議會ノ協賛ヲ經ヘシ新ニ租税ヲ課スルニ當テ議會ノ協賛ヲ必要トシ之ヲ政府ノ專行ニ任セサルハ立憲政ノ一大美果トシテ直接ニ臣民ノ幸福ヲ保護スル者ナリ蓋既ニ定マレル現稅ノ外ニ新ニ徵額ヲ起シ及稅率ヲ變更スルニ當テ適當ノ程度ヲ決定スルハ專ラ議會ノ公論ニ倚頼セサルコトヲ得ス若此ノ有效ナル憲法上ノ防範ナカリセハ臣民ノ富資ハ其ノ安固ヲ保證スルコト能ハサラムトス第二項報償ニ屬スル行政上ノ手數料及其ノ他ノ收納金トハ各個人ノ要求ニ由リ又ハ各個人ニ利盆ヲ予フル爲ノ政府ノ事業又ハ事務ニ對シ上納セシムル者ニシテ普通ノ義務トシテ賦課スル所ノ租税ト其ノ性質ヲ殊ニスル者ヲ謂フ即鐵道切符料倉庫料學校授業料ノ類ハ行政命令ヲ以テ之ヲ定ムルコトヲ得ヘク必シモ法律ニ依ルヘキノ限ニ在ラサル者トス但シ行政上ノ手數料ト謂フトキハ司法上ノ手數料ト其ノ類ヲ異ニスルコト知ルヘキナリ第三項國債ハ將來ニ國庫ノ負擔義務ヲ約束スル者ナリ故ニ新ニ國債ヲ起スニハ必議會ノ協賛ヲ取ラサルヘカラス豫算ノ效力ハ一ノ會計年度ニ限ル故ニ豫算ノ外ニ渉リ將來ニ國庫ノ負擔タルヘキ補助保證及其ノ他ノ契約ヲ爲スハ皆國債ニ同シク議會ノ協賛ヲ要スルナリ</p></div>
+<h3 class="jo" id="art63"><a class="self-link" href="#art63">第六十三條</a></h3>
+<div class="joubun"><p>現行ノ租税ハ更ニ法律ヲ以テ之ヲ改メサル限ハ舊ニ依リ之ヲ徴收ス前條巳ニ新ニ課スルノ租稅ハ必法律ヲ以テ之ヲ定ムヘキコトヲ保明シクリ而シテ本條ハ現行ノ租税ハ嗣後更ニ新定ノ法律ヲ以テ之ヲ改正スルノ事アラサル限ハ總テ從前ノ舊制及舊税率ニ依遵シテ之ヲ徴收スヘキコトヲ定ム壹國家ハ其ノ必要ノ經費ニ供スル爲ニ一定ノ貸入アルヲ要ス故ニ現行組税ニ屬スル國家ノ歳入ハ憲法ニ由テ移動セサルノミナラス憲法ハ更ニ明文ヲ以テ之ヲ確定シタリ(附記)之ヲ歐洲各國ニ參考スルニ毎一年ニ徴税ノ全部ヲ議會ノ議ニ付スルハ其ノ實多クハ無用ノ形式タルニ拘ラス一般ニ理論ノ貴重スル所トナリ或國ノ憲法ハ租税議決ノ效力ハ一年ニ限リ明文ヲ以テ之ヲ更新スルニ非サレハ一年以外ニ存立セサルコトヲ掲ケタリ今其ノ由テ來ル所ヲ推究スルニ其ノ一ハ歐洲中古各國ノ君家ハ家事ヲ以テ國務ト相混シ家産ヲ以チ國費ニ充テ私邑ヲ封殖シテ其ノ租入ヲ取リ以テ支武ノ需要ニ供給シタリシニ其ノ後常備兵ノ設軍需鉅大ナルト及宮室國圈ノ費トニ因リ内庫缺乏スルニ至リ國中ノ豪族ヲ召集シ其ノ貢獻ヲ徴シ以テ歳費ヲ補給スルノ方法ヲ取リタリ此レ乃歐洲各國ニ於ケル租稅ノ起源ハ實ニ人民ノ貢獻寄附タルニ過キス及整備法第百九條ニ正室財産ノ收入ニシテ足ラサルシ、トキハ租利ヲ權利ヲ徴收シテ國費ヲ支給スヘシト云ヘルハ其ノ一證ナリ故ニ國民ハ王家要クコト無キノ徴求ヲ防制スル爲ニ政府ヲシテ其ノ必要ヲ證明シ以テ國民ノ承諾ヲ經ルヲ要セシメ承諾ナケレハ租税ナシト謂ヘルノ約束ヲ以テ國憲ノ大則トスルニ至レリ此レ歷史上ノ沿革ヨリ來ル者ナリ其ノ二ハ主權在民ノ主義ニ據リ國民ハ全部ノ租税ニ對シ專ラ自由承諾ノ權ヲ有シ國民ニシテ租稅ヲ承諾セサルトキハ政府ハ其ノ存立ヲ失フヲ以テ自然ノ結果トスヘシト謂ヘル極端ノ論ヨリ來ル者ナリ抑〻此ノ歴史上ノ遺傳ト架空ノ理論トハ兩々抱合シテ以テ各國ノ憲法ノ上ニ堪大ナル勢力ヲ有シ牢固ニシテ破ルヘカラサルニ至レルニ拘ラス顧ミテ其ノ實際如何ト問フニ至テハ英國ニ在テハ地租、關税、物産税、印紙税ハ常久ニ之ヲ徴收シ固定資金ニ拂ヒ込ム者計ソ歳入ノ全部七分ノ六ニ居ルダイシ十四千八百八十四年ノ競計ニ據ルニ歳入金部八千七百二十萬五千百八十日達ニシテ其ノ千目百萬碼ハ毎年前後入金額八千七百二十萬五千百八法ニ依リ徴收ハ此レ乃昔日ノ困襲ト及法律ノ效力ニ依リ經常不動ノ歳入トシ毎年ニ議ニ付スルコトヲ委セサル者ナリ普國ハ憲法第百九條ニ依リ現税ハ舊ニ依ルノ條規ヲ實行シタリ彼ノ理論ノ巣窟タル所ノ佛國ニ於テモ其ノ著述者ノ言ニ據ルニ每年租稅ヲ議スルノ原則ハ依違ノ間ニ之ヲ施行スルニ過キス。 七十 日本 第三節 第二每年討議シテ以テ税率ヲ定ムル所ノ直税ノ如キモ亦既ニ其ノ不便ヲ論スル者アリ蓋之ヲ立國ノ原理ニ求ムルニ國家ノ成立ハ水久ニシテ假設ノ物ニ非ス故ニ國家其ノ永久ノ存立ヲ保ツ爲ノ經費ノ大局ハ毎一年ニ移動ヲ爲スヘキニ非ス而シテ何人モ及何等ノ機關モ必要經費ノ源ヲ杜塞シテ以テ國家ノ成立ヲ栽害スルノ權利ナカルヘキナリ彼ノ歐洲各國ノ中古ノ制度ノ如キハ國家常存ノ資源ハ王室ノ財産ニ在テ租税ニ在ラス故ニ人民ハ隨意ニ納税ノ謹否ヲ毎一年ニ限ルコトヲ得ヘキモ近世國家ノ原理漸ク論定ヲ得ルニ至テハ國家ノ經費ハ租税ノ正供ニ資ルヘク而シテ殊ニ國家ノ存立ニ必要ナル經常税ノ徴收ハ專ラ國權ニ據ル者ニシテ人民ノ隨意ナル獻饋ニ因ル者ニ非サルコト既ニ疑ヲ容ルヘキノ餘地アルコトナキナリ我カ國上古ヨリ國家ノ經費ハ之ヲ租税ニ取リ中古三税 庸ノ法ヲ定メ國民ヲシテ均ク納税ノ義務アラシメ正供ノ外ニ徴求ノ路ヲ開クコトヲ假ラス現在各種税法皆常經アリテ毎年移動ノ方法ニ由ル者アルコトナシ今憲法ニ於テ現行税ヲ定メテ經常税トナシ其ノ將來ニ變更アルヲ除ク外總テ舊ニ依リ徴收セシムルハ之ヲ國體ニ原ツケ之ヲ理勢ニ酌ミ紛更ヲ容レサル者ナリ</p></div>
+<h3 class="jo" id="art64"><a class="self-link" href="#art64">第六十四條</a></h3>
+<div class="joubun"><p>國家ノ歳出歳入ハ毎年豫算ヲ以テ帝國議會ノ協賛ヲ經ヘシ豫算ノ款項ニ超過シ又ハ豫算ノ外ニ生シタル支出アルトキハ後日帝國議會ノ承諾ヲ求ムルヲ要ス豫算ハ以テ會計年度ノ爲ニ歳出歳入ヲ豫定シ行政機關ヲシテ其ノ制限ニ準據セシメムトス國家ノ經費ニ豫算ヲ設タルハ財政ヲ整理スルノ初歩發初タリ而シテ豫算ヲ議會ニ付シ其ノ協賛ヲ經及豫算ニ依リ支費スルノ後仍超過支出及豫算外ノ支出ヲ以テ議會ノ監督ニ付シ事後承諾ヲ求ムルニ至テハ之ヲ立憲制ノ成果トスルニ足ル者ナリ豫算ノ事大寶ノ令ニ見ル所ナシ德川氏ノ時各官衙ニ定額アリテ而シテ豫算ナシ維新ノ後仍舊慣ニ因リ國庫又ハ各廳ニ於テ逐次出納スルニ止マル明治六年大藏省ニ於テ始メテ歳入出見込會計表ヲ作リ太政大臣ニ呈出ス我カ政府ノ豫算ヲ以テ公文トスルハ此ヲ以テ始トス七年ニ又同年度ノ豫算會計表ヲ作リ嗣後逐年ニ豫算ノ科目及樣式ヲ改良シ十四年ニ會計法ヲ頒布スルニ至テ稍整頓ニ就キ十七年ニ竣入出豫算條規ヲ施行シ益〻成績ヲ見ルコトヲ得タリ十九年ニ勅令ヲ以テ豫算ヲ發布ス此ヲ式ニ依リ豫算ヲ公布スルノ初トス而シテ豫算ノ制ハ實ニ會計上必要ノ準繩トナルニ至レリ本條ハ更ニ進ミテ豫算ヲ議會ニ付スルノ制ヲ取ラムトス蓋豫算ヲシテ正當明確ナラシメ又其ノ正當明確ナルコトヲ公衆ニ證明シ及行政官衙ヲシテ豫算ヲ遵守スルノ必然ノ義務アラシムルハ之ヲ議會ニ付スルヨリ最モ緊切ナル效力ヲ見ルニ若クハナカルヘシ茲ニ辯明ヲ要スル者ハ各國ニ於テ豫算ヲ以テ一ノ法律ト認メタルコト是ナリ抑豫算ハ單ニ一年ニ向テ行政官ノ遵守スヘキ準繩ヲ定ムル者ナルニ通キス故ニ豫算ハ特別ノ性質ニ因リ議會ノ協贊ヲ要スル者ニシテ本然ノ法律ニ非サルナリ唯然リ故ニ法律ハ以テ豫算ノ上ニ前定ノ效力ヲ有スヘク而シテ豫算ハ以テ法律ヲ變更スルノ作用ヲ爲スコトヲ得ス豫算ヲ以テ法律ヲ變更スルハ豫算議定權ノ適當ナル範圍ヲ超ユル者ナリ彼ノ各國ニ於テ豫算ヲ以テ法律ト稱ヘタルハ或ハ豫算ノ議定ヲ過重シテ議院無限ノ權トスルニ因リ又或ハ凡ソ議院ノ議ヲ經ル者ハ總テ法律ヲ以テ稱呼スルノ謬ヲ蹈ムニ因ルニ過キス抑〻法律ハ必議會ノ議ヲ經ト謂フコトヲ得ヘシ而シテ議會ノ議ヲ經ル者ハ必法律ト名クト謂フコトヲ得サルナリ何トナレハ議會ノ承諾ヲ經ルモ其ノ特別ノ一事ニ限リ普通ニ遵由セシムルノ條則ニ非サル者ハ固ヨリ法律ト其ノ性質ヲ殊ニスレハナリ第二項歲出ノ豫算ノ款項ニ超過スル者アルカ又ハ豫算ノ外ニ生シタル費用ノ支出ヲナシタルトキハ議會ノ事後承諾ヲ求ムルハ政府已ムヲ得サルノ處分ニ於テ仍議會ノ監督ヲ要スルナリ蓋精確ナル豫算ハ過剩アルヨリモ寧不足アルハ往々避クヘカラサルノ事實ナリ各大臣ハ豫算ニ拘束セラレテ既ニ不要トナリタル豫定ノ政費ヲ支出スルノ責ヲ有セサルカ如ク已ムヲ得サルノ必要ニ由リ生シタル豫算超過及豫算ノ外ノ支出ヲ施行スルモ亦憲法ノ禁スル所ニ非ス何トナレハ大臣ノ職務ハ獨豫算ニ關ル國會ノ協賛ニ由リ指定セラルヽノミニ非スシテ寧至高ノ模範タル憲法及法律ニ依リ指定セラルヽ者ナレハナリ故ニ憲法上ノ權利又ハ法律上ノ義務ヲ履踐スル爲ニ必要ナル供需アルニ際シ大臣ハ豫算ニ不足ヲ生シ又ハ豫算中ニ正條ナキノ故ヲ以テ其ノ政務ヲ廢スルコトヲ得ス而シテ已ムヲ得サルノ超過及豫算外ノ支出ハ仍適法ノ事タルコトヲ失ハサルナリ抑適法ノ事ニシテ猶事後承諾ヲ要スルハ何ソ乎行政ノ必要ト立法ノ監督トヲシテ兩々並行互相調和セシムル所以ナリ蓋國家モ亦一個人ト同ク濫費冗出ノ情弊アルハ免レサルノ弱點タルカ故ニ豫算ノ議決款項ヲ細密ニ履行スルハ此ヲ以テ政府ノ重要義務トセサルコトヲ得ス禦學行執行期計九年三月三十期ノ除酷整ノ議決ニ云蠣會議注意スルハ責任及監督ニ滿セサラシムルナリニ而シテ已ムヲ得サルノ超過支出及豫算外支出アルハ異例ノ事トシ若議會ニ於テ濫費違法ノ情弊ヲ發見シ其ノ必要ナルコトヲ認メサルトキハ以テ法律上ノ爭議ヲ提起スルコトヲ得サルモ以テ政事上ノ問題ヲ媒介スルコトヲ得ヘシ但シ財政上政府ノ既ニ支出シタル費額及政府ノ爲ニ生シタル義務ニ付テハ其ノ結果ヲ變動スルコト能ハサルノミ豫算款項ノ超過ハ議會ニ於テ議決セル定額ヲ超エ支出シタルヲ謂フ豫算ノ外ニ生シタル支出トハ豫算ニ設ケタル款項ノ外ニ豫見セサルノ事項ノ爲ニ支出シタルヲ謂フ 酸性酸素 ハ ハ ハ ハ ハ ハ ハ ハ ハニ豫算超過トハ豫算ニ於テ各項ノ流用ヲ許シ此ノ項ノ抄支頭ヲ以テ彼ノ項ノ多波細ヲ推括シ得スベシヲ除ク針等大ナカ條ニ從ヒ既ニ確定シタル會計豫算ノ各款各項又ハ議院ノ承認シタル特團豫算ノ各項ニ違ヘル多額ノ支出ヲ謂フ豫算超過及豫算外ノ支出ノ證明ハ翌年ニ兩議院ニ提出シテ其ノ承諾ヲ受クヘシト此レ其ノ憲法第百四條ノ遺漏ヲ補注シ并ニ豫算超過ヲ推シテ豫算外ノ支出ニ及ホス者ナリ(附記) 豫算超過ノ支出ハ各國ノ會計ニ於テ實際ノ免レサル所ナリ英國千八百八十五年收入支出監督條規トシテ議院ノ議決スル所ニ依ルニ毎年ノ決算ハ最後ニ下院ノ決算委員ニ於テ之ヲ審査シ各科目ニ付議決ノ金額ニ超過シタル支費アルトキハ立法ノ認可ヲ經ヘシト云ヘリ「コツクス氏ニ職實ヲ著シテ云國會ノ議定費額ハ豫算調製ノ當時ニ在リテハ十分餘裕アルガ同シテ米國會ノ測定費但ハ豫算圓權ノ當時ニ在リテハ十分餘裕ヲ補充議決ノ兩種ノ方法ヲ行フ者ナリ普國ハ事後承諾ノ方法ヲ取リ而シテ憲法ニ之ヲ明言セリ伊國ハ半ハ現年度ニ於ケル豫算修正ノ方法ヲ取リ半ハ事後承諾ノ方法ヲ取レリ 「タル經費ニシテ當然ノ理由ニ因リ不足ヲ生シタル者ハ補充費トシ豫見セサル事項又ハ豫算ニ定メタル事務ニシテ既定ノ區域ノ外ニ擴張スル者ハ非常費トシ補充費非常費ハ皆法律ヲ以テ之ヲ許可スヘキ者トシ國會閉會ノ場合ニ於テハ參議院ノ發議ニ由リ内閣會議ヲ經、命令ヲ以テ假ニ之ヲ許可シ而シテ其ノ命令ハ次囘ノ國會ニ於テ承諾ヲ受クヘキ者トシタリ十 八 年 法</p></div>
+<h3 class="jo" id="art65"><a class="self-link" href="#art65">第六十五條</a></h3>
+<div class="joubun"><p>豫算ハ前ニ衆議院ニ提出スヘシ本條豫算議案ヲ以テ衆議院ニ最先ノ特權ヲ付シタリ蓋豫算ヲ議スルハ政府ノ財務ト國民ノ生計トヲ對照シ兩々顧應シ豐儉ノ程度ヲ得セシムルヲ要ス此レ乃衆民ノ公選ニ依リ成立スル代議士ノ職任ニ於テ尤緊切ナリトスル所ナリ</p></div>
+<h3 class="jo" id="art66"><a class="self-link" href="#art66">第六十六條</a></h3>
+<div class="joubun"><p>皇室經費ハ現在ノ定額ニ依リ毎年國庫ヨリ之ヲ支出シ將來増額ヲ要スル場合ヲ除ク外帝國議會ノ協賛ヲ要セス第六十四條ニ豫算ハ帝國議會ノ協賛ヲ經ヘキコトヲ定メタリ而シテ本條ハ皇室經費ノ爲ニ其ノ例外ヲ示ス者ナリ</p></div>
+<div class="commentary"><p>皇室經費ハ天皇ノ尊嚴ヲ保ツ爲ニ缺クヘカラサルノ經費ヲ供給スル國庫最先ノ義務タリ其ノ使用ハ一ニ宮廷ノ事ニ係リ議會ノ問フ所ニ非ス從テ議會ノ承諾及檢査ヲ要スルコトナカルヘキナリ皇室費額ヲ豫算及決算ニ記載スルハ支出總額ノ成分ヲ示ス者ニ過キスシテ之ヲ議會ノ議ニ付スルノ一款トナスニ非サルナリ而シテ其ノ將來ニ増額ヲ要スルニ當リ仍議會ノ協賛ヲ要スルハ其ノ臣民ニ負擔セシムルノ租税ト密切ナル關係ヲ有スルヲ以テ衆議ニ詢ハムトスルナリ</p></div>
+<h3 class="jo" id="art67"><a class="self-link" href="#art67">第六十七條</a></h3>
+<div class="joubun"><p>憲法上ノ大權ニ基ツケル既定ノ歳出及法律ノ結果ニ由リ又ハ法律上政府ノ義務ニ屬スル歲出ハ政府ノ同意ナクシテ帝國議會之ヲ廢除シ又ハ削減スルコトヲ得ス憲法上ノ大權ニ基ツケル既定ノ歳出トハ第一章ニ揭ケタル天皇ノ大權ニ依レル支出、即チ行政各部ノ官制陸海軍ノ編制ニ要スル費用文武官ノ俸給并ニ外國條約ニ依レル費用ニシテ憲法施行ノ前ト施行ノ後トヲ論セス豫算提議ノ前ニ既ニ定マレル經常費額ヲ成ス者ヲ謂フ法律ノ結果ニ由ル歳出トハ議院ノ費用議員ノ歳費手當諸般ノ恩給年金法律ニ依レル官制ノ費用及俸給ノ類ヲ謂フ法律上政府ノ義務ニ屬スル歳出トハ國債ノ利子及償還會社營業ノ補助又ハ保證政府ノ民法上ノ義務又ハ諸般ノ賠償ノ類ヲ謂フ蓋憲法ト法律トハ行政及財務ノ上ニ至高ノ標準ヲ示ス者ニシテ國家ハ立國ノ目的ヲ達スル爲ニ憲法ト法律トヲ以テ最高ノ主位ヲ占領セシメ而シテ行政ト財務トヲ以テ此レニ從屬セシメサルヘカラサルナリ故ニ豫算ヲ議スル者ハ憲法ト法律トニ準據シ憲法上及法律上國家ノ制置ニ必要ナル資料ヲ給備スルヲ以テ當然ノ原則トセサルヘカラス其ノ他前定ノ契約及民法上又ハ諸般ノ義務ハ均ク法律上ノ必要ヲ生スル者トス若議會ニシテ豫算ヲ議スルニ當リ憲法上ノ大權ニ準據セル既定ノ額又ハ法律ノ結果ニ由リ及法律上ノ義務ヲ履行スルニ必要ナル歳出ヲ廢除削減スルコトアラハ此レ即チ國家ノ成立ヲ破壞シ憲法ノ原則ニ背ク者トセサルコトヲ得ス但シ既定ノ歳出ト謂フトキハ其ノ憲法上ノ大權ニ基ツクニ拘ラス新置及增置ノ竣出ハ仍議會ニ於テ論議ノ自由ヲ有スルナリ而シテ政府ノ同意ヲ經ルトキハ憲法上既定歲出及法律ノ結果ニ由リ又ハ義務ノ必要ニ由ル者ト雖法律及時宜ノ許ス限ハ仍省略修正スルコトヲ得ヘキナリ(附記)「ボーリウ」氏ノ著論ニ據ルニ瑞典ニ於テハ國會ニシテ歳出ヲ削減シ現在建設ノ事業ヲ繼續スルニ足ラサル場合ニ於テハ國王ノ認許ヲ得スシテ之ヲ決議スルコト能ハス八十九條テ之ヲ決議スルコト能ハス其ノ他、獨逸各邦ニ於テ議會ハ憲法上ノ義務又ハ法律及民法上ノ義務ニ生スル必要ナル歳出ヲ拒ムコトヲ得サルノ主義ヲ掲クル者ハ「ブラウンシユワイヒ憲法第百七十三條「オルデンブルヒ」憲法第百八十七條「ハノーフル」憲法第九十一條「サクソン、マイニンゲン憲法第八十一條是ナリ又一クヒ豫算ヲ以テ定メタルノ經費ハ其ノ事項及目的ノ消滅セサル間ハ國會ノ承諾ナクシテ之ヲ増加スルコトヲ得ス政府ノ承諾ナクシテ之ヲ削減スルコトヲ得サルコトヲ定ムル者ハ「アルデンブルヒ盜法第二百三條是ナリ、此レ皆各國ノ舊慣又ハ成文ニ存スル者ニシテ而シテ近世國家原理ノ發達ト符合スル者ナリ茲ニ附記シテ以テ參考ニ備フ</p></div>
+<h3 class="jo" id="art68"><a class="self-link" href="#art68">第六十八條</a></h3>
+<div class="joubun"><p>特別ノ須要ニ因リ政府ハ豫メ年限ヲ定メ繼續費トシテ帝國議會ノ協賛ヲ求ムルコトヲ得歲費ハ每年ニ議定スルヲ以テ常トス至國家ノ務ハ活動變遷シテ一定ノ間尺ヲ以テ概律スヘカラス故ニ國家ノ費用ハ亦前年ヲ以テ後年ニ推行スヘカラス但シ本條特別ノ須要アル場合ニ對シ例外ヲ設クルハ臨海軍費ノ一部又ハ工事製造ノ類數年ヲ期シ其ノ成功ヲ見ルヘキ者議會ノ協賛ヲ以テ數年ニ亙ルノ年限ヲ定ムルコトヲ得ルナリ</p></div>
+<h3 class="jo" id="art69"><a class="self-link" href="#art69">第六十九條</a></h3>
+<div class="joubun"><p>避クヘカラサル豫算ノ不足ヲ補フ爲ニ又ハ豫算ノ外ニ生シタル必要ノ費用ニ充ツル爲ニ豫備費ヲ設クヘシ本條ハ豫備費ノ設ヲ以テ豫算ノ不足及豫算ノ外ノ必要ナル費用ヲ補給スルコトヲ定ム蓋第六十四條ハ豫算超過及豫算外支出ニ付議會ノ事後承諾ヲ求ムヘキコトヲ掲ケタリ而シテ其ノ超過及額外支出ハ何等ノ財源ニ資リテ以テ之ヲ供給スル乎ヲ指示セス此レ本條ニ豫備費ノ設ヲ定ムルヲ必要トスル所以ナリ(附記)各國豫備費ノ設ヲ參考スルニ荷蘭ニ於テハ各省ニ豫備費五萬「フロリン」ヲ置キ又政府一般ノ爲ニ五萬「フロリン」ヲ置キ以テ議決科目ノ不足ヲ補給スルニ備フ伊國千八百六十九年ノ會計法ハ豫算ノ中ニ豫備費ヲ設クルコトヲ掲ケ豫算定額ノ避クヘカラサル不足ニ應スル爲ニ二項ノ定額ヲ許可ス其ノ一ハ義務ト及命令ニ依リ生スル經費ヲ支辨スヘキ豫備費トシ四百萬「フ其ノ二ハ別ニ一項ヲ爲スヘキ豫知スヘカラサル經費ノ爲ノ豫備ランク」費トス四百萬「フ費トス 其ノ第一豫傭ノ使用ハ會計檢査院ノ登記ヲ經テ大藏長官之ヲ施行シ第二豫備ノ使用ハ大藏長官ノ發議ニ由リ內閣會議ヲ經テ勅令ヲ以テ之ヲ定ム普國ハ各省ニ豫備費ヲ置キ更ニ大藏省ニ非常豫備費ヲ置ク此レ皆豫算ノ不足ト豫算ノ外ノ必要ヲ補充スル爲ニ豫メ設クル者ナリ瑞典ハ豫見セサル場合ニ借フル爲ニ國債局ノ收入ヨリ二種ノ豫備金ヲ設ケ其ノ第一種ハ國家ノ防禦又ハ重要緊急ナル事件ニ備ヘ第二種ハ戰時ノ用ニ備フ此レ亦別ニ一法タリ</p></div>
+<h3 class="jo" id="art70"><a class="self-link" href="#art70">第七十條</a></h3>
+<div class="joubun"><p>公共ノ安全ヲ保持スル爲緊急ノ需用アル場合ニ於テ内外ノ情形ニ因リ政府ハ帝國議會ヲ召集スルコト能ハサルトキハ勅令ニ依リ財政上必要ノ處分ヲ爲スコトヲ得前項ノ場合ニ於テハ次ノ會期ニ於テ帝國議會ニ提出シ其ノ承諾ヲ求ムルヲ要ス本條ノ解釋ハ既ニ第八條ニ具ハル但シ第八條ト異ナル所ノ者ハ第八條ハ憲法ニ於テ議會開會セサルトキハ臨時會ノ召集ヲ要セス本條ハ議會開會セサルトキハ臨時會ノ召集ヲ要ス而シテ内外ノ情形ニ由リ議會ヲ召集シ能ハサルトキニ限リ始メテ議會ノ叶同ヲ待タスシテ必要ノ處分ヲ施スコトヲ得蓋本條ハ專ラ財政ニ關ルヲ以テ更ニ一層ノ愼重ヲ加フルナリ所謂財政上必要ノ處分トハ立法議會ノ恊賛ヲ經ヘキ者ニシテ而シテ臨時緊急ノ場合ノ爲ニ協賛ヲ經スシテ處分スルヲ謂フ臨時財政ノ處分ニシテ將來ニ國庫ノ爲ニ義務ヲ生スル者若議會ノ事後承諾ヲ得サルトキハ何等ノ結果ヲ生スヘキ乎蓋議會ノ承諾ヲ拒ムハ將來ニ繼行スルノ效力ヲ拒ム者ニシテ其ノ既ニ行ヘル過去ノ處分ヲ追廢スルニ非ス第八條ノ説明評ニ之ヲ詳ニス故ニ勅令ニ依リ既ニ生シタルノ政府ノ義務ハ議會之ヲ廢スルコト能ハス抑事若此ニ至ラハ國家不祥ノ結果トシテ視サルコトヲ得ス此レ本條ノ國家ノ成立ヲ保護スル爲ニ至テ已ムヲ得サルノ處分ヲ認メ又議會ノ權ヲ存崇シテ尤愼重ノ意ヲ致ス所以ナリ</p></div>
+<h3 class="jo" id="art71"><a class="self-link" href="#art71">第七十一條</a></h3>
+<div class="joubun"><p>帝國議會ニ於テ豫算ヲ議定セス又ハ豫算成立ニ至ラサルトキハ政府ハ前年度ノ豫算ヲ施行スヘシ議會自ラ議定ノ結局ヲ爲サスシテ閉會ニ至ルトキハ之ヲ豫算ヲ議定セストス兩議院ノ一ニ於テ豫算ヲ廢棄シタルトキハ之ヲ豫算成立ニ至ラストス其ノ他議會未タ豫算ヲ議決セスシテ停會又ハ解散ヲ命セラレタルトキハ其ノ再ヒ開會スルノ日ニ至ルマテ亦豫算成立セサルノ場合トス議會ニ於テ豫算ヲ議定セス又ハ豫算成立ニ至ラサルトキハ其ノ結果ハ大ニシテハ國家ノ存立ヲ廢絕シ小ニシテハ行政ノ機關ヲ麻痺セシムルニ至ル千八百七十七年北米合衆國ニ於テ國會陸軍ノ豫算ヲ議定スルコトヲ遷延シタルカ爲ニ三月ノ間兵士ノ給養ヲ缺クコトヲ致セリ同年漢斯特剌利ニ於テ「メルボルン」ノ議院ハ豫算ノ全部ヲ廢棄シタリ是レ民主主義ノ上ニ結架セル邦國ノ情態ニシテ我カ國體ノ固ヨリ取ルヘキ所ニ非サルナリ乃或國ニ於テ此ノ場合ヲ以テ一ニ勞力ノ判決スル所ト爲シ議會ニ拘ラスシテ政府ノ專意ニ任シ財務ヲ施行セルカ如キモ(普國千八百六十二年ヨリ六十六年ニ至ル)亦非常ノ變例ニシテ立憲ノ當然ニ非サルナリ我カ憲法ハ國體ニ基ツキ理勢ニ酌ミ此ノ變状ニ當リ前年ノ豫算ヲ施行スルヲ以テ終局ノ處分トスルコトヲ定メタリ</p></div>
+<h3 class="jo" id="art72"><a class="self-link" href="#art72">第七十二條</a></h3>
+<div class="joubun"><p>國家ノ歳出歳入ノ決算ハ會計檢査院之ヲ檢査確定シ政府ハ其ノ檢査報告ト倶ニ之ヲ帝國議會ニ提出スヘシ會計檢査院ノ組織及職權ハ法律ヲ以テ之ヲ定ム豫算ハ會計ノ初トシ決算ハ會計ノ終トス議會ノ會計ヲ監督スルニ其ノ方法二ツアリ即チ一ハ期前ノ監督ニシテ二ハ期後ノ監督トス期前ノ監督トハ次年度ノ豫算ヲ承諾スルヲ謂ヒ期後ノ監督トハ經過セル年度ノ決算ヲ審査スルヲ謂フ此ノ期後ノ監督ヲ取ル爲ニ政府ハ會計檢査院ノ檢査ヲ經タル決算ヲ以テ該院ノ報告ヲ併セテ議會ニ提出スルノ義務アリ檢査院ノ職掌ハ一ニ各部ノ出納官ノ證明ヲ檢査シ其ノ責任ヲ解除スルニ在リ二ニ支拂命令官ノ處分ヲ監督シテ其ノ豫算超過豫算外ノ支出及豫算又ハ法律勅令ニ違反シタル事件ヲ檢査スルニ在リ三ニ國庫ノ總決算又各省決算報告ヲ檢査シ各出納官ノ報呈シタル各部會計ノ積數ト對照シ以テ之ヲ確定スルニ在リ會計檢査院ノ行政上ノ檢査ハ議會ノ立法上ノ檢査ノ爲ニ準備ノ地ヲ爲ス者ナリ故ニ議會ハ檢査院ノ報告ト倶ニ政府ノ決算書ヲ受ケテ其ノ正當ナルヲ承諾シ之ヲ決定スヘシ會計檢査院ハ政府ノ會計ヲ監査スル爲ニ獨立ノ資格ヲ有セサルヘカラス故ニ其ノ組織及職權ハ裁判官ト同ク法律ヲ以テ之ヲ定メ行政命令ノ區域ノ外ニ在ル者トス但シ其ノ檢査上ノ規程ノ如キハ仍勅令ノ定ムル所タルヘキノミ</p></div>
+<h2 class="hen" id="ch7"><a class="self-link" href="#ch7">第七章 補則</a></h2>
+<h3 class="jo" id="art73"><a class="self-link" href="#art73">第七十三條</a></h3>
+<div class="joubun"><p>將來此ノ憲法ノ條項ヲ改正スルノ必要アルトキハ勅命ヲ以テ議案ヲ帝國議會ノ議ニ付スヘシ此ノ場合ニ於テ兩議院ハ各其ノ總員三分ノ二以上出席スルニ非サレハ議事ヲ開クコトヲ得ス出席議員三分ノ二以上ノ多數ヲ得ルニ非サレハ改正ノ議決ヲ爲スコトヲ得ス恭ヲ按スルニ憲法ハ我カ天皇ノ親ク之ヲ制定シ上祖宗ニ繼キ下後世ニ遺シ全國ノ臣民及臣民ノ子孫タル者ヲシテ其ノ條則ニ遵由セシメ以テ不廢ノ大典トナス所ナリ故ニ憲法ハ紛更ヲ容サス但シ法ハ社會ノ必要ニ調熟シテ其ノ效用ヲ爲ス者ナリ故ニ國體ノ大綱ハ萬世ニ亙リ永遠恒久ニシテ移動スヘカラスト雖政制ノ節目ハ世運ト倶ニ事宜ヲ酌量シテ之ヲ變通スルハ亦已ムヘカラサルノ必要タラスムハアラス本條ハ將來ニ向テ此ノ憲法ノ條項ヲ改定スルノ事アルヲ禁セス而シテ憲法ヲ改定スル爲ニ更ニ特別ノ要件ヲ定メタリ通常ノ法律案ハ政府ヨリ之ヲ議會ニ付シ或ハ議會之ヲ提出ス而シテ憲法改正ノ議案ハ必勅命ヲ以テ之ヲ下付スルハ何ソヤ憲法ハ天皇ノ獨リ親ラ定ムル所タリ故ニ改正ノ權ハ亦天皇ニ屬スヘケレハナリ改正ノ權既ニ天皇ニ屬ス而シテ仍之ヲ議會ニ付スルハ何ソヤ一タヒ定マルノ大典ハ臣民ト倶ニ之ヲ守リ王筮ノ專意ヲ以テ之ヲ變更スルコトヲ欲セサルナリ議院ニ於テ之ヲ議決スルニ通常過半數ノ議事法ニ依ラシメスシテ必三分二ノ出席ト及多數ヲ望ムハ何ソヤ將來ニ向テ憲法ニ對スル愼守ノ方嚮ヲ扶持スルナリ本條ノ明文ニ據ルニ憲法ノ改正條項ヲ議會ノ議ニ付セラルヽニ當リ議會ハ議案ノ外ノ條項ニ連及シテ議決スルコトヲ得サルヘキナリ又議會ハ直接又ハ間接ニ憲法ノ主義ヲ變更スルノ法律ヲ議決シテ以テ本條ノ制限ヲ逃ルルコトヲ得サルヘキナリ</p></div>
+<h3 class="jo" id="art74"><a class="self-link" href="#art74">第七十四條</a></h3>
+<div class="joubun"><p>皇室典範ノ改正ハ帝國議會ノ議ヲ經ルヲ要セス皇室典範ヲ以テ此ノ憲法ノ條規ヲ變更スルコトヲ得ス</p></div>
+<div class="commentary"><p>憲法ノ改正ハ既ニ議會ノ議ヲ經ルヲ要ス而シテ皇室典範ハ獨其ノ議ヲ經ルヲ要セサルハ何ソヤ蒼皇室典範ハ皇室自ラ皇室ノ事ヲ制定ス而シテ君民相關カルノ權義ニ渉ル者ニ非サレハナリ若夫改正ノ必要アルニ當テ之ヲ皇族會議及樞密顧問ニ付スルノ條則ノ如キハ亦典範ニ於テ之ヲ制定スヘキ者ニシテ而シテ憲法ニ之ヲ示明スルノ要用ナシ故ニ此ノ條ニ之ヲ併セ掲ケサルナリ但シ皇室典範ノ改正ニ由リ直接又ハ間接ニ此ノ憲法ヲ變更スルノ事アラシメハ憲法ノ基址ハ容易ニ移動スルノ不幸ナキコトヲ保タサラムトス故ニ本條特ニ憲法ノ爲ニ保障ヲ存スルノ至意ヲ示シタリ</p></div>
+<h3 class="jo" id="art75"><a class="self-link" href="#art75">第七十五條</a></h3>
+<div class="joubun"><p>憲法及皇室典範ハ攝政ヲ置クノ間之ヲ變更スルコトヲ得ス</p></div>
+<div class="commentary"><p>攝政ヲ置クハ國ノ變局ニシテ其ノ常ニ非サルナリ故ニ攝政ハ統治權ヲ行フコト天皇ニ異ナラスト雖憲法及皇室典範ノ何等ノ變更モ之ヲ攝政ノ斷定ニ任セサルハ國家及皇室ニ於ケル根本條則ノ至重ナルコト固ヨリ假攝ノ位置ノ上ニ在リ而シテ天皇ノ外何人モ改正ノ大事ヲ行フコト能ハサルナリ</p></div>
+<h3 class="jo" id="art76"><a class="self-link" href="#art76">第七十六條</a></h3>
+<div class="joubun"><p>法律規則命令又ハ何等ノ名稱ヲ用ヰタルニ拘ラス此ノ憲法ニ矛盾セサル現行ノ法令ハ總テ遵由ノ效力ヲ有ス歳出上政府ノ義務ニ係ル現在ノ契約又ハ命令ハ總テ第六十七條ノ例ニ依ル維新ノ後法令ノ頒布ハ御沙汰書又ハ布告及布達ト稱フ明治元年八月十三日法令頒布ノ書式ヲ定メ以後被仰出御沙汰等ノ文字ヲ用ヰルハ行政官ニ限リ其ノ他ノ五官神祇官、會計官、軍官、外國官、刑法官。務及府縣ハ申達ノ字ヲ以テス五官府縣ニ於テ重立タル布告ハ行政官ニ差出シ議政官決議ノ上行政官ヨリ達セシム五年正月八日達ニ自今布告ニ番號ヲ附シ各省ノ布達亦同樣タラシム此レヨリ始メテ布告布達ノ名稱ニ區別ヲナシタリ六年七月十八日達ニ布令中掲示スヘキ者ト然ラサル者トヲ區別シ布令書ノ結文ノ例ヲ定メ各廳及官員ニ達スルハ此旨相達又ハ此旨可相心得トシ全國一般ニ布告スルハ此旨布告トシ華族或ハ社寺ニ達スルハ此旨華士族ヘ布告又ハ此旨社寺へ布告トス其ノ各廳及官員ニ達スル者ハ揭示ヲ要セス此レ人民ニ對スル布告ト官廳訓令トヲ區別シタルノ始ナリ十四年十二月布告布達式ヲ定メ布告ハ太政大臣奉勅旨布告トシ布達ハ太政大臣ヨリ布達シ竝ニ主任ノ卿之ニ連署ス同月三日布告ニ法律規則ハ布告ヲ以テ發行ス從前諸省限布達セル條規ノ類ハ自今總テ太政官ヨリ布達ス此レ諸省布達ノ制ヲ廢シ及始メテ諸省卵ノ連署ノ制ヲ定メタルナリ十九年二月二十六日ノ勅令ニ法律勅令ハ上詮ヲ以テ公布シ親署ノ後御璽ヲ針シ内閣總理大臣及主任ノ大臣之ニ副署ス閣令ハ内閣總理大臣之ヲ發シ省令ハ各省大臣之ヲ發ス以上之ヲ總フルニ維新以來ノ官令ニ御沙汰書ト曰ヒ布告ト曰ヒ布達ト曰ヘルハ其ノ文式ニ依テ稱呼シタルナリ其ノ法ト曰ヒ戸籍ノ類法律ト曰ヒ令ト曰ヒ徵兵令戒嚴令ノ類條例ト曰ヒ峠新聞條例律例ト曰ヒノ類改定律可負阿ノ願規則ト曰フ則ノ類貝ノ 菊硫酸規則ト曰フ ハ總テ皆人民ニ公布シ遵由ノ效力ヲ有セシムル伊ノ類ノ條則ヲ謂フノ義ニシテ其ノ間ニ輕重スル所アルニ非サルナリ而シテ十九年二月二十六日ノ勅令ニ至テ始メテ法律勅令ノ名稱ヲ正シタリシモ何ヲカ法律トシ何ヲカ勅令トスルニ至テハ亦未タ一定ノ限界アルニ非サルナリ八年ノ元老院ノ章程ニ元老院ハ新法ノ設立舊法ノ改定ヲ議定スト謂ヒ十九年二月二十六日ノ勅令ニ法律ノ元老院ノ議ヲ經ルヲ要スル者ハ舊ニ依ルト謂フ然ルニ八年以後布告ノ中何ヲカ指シテ法律トスヘキヤ未タ明白ナラス從テ元老院立法ノ權限亦明劃ナラス 十九年以後勅元老院ノ上奏ニ依ル令ニシテ院議ニ付スル者亦少シトセス要スルニ憲法發布ノ前ニ當テハ法律ト勅令トハ其ノ名稱ヲ殊ニシテ其ノ事實ヲ同クスル者タルニ過キス而シテ其ノ名稱ニ依テ以テ效力ノ輕重ヲ區別スヘカラサルハ十九年以前布告ト布達ト時アリテ區別アリ時アリテ區別ナキニ異ナルコトナキナリ故ニ憲法ノ指定スル所ニ從ヒ法律ト命令トノ區別ヲ明ニセントスルハ必立法議會開設ノ時期ニ於テ其ノ始ヲ履ムコトヲ得ヘク而シテ立法議會開設ノ前ニ當テハ法律規則命令其ノ他何等ノ名稱ヲ用ヰ何等ノ文式ヲ用ヰタルモ此ヲ以テ其ノ效力ノ輕重ヲ判斷スルノ繩尺トスルコトヲ得ス前日ノ公布ハ何等ノ名稱ヲ用ヰタルモ總テ遵由ノ效力アリトス但シ此ノ憲法ニ矛盾スル者ハ憲法ノ施行ノ日ヨリ其ノ法令ノ全文或ハ或ル條章ニ限リ效力ヲ失フヘキナリ前日ノ公令今日ニ現行シテ將來ニ遵由ノ力アル者ノ中ニ就テ更ニ憲法ノ定ムル所ニ依ルトキハ必其ノ法律タルコトヲ望ム者アリ第二十條兵役俸一條租稅ノ類今過去ニ泝リテ一々之ニ法律ノ公式ヲ予ヘ以テ憲法ノ文義ニ副ハシメムトスルハ形式ニ拘リ徒ニ多事ヲ爲スニ過キス故ニ本條ハ現行ノ法令條規ヲシテ總テ皆遵由ノ力アラシムルノミナラス其ノ中憲法ニ於テ法律ヲ以テ之ヲ望ム者ハ即チ法律トシテ適由ノ力アラシムルコトヲ示ス者ナリ而シテ法律トシテ遵由ノ力アラシムル者ニシテ若將來ニ於テ改正ヲ要スルトキハ其ノ前日ニ勅令布達ヲ以テ公布シタルニ拘ラス總テ皆法律ヲ以テ擧行スルヲ要スルコト知ルヘキナリ</p></div>
+<h2 class="hen" id="tenpen-jouyu"><a class="self-link" href="#tenpen-jouyu">皇室典範 上諭</a></h2>
+<div class="section-preamble"><div class="joubun">
+<p>皇室典範天佑ヲ享有シタル我カ日本帝國ノ寶祚ハ萬世一系壓代繼承シ以テ朕カ躬ニ至ル惟フニ祖宗肇國ノ初大憲一タヒ定マリ昭ナルコト日星ノ如シ今ノ時ニ當リ宜ク遺訓ヲ明徴ニシ皇家ノ威典ヲ制立シ以テ丕基ヲ永遠ニ鞏固ニスヘシ玆ニ樞密顧問ノ諮詢ヲ經皇室典範ヲ裁定シ朕カ後嗣及子孫ヲシテ遵守スル所アラシム</p>
+</div></div>
+<h2 class="hen" id="tenpen-gige"><a class="self-link" href="#tenpen-gige">皇室典範義解</a></h2>
+<div class="section-intro"><p>恭テ按スルニ皇室ノ典範アルハ益〻其ノ基礎ヲ鞏固ニシ尊嚴ヲ無窮ニ維持スルニ於テ缺クヘカラサルノ憲章ナリ祖宗國ヲ肇メ一系相承ケ天壤ト與ニ無窮ニ垂ル此レ蓋言説ヲ假ラスシテ既ニ一定ノ模範アリ以テ不易ノ規準タルニ因ルニ非サルハナシ今人文漸ク進ミ適由ノ路必憲章ニ依ル而シテ皇室典範ノ成ルハ實ニ祖宗ノ造意ヲ明徴ニシテ子孫ノ爲ニ永遠ノ銘典ヲ貽ス所以ナリ皇室典範ハ皇室自ラ其ノ家法ヲ條定スル者ナリ故ニ公式ニ依リ之ヲ臣民ニ公布スル者ニ非ス而シテ將來已ムヲ得サルノ必要ニ由リ其ノ條章ヲ更定スルコトアルモ亦帝國議會ノ協賛ヲ經ルヲ要セサルナリ蓋皇室ノ家法ハ祖宗ニ承ケ子孫ニ傳フ既ニ君主ノ任意ニ制作スル所ニ非ス又臣民ノ敢テ干渉スル所ニ非サルナリ</p></div>
+<h3 class="jo" id="tp-ch1" style="font-size:22px; margin:34px 0 10px; border-bottom:1px solid #b0a060; padding-bottom:4px;"><a class="self-link" href="#tp-ch1">第一章 皇位繼承</a></h3>
+<h3 class="jo" id="tp-art1"><a class="self-link" href="#tp-art1">皇室典範 第一條</a></h3>
+<div class="joubun"><p>大日本國皇位ハ祖宗ノ皇統ニシテ男系ノ男子之ヲ繼承ス</p></div>
+<div class="commentary"><p>皇位ノ繼承ハ祖宗以來既ニ明訓アリ和氣清麻呂還奏ノ言ニ曰、我國家開闢以來、君臣分定矣。以臣爲君未之有也。天之日嗣、必立皇績ト皇統ハ男系ニ限リ女系ノ所出ニ及ハサルハ皇家ノ成法ナリ上代獨女系ヲ取ラサルノミナラス神武天皇ヨリ崇峻天皇ニ至ルマテ三十二世曾テ女帝ヲ立ツルノ例アラス故ニ神功皇后ハ國ニ當ルコト六十九年終ニ攝位ヲ以テ終ヘタマヘリ飯豐青尊政ヲ攝シ清寧天皇ノ後ヲ承ケシモ亦未タ皇位ニ即キタマハス淸寧天皇崩シテ皇子ナシ亦近親ノ皇族男ナシ而シテ皇妹春日大娘アリ然ルニ皇妹位ニ即カスシテ群臣從祖履中天皇ノ孫顯宗天皇ヲ推奉ス是レ以テ上代既ニ不文ノ常典アリテ易フヘカラサルノ家法ヲ成シタルコトヲ見ルヘシ其ノ後推古天皇以來皇后皇女師位ノ例ナキニ非サルモ當時ノ事情ヲ推原スルニ一時國ニ當リ幼帝ノ歳長スルヲ待チテ位ヲ傳ヘタマハムトスルノ權宜ニ外ナラス之ヲ要スルニ祖宗ノ常憲ニ非ス而シテ終ニ後世ノ模範ト爲スヘカラサルナリ本條皇位ノ繼承ヲ以テ男系ノ男子ニ限リ而シテ又第二十一條ニ於テ皇后皇女ノ攝政ヲ掲クル者ハ至皆先王ノ遺意ヲ紹述スル者ニシテ苟モ新例ヲ創ムルニ非サルナリ祖宗ノ皇統トハ一系ノ正統ヲ承クル皇胤ヲ謂フ而シテ和氣淸麻呂ノ所謂整緒ナル者ト其ノ解義ヲ同クスル者ナリ皇統ニシテ皇位ヲ繼クハ必一系ニ限ル而シテ二三ニ分割スヘカラス天智天皇ノ言ニ曰天無雙日國無二王ト故ニ後深草天皇以來數世ノ間兩統互ニ代リ終ニ南北二朝アルヲ致シヽハ皇家ノ變運ニシテ祖宗典憲ノ存スル所ニ非サルナリ以上本條ノ意義ヲ約說スルニ祖宗以來皇祚繼承ノ大義炳焉トシテ日。川ノ如ク萬世ニ亙リテ易フヘカラサル者蓋左ノ三大則トス第一皇祚ヲ踐ムハ皇胤ニ限ル第二皇祚ヲ踐ムハ男系ニ限ル第三皇祚ハ一系ニシテ分裂スヘカラス</p></div>
+<h3 class="jo" id="tp-art2"><a class="self-link" href="#tp-art2">皇室典範 第二條</a></h3>
+<div class="joubun"><p>皇位ハ皇長子ニ傳フ</p></div>
+<h3 class="jo" id="tp-art3"><a class="self-link" href="#tp-art3">皇室典範 第三條</a></h3>
+<div class="joubun"><p>皇長子在ラサルトキハ皇長孫ニ傳フ皇長子及其ノ子孫皆在ラサルトキハ皇次子及其ノ子孫ニ傳フ以下皆之ニ例ス</p></div>
+<div class="commentary"><p>菟道椎郎子ノ言ニ曰、昆上而季下、古今之常典ト葛野王持統天皇ニ進奏スルノ言ニ曰、我國家爲法也、神代以來、子孫相承、以襲天位、若兄弟相及、則亂從此興ト此レ乃祖宗以來子孫直系相傳ヘ長幼序ニ從フヲ以テ天位繼承ノ正法トス而シテ其ノ兄弟相傳フルハ反正天皇ノ腰中天皇ニ於ケル允恭天皇ノ反正天皇ニ於ケルヨリ始マリ皆已ムヲ得サルニ出テ其ノ正ニ非サルナリ第二第三條繼承ノ法ヲ一定シテ後王ノ爲ニ常典ヲ貽シ敢テ權宜左右スルコトヲ容サヽルハ蓋祖宗ノ遺範ヲ恪ミ永ク亂萌ヲ後裔ニ絶ツ所以ナリ凡ソ子孫ト云ヘルハ曾孫以下皆其ノ内ニ在リ沽典ニ天神之孫也トアルハ(日本十)是レ雄氏終ノ慣用スル所ハ 長子ノ子孫ハ次子ニ先タツハ宗統ヲ重ンスルナリ長子ノ子孫在ラサルニ至テ始メテ次子ニ移ル次子ノ子孫ノ第三子以下ニ於ケルモ亦同例トス次條ニ崇庶子孫ノ皇位ヲ繼承スルハ皇嫡子孫皆在ラサルトキニ限ルト謂ツトキハ第二第三條ハ嫡子孫ニ就テ其ノ長ヲ擇フヲ謂フ而シテ嫡子孫皆在ラサルトキハ庶子孫ニ於テ其ノ長ヲ擇フモ亦本法ニ依ルコト知ルヘキナリ</p></div>
+<h3 class="jo" id="tp-art4"><a class="self-link" href="#tp-art4">皇室典範 第四條</a></h3>
+<div class="joubun"><p>皇子孫ノ皇位ヲ繼承スルハ嫡出ヲ先ニス皇庶子孫ノ皇位ヲ繼承スルハ皇嫡子孫皆在ラサルトキニ限ル</p></div>
+<div class="commentary"><p>祖宗ノ嫡ヲ先ニシ庶ヲ後ニスルハ神武天皇庶長子手祈耳命ヲ措テ綏靖天皇ヲ立テタマフニ始マル是ヲ繼嗣ノ常典トス但シ皇緒萬意一日モ曠クスヘカラス故ニ既ニ嫡出ナキトキハ庶出亦位ヲ繼クコトヲ得セシム蓋清寧天皇崩シ皇嗣ナシ履中天皇ノ孫顯宗天皇位ヲ繼ク而シテ天皇ハ寳ニ其ノ姉、飯豐靑尊、兄仁賢天皇ト倶ニ服中天皇ノ庶出磐坂市邊押羽皇子ノ子ナリ清寧天皇ノ妹春日大ナリ娘アリオーナナ 大武烈天皇嗣ナシ應神天皇五世ノ孫繼禮天皇ヲ迎ヘ位ニ即ク而シテ天皇ハ實ニ應神天皇ノ底出稚渟毛二派皇子ノ後ナリ此ノ時ニ當テ坐統絶エサルコト縫ノ如シ若庶系ヲ立ツルコトナカリセハ當時既ニ言フヘカラサルノ事アラム我カ國ノ庶出ヲ絶タサルハ實ニ已ムヲ得サルニ出ル者ナリ皇嫡子孫皆在ラサルトキニ限ルトハ長子及次子以下及其ノ子孫ニ通シテ之ヲ謂フナリ故ニ皇庶長子ハ皇嫡幼子孫ニ先タツコトヲ得ス長系ノ庶皇孫ハ次系ノ皇嫡子孫ニ先タツコトヲ得サルナリ問崇庶子ノ子嫡出ナルトキハ之ヲ嫡兒孫トスルコトヲ得ヘキカ答皇庶子ノ子孫ハ即チ庶流ナリ故ニ皇庶子ノ嫡出ノ子ハ其ノ庶出ノ兄弟ニ先タツヘキモ皇嫡子孫ニ先タツコトヲ得ス</p></div>
+<h3 class="jo" id="tp-art5"><a class="self-link" href="#tp-art5">皇室典範 第五條</a></h3>
+<div class="joubun"><p>皇子孫皆在ラサルトキハ皇兄弟及其ノ子孫ニ傳フ</p></div>
+<h3 class="jo" id="tp-art6"><a class="self-link" href="#tp-art6">皇室典範 第六條</a></h3>
+<div class="joubun"><p>皇兄弟及其ノ子孫皆在ラサルトキハ皇伯叔父及其ノ子孫ニ傳フ</p></div>
+<h3 class="jo" id="tp-art7"><a class="self-link" href="#tp-art7">皇室典範 第七條</a></h3>
+<div class="joubun"><p>皇伯叔父及其ノ子孫皆在ラサルトキハ其ノ以上ニ於テ最近親ノ皇族ニ傳フ恭ヲ按スルニ第五第六第七條ハ皇子孫在ラサルニ當リ繼嗣ヲ定ムルニ最近親ヲ以テスルコトヲ示スナリ皇子孫ハ現在ノ天皇ニ屬スル至親ノ宗系タリ皇子孫ノ嫡庶倶ニ在ラサルトキハ皇兄弟ヲ以テ最近親トス故ニ繼承ノ權樂兄弟ノ中ノ一ニ移ル其ノ現在ノ天皇ト同父ナレハナリ皇兄又ハ皇弟ノ子及孫ハ皇兄又ハ皇弟ノ系統ニ屬スル者ナリ皇兄弟及其ノ子孫ノ嫡庶倶ニ在ラサルトキハ此ニ次キ皇伯叔ヲ最近親トス故ニ繼承ノ權皇伯叔ノ中ノ一ニ移ル其ノ現在ノ天皇ノ父ト同父ナレハナリ皇伯又ハ皇叔ノ子及孫ハ皇伯又ハ皇叔ノ系統ニ屬スル者ナリ皇伯叔以上最近親ノ皇族ト謂ヘルハ皇大伯叔及其ノ以上皆之ニ準スルナリ一系ノ下ハ尊卑相承ケ而シテ宗系盡キテ支系ニ及ヒ近系盡キテ遠系ニ及フ蓋繼承ノ疑義ヲ將來ニ絶チ皇精ノ慶剛ヲ永遠ニ保タムトスルナリ</p></div>
+<h3 class="jo" id="tp-art8"><a class="self-link" href="#tp-art8">皇室典範 第八條</a></h3>
+<div class="joubun"><p>皇兄弟以上ハ同等内ニ於テ嫡ヲ先ニシ庶ヲ後ニシ長ヲ先ニシ幼ヲ後ニス</p></div>
+<div class="commentary"><p>皇兄弟一等トシ皇伯叔又一等トシ崇大伯叔又一等トス皇兄弟ノ等内ニ於ケルハ其ノ嫡長ヲ擇ヒ摘ナキトキハ庶出ノ中ニ就テ其ノ長ヲ擇フ察兄弟ノ子孫ニ於ケルハ總テ皇子孫ノ例ニ同シ皇伯叔ノ等内ニ於テ嫡ヲ先ニシ長ヲ先ニスルハ其ノ例皇兄弟ノ等ニ同シ其ノ皇大伯叔ノ等ニ於ケルモ亦同シ蓋皇子孫ノ庶出ハ皇兄弟ノ嫡出ニ先ンスルハ皇家其ノ宗系ヲ重ンスルノ例典ニシテ天皇ノ下尊卑相承ケ嫡庶倶ニ盡クルニ非サレハ支系ニ移ルコトナシ本條推シテ之ヲ各等ニ及ホシ一等コトニ嫡長ヲ先ニシ庶幼ヲ後ニシ嫡庶倶ニ盡クル毎ニ其ノ等ヲ上ス皆其ノ例ヲ同クス故ニ同等内ニ於テト謂ヘルナリ嫡ヲ先ニストハ嫡出ヲ先ニシ嫡系ヲ先ニスルヲ謂フ長ヲ先ニストハ長子ヲ先ニシ長系ヲ先ニスルヲ謂フ故ニ堅嫡兄弟及其ノ子孫ハ皇庶兄弟ニ先クチ皇嫡兄弟ノ中ニ就テハ皇長兄及其ノ子孫ハ皇幼弟ニ先クチ皇嫡兄弟ナキトキハ皇庶兄及其ノ子孫ハ又皇庶弟ニ先タツヘキナリ</p></div>
+<h3 class="jo" id="tp-art9"><a class="self-link" href="#tp-art9">皇室典範 第九條</a></h3>
+<div class="joubun"><p>皇嗣精神若ハ身體ノ不治ノ重患アリ又ハ重大ノ事故アルトキハ皇族會議及樞密顧問ニ諮詢シ前數條ニ依リ繼承ノ順序ヲ換フルコトヲ得恭チ按スルニ皇嗣ハ先王意典ノ存スル所ニ循ヒ大統ヲ繼キ神器ヲ傳フルノ位ニ屈ル而シテ人主ノ任意ニ左右スルコトヲ得ル所ニ非ス故ニ繼承ノ順序ヲ換フルハ必精神若ハ身滿ノ不治ノ重想アリ又ハ重大ノ事故アリテ神噐ノ重キヲ承クルニ堪ヘサルトキニ限リ而シテ又必堅族會議及樞密顧問ニ許罰スルヲ經テ始メテ決行スルコトヲ得若本條ノ定ムル所ニ依ラスシテ繼嗣ヲ易ヘ置クハ典範ノ認メサル所タリ而シテ一時ノ過失ノ如キハ以テ重大ノ事故ト爲スノ類ニ非サルナリ</p></div>
+<h3 class="jo" id="tp-ch2" style="font-size:22px; margin:34px 0 10px; border-bottom:1px solid #b0a060; padding-bottom:4px;"><a class="self-link" href="#tp-ch2">第二章 踐祚卽位</a></h3>
+<h3 class="jo" id="tp-art10"><a class="self-link" href="#tp-art10">皇室典範 第十條</a></h3>
+<div class="joubun"><p>天皇崩スルトキハ皇嗣即チ踐祚シ祖宗ノ神器ヲ承ク</p></div>
+<div class="commentary"><p>神祖以來鏡、劍、塵三種ノ神器ヲ以テ皇位ノ御守ト爲シクマヒ歷代卽位ノ時ハ必神器ヲ承クルヲ以テ例トセラレタリ允恭天皇元年紀ニ大中姫命、謂群卿曰、皇子(允恭天皇)將聽群臣之請今當上天皇應符於是群臣大喜、即日捧天皇之璽符再拜上焉、乃即帝位 ト云ヘル是レナリ書紀上古ハ踐祚卽チ卽位ニシテ兩事ニ非ス令義解ニ天皇卽位謂之踐祚、祚、位也トアル是レナリ此ノ時ヨリ踐祚ノ日ニ神器ヲ奉ラレタリ蓋天子之位、一日不可斷歷世ノ宣ハ蓋古諺ナリ故ニ繼體天皇群臣ノ迎フル所トナリ未タ帝位ヲ踐ミタマハス而シテ史臣既ニ天皇移樟葉宮ト書シタリ藤原兼實玉海然ルニ天智天皇重キヲ承ケテ仍皇太子ト稱ヘ七年ノ後ニ即位ノ禮ヲ行ヒタマヘリ是レ疏祚ト即位ト兩樣ノ區則ヲ爲シタルノ初ナリ其ノ後歷代戰祚ノ後數年ニシテ即位ノ禮ヲ行ハレタルコトアリシモ神器ハ必觀祚ノ時ニ奉ラルヽコト上古ト異サルコトナシ本條ハ皇位ノ一日モ疑闕スヘカラサルヲ求シ及神器相承ノ大義ヲ掲ケ以テ舊章ヲ昭明ニス若乃繼承ノ大義ハ疏祚ノ條文ノ有無ヲ問ハサルハ固ヨリ本條ノ精神ナリ再ヒ恭テ按スルニ神武天皇ヨリ舒明天皇ニ至ル迄三十四世嘗テ讓位ノ事アラス讓位ノ例ノ皇極天皇ニ始マリシハ蓋女帝假攝ヨリ來ル者ナリ起因ス御アリ未タ誠位ノ始トナスヘカラズ聖武天皇光仁天皇ニ至テ遂ニ定例ヲ爲セリ此ヲ世變ノ一トス其ノ後權臣ノ變迫ニ因リ兩統互立ヲ例トスルノ事アルニ至ル而シテ南北朝ノ亂亦此ニ源因セリ本條ニ踐祚ヲ以テ光帝國御ノ後ニ即チ行ハルヽ者ト定メタルハ上代ノ恒典ニ因リ中古以來讓位ノ實例ヲ改ムル者ナリ</p></div>
+<h3 class="jo" id="tp-art11"><a class="self-link" href="#tp-art11">皇室典範 第十一條</a></h3>
+<div class="joubun"><p>即位ノ禮及大嘗祭ハ京都ニ於テ之ヲ行フ</p></div>
+<div class="commentary"><p>天智天崇稱制ノ後更ニ卽位ノ禮ヲ行ハレシ以來歷代相因ルノ大典トナレリ文武天皇紀ニ載セタル即位ノ詔ニ集侍皇子等、王、臣、百官人等天下公民、諸〻間食ト詔ルトアルハ蓋上代ノ遺例ニシテ皇族以下百官人民ヲ集メテ詔命ヲ天下ニ布キクマセシナリ即位ノ古禮ノ史乘ニ見ヱタルハ持統天皇紀ニ物部麻呂朝臣樹大仄神祇伯中臣大島朝臣讀天神壽阿擧。忌部宿禰色夫和奉上神藥劍鏡於皇后、皇后卽天皇位公卿百僚羅列匝拜而拍手焉トアルヲ結トストスタレトモ船ハシテハ太極殿ニテ行ハレ電服ヲ服シ高御麻ニ卽キクマフ 冷泉天皇御惱ニ由リ紫宸殿ニテ行ハル其ノ後太極戰災廢シテ或ハ太政官廳ニテ行ハレ或ハ南殿 註 ニテ行ハレタリ武門政ヲ專ニスルノ時用度供給セスシテ踐祚ノ後數年ヲ經ト雖猶大禮ヲ行ハレサルコトアリシ雜新ノ後明治元年八月二十七日即位ノ禮ヲ擧行セラレ臣民再ヒ祖宗ノ遺典ヲ伸望スルコトヲ得タリ十三年率爾京都ニ駐マル舊都ノ荒渡ヲ嘆惜シタマヒ後ノ大禮ヲ行フ者ハ宜ク此ノ地ニ於テスヘシトノ旨アリ勅シテ宮閭ヲ修理セシメクマヘリ木條ニ京部ニ於テ即位ノ禮及大嘗祭ヲ行フコトヲ定ムルハ大禮ヲ重ンシ遺訓ヲ恪ミ又本ヲ忘レサルノ意ヲ明ニスルナリ大嘗ノ祭ハ神武天皇元年以來歴代相因テ大典トハセラレタリ蓋天皇位ニ卽キ天祖及天神地祇ヲ請提セラルヽノ禮ニシテ一世ニ一タヒ行ハルヽ者ナ沃素酸塩塩鹹醂ニ行わサルトキモト五段ノ中コロ表ヘタルトキ此ノ後、久シク發呈シタリシニ接續時間ハ彼地球収緬壓計比數頭増セセタル期間ノレス櫻町天皇ニ至テ擧行セラル明治四年十一月詔アリテ擧行セラレタリ</p></div>
+<h3 class="jo" id="tp-art12"><a class="self-link" href="#tp-art12">皇室典範 第十二條</a></h3>
+<div class="joubun"><p>殘祚ノ後元號ヲ建テ一世ノ間ニ再ヒ改メサルコト明治元年ノ定制ニ從フ</p></div>
+<div class="commentary"><p>孝徳天皇紀ニ改天豐財重日足謙天皇四年爲大化元年トアルハ是レ建元ノ始ニシテ歴代ノ例制トナレリシモ其ノ後陰陽占トノ説ニ依リ一世ノ間屢〻年號ヲ改メ徒ニ史乘ノ煩キヲ爲スニ至レリ明治元年九月八日ノ布告ニ云今般御即位御大禮被爲濟先例之通被爲改年號候就テハ是迄吉凶之象兆ニ隨ヒ屡〻改就有之候へ共自今御一代一號ニ被定候依之改慶應四年可爲明治元年旨被仰出候事ト此レ本條ノ依ル所ノ令典ナリ</p></div>
+<h3 class="jo" id="tp-ch3" style="font-size:22px; margin:34px 0 10px; border-bottom:1px solid #b0a060; padding-bottom:4px;"><a class="self-link" href="#tp-ch3">第三章 成年立后立太子</a></h3>
+<h3 class="jo" id="tp-art13"><a class="self-link" href="#tp-art13">皇室典範 第十三條</a></h3>
+<div class="joubun"><p>天皇及皇太子皇太孫ハ滿十八年ヲ以テ戌年ト</p></div>
+<div class="commentary"><p>中古以來天皇元服ノ制ヲ設ケラル大抵十一歳ヨリ十五歳ニ至リ元服ヲ行ハレタリ明治九年民法上ノ丁年ヲ定メテ滿二十年トス本條天皇及皇太子皇太孫ノ爲ニ成年ヲ定メテ十八年トシタルハ天皇及皇嗣ハ神器ノ重ニ當リ尋常通法ノ拘ル所ニ非サレハナリ</p></div>
+<h3 class="jo" id="tp-art14"><a class="self-link" href="#tp-art14">皇室典範 第十四條</a></h3>
+<div class="joubun"><p>前條ノ外ノ皇族ハ滿二十年ヲ以テ成年トス</p></div>
+<div class="commentary"><p>天皇及皇嗣ノ成年ヲ以テ之ヲ他ノ皇族ニ及ホサヽルハ前條特例ノ限ニ在ラサルナリ</p></div>
+<h3 class="jo" id="tp-art15"><a class="self-link" href="#tp-art15">皇室典範 第十五條</a></h3>
+<div class="joubun"><p>儲嗣タル皇子ヲ皇太子トス皇太子在ラサルトキハ儲嗣タル皇孫ヲ皇太孫トス</p></div>
+<div class="commentary"><p>皇太子古ハ「ヒツギノミコ」ト稱フ神武天皇紀ニ立」皇子神渟名川耳尊爲皇太子ト此レ乃史臣皇太子ノ稱ヲ用ヰ日嗣ノ御子ノ名ニ當テタル者ニシテ中古以來ハ取テ典禮トセラレタリ其ノ皇子ニ非スシテ入テ皇嗣トナルモ史臣亦皇太子ヲ以テ稱フ城ノ第二子足艸彦尊ノ第二子足艸彦尊孫ノ天皇ニシテ族叔祖ヲ立ツルニ至テモ亦太子ト呼ヘリ蜂孝謙天皇ノ淳仁天リ但シ或ハ立太子ヲ宜行スルアリ或ハ宣行セサルアリテ其ノ實一定ノ成例アラス皇弟ヲ立ツルニ至テハ或ハ儒君ト稱ヘ短天娘天娘ノ城中或ハ太子ト雖ヘ後三條天皇ノ後冷或ハ太岩ト稱フ嵯峨淳和村上圓融ヘ親元茲ニ短ケ後冷或ハ太弟ト稱フ纎維總額謝社頭祖亦亦未タ畫一ナラス今既ニ埀位權承ノ法ヲ定メ明文ノ揭クル所ト爲ストキハ立太子立太孫ノ外文系ヨリ入テ大統ヲ承タルノ皇嗣ハ立坊ノ儀文ニ依ルコトヲ領ヰス而シテ皇太子皇太孫ノ名稱ハ皇子皇孫ニ限ルヘキナリ</p></div>
+<h3 class="jo" id="tp-art16"><a class="self-link" href="#tp-art16">皇室典範 第十六條</a></h3>
+<div class="joubun"><p>皇后皇太子皇太孫ヲ立ツルトキハ詔書ヲ以テ之ヲ公布ス</p></div>
+<div class="commentary"><p>立后ノ事ハ神武天皇以來歷世ノ帝紀ニ就セタリ而シテ立后ノ詔ハ始メテ聖武天皇紀ニ見ユ其ノ宣命ニ謂ヘルコトアリ。天下ノ政ニ於キテ獨知ルヘキ物ニアラス必モ後ノ政アルヘシ此ハ事立ツニアラス天ニ日月アル如ト地ニ山川アル如ト花坐ヲ在ルヘシト云フコトハ汝等、王、巨等明ニ見、知レルコトナリ云々」此ノ詔命ハ坤位略立ノ義ヲ表スルニ於テ事理昭明更ニ賛辭ヲ須ヰサル者ナリ本條ニ立后ノ大禮必詔書ヲ以テ公布スルコトヲ定ムルハ先王ノ典故ヲ重ンシ且中古以來中宮准后ノ設アリ從テ冊立ノ儀ヲ缺クコトアルハ將來ニ依ルヘキノ模範ト爲スヘカラサルコトヲ明ニスルナリ立太子ノ詔ハ始メテ光仁天皇紀ニ見ユ貞觀儀式ニ宜細ノ式ヲ載ス曰。法ノマヽニ有ルヘキ政トシテ某ノ親王ヲ立テヽ皇太子ト定メ賜フ。故此ノ状ヲ悟リテ百官人等仕奉 ̄ト謂ル云々」ト蓋皇太子皇太孫ハ祖宗ノ正統ヲ承ケ皇位ヲ繼嗣セムトス故ニ皇嗣ノ位置ハ立坊ノ儀ニ由リ始メテ定マルニ非ス而シテ立坊ノ儀ハ此ニ由テ以テ臣民ノ瞻望ヲ要カシムル者ナリ</p></div>
+<h3 class="jo" id="tp-ch4" style="font-size:22px; margin:34px 0 10px; border-bottom:1px solid #b0a060; padding-bottom:4px;"><a class="self-link" href="#tp-ch4">第四章 敬稱</a></h3>
+<h3 class="jo" id="tp-art17"><a class="self-link" href="#tp-art17">皇室典範 第十七條</a></h3>
+<div class="joubun"><p>天皇太皇太后皇太后皇后ノ敬稱ハ陛下トス</p></div>
+<div class="commentary"><p>陛下ハ臣下ヨリ天子ニ敷奏スルトキノ敬稱ナリ本條ニ陛下ノ敬稱ヲ以テ通シテ至尊ニ對スルノ稱訓トシ而シテ敷奏佳見ノ辭ニ限ラサルハ舊典ヲ敷衍シテ之ヲ内外ニ廣ムルナリ大寶ノ令ニ三后ニ上啓スルハ殿下ト稱フ本條ニ太皇太后皇太后皇后皆陛下ト稱フルハ嫡后國母ハ至尊ニ齊匹シ至尊ト倶ニ臣民ノ至隆ナル敬禮ヲ受クヘケレハナリ但シ君位ハ一アリテ二ナシ皇后ハ固ヨリ佗ノ皇族ト均ク人臣ノ列ニ居ル而シテ大寶ノ制ト其ノ稱ヲ殊ニシテ仍其ノ實ヲ同クスルコトヲ失ハサルナリ</p></div>
+<h3 class="jo" id="tp-art18"><a class="self-link" href="#tp-art18">皇室典範 第十八條</a></h3>
+<div class="joubun"><p>皇太子皇太子妃皇太孫皇太孫妃親王親王妃内親王王王妃女王ノ敬稱ハ殿下トス</p></div>
+<div class="commentary"><p>本條ハ舊制皇太子ニ於テ殿下ト稱フルノ例ニ因リ推シテ之ヲ皇族ニ及ホスナリ</p></div>
+<h3 class="jo" id="tp-ch5" style="font-size:22px; margin:34px 0 10px; border-bottom:1px solid #b0a060; padding-bottom:4px;"><a class="self-link" href="#tp-ch5">第五章 攝政</a></h3>
+<h3 class="jo" id="tp-art19"><a class="self-link" href="#tp-art19">皇室典範 第十九條</a></h3>
+<div class="joubun"><p>天皇未タ成年ニ達セサルトキハ攝政ヲ置ク天皇久キニ亘ルノ故障ニ由リ大政ヲ親ラスルコト能ハサルトキハ皇族會議及樞密顧問ノ議ヲ經テ攝政ヲ置ク</p></div>
+<div class="commentary"><p>攝政ハ以テ皇室避クヘカラサルノ變局ヲ救濟シ一ハ皇統ノ常久ヲ保持シ二ハ大政ノ便宜ヲ疏通シ兩ツナカラ失墜ノ患ヲ免ルヽ所以ナリ攝政ハ天皇ノ天職ヲ攝行シ一切ノ大政及皇室ノ内事皆天皇ニ代リ之ヲ總攬ス而シテ至尊ノ名位ニ居ラサルナリ之ヲ古今及各國ニ參照スルニ攝政ノ事例一ニ非ス或ハ君祚ヲ假攝スルアリ無智尊ノ攝政ニ於タ或ハ人臣ヲ以テ大政ヲ攝行スルアリ 或ハ共同攝政ヲ組織シ輔臣ヲ以テ攝政體ト爲スアリ是等ノ國ニ於ケル共和及巴滅爾素ノ危機亦往々攝政ノ時ニ起ル者少カラス本條ハ攝政ヲ認メテ攝位ヲ認メス以テ大統ヲ嚴愼ニスルナリ而シテ人臣ノ攝政ヲ許サヽルハ次條ニ於テ之ヲ見ル天崇久キニ亙ルノ故障トハ重忠彌留歳月ノ久キニ亙リ醫治ノ望ナク又ハ其ノ他ノ事故ニ因リ天職曠關ナルヲ謂フ而シテ其ノ大政ヲ親ラスルニ堪ヘサルニ至テ始メテ攝政ヲ置クノ事アルヘシ若天皇一時ノ疾病違和又ハ國疆ノ外ニ在スノ説ヲ以テ皇太子皇太孫ニ命シ代理監國セシムルカ如キハ大寶令以令代勅ノ制ニ依リ別ニ攝政ヲ置カス ノ 攝政ヲ置クハ已ムヲ得サルノ必要ニ由ル故ニ天皇既ニ成年ニ達シ又ハ違豫常ニ復シタマフトキハ攝政ヲ罷ムルコト別ニ明言ヲ待タスシテ知ルヘキナリ次項皇族會議及樞密顧問ノ議ヲ經ルハ何ソ乎蓋事體時アリテ或ハ候似ニ渉ルコトアルヲ免レス故ニ典範ニ於テ其ノ議ヲ經ルコトヲ掲ケテ要件ト爲スナリ其ノ諮詢ト謂ハスシテ議ヲ經ト謂ヘルハ何ソ乎天皇或ハ諮詢ノ命ヲ親ラスルコト能ハサルノ情況ニ在ルモ皇族會議樞密顧問ハ皇室ノ大事ニ於テ推談傍觀スヘキニ非ス進テ其ノ誠ヲ致シ以テ宮禁ノ大計ヲ定ムヘキナリ其ノ或ハ坐族會議ニ由テ發議シ樞密顧問ノ審議ニ付スルト或ハ樞密顧問ノ發議ニ由リ皇族會議ノ協同ヲ求ムルト倶ニ時宜ニ從フナリ</p></div>
+<h3 class="jo" id="tp-art20"><a class="self-link" href="#tp-art20">皇室典範 第二十條</a></h3>
+<div class="joubun"><p>攝政ハ成年ニ達シタル皇太子又ハ皇太孫之ニ任ス</p></div>
+<h3 class="jo" id="tp-art21"><a class="self-link" href="#tp-art21">皇室典範 第二十一條</a></h3>
+<div class="joubun"><p>皇太子皇太孫在ラサルカ又ハ未タ成年ニ達セサルトキハ左ノ順序ニ依リ攝政ニ任ス第一親王及王第二皇后第三皇太后第四太皇太后第五内親王及女王</p></div>
+<div class="commentary"><p>推古天皇紀ニ立厩戸豐聰耳皇子(馬皇太子(仍録攝政以眞授悉愛焉、是ヲ皇太子攝政ノ例トス仲哀天皇崩シ應神天皇胎中ニ在リ崇舜神功皇后攝政ス是ヲ皇后攝政ノ例トス顯宗天皇紀ニ白髮天皇崩、皇太子德計王與天聖讓位、久而不處、由是、天皇ノ姉飯豐靑皇女臨朝蒙敎、是ヲ皇女攝政ノ例トス上世攝政ニ當ル者ハ必皇族ニ限ル申古以來始メテ大臣攝政ノ例アリ而シテ要スルニ一時ノ便宜ニシテ以テ後世ノ模範ト爲スヘカラス本條攝政ノ制ヲ定メ皇族ニ限リ人臣ニ及ホサヽルハ蓋大致ノ繋ル所ヲ嚴ニシ神器ノ重キヲ愼ムナリ第一條ニ票位ヲ繼承スルハ男系ノ男子ニ限ルコトヲ掲ケタリ而シテ木修皇后皇女ニ攝政ノ權ヲ付與スルハ蓋上古以來ノ慣例ニ遵ヒ且攝政其ノ人ヲ得ルノ道ヲ廣クシ人臣ニ下及スルノ漸ヲ社カムトナリ第二十條ニ謂ヘル皇太子樂太孫ノ成年ハ第十三條ニ依ル其ノ他親王以下普通ノ成年ニ達セサルハ仍攝政ニ任スヘカラサルコト知ルヘキナリ</p></div>
+<h3 class="jo" id="tp-art22"><a class="self-link" href="#tp-art22">皇室典範 第二十二條</a></h3>
+<div class="joubun"><p>皇族男子ノ攝政ニ任スルハ皇位繼承ノ順序ニ從フ其ノ女子ニ於ケルモ亦之ニ準ス</p></div>
+<div class="commentary"><p>上代皇太子攝政ノ任ニ當ルノ事アルハ是レ既ニ攝政ノ重任ト皇位繼承ノ順序トヲ以テ併セテ一條ノ軌轍ト爲スノ義例ヲ始ムル者ナリ蓋各國古史ノ載スル所ニ參考スルニ攝政ハ長年徳器ノ人ヲ擇テ之ニ任ス而シテ繼統ノ變多クハ此ニ因テ起ル木條ニ攝政ノ任ヲ以テ專ラ皇位繼承ノ順序ニ從ハシムルハ宗統ノ倫序ヲ以テ併セテ攝政ニ及ホシ危疑ノ門ヲ將來ニ絶ツ所以ナリ故ニ第十九條ニ依リ攝政ヲ置クヲ要スルノ時アルニ際リテハ樂位繼承ノ順次ニ當レル皇族ハ群臣ノ推奉アルヲ待タスシテ進テ攝政ニ任スルノ權利及義務ヲ有スヘキコト皇太子ノ大位ヲ繼クニ於ケルト異ナルコト無キナリ皇族女子ハ皇位繼承ノ權ナシ 但シ攝政ニ任スルノ順序ハ皇族男子ノ繼承ノ順序ニ比準シテ先後ヲ定ム</p></div>
+<h3 class="jo" id="tp-art23"><a class="self-link" href="#tp-art23">皇室典範 第二十三條</a></h3>
+<div class="joubun"><p>皇族女子ノ攝政ニ任スルハ其ノ配偶アラサル者ニ限ル</p></div>
+<div class="commentary"><p>上代既ニ嫁スルノ皇族女子攝政ニ任スルノ例アルコトナシ蓋其ノ夫ニ從フノ義ト並行スヘカラサレハナリ而シテ異姓ニ嫁スルノ王女ハ王族ニ非サルトキハ從テ又攝政ノ權アラサルヘキナリ但シ其ノ皇族ニ嫁スルノ後、夫ヲ喪ヒ寡居スル者及異姓ニ嫁スルモ離婚シテ本族ニ復シ又ハ嬌婦トナルノ後、其ノ夫ノ家ヲ離レ本族ニ復スル者ハ仍搆政タルノ權ヲ失ハサルヘシ故ニ本條ハ未タ嫁セサルノ皇女ト謂ハスシテ配偶アラサル者ト謂フ</p></div>
+<h3 class="jo" id="tp-art24"><a class="self-link" href="#tp-art24">皇室典範 第二十四條</a></h3>
+<div class="joubun"><p>最近親ノ皇族未タ成年ニ達セサルカ又ハ其ノ他ノ事故ニ由リ他ノ皇族攝政ニ任シタルトキハ後來最近親ノ皇族成年ニ達シ又ハ其ノ事故既ニ除クト雖皇太子及皇太孫ニ對スルノ外其ノ任ヲ讓ルコトナシ</p></div>
+<div class="commentary"><p>本條ハ明文ヲ以テ豫メ疑義ヲ判スルナリ皇太子皇太孫ハ大統ノ宗系ニ居ル故ニ已ニ成年ニ達シ又ハ事故已ニ除クトキハ他ノ皇族及皇后以下攝政ニ當レル者總テ其ノ任ヲ讓ラサルコトヲ得ス但シ甲ノ皇族ト乙ノ皇族トノ間ニシテ單ニ親疎ノ別アル者ニ在テハ一タヒ攝政ニ當レルノ甲ハ更ニ其ノ任ヲ乙ニ讓ルコトヲ要セス又任意ニ之ヲ讓ルコトヲ得サル者トス</p></div>
+<h3 class="jo" id="tp-art25"><a class="self-link" href="#tp-art25">皇室典範 第二十五條</a></h3>
+<div class="joubun"><p>攝政又ハ攝政タルヘキ者精神若ハ身體ノ重患アリ又ハ重大ノ事故アルトキハ皇族會議及樞密顛問ノ議ヲ經テ其ノ順序ヲ換フルコトヲ得恭ヲ按スルニ攝政又ハ攝政タルヘキ者重患又ハ重故アルニ因リ其ノ順序ヲ換フルノ必要ナル時機アルニ當テハ皇族會議及樞密顧問ハ和衷同心以テ其ノ誠ヲ致シ大計ヲ定メサルコトヲ得ス本條ニ重忠ト謂テ不治ノ重患ト謂ハス第九條ト文ヲ異ニスルハ彼此ノ間ニ固ヨリ輕重ノ別アレハナリ</p></div>
+<h3 class="jo" id="tp-ch6" style="font-size:22px; margin:34px 0 10px; border-bottom:1px solid #b0a060; padding-bottom:4px;"><a class="self-link" href="#tp-ch6">第六章 太傳</a></h3>
+<h3 class="jo" id="tp-art26"><a class="self-link" href="#tp-art26">皇室典範 第二十六條</a></h3>
+<div class="joubun"><p>天皇未タ成年ニ達セサルトキハ太傳ヲ置キ保育ヲ掌ラシム恭ヲ按スルニ太子傳ノ職ハ大寶ノ令ニ見ユ而シテ持統天皇紀ニ以前廣壹當麻國見爲東宮太傳ノ事ヲ載セクレハ壹其ノ由テ來ルコト久キナリ本條天皇幼冲ノ爲ニ太傳ヲ置クコトヲ定ムルハ保傳ノ任其ノ重キコト攝政ニ亞ケハナリ大寶令ニ傳一人、掌以道徳輔導東宮而シテ太傳ハ專ラ保育敎導ノ任ニ止マリ大政ニ干預スルコトナク攝政ハ大政ヲ攝行スルモ保導及天皇ノ私事ニ干渉セス</p></div>
+<h3 class="jo" id="tp-art27"><a class="self-link" href="#tp-art27">皇室典範 第二十七條</a></h3>
+<div class="joubun"><p>先帝遺命ヲ以テ太傳ヲ任セサリシトキハ攝政ヨリ皇族會議及樞密顧問ニ諮詢シ之ヲ選任ス</p></div>
+<h3 class="jo" id="tp-art28"><a class="self-link" href="#tp-art28">皇室典範 第二十八條</a></h3>
+<div class="joubun"><p>太傳ハ攝政及其ノ子孫之ニ任スルコトヲ得ス</p></div>
+<h3 class="jo" id="tp-art29"><a class="self-link" href="#tp-art29">皇室典範 第二十九條</a></h3>
+<div class="joubun"><p>攝政ハ皇族會議及樞密顧問ニ諮詢シタル後ニ非サレハ太傳ヲ退職セシムルコトヲ得ス</p></div>
+<div class="commentary"><p>攝政ハ大政ヲ總攝スルノミナラス兼テ又皇家ノ内事ヲ監督ス故ニ先帝ノ遺命アラサリシトキハ攝政ハ太傳ヲ選任スルノ事ヲ怠ラサルヘク而シテ攝政及其ノ子孫ハ太傳ニ任スルコトヲ得ス及太傳ノ任免ハ必皇族會議及樞密顧問ニ諮詢シ而シテ後決行スルコトヲ定ムルハ危疑ノ門ヲ愼ミ攝政ヲシテ其ノ忠順ヲ全クセシメムトナリ</p></div>
+<h3 class="jo" id="tp-ch7" style="font-size:22px; margin:34px 0 10px; border-bottom:1px solid #b0a060; padding-bottom:4px;"><a class="self-link" href="#tp-ch7">第七章 皇族</a></h3>
+<h3 class="jo" id="tp-art30"><a class="self-link" href="#tp-art30">皇室典範 第三十條</a></h3>
+<div class="joubun"><p>皇族ト稱フルハ太皇太后皇太后皇后皇太子皇太子妃皇太孫皇太孫妃親王親王妃内親王王王妃女王ヲ謂フ</p></div>
+<div class="commentary"><p>太皇太后皇太后ハ令義解ニ嗣天子ノ祖母登后位者爲太皇太后嗣天子ノ母登后位者爲泉太后ト云ヘリ續日本紀ニ天平應眞仁正皇太后。聖武皇帝儲貳之日、納以爲妃トアリ是レ古ハ皇太子ノ正配ヲ稱ヘテ妃ト謂ヒシナリニ新俗稱ニシテ典性ニ非ツルナリ又日本書紀ニ大津皇子妃、皇女山邊ノ文アリ待統アリ縣糸是レ凡ソ皇子ノ正配亦妃ト稱ヘシナリ皇族トハ凡ソ皇胤ノ男子及其ノ正配及皇胤ノ女子ヲ謂フ凡ソ皇族ノ男子ハ皆皇位繼承ノ權利ヲ有スル者ナリ故ニ中世以來空費府庫ヲ以テ能ヲ賜ヒ臣籍ニ列スルノ例ハ本條ノ取ラサル所ナリ皇女ニシテ異姓ノ臣籍ニ嫁シタル者ハ其夫ノ身分ニ從フ故ニ本條ニ内親王女王ト謂ヘルハ未タ嫁セサルノ女王ヲ指スコト知ルヘキナリ太皇太后皇太后皇后ノ叙列ハ大寶令ニ依リ尊屬ノ序次ニ從フナリ</p></div>
+<h3 class="jo" id="tp-art31"><a class="self-link" href="#tp-art31">皇室典範 第三十一條</a></h3>
+<div class="joubun"><p>皇子ヨリ皇玄孫ニ至ルマテハ男ヲ親王女ヲ内親王トシ五世以下ハ男ヲ王女ヲ女王トス</p></div>
+<div class="commentary"><p>子ノ子ヲ孫トシ孫ノ子ヲ曾孫トシ曾孫ノ子ヲ玄確トス抑々依抄ニ子ヲ一世トシ孫テ二世トシ曾孫ヲ三世トシ玄孫ヲ四世トシ玄孫ノ子ヲ五世トス大寶令ニ自親王五世ト謂ヘル是レナリ之ヲ上古ニ考フルニ皇子ハ「ミコ」ト稱ヘ皇女ハ「ヒメミコ」ト稱フ親王内親王ノ稱ハ持続天皇紀六年正月朔、賜」親王内親王女王内命婦等位ト見エタルヲ始トス大寶令ニ凡皇兄弟崇子皆弟親王ト此ノ時未タ宜下ノ式アラス宣下ノ式ハ蓋淳仁天皇紀ニ兄弟姉妹悉稱親王ト見エタルヲ始トス皇孫ニシテ親王内親王ノ宣下アリシハ三條天皇ノ皇孫敦貞親王敦元親王侯子内親王嘉子内親王ヲ始トス紹揮錄ニ見エタル顯山天皇ノ崇子恒明親王其ノ子全仁親王其ノ子滿仁親王其ノ子直仁親王其ノ子全明親王其ノ子恒直親王相嗣テ當葉井宮ト稱ヘタルハ是レ世襲親王家ノ給ナリ蓋令ニハ親王ノ稱ハ皇兄弟皇子ニ限リシヲ其ノ後宜下式ニ依リ歷世ノ皇孫亦親王ノ稱ヲ賜ヒシナリ本條ニ皇玄孫以上ハ親王内親王トスルコトヲ定ムルハ現行ノ慣例ヲ斟酌シ且宣下ヲ待タスシテ皇親ノ王男王女タルコトヲ示スナリ大寶令五世以下ハ皇親ノ限ニ在ラス而シテ正親司ノ司ル所ハ四世以上ニ限ル然ルニ繼體天皇ノ皇位ヲ繼承シタマヘルハ實ニ應神天皇五世ノ孫ヲ以チス此レ乃中古ノ制ハ必シモ先王ノ遺範ニ非サリシナリ本條ニ五世以下王女王タルコトヲ定ムルハ宗室ノ子孫ハ五世ノ後ニ至ルモ亦皇族タルコトヲ失ハサラシメ以テ親々ノ義ヲ廣ムルナリ 或天皇禮鑑三年ノ詔ニ曰、准令、文武天皇慶雲三年ノ詔ニ曰、准令、五世之王雖得王名、不在皇親之限、之術。自今以後、五世之王、在龜親之限、其承嫡者、相承爲王、自然如令ト。又聖武天皇天平元年ノ權ニ曰、五世王嫡子以上、碧孫王ハ生男女者、人皇親之儀、自入慶雲三年格ト其ノ後杷武天皇延暦十年ニ至リ勅シテ令制ニ復シタリ</p></div>
+<h3 class="jo" id="tp-art32"><a class="self-link" href="#tp-art32">皇室典範 第三十二條</a></h3>
+<div class="joubun"><p>第三十二條天皇支系ヨリ入テ大統ヲ承クルトキハ皇兄弟姉妹ノ王女王タル者ニ特ニ親王内親王ノ號ヲ宣賜ス</p></div>
+<div class="commentary"><p>大寶令ニ凡皇兄弟皇子皆爲親王トアリ是レ皇兄弟ハ皇子ト同ク親王ト稱フヘキコト既ニ成典アルナリ天皇支系ヨリ入テ大統ヲ承タレハ皇兄弟姉妹ハ皆親王内親王ノ尊號ヲ得ルハ元仁天皇大統ヲ繼チ崇弟湯原王榎井王ヲ陞セテ親王ト爲シタマヘルヲ以テ始例トス前條ノ注ニ引ク所淳仁天皇兄弟姉妹ノ例亦同シ木條ニ仍宣下ノ例ヲ用ヰルハ前條ト其ノ義ヲ異ニスレハナリ</p></div>
+<h3 class="jo" id="tp-art33"><a class="self-link" href="#tp-art33">皇室典範 第三十三條</a></h3>
+<div class="joubun"><p>皇族ノ誕生命名婚嫁薨去ハ宮内大臣之ヲ公告ス</p></div>
+<div class="commentary"><p>皇太子皇太孫ノ立坊ハ詔書ヲ以テ公布スルノ外凡ソ皇族ノ生死婦及命名ハ宮内大臣ヨリ公告ス蓋皇族ハ皇統ノ係ル所ニシテ臣民精望ノ集マル所タリ故ニ之ヲ臣民ニ公ニシ皆聞知ラシムルナリ</p></div>
+<h3 class="jo" id="tp-art34"><a class="self-link" href="#tp-art34">皇室典範 第三十四條</a></h3>
+<div class="joubun"><p>第三十四條皇統譜及前條ニ關ル記録ハ圖書寮ニ於テ尚藏ス</p></div>
+<div class="commentary"><p>圖書寮尚藏スル所ノ皇統譜及皇族記錄ハ大統ノ源流ヲ徴明シ宗宝ノ本末ヲ疏證ス本條特ニ之ヲ掲ケテ皇室圖書ノ登録ハ嫌疑ヲ定メ亂萌ヲ絶ツノ典籍タルコトヲ明ニス</p></div>
+<h3 class="jo" id="tp-art35"><a class="self-link" href="#tp-art35">皇室典範 第三十五條</a></h3>
+<div class="joubun"><p>皇族ハ天皇之ヲ監督ス</p></div>
+<div class="commentary"><p>天皇ハ皇宝ノ家父タリ故ニ皇族ノ麾俸ハ皇室經費ヨリ給賜シ皇族各人ノ結婚又ハ外國ニ旅行スルハ勅許ヲ要シ父ナキノ幼男幼女ノ教育及保護ハ勅命ニ由ル凡ソ皇族ハ總テ天皇監督ノ下ニ在ルコト家人ノ家父ニ於ケルカ如シ此レ乃皇族ノ幸福及榮譽ヲ保ツ所以ナリ</p></div>
+<h3 class="jo" id="tp-art36"><a class="self-link" href="#tp-art36">皇室典範 第三十六條</a></h3>
+<div class="joubun"><p>攝政在任ノ時ハ前條ノ事ヲ攝行ス</p></div>
+<div class="commentary"><p>攝政ハ大政ヲ攝行スルノミナラス兼テ又皇室家父タルノ事ヲ攝行ス故ニ皇族各人ハ攝政ニ對シ家人從順ノ義務ヲ有スヘシ</p></div>
+<h3 class="jo" id="tp-art37"><a class="self-link" href="#tp-art37">皇室典範 第三十七條</a></h3>
+<div class="joubun"><p>皇族男女幼年ニシテ父ナキ者ハ宮内ノ官僚ニ命シ保育ヲ掌ラシム事宜ニ依リ天皇ハ其ノ父母ノ選擧セル後見人ヲ認可シ又ハ之ヲ勅選スヘシ</p></div>
+<h3 class="jo" id="tp-art38"><a class="self-link" href="#tp-art38">皇室典範 第三十八條</a></h3>
+<div class="joubun"><p>皇族ノ後見人ハ成年以上ノ皇族ニ限ル</p></div>
+<div class="commentary"><p>天皇ハ皇族ヲ監督ス故ニ皇族幼年ニシテ父ナキトキハ勅旨ニ由リ宮内ノ官僚ニ命シテ保育ヲ掌ラシムヘシ或ハ其ノ父ノ遺囑ニ由リ後見人ヲ選擧シ又ハ其ノ母後見人ヲ選擧シタルトキハ天皇之ヲ認可シ或ハ特ニ後見人ヲ勅遣シテ保育ニ當ラシムルコトアルハ皆事宜ニ從フ而シテ後見人ノ行フ所ノ事ハ仍天皇親ラ之ヲ監督スヘシ</p></div>
+<h3 class="jo" id="tp-art39"><a class="self-link" href="#tp-art39">皇室典範 第三十九條</a></h3>
+<div class="joubun"><p>皇族ノ婚嫁ハ同族又ハ勅旨ニ由リ特ニ認許セラレタル華族ニ限ル</p></div>
+<div class="commentary"><p>皇族ノ婚嫁ト謂ヘルハ皇后ヲ擇フコト固ヨリ其ノ中ニ在リ上代皇后ハ坐親ニ擇フ其ノ人臣ノ家ニ取レルハ聖武天皇藤原不比等ノ女安宿媛ヲ立テヽ皇后ト爲シタマヘルニ始マル杜徳天皇ノ聲之後ニ於ケルハ擧シタル所ナレト其ノ實仍良級ニ係ル中古以來皇親ノ外ハ藤原氏橘氏平氏源氏ノ四姓ヨリ學后ヲ奉ルコトヽハナレリ其ノ他ノ皇族ハ大寶令ニ凡王娶親王、臣安五世王母聽、唯五世王、不得參親王ト此レ其ノ婚娶ニ於テ尤名位ヲ重ンシタルナリ本條ハ祖宗ノ古法ヲ存重シ又學族ノ家ニ婚嫁スルコトヲ許スハ兼テ中世以來ノ慣例ヲ斟酌シ貞淑ヲ擇フノ道ヲ廣ムルナリ而シテ又特ニ認許ヲ得タルノ家ニ限ルハ名門右族ヲ擇ハムトナリ</p></div>
+<h3 class="jo" id="tp-art40"><a class="self-link" href="#tp-art40">皇室典範 第四十條</a></h3>
+<div class="joubun"><p>皇族ノ婚嫁ハ勅許ニ由ル</p></div>
+<div class="commentary"><p>皇族ノ婚嫁必勅許ニ由ルハ至尊監督ノ大權ニ依リ皇族ノ榮譽ヲ保タシメムトナリ</p></div>
+<h3 class="jo" id="tp-art41"><a class="self-link" href="#tp-art41">皇室典範 第四十一條</a></h3>
+<div class="joubun"><p>皇族ノ婚嫁ヲ許可スルノ勅書ハ宮内大臣之ニ副署ス</p></div>
+<div class="commentary"><p>皇族ノ婚嫁本法ニ違ヒ勅許ヲ得サル者ハ其ノ婚嫁ヲ認メス其ノ婦ハ皇族タルノ禮遇及名稱ヲ得サルヘシ故ニ勅許ヲ付スルニ當テ亦特ニ愼重ノ意ヲ致ス</p></div>
+<h3 class="jo" id="tp-art42"><a class="self-link" href="#tp-art42">皇室典範 第四十二條</a></h3>
+<div class="joubun"><p>皇族ハ養子ヲ爲スコトヲ得ス</p></div>
+<div class="commentary"><p>皇家養子猶子ノ習アルハ蓋嵯峨天皇ノ皇子源定ヲ淳和天皇ノ子トシノ子トシ ヘ溫トヲ仁明天皇ノ子トセラレタルニ始マル而シテ未タ養子猶子ノ稱ヘハアラス皇族ノ支孫ニシテ天皇ノ養子トナレルハ融ノ皇室</p></div>
+<h3 class="jo" id="tp-art43"><a class="self-link" href="#tp-art43">皇室典範 第四十三條</a></h3>
+<div class="joubun"><p>第四十三條 第四十五條 第四十五條 一七〇孫是茂ヲ光孝天皇ノ養子トセラレタルニ始マル猶子ノ稱ハ神皇正統紀ニ觀山院天皇姪熈仁ヲ猶子ニシテ東宮ニスヱタマフトアリ及ヒ職原鈔ニ忠房親王爲後宇多院御猶子トアルヲ始メトス猶子トハ蓋皇子ニ準スルノ義ナリ其本史ニ清仁親王與泰昭登尊室帝(花山帝)森髮後新生也帝教愛青仁託左大臣道長謝以皇子準冷泉上皇諸子教以前仁爲弟五子暗登彰六子並爲親王凡此レ皆中世以來ノ沿習ニシテ古ノ典例ニ非サルナリ本條ハ獨異姓ニ於ケルノミナラス坐族互ニ男女ノ養子ヲ爲スコトヲ禁スルハ宗系紊亂ノ門ヲ察タナリ其ノ皇猶子ノ事ニ及ハサルハ皇養子ト同例ナレハナリ第四十三條皇族國疆ノ外ニ旅行セムトスルトキハ勅許ヲ請フヘシ</p></div>
+<div class="commentary"><p>此レ皇族天皇ノ監督ニ屬スル要件ノ一ニ居ル者ナリ疆外ニ旅行スル者勅許ヲ要スルトキハ外國政府ノ文武ノ官ニ補スル者ハ謂ハスシテ知ルヘキナリ。</p></div>
+<h3 class="jo" id="tp-art44"><a class="self-link" href="#tp-art44">皇室典範 第四十四條</a></h3>
+<div class="joubun"><p>皇族女子ノ臣籍ニ嫁シタル者ハ皇族ノ列ニ在ラス但シ特旨ニ依リ仍内親王女王ノ稱ヲ有セシムルコトアルヘシ</p></div>
+<div class="commentary"><p>女子ノ嫁スル者ハ各其ノ夫ノ身分ニ從フ故ニ皇族女子ノ臣籍ニ嫁シタル者ハ皇族ノ列ニ在ラス此ニ臣籍ト謂ヘルハ專ラ異姓ノ臣籍ヲ謂ヘルナリ仍内親王又ハ女王ノ尊稱ヲ有セシムルコトアルハ近時ノ前例ニ依ルナリ然ルニ亦必特旨アルヲ須ツハ其ノ特ニ賜ヘルノ尊稱ニシテ其ノ身分ニ依ルニ非サレハナリ</p></div>
+<h3 class="jo" id="tp-ch8" style="font-size:22px; margin:34px 0 10px; border-bottom:1px solid #b0a060; padding-bottom:4px;"><a class="self-link" href="#tp-ch8">第八章 世傳御料</a></h3>
+<h3 class="jo" id="tp-art45"><a class="self-link" href="#tp-art45">皇室典範 第四十五條</a></h3>
+<div class="joubun"><p>土地物件ノ世傳御料ト定メタルモノハ分割讓與スルコトヲ得ス</p></div>
+<div class="commentary"><p>世傳御料ハ皇室ニ係屬ス天皇ハ之ヲ後嗣ニ傳ヘ皇統ノ遺物トシ隨意ニ分割シ又ハ讓與セラルヽコトヲ得ス故ニ後嵯峨天皇、後深草天皇ヲシテ龜山天皇ニ位ヲ傳ヘシメ遺命ヲ以テ長講堂領二百八十所ヲ後深草天皇ノ子孫ニ讓與アリタルカ如キハ一時ノ變例ニシテ將來ニ依ルヘキノ典憲ニ非サルナリ上代ニ屯家ヲ置カル又ハ御田ト呼フ御田ノ穀ヲ收ムルノ處ヲ屯倉ト謂フ垂仁天皇紀ニ屯倉此云彌夜氣ト註セル是レナリ仁徳天皇紀ニ倭屯田者、毎御宇帝皇之屯田也、其雖帝皇之子、非御字者、不得掌矣トアリ是レ上古既ニ世傳御料ノ制アリテ繼體ノ天皇之ヲ掌有シタマヒシナリ其ノ他ノ屯田ハ賜予又ハ遣命ヲ以テ分割讓予セラルヽコト總テ勅旨ニ隨フ者アリ卽チ天皇ノ私法上ノ財産トシテ皇室ニ係屬セサル者ナリ安閑天皇紀ニ爲皇后次妃建立屯倉之地、使留後代令頭前述トアルカ如キ是レ世傳御料ト其ノ類ヲ異ニスルコト知ルヘキナリ我カ肇國ノ初夙ニ一國統治ノ公義ニ依リ豪族ノ徒ヲ斥ケテ其ノ私ニ邦土ヲ領有スルヲ許サスヘケル犯罪ノ中ツ國ハ我カ獅子ノ如ラサム國ナリ云々而シテ皇室ノ經費ハ全國ノ租税ヲ以テ之ヲ供奉シ更ニ内庫ノ私産ヲ用ヰテ供給スルヲ假ラサリシハ全ク立憲ノ主義ニ符合スル者ニシテ善美ナル國識ノ基礎ナリト謂フヘシ故ニ本條ハ上代ノ所謂屯家御田ノ類專ラ一部ノ御料ニ屬スル者ヲ指ス而シテ皇室經費ハ別ニ憲法ヲ以テ之ヲ定メタリ</p></div>
+<h3 class="jo" id="tp-art46"><a class="self-link" href="#tp-art46">皇室典範 第四十六條</a></h3>
+<div class="joubun"><p>世傳御料ニ編入スル土地物件ハ樞密顧問ニ諮詢シ勅書ヲ以テ之ヲ定メ宮内大臣之ヲ公告ス</p></div>
+<div class="commentary"><p>土地物件ノ世傳御料ニ編入スル者ハ普通民法ノ外ニ於テ處分セラルヘキ者ナリ故ニ樞密顧問ノ議ヲ掬フノ後勅書ヲ以テ之ヲ定ムルハ其ノ愼重ヲ致スナリ又宮内大臣ヨリ公告スルハ臣民ヲシテ普ク之ヲ聞知セシムルナリ皇室常藏ハ皇室ノ圖書ニ登錄シ其ノ土地ハ地籍ニ明記スルヲ要ス叡旨ヲ以テ一タヒ皇宗常産ニ編入セラレクル者ハ更ニ分離シテ私産トナサルヽコトヲ得ス</p></div>
+<h3 class="jo" id="tp-ch9" style="font-size:22px; margin:34px 0 10px; border-bottom:1px solid #b0a060; padding-bottom:4px;"><a class="self-link" href="#tp-ch9">第九章 皇室經費</a></h3>
+<h3 class="jo" id="tp-art47"><a class="self-link" href="#tp-art47">皇室典範 第四十七條</a></h3>
+<div class="joubun"><p>皇室諸般ノ經費ハ特ニ常額ヲ定メ國庫ヨリ支出セシム恭ヲ按スルニ皇室ノ經費ハ特ニ常額ヲ定メ國庫至重ノ義務トシテ每年支出セシム蓋天皇ハ一國ノ元首トシテ臣民ヲ統治シ從テ臣民ノ正供ニ由リ其ノ需要ニ奉スルハ當然ノ權利タリ故ニ議會ハ皇室經費既定ノ歳額ヲ議シ及之ヲ檢査スルノ權アルコトナシ但シ新ニ増額ヲ要スルニ當テハ更ニ議會ノ協賛ヲ經ルヲ要ス故ニ常額ト謂フナリ皇族ノ藏費ハ皇室經費ヨリ支辨シ別ニ國庫豫算ノ科目ヲ設ケス所謂諸般經費ノ中ニ包括スル者ナリ</p></div>
+<h3 class="jo" id="tp-art48"><a class="self-link" href="#tp-art48">皇室典範 第四十八條</a></h3>
+<div class="joubun"><p>皇室經費ノ豫算決算檢査及其ノ他ノ規則ハ皇室會計法ノ定ムル所ニ依ル</p></div>
+<div class="commentary"><p>皇室經費ハ既ニ議會ノ議ヲ經ス又會計檢査院ノ檢査ヲ要セス而シテ別ニ皇室會計法ニ依リ其ノ條規ヲ定メテ以テ精確ト節約トヲ要スヘキナリ</p></div>
+<h3 class="jo" id="tp-ch10" style="font-size:22px; margin:34px 0 10px; border-bottom:1px solid #b0a060; padding-bottom:4px;"><a class="self-link" href="#tp-ch10">第十章 皇族訴訟及懲戒</a></h3>
+<h3 class="jo" id="tp-art49"><a class="self-link" href="#tp-art49">皇室典範 第四十九條</a></h3>
+<h3 class="jo" id="tp-art50"><a class="self-link" href="#tp-art50">皇室典範 第五十條</a></h3>
+<h3 class="jo" id="tp-art51"><a class="self-link" href="#tp-art51">皇室典範 第五十一條</a></h3>
+<div class="joubun"><p>一七六第四十九條皇族相互ノ民事ノ訴訟ハ勅旨ニ依リ宮内省ニ於テ裁判員ヲ命シ裁判セシメ勅裁ヲ經テ之ヲ執行ス</p></div>
+<div class="commentary"><p>皇族ト皇族トノ間ニ起ル訴訟ハ内廷ノ裁判ニ依ルヘン故ニ宮内省ニ於テ之ヲ勸解セシメ勸解成ラサルトキハ特ニ裁判員ヲ命シテ之ヲ裁判セシメ更ニ勅裁ヲ經テ之ヲ執行セシム其ノ他音通ノ民法ニ於テ裁判所ノ登録又ハ處分ヲ要スル者ハ皆宮内省之ニ當ル第五十條人民ヨリ皇族ニ對スル民事ノ訴訟ハ東京控訴院ニ於テ之ヲ裁判ス但シ皇族ハ代人ヲ以テ訴訟ニ當ラシメ自ラ訟廷ニ出ルヲ要セス恭テ按スルニ本條人民ヨリ皇族ニ對スル民事ノ訴訟ハ東京控訴院ニ於テ之ヲ裁判スルコトヲ定ムルハ皇族ノ特權ヲ示スナリ而シテ其ノ御節ハ蓋制ニ之ヲ定ムル所アラムトス其ノ皇族ヨリ原告トシテ人民ニ對スル訴訟ハ仍普通ノ訴訟原則ニ依リ被告人ノ所轄裁判所之ヲ裁判スヘキナリ普通ノ訴訟人ハ裁判所ヨリ本人訊問ヲ要シ召喚スルニ當リ訟廷ニ出サルコトヲ得ス而シテ皇族ハ自ラ出ルヲ要セサルハ此レ亦特權タリ其ノ他ノ訴訟手續ニシテ此ノ典範又ハ他ノ法律ニ別段ノ條規ナキ者ハ總テ普通ノ裁判構成法及訴訟法ニ依ル第五十一條皇族ハ勅許ヲ得ルニ非サレハ勾引シ又ハ裁判所ニ召喚スルコトヲ得ス恭テ按スルニ皇族ハ犯罪アルモ之ヲ勾引スルコトヲ得ス其ノ現行犯ニ於ケルモ亦同シ又刑事ノ審問ノ爲ニ裁判所ニ召喚スルコトヲ得ス豫審判事書記ト倶ニ其ノ所在ニ就テ陳述ヲ聽クヘシ但シ天皇ノ勅許ヲ得タルトキハ例外トス塁放設人タルノ場合ハ治算法ニ之ヲ揭クザリ 而シテ趣許ヲ予ツルニ在ラス</p></div>
+<h3 class="jo" id="tp-art52"><a class="self-link" href="#tp-art52">皇室典範 第五十二條</a></h3>
+<div class="joubun"><p>皇族其ノ品位ヲ辱ムルノ所行アリ又ハ皇室ニ對シ忠順ヲ缺クトキハ勅旨ヲ以テ之ヲ懲戒シ其ノ戴キ者ハ皇族特權ノ一部又ハ全部ヲ停止シ若ハ剝奪スヘシ毒ヲ授スルニ蟲族ハ皇室ニ對シ忠順ノ義務ヲ負フ者ナリ故ニ皇室ニ不忠サルト品位ヲ辱ムルノ汚行トハ倶ニ紀律ヲ取ル者トシ懲戒ノ處分ヲ被ルヘシ皇族懲戒ノ權ハ天皇ノ親ラ執ル所タリ舊戒ノ重キ者ハ皇族特權ノ一部又ハ全部ヲ停止シ又ハ全部ヲ剝奪ス停止ハ期限アリ剝奪ハ期限ナシ</p></div>
+<h3 class="jo" id="tp-art53"><a class="self-link" href="#tp-art53">皇室典範 第五十三條</a></h3>
+<div class="joubun"><p>皇族蕩産ノ所行アルトキハ勅旨ヲ以テ治產ノ禁ヲ宣告シ其ノ管財者ヲ任スヘシ</p></div>
+<div class="commentary"><p>皇族蕩産ノ所行アル者ニ對シ民法上治産ノ禁ヲ宜告シ及其ノ管財者ヲ命シ財産ヲ管理セシムルコト亦勅旨ニ由ル此レ固ヨリ天皇監督ノ權ニ屬スレハナリ</p></div>
+<h3 class="jo" id="tp-art54"><a class="self-link" href="#tp-art54">皇室典範 第五十四條</a></h3>
+<div class="joubun"><p>前二條ハ皇族會議ニ諮詢シタル後之ヲ勅裁ス</p></div>
+<div class="commentary"><p>皇族會議ハ皇室ノ内事ニ付天皇ノ諮詢ニ應フヘク而シテ皇族ノ懲戒又ハ治産ノ處分ニ付テハ特ニ諮詢ヲ以テ必要トス</p></div>
+<h3 class="jo" id="tp-ch11" style="font-size:22px; margin:34px 0 10px; border-bottom:1px solid #b0a060; padding-bottom:4px;"><a class="self-link" href="#tp-ch11">第十一章 皇族會議</a></h3>
+<h3 class="jo" id="tp-art55"><a class="self-link" href="#tp-art55">皇室典範 第五十五條</a></h3>
+<div class="joubun"><p>條皇族會議ハ成年以上ノ皇族男子ヲ以テ組織シ内大臣樞密院議長宮内大臣司法大臣大審院長ヲ以テ參列セシム族テ按スルニ學族會議ハ第一ニ皇室典範ニ係ル改正ノ許約ヲ受ケ第二ニ第十九條第二項及第二十五條ノ場合ニ於テ其ノ議ヲ經ルヲ要シ第三ニ皇嗣ヲ換フル時ニ諮詢ヲ受ケ第四ニ庶族ノ懲戒及治産處分ノ諮詢ヲ受ケ其ノ他皇室ニ係ル重要ノ事件及民法ニ於テ親族會議ニ係ル事件ノ諮期ヲ受タヘシ其ノ議事ノ規則ノ若キハ差別ニ之ヲ定メラルヘキナリ</p></div>
+<h3 class="jo" id="tp-art56"><a class="self-link" href="#tp-art56">皇室典範 第五十六條</a></h3>
+<div class="joubun"><p>天皇ハ皇族會議ニ親臨シ又ハ皇族中ノ一員ニ命シテ議長タラシム恭ヲ按スルニ天皇皇族會議ニ報臨セラルヽトキハ親ラ會議ヲ統理セラル其ノ規商セラレチルトキ又ハ親ラ會議ヲ統理セラレサルトキハ別ニ議長ヲ指命セラルヘシ</p></div>
+<h3 class="jo" id="tp-ch12" style="font-size:22px; margin:34px 0 10px; border-bottom:1px solid #b0a060; padding-bottom:4px;"><a class="self-link" href="#tp-ch12">第十二章 補則</a></h3>
+<h3 class="jo" id="tp-art57"><a class="self-link" href="#tp-art57">皇室典範 第五十七條</a></h3>
+<div class="joubun"><p>現在ノ皇族五世以下親王ノ號ヲ宣賜シタル者ハ舊ニ依ル</p></div>
+<div class="commentary"><p>典範ノ定ムル所ニ依レハ五世以下ノ王ハ親王ト稱フルコトヲ得ス本條ハ現在ノ宜下親王ノ爲ニ其ノ既得ノ尊榮ヲ奪ハサルナリ而シテ其ノ繼嗣以下未タ宣下アラサルハ典範ノ本則ニ依ルコトヲ知ルヘキナリ</p></div>
+<h3 class="jo" id="tp-art58"><a class="self-link" href="#tp-art58">皇室典範 第五十八條</a></h3>
+<div class="joubun"><p>皇位繼承ノ順序ハ總テ實系ニ依ル現在皇養子皇猶子又ハ他ノ繼嗣タルノ故ヲ以テ之ヲ混スルコトナシ皇室典範第十二章補則</p></div>
+<div class="commentary"><p>現在ノ親王家親王宣下アリシハ多クハ皇養子皇猶子タルノ近例ニ從ヒシナリ第四十二條ハ皇族養子ノ制ヲ廢ス而シテ現在既ニ行ヘル者ニ上及セス但シ皇位繼承ノ順序ハ總テ宗支遠近ノ實系ニ依リ養子猶子ノ名稱及甲家ノ子乙家ノ繼嗣タリシニ拘ラス其ノ間多少紛錯アルモ其ノ名ニ因テ其ノ實ヲ混スルコトナカルヘキナリ</p></div>
+<h3 class="jo" id="tp-art59"><a class="self-link" href="#tp-art59">皇室典範 第五十九條</a></h3>
+<div class="joubun"><p>親王内親王王女王ノ品位ハ之ヲ廢ス</p></div>
+<div class="commentary"><p>親王内親王ノ叙品王女王ノ叙位ハ蓋中古ニ在テ隋唐ノ制ニ依レルナリ皇族既ニ品位ヲ以テ班別ヲ爲シ而シテ親疎長幼ノ倫序從テ失ヘリ抑々皇族ハ生レテ潰流ノ尊榮ニ居ル而シテ人臣ノ位階ニ依テ陞叙スルノ比ニ非ス本條ニ品位ノ舊制ヲ廢スルハ一ハ倫序ヲ以テ重シトスルニ因ルナリ</p></div>
+<h3 class="jo" id="tp-art60"><a class="self-link" href="#tp-art60">皇室典範 第六十條</a></h3>
+<div class="joubun"><p>親王ノ家格及其ノ他此ノ典範ニ牴觸スル例規ハ總テ之ヲ廢ス</p></div>
+<div class="commentary"><p>有栖川宮、閑院宮ハ明治元年閏四月ノ令ニ依リ世襲親王クリ被仰間書ニ有頼川宮嫡子者即今先是迄之通爲御養子可有哉子可有哉子可有哉宣下閑院宮嫡子相續之師先是迄之通爲御養子可有親王宣下賀陽宮、山請言、豪塵陵富、仁和寺宮、聯區富、藏高院宮、櫻井宮ハ旧令ニ依リ一代皇藏タリ瑞襟珊瑚銅三年十二月十日ノ令ニ四氣王默觀舘、瑞暗、聯頭琉硝、ノ外ノ親王タハ二代目ヨリ届姓華族ニ列セラルヽコトヲ定メラル知能十四年二月小松宮親王ヲ世襲皇族ニ山階宮親王ヲ二代皇族ニ列セラル十六年七月久邇宮親王ヲ二代皇族ニ列セラル今典範ニ於テ已ニ皇養子皇猶子ノ制ヲ廢シタルトキハ從テ世襲親王ノ舊制モ亦廢除ニ歸セサルコトヲ得ス皇子攝ハ諸王ト雖亦皇族タルコトヲ失ハサルトキハ從テ賜姓ノ制及一代皇族又ハ二代皇族ノ家格ハ亦廢除ニ歸セサルコトヲ得ス</p></div>
+<h3 class="jo" id="tp-art61"><a class="self-link" href="#tp-art61">皇室典範 第六十一條</a></h3>
+<div class="joubun"><p>皇族ノ財產歲費及諸規則ハ別ニ之ヲ定ムヘシ</p></div>
+<div class="commentary"><p>皇族ノ各個財産及歳費廩給ノ方法及其ノ他皇族ニ係ル諸般ノ規則ハ蓋別ニ皇族令ヲ以テ之ヲ定メムトス故ニ典範ハ務メテ大體ヲ擧ク而シテ詳節繁文ニ渉ルコトヲ欲セサルナリ</p></div>
+<h3 class="jo" id="tp-art62"><a class="self-link" href="#tp-art62">皇室典範 第六十二條</a></h3>
+<div class="joubun"><p>將來此ノ典範ノ條項ヲ改正シ又ハ増補スヘキノ必要アルニ當テハ皇族會議及樞密顧問ニ諮詢シテ之ヲ勅定スヘシ</p></div>
+<div class="commentary"><p>皇室典範ハ天皇立憲ヲ經始シタマヘル制作ノ一トシテ永遠ニ傳ヘ皇室ノ寶典タリ故ニ本條其ノ紛更ヲ愼ムノ意ヲ致スナリ抑〻憲法ニ據ルニ其ノ條項ニ改正ヲ要スルコトアルトキハ之ヲ議會ノ議ニ付シ特ニ鄭重ナル方式ニ依リ議決セシム而シテ皇室典範ニ於テハ獨皇族會議ト樞密顧問ニ諮詢スルニ止マリ憲法ト同一ノ軌轍ニ依ラサルハ何ソヤ蓋皇室ノ事ハ皇室自ラ之ヲ決定スヘクシテ之ヲ臣民ノ公議ニ付スヘキニ非サレハナリ</p></div>
+<h2 class="hen" id="zouho"><a class="self-link" href="#zouho">皇室典範増補</a></h2>
+<div class="section-preamble"><div class="joubun">
+<p>皇室典範増補(頭胎相十年)御告文皇朕レ謹ミ畏ミ皇祖皇宗ノ神靈ニ告ケ白サク皇室典範ハ皇祖皇宗ノ遺範ヲ明徴ニシ天壤無窮ノ宏基ヲ鞏固ニスル所以ニシテ紹述以來爰ニ十有九年皇朕レ我カ諸昆ト倶ニ之ヲ欽進シテ敢テ違越スルコトナシ今ヤ國祺倍。昌隆ニシテ皇祖皇室典範增補皇宗ノ威靈遐ク四裔ニ顯赫タルノ時ニ膺リ進運ヲ照察シ成典ヲ増盆シ以テ尊嚴保維ノ圖ヲ廓ニシ子孫率由ノ道ヲ裕ニスルハ亦皇祖皇宗聖護ノ存スル所ニ外ナラス皇朕レ茲ニ皇室典範增補ヲ制定シ仰テ皇祖皇宗ノ神祐ヲ祷リ永遠ニ履行シテ愆ラサラムコトヲ誓フ庶幾クハ神霊此ヲ鑒ミタマヘ天祐ヲ享有シタル我カ日本帝國皇家ノ成典ハ祖宗ノ洪範ヲ紹述シテ敢テ違フコトアルナシ而シテ人文ノ發展ハ實字ノ進運ニ隨ヒ制度ノ燦備ハ條章ノ增廣ヲ必トス是ノ時ニ當リ朕ハ祖宗ノ丕基ヲ永遠ニ鞏固ニスル所以ノ良圖ヲ惟ヒ且憲章ニ由テ以テ皇族ノ分義ヲ昭ニセムコトヲ欲シ茲ニ皇族會議及樞密顧問ノ諮詢ヲ經テ皇室典範増補ヲ裁定シ朕カ子孫及臣民ヲシテ之ニ率由シテ愆ルコトナキヲ期セシム皇室典範増補皇室典範增補第一條王ハ勅旨又ハ情願ニ依リ家名ヲ賜ヒ華族ニ列セシムルコトアルヘシ第二條王ハ勅許ニ依リ華族ノ家督相續人トナリ又ハ家督相續ノ目的ヲ以テ華族ノ養子トナルコトヲ得第三條前二條ニ依リ臣籍ニ入リタル者ノ妻直系卑屬及其ノ妻ハ其ノ家ニ入ル但シ他ノ皇族ニ嫁シタル女子及其ノ直系卑屬ハ此ノ限ニ在ラス第四條特權ヲ剥奪セラレタル皇族ハ勅旨ニ由リ臣籍ニ降スコトアルヘシ前項ニ依リ臣籍ニ降サレタル者ノ妻ハ其ノ家ニ入ル第五條第一條第二條第四條ノ場合ニ於テハ皇族會議及樞密顧問ノ諮詢ヲ經ヘシ第六條皇族ノ臣籍ニ入リタル者ハ皇族ニ復スルコトヲ得ス第七條皇族ノ身位其ノ他ノ權義ニ關スル規程ハ此ノ典範ニ定メタルモノノ外別ニ之ヲ定ム皇族ト人民トニ渉ル事項ニシテ各適用スヘキ法規ヲ異ニスルトキハ前項ノ規程ニ依ル第八條法律命令中皇族ニ適用スヘキモノトシタル規定ハ此ノ典範又ハ之ニ基ツキ發スル規則ニ別段ノ條規ナキトキニ限リ之ヲ適用ス皇室典範増補(秋田朕惟フニ祖宗ノ遺範ヲ紹述シ時ニ隨ヒ宜ヲ制シ以テ國運ノ進展ニ順應スルハ皇考ノ宏謨ニシテ朕ノ率循スル所ナリ今ヤ皇家ノ威典ヲ増廣スルノ要ヲ認メ皇族會議及樞密顧問ノ諮詢ヲ經テ皇室典範増補ヲ裁定シ茲ニ之ヲ公布セシム皇室典範増補皇族女子ハ王族又ハ公族ニ嫁スルコトヲ得</p>
+</div></div>
+<h2 class="hen" id="fugen"><a class="self-link" href="#fugen">附言</a></h2>
+<div class="section-intro">
+<p>會員伯爵伊藤博文君帝國憲法及皇室典範ノ義解ヲ編成シ其稿本ヲ本會ニ寄贈セラレタリ君ノ意蓋シ學者ノ講究ニ資シ其發賣所得ノ利ヲ以テ國家學ノ擴張ヲ補セントスルニ在リ而シテ國家學ノ範圍ニ屬スル良著ヲ得テ之ヲ刊行販賣シ斯學ノ振興ヲ助クルカ如キハ固ヨリ本會ノ希圖スル所ナルヲ以テ喜ヒテ君ノ惠贈ヲ受ケ速ニ制團ニ命シテ之ヲ世ニ公布ス因テ聊カ其縁由ヲ記シテ卷尾ニ附スト云爾明治廿二年五月大日本帝國憲法告文憲法發布勅語上諭並ニ皇室典範上諭皇室典範増補ハモト本書ノ掲クル所ニ非ス昭和十年四月改版ニ當リ目次ト共ニ本會ニ於テ特ニ附加シタルモノナリ昭和十年四月國家學會</p>
+</div>
+<div style="text-align: right; font-size: 12px; color: #999; margin-top: 60px; padding-bottom: 20px;">Updated: 2026-03-27</div>
+</main>
 </div>
 <script>
-(function() {
-    var hamburger = document.getElementById('hamburger');
-    var navPane = document.getElementById('nav-pane');
-    var overlay = document.getElementById('nav-overlay');
-    function openNav() { navPane.classList.add('open'); overlay.classList.add('open'); }
-    function closeNav() { navPane.classList.remove('open'); overlay.classList.remove('open'); }
-    hamburger.addEventListener('click', function() {
-        navPane.classList.contains('open') ? closeNav() : openNav();
-    });
-    overlay.addEventListener('click', closeNav);
-    navPane.addEventListener('click', function(e) {
-        if (e.target.tagName === 'A' && window.innerWidth <= 768) closeNav();
-    });
-
-    var resizer = document.getElementById('resizer');
-    var isResizing = false;
-    resizer.addEventListener('mousedown', function(e) {
-        isResizing = true;
-        resizer.classList.add('active');
-        document.body.style.cursor = 'col-resize';
-        document.body.style.userSelect = 'none';
-        e.preventDefault();
-    });
-    document.addEventListener('mousemove', function(e) {
-        if (!isResizing) return;
-        var newWidth = e.clientX;
-        if (newWidth < 150) newWidth = 150;
-        if (newWidth > window.innerWidth * 0.5) newWidth = window.innerWidth * 0.5;
-        navPane.style.width = newWidth + 'px';
-    });
-    document.addEventListener('mouseup', function() {
-        if (isResizing) {
-            isResizing = false;
-            resizer.classList.remove('active');
-            document.body.style.cursor = '';
-            document.body.style.userSelect = '';
-        }
-    });
-})();
+const resizer = document.getElementById('resizer');
+const nav = document.getElementById('nav-pane');
+let isResizing = false;
+resizer.addEventListener('mousedown', (e) => { isResizing = true; resizer.classList.add('active'); document.body.style.userSelect = 'none'; });
+document.addEventListener('mousemove', (e) => { if (!isResizing) return; let w = e.clientX; if (w < 100) w = 100; if (w > window.innerWidth * 0.5) w = window.innerWidth * 0.5; nav.style.width = w + 'px'; });
+document.addEventListener('mouseup', () => { isResizing = false; resizer.classList.remove('active'); document.body.style.userSelect = ''; });
+const hamburger = document.getElementById('hamburger');
+const overlay = document.getElementById('nav-overlay');
+hamburger.addEventListener('click', () => { nav.classList.toggle('open'); overlay.classList.toggle('open'); });
+overlay.addEventListener('click', () => { nav.classList.remove('open'); overlay.classList.remove('open'); });
+document.querySelectorAll('.nav-pane a').forEach(a => { a.addEventListener('click', () => { if (window.innerWidth <= 768) { nav.classList.remove('open'); overlay.classList.remove('open'); } }); });
 </script>
 </body>
 </html>
