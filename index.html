@@ -20,31 +20,31 @@ html, body {
 h1 {
     font-size: 36px;
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 48px;
     letter-spacing: 0.15em;
 }
-.subtitle {
-    text-align: center;
+.section-group {
+    margin-bottom: 36px;
+}
+.section-group h2 {
     font-size: 15px;
     color: #6a5a3a;
-    margin-bottom: 48px;
+    margin-bottom: 10px;
+    padding-left: 2px;
 }
-.works {
-    margin-top: 32px;
-}
-.works h2 {
+.section-group h3 {
     font-size: 20px;
-    border-bottom: 2px solid #b0a060;
-    padding-bottom: 6px;
-    margin-bottom: 20px;
+    color: #2a1a0a;
+    margin-bottom: 10px;
+    padding-left: 2px;
 }
 .work-card {
     display: block;
     background: #fff;
     border: 1px solid #e0dcd0;
     border-radius: 6px;
-    padding: 20px 24px;
-    margin-bottom: 16px;
+    padding: 14px 18px;
+    margin-bottom: 8px;
     text-decoration: none;
     color: inherit;
     transition: box-shadow 0.15s, border-color 0.15s;
@@ -54,20 +54,20 @@ h1 {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 .work-card .work-title {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
     color: #2a1a0a;
-    margin-bottom: 4px;
 }
 .work-card .work-author {
-    font-size: 14px;
+    font-size: 13px;
     color: #6a5a3a;
-    margin-bottom: 8px;
+    margin-top: 2px;
 }
-.work-card .work-desc {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.7;
+.wip {
+    font-size: 12px;
+    color: #8a6a2a;
+    margin-left: 6px;
+    font-weight: normal;
 }
 .about {
     margin-top: 48px;
@@ -99,41 +99,39 @@ footer {
 
 <h1>ふぐば文庫</h1>
 
-<div class="works">
-<h2>一覧</h2>
+<div class="section-group">
+<h2>清水澄</h2>
+<h3>逐条帝国憲法講義</h3>
 
 <a href="shimizu-icc-raw/" class="work-card">
-    <div class="work-title">逐条帝国憲法講義（原文）</div>
-    <div class="work-author">法学博士 清水澄 著 — 松華堂、昭和11（1936）年 第9版</div>
-    <div class="work-desc">底本の旧字旧仮名をそのまま収録。</div>
+    <div class="work-title">原文</div>
+    <div class="work-author">松華堂、昭和11（1936）年 第9版</div>
 </a>
-
 
 <a href="shimizu-icc/" class="work-card">
-    <div class="work-title">逐条帝国憲法講義（現代語訳）</div>
-    <div class="work-author">法学博士 清水澄 著 — 松華堂、昭和11（1936）年 第9版</div>
-    <div class="work-desc">枢密院議長を務めた憲法学者・清水博士による大日本帝国憲法全76条の逐条解説。日本国憲法施行後に国体護持に殉じた著者の遺した体系的註釈書を現代語で読む。</div>
+    <div class="work-title">現代語訳</div>
+    <div class="work-author">松華堂、昭和11（1936）年 第9版</div>
 </a>
+</div>
 
+<div class="section-group">
+<h2>伊藤博文</h2>
+<h3>帝國憲法義解</h3>
 
 <a href="ito-gige-raw/" class="work-card" style="opacity:0.6;">
-    <div class="work-title">帝國憲法義解（原文）<span style="font-size:13px; color:#8a6a2a; margin-left:8px;">工事中</span></div>
-    <div class="work-author">伊藤博文 著 — 丸善、昭和12（1937）年 第17版</div>
-    <div class="work-desc">初代内閣総理大臣・伊藤博文公の遺した帝国憲法の公式逐条解説書。旧字旧仮名の原文。NDLデジタルコレクションよりOCR抽出。</div>
+    <div class="work-title">原文<span class="wip">工事中</span></div>
+    <div class="work-author">丸善、昭和12（1937）年 第17版</div>
 </a>
 
 <a href="ito-gige/" class="work-card" style="opacity:0.6;">
-    <div class="work-title">新譯帝國憲法義解<span style="font-size:13px; color:#8a6a2a; margin-left:8px;">工事中</span></div>
-    <div class="work-author">伊藤博文 原著 — 日本國學振興會 訳註、昭和13（1938）年</div>
-    <div class="work-desc">伊藤博文公の『帝國憲法義解』を口語体に翻訳し、難解な語句に註釈を施したもの。NDLデジタルコレクションよりOCR抽出。</div>
+    <div class="work-title">新譯<span class="wip">工事中</span></div>
+    <div class="work-author">日本國學振興會 訳註、昭和13（1938）年</div>
 </a>
 
 <a href="ito-gige-modern/" class="work-card" style="opacity:0.6;">
-    <div class="work-title">帝国憲法義解（現代語訳）<span style="font-size:13px; color:#8a6a2a; margin-left:8px;">工事中</span></div>
-    <div class="work-author">伊藤博文 原著 — ふぐば文庫 訳</div>
-    <div class="work-desc">『新譯帝國憲法義解』をさらに現代語に訳し直したもの。旧仮名遣い・旧字体・戦前の文語表現を平易な現代日本語で読む。</div>
+    <div class="work-title">現代語訳<span class="wip">工事中</span></div>
+    <div class="work-author">ふぐば文庫 訳</div>
 </a>
-
 </div>
 
 <div class="about">
@@ -147,6 +145,6 @@ footer {
 </footer>
 
 </div>
-<div style="position: fixed; bottom: 8px; right: 12px; font-size: 11px; color: #bbb;">Updated: 2026-03-27</div>
+<div style="position: fixed; bottom: 8px; right: 12px; font-size: 11px; color: #bbb;">Updated: 2026-03-28 01:30</div>
 </body>
 </html>
